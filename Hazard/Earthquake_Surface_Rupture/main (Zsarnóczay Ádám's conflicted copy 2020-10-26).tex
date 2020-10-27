@@ -1,0 +1,157 @@
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for your "contribution" to a contributed volume
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[graybox]{svmult}
+%
+%% choose options for [] as required from the list
+%% in the Reference Guide
+%
+%\usepackage{mathptmx}       % selects Times Roman as basic font
+%\usepackage{helvet}         % selects Helvetica as sans-serif font
+%\usepackage{courier}        % selects Courier as typewriter font
+%\usepackage{type1cm}        % activate if the above 3 fonts are
+                             % not available on your system
+%
+%\usepackage{makeidx}         % allows index generation
+%\usepackage{graphicx}        % standard LaTeX graphics tool
+%                             % when including figure files
+%\usepackage{multicol}        % used for the two-column index
+%\usepackage[bottom]{footmisc}% places footnotes at page bottom
+%
+%% see the list of further useful packages
+%% in the Reference Guide
+%
+%\makeindex             % used for the subject index
+%                       % please use the style svind.ist with
+%                       % your makeindex program
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\begin{document}
+
+\title{Earthquake - Surface Fault Rupture}
+% Use \titlerunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+\author{
+    \textbf{Michael Gardner } 
+    \and Jonathan D. Bray
+    \and Chaofeng Wang}
+\tocauthor{}
+\authorrunning{Gardner et al.}
+% Use \authorrunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+%\institute{Name of First Author \at Name, Address of Institute, %\email{name@email.address}
+%\and Name of Second Author \at Name, Address of Institute %\email{name@email.address}}
+%
+% Use the package "url.sty" to avoid
+% problems with special characters
+% used in your e-mail or web address
+%
+\maketitle
+
+Surface fault rupture is a manifestation of subsurface fault displacement through the overlying earth, including soil deposits, resulting in permanent ground surface deformation that can damage engineered systems. The characteristics of the surface deformation depend on the type of fault movement, the inclination of the fault plane, the amount of displacement on the fault, the depth and geometry of the materials overlying the bedrock fault, the nature of the overlying earth materials and definition of the fault, and the structure and its foundation \citep{bray2001developing}. The subsurface movement of the fault may be expressed as a distinct rupture plane or as distributed distortion of the ground surface. Additionally, extensional movement of the fault can cause tensile strains and cracking at the ground surface.
+
+\section{Input and Output Data}
+\label{sec:eq_surface_rup_input_output}
+
+\subsection{Input Data}
+
+Input data for analyses assessing surface fault rupture describe the characteristics of the fault, the overlying materials, and in some cases the structures overlying the fault. These inputs can be classified as follows:\\
+
+\noindent\textbf{Depth of Overlying Soil}\\
+The depth of the overlying soil affects how subsurface fault deformations manifest as surface fault rupture. In closed-form solutions, the depth of soil is an input into the analytical equation. In pseudostatic analyses, the depth of overlying soil is defined by the boundary conditions in the numerical model.\\
+
+\noindent\textbf{Angle of Dilation}\\
+Some closed-form solutions take angle of dilation as input while soil constitutive models used in pseudostatic analyses account for soil dilatancy in their formulation. The angle of dilation will depend on the type and characteristics of the soil overlying the fault. "Dense" sand will tend to increase in volume during shearing, which is described by a larger angle of dilation. Conversely, "loose" sand may contract during shearing such that the dilation angle is often near zero or negative. Normally consolidated to slightly overconsolidated clay is characterized by low dilatancy, while heavily overconsolidated clay will respond dilatively.\\
+
+\noindent\textbf{Fault Characteristics}\\
+The type of fault, slip-type, and fault geometry influence the likelihood and amount of surface fault rupture that may occur during an earthquake. Closed-form solutions are only applicable for the fault type for which they were developed, so care must be taken when applying these methods. Pseudostatic analyses explicitly model the fault type and geometry by specifying boundary conditions and boundary displacements in the numerical model. Some probabilistic models, such as the model developed by \cite{moss2011probabilistic}, are specific to a particular type of fault and slip-type while other methods, such as the \cite{hecker2013variability} model, can be applied more generally.\\
+
+\noindent\textbf{Moment Magnitude}\\
+Moment magnitude is a quantitative measure of the earthquake size or magnitude. It is the only magnitude scale that is not subject to saturation, as it is based on seismic moment as opposed to the ground shaking level. Probabilistic fault displacement hazard assessments take magnitude as an input and condition the probability of surface fault rupture occurring and the probability of rupture past the site on the input magnitude.\\
+
+\noindent\textbf{Numerical Method and Soil Constitutive Model}\\
+In psuedostatic analyses, soil has been modeled using both continuum and granular methods. Both Finite Difference and Finite Element methods have been applied when modeling the soil as a continuous medium. Constitutive models employed in these methods have ranged from elastoplastic Mohr-Coulomb to more advanced models, such as UBCSAND \citep{byrne2004numerical}, that can capture non-linear stress-strain response, contractive and dilative volumetric response, and dependence on confining pressure. The Discrete Element Method has been used to explicitly model the granular nature of soil. In this approach, the particles are modeled as rigid bodies and all non-linear behavior is captured in the model describing contacts between particles. Contact models range from as simple as linear elastic contacts to non-linear Hertz-Mindlin type contact models.\\
+
+\subsection{Output Data}
+Depending on the type of analytical procedure used, one or more of the following outputs can be produced:\\[0.5em]
+
+\noindent\textbf{Shape and Location of Failure Surfaces}\\
+Closed-form solutions can provide estimates of the shape and location of the failure surface, and possible failure modes associated with shallow foundations. However, it is important to note that closed-form solutions are oversimplified and not well validated by field case histories. Pseudostatic analyses can provide a more complete description of the anticipated location, shape, width, and extent of the failure surface and its dependence on soil conditions at the site.\\ %Additionally, the influence of foundation type on how rupture propagates to the surface can be explored using pseudostatic analyses.\\
+
+\noindent\textbf{Foundation-Rupture Interaction}\\
+Pseudostatic analyses can be employed to investigate how different foundation systems and soil improvement can influence how subsurface fault displacement propagates through the overlying soil deposits and manifests at the surface. This requires more knowledge about the conditions at the site being analyzed such that constitutive models can be calibrated to provide meaningful results.\\
+
+\noindent\textbf{Probability of Surface Rupture}\\
+Probabilistic fault displacement hazard assessments can provide estimates of the probability of surface rupture occurring at a site and the probability that the rupture will fall within an estimated range of displacements.\\
+
+\section{Procedures for Evaluating Surface Ruptures}
+\label{sec:eq_surface_rup_procedures}
+
+In the event that surface fault rupture is anticipated to occur at a site, the following procedures can be applied:
+\newline
+
+\noindent\textbf{Closed-Form Solutions} \\
+Closed-form solutions for evaluating surface fault rupture and its interaction with structures are not typically used in research or practice because they are oversimplified and not well validated by field case histories. For free-field analyses, the method presented by \cite{cole1984influence} can provide estimates of the shape and location of failure surfaces in soil. The required inputs for this procedure are the depth of the overlying soil, the angle of dilation of the soil, and the dip angle of the fault; however, this method is restricted to dry, cohesionless soils above dip-slip faults.  Importantly, the procedure was developed based on small-scale experiments and has not been validated by field case histories. Another approach, presented by \cite{berrill1983two}, provides analytical solutions for assessing various failure modes for shallow foundations across strike-slip faults. Similarly, this procedure is not widely used in practice.
+\newline
+
+\noindent\textbf{Probabilistic Assessment of Fault Displacement Hazard}\\
+Probabilistic fault displacement hazard assessments provide a means to evaluate the probability of some amount of fault displacement occurring at a site. Generally, these methods will provide an estimate of the probability of some level of fault displacement being exceeded\textemdash analogous to the approach used in PSHA for ground shaking-based on a given set of input parameters that characterize the type of event and location of the site relative to that event. Examples of such methodologies are \cite{youngs2003a, petersen2011fault, moss2011probabilistic} and \cite{hecker2013variability}.\\
+
+\noindent\textbf{Pseudostatic Analysis}\\
+Pseudostatic numerical analyses can provide estimates of not only the amount of surface fault displacement that may occur at a site, but also the characteristics of the deformation at the site and how structures might interact with the deforming soil. Continuum-based methods, such as Finite Element and Finite Difference Methods, and discontinuous methods, such as the Discrete Element Method, have been implemented to model surface fault rupture. These methods can capture how fault and soil material properties affect surface manifestations of subsurface fault displacement, providing insight into what potential hazards at a site may be. These methods require more knowledge of site conditions and soil properties such that constitutive model parameters can be calibrated to provide meaningful results for a particular site. For pseudostatic analyses, the dynamics of fault rupture are ignored, and instead the fault displacement is specified while the displacement rate is kept slow enough to avoid dynamic effects. Some research has investigated dynamic surface fault rupture \citep{oettle2015dynamic} and ignoring dynamic effects results typically in insignificant differences, so most analyses are implemented in a pseudostatic manner \citep{anastasopoulos2007foundation, anastasopoulos2008numerical, bransby2008centrifuge_reverse, bransby2008centrifuge, oettle2013geotechnical, oettle2017numerical, garcia2018distinct, garcia2018distinct_2}.\\
+
+\section{Research Gaps and Opportunities}
+\label{sec:eq_surface_rup_research_gaps}
+Recent advances in probabilistic fault rupture assessment methods allow for hazard-based evaluation of surface fault rupture and are amenable to being applied at a regional scale. However, they do not currently incorporate soil conditions in evaluating surface fault rupture. Comparatively, pseudostatic simulations of surface fault rupture have been used to assess how local soil conditions and the characteristics of foundations overlying the fault affect the rupture path and how it manifests at the surface, but the computational demand associated with these analyses are prohibitive at regional scale. The challenge of assessing surface fault rupture can be attributed to the nature of the phenomenon\textemdash displacements occur across a narrow shear band along significantly longer lengths of rupture, which poses unique challenges to the research community.
+
+%The difficulty of assessing surface fault rupture is related to the varying scales over which this phenomenon can be investigated which poses unique challenges and opportunities to the research community.
+
+When considering numerical simulations of surface fault rupture, a major difficulty is ensuring sufficient numerical resolution while also minimizing computational cost. Given that the area of interest is highly localized\textemdash even in "loose" soil deposits where deformation is more distributed, the shear band is relatively narrow compared to the rest of the simulation domain\textemdash adaptive meshing and refinement techniques could help alleviate some of the computational burden while maintaining sufficient resolution where it is needed. Additionally, currently simulations do not consider the layered and heterogeneous nature of natural soils which potentially could have a significant influence on the propagation of subsurface rupture to the ground surface. While implementing and validating numerical models that are capable of performing these simulations in HPC-capable, open-source software is needed, there is also a gap in the amount of high quality experimental data that is available to validate numerical capabilities. Available experimental data sets focus primarily on homogeneous, cohesionless soils, so it is not possible to calibrate and validate numerical models that potentially could capture the influence of heterogeneity in overlying soil deposits.
+
+On a regional scale, probabilistic assessment of fault displacement hazard has great potential for broad application. Current methods consider the probability that surface fault rupture will occur at a site conditioned on the earthquake magnitude being large enough to cause rupture and that sufficient subsurface rupture occurs to manifest as surface rupture. Developing models that are capable of incorporating additional data that describes soil conditions and explicitly consider different fault and slip-types would provide insight into how more localized conditions could affect regional response.
+
+%Recent advances in numerically assessing surface fault rupture have provided a means to consider how both local soil conditions and the characteristics of foundations overlying the fault affect the rupture path and how it manifests at the surface. However, these methods have not been applied to consider layering of different soil types and how that may affect the characteristics of surface manifestations  of subsurface fault rupture. 
+
+\section{Software and Systems}
+\label{sec:eq_surface_rup_tools}
+
+The following list of software is commonly used in assessing earthquake surface fault rupture. Important to note is that there are no software packages available for the closed-form procedures and while probabilistic fault displacement hazard assessment software has been developed by consultants that perform this type of analysis \citep{wells2014probabilistic}, it is not available publicly.\\
+
+\noindent\textbf{OpenSees}\\
+The Open System for Earthquake Engineering Simulation (OpenSees) is an open-source software framework capable of performing pseudostatic and dynamic analyses with the Finite Element Method. OpenSees is maintained by the Pacific Earthquake Engineering Research (PEER) Center and actively developed by researchers at various research institutions. Several commonly used soil constitutive models have been implemented in OpenSees and additional models can be added based on user needs. The framework is capable of running on HPC systems and supports MacOS, Linux, and Windows operating systems.\\
+
+\noindent\textbf{YADE}\\
+Yade is an extensible open-source framework focused on the Discrete Element Method (DEM)\citep{yade2005doc} that can be used to perform pseudostatic and dynamic analyses. Yade is capable of performing three-dimensional simulations with various particle shapes and contact models. Since it is open-source, it is possible to add different particle shapes and contact models as needed. Currently Yade supports Linux operating systems. In terms of parallel computing capability, shared memory parallelism using OpenMP has been implemented though distributed memory capability using MPI is under development. More information, including the source code, can be found on the \href{https://yade-dem.org/doc/}{Yade homepage}.\\
+
+\noindent\textbf{LIGGGHTS}\\
+LIGGGHTS, an open-source (at least partially) Discrete Element Method package, is capable of performing both pseudostatic and dynamic analyses. LIGGGHTS originated as an expansion of the granular package in \href{https://lammps.sandia.gov/}{LAMMPS}, an open-source molecular dynamics framework developed and maintained by Sandia National Laboratories. Some functionality within LIGGGHTS is not available in the public version. The source code for the public version is available at on \href{https://github.com/CFDEMproject/LIGGGHTS-PUBLIC}{on GitHub}.\\
+
+\noindent\textbf{LMGC90}\\
+ LBMC90 is an open-source framework developed and maintained by the Mechanical and Civil Engineering Laboratory (LMGC), a research laboratory of the University of Montpellier and of the French National Center for Scientific Research (CNRS). The software implements the Discrete Element Method (DEM) with non-smooth contact dynamics. More information is available on the \href{http://mimetics-engineering.fr/index.php/en/lmgc90-2/}{LMGC90 homepage}.\\
+
+\noindent\textbf{FLAC}\\
+Fast Lagrangian Analysis of Continua (FLAC), from Itasca Consulting Group, has been used to perform pseudostatic and dynamic surface fault rupture analyses. FLAC implements the Finite Difference Method and models the soil as a continuum. In addition to the pre-programmed soil consitutive models available in FLAC, users can provide customized soil constitutive models either as pre-compiled dynamic libraries or by using the scripting language FISH. This software is proprietary, closed-source and does not support HPC deployment. Currently, FLAC supports only Windows-based operating systems.\\
+
+\noindent\textbf{PFC}\\
+Particle Flow Code (PFC) is a general purpose Discrete Element Method (DEM) framework. PFC can model the granular nature of soil and has been used for pseudostatic analyses of surface fault rupture in sand. PFC is capable of performing either two-dimensional or three-dimensional analyses using various contact models. User-defined contact models can be input using either FISH scripts or pre-compiled dynamic libraries. Currently, PFC supports only Windows-based operating systems and is not HPC capable. The software is proprietary and closed-source.\\
+
+\noindent\textbf{PLAXIS}\\
+PLAXIS, now part of Bentley Systems, is a Finite Element Method software package that can be used to perform pseudostatic and dynamic analyses. Custom soil constitutive models can be implemented within the platform. PLAXIS is proprietary and closed-source. Currently, it is not HPC capable and supports only Windows-based operating systems.\\
+
+\noindent\textbf{General FEM solvers}\\
+LS-Dyna and ABAQUS, both proprietary, closed-source general Finite Element Methods solvers, have been used successfully for large-scale pseudostatic and dynamic analyses. Custom material models, such as UBCSAND, can be implemented in these frameworks. Depending on the license purchased, LS-Dyna and ABAQUS are capable of running on HPC systems. LS-Dyna supports Unix, Linux, and Windows-based operating systems and is currently available on DesignSafe. ABAQUS currently supports Linux and Windows-based operating systems.
+
+
+%Sections 5.1 and 5.2 list relevant software available to simulate earthquake surface fault rupture. It shows which software supports which operating systems, and whether it is open source. Note: there are no software packages available for the closed-form procedures; probabilistic fault displacement hazard assessment software has been developed by consultants who perform this type of analyses (e.g., Wells and Kulkarni 2014).
+
+%The software listed in Sections 5.1 and 5.2 can be used to perform either a pseudostatic or dynamic analysis. FLAC and PFC from Itasca Consulting Group have been used to perform both static and dynamic analyses. FLAC implements the Finite-Difference Method while PFC is based on the Discrete-Element Method (DEM). In general, Itasca software is Windows-based and closed-source software. In addition to the software offered by Itasca, the geotechnical FEM software suite PLAXIS is also able to perform dynamic and pseudostatic analyses, though it is also proprietary, closed-source, and restricted to Windows. General FEM solvers, such as LS-Dyna and ABAQUS, support user-defined constitutive models and have been used successfully for large-scale pseudostatic and dynamic analyses, but these programs are proprietary. The open-source FEM package OpenSees is capable of performing pseudostatic and dynamic simulations, and is supported on MacOS, Windows, and Linux operating systems. LIGGGHTS, an open-source (at least partially) DEM package, is capable of performing both pseudostatic and dynamic analyses. Some functionality within LIGGGHTS is not available in the public version. The source code for the public version is available at https://github.com/CFDEMproject/LIGGGHTS-PUBLIC.
+
+%\end{document}

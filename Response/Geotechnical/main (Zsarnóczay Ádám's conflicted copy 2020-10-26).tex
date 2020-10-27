@@ -1,0 +1,137 @@
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for your "contribution" to a contributed volume
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[graybox]{svmult}
+%
+%% choose options for [] as required from the list
+%% in the Reference Guide
+%
+%\usepackage{mathptmx}       % selects Times Roman as basic font
+%\usepackage{helvet}         % selects Helvetica as sans-serif font
+%\usepackage{courier}        % selects Courier as typewriter font
+%\usepackage{type1cm}        % activate if the above 3 fonts are
+                             % not available on your system
+%
+%\usepackage{makeidx}         % allows index generation
+%\usepackage{graphicx}        % standard LaTeX graphics tool
+%                             % when including figure files
+%\usepackage{multicol}        % used for the two-column index
+%\usepackage[bottom]{footmisc}% places footnotes at page bottom
+%
+%% see the list of further useful packages
+%% in the Reference Guide
+%
+%\makeindex             % used for the subject index
+%                       % please use the style svind.ist with
+%                       % your makeindex program
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\begin{document}
+
+\title{Geotechnical Systems}
+% Use \titlerunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+\author{
+    \textbf{Pedro Arduino}}
+\tocauthor{}
+\authorrunning{Arduino}
+% Use \authorrunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+%\institute{Name of First Author \at Name, Address of Institute, %\email{name@email.address}
+%\and Name of Second Author \at Name, Address of Institute %\email{name@email.address}}
+%
+% Use the package "url.sty" to avoid
+% problems with special characters
+% used in your e-mail or web address
+%
+\maketitle
+
+Problems in geotechnical earthquake engineering often involve complex geometry and boundary conditions. Materials comprising geotechnical media behave almost always in a nonlinear fashion. Moreover, soil is made of three phases, and interactions between these phases play an important role in the global response, making theories even more complicated. Interaction of structural foundations (e.g., bridges, abutments, or buildings) with the surrounding soil is also a major aspect to consider in geotechnical earthquake analysis and design. Natural material inhomogeneity caused by the way soil is deposited, as well as human inﬂuence, contributes to the complexity of the problem. In addition, the dynamic nature of earthquakes and their eﬀects can rarely be considered in simpliﬁed models while preserving all their important aspects.
+
+To address these problems, numerical analysis techniques have become the most viable method of analysis for design and research purposes. In describing the state-of-the-art in numerical modeling in geotechnical engineering, it is necessary to discuss each one of the aforementioned aspects; i.e., numerical methods, coupled formulations, constitutive models, interface elements, boundary and initial conditions, and corresponding verification and validation efforts. A list of common geotechnical codes used in geotechnical earthquake engineering is provided below. Although incomplete, this list identifies several common aspects. A few notes on research gaps and needs complete this section. 
+
+
+\section{Numerical Methods}
+% I used numbers for these section labels to save time because I expect that the structure of this chapter might change significantly. Eventually, I suggest using more descriptive labels by replacing the numbers with text.
+\label{sec:resp_geotech_1}
+
+Among many other methods of analysis, the finite element method (FEM), finite difference method (FDM), the material point method (MPM), and smooth particle hydrodynamics (SPH) are used in different geotechnical earthquake engineering applications. Of these, the FEM and FDM are most common in geotechnical practice and research. Commercial codes like PLAXIS, FLAC, LSDYNA, and ABAQUS (to mention a few) and open-source codes like OpenSees, FEAP, and Real-ESSI are examples of numerical frameworks that offer dedicated geotechnical capabilities for earthquake applications. When considering problems dominated by large deformations, e.g., in the case of debris flows or tailing-dam run outs, then meshless techniques, e.g., MPM and SPH, provide the necessary functionality to account for these conditions. MPM codes commonly used in research and practice include UINTA, ANURA3D and   For 1D wave propagation, equivalent linear methods continue to be a common choice, with “shake-like” tools, e.g., ProShake, Shake200, and DeepSoil (EL), being popular in practice. Most FEM tools offer 1D, 2D, and 3D capabilities. Finite-element formulations that reduce computational demand via mesh accuracy, eﬀective assimilation of nonlinear constitutive models, or general eﬃciency are ideal in this context. Today, extensive research is being devotPFC, Yade, ed to establish ﬁnite-element formulations for solid mechanics that are equally applicable to any arbitrarily-posed problem.
+
+In recent years the discrete element method (DEM) and discontinuous deformation analysis (DDA) have gained applicability in geotechnical earthquake engineering; in particular for understanding phenomena at micro- and meso-scales and homogenization to the macro-scale. Popular DEM and DDA tools include PFC, LS-DEM, Yade and, LIGGGHTS.   
+
+\section{Coupled Fluid-Solid Formulations}
+\label{sec:resp_geotech_2}
+
+Geotechnical engineering requires the evaluation of total and effective stresses. Total stress analysis is based on conventional single-phase formulations. Eﬀective stress analysis requires a method to account for the interaction between the pore ﬂuid and soil skeleton in saturated or partially saturated soil. Various approaches derived from the early work of Biot (1941, 1956, 1962) \cite{Biot41, Biot56, Biot62} and others including Borja (2005) and Ehlers (2006), had been developed and added to multiple numerical settings, each one adding ﬂuid degrees-of-freedom to the system according to diﬀerent assumptions. Three primary numerical approaches are discussed by Zienkiewicz and Shiomi (1984). These approaches are the u-p-U element formulation (which uses the full system of equations developed for the saturated problem), the u-U formulation (which is a simpliﬁcation of the u-p-U approach that assumes incompressibility for each medium), and the u-p approach (which simpliﬁes the system by assuming that ﬂuid acceleration can be neglected). The u-p approach is most common in commercial codes like PLAXIS and FLAC, and is also available in OpenSees and Real-ESSI. These formulations have also found application in MPM codes, although at this level it is important to completely separate the phases. Extensive research is currently ongoing in this field. 
+
+\section{Treatment of Soil-Foundation Interfaces}
+\label{sec:resp_geotech_3}
+
+Interaction of structural components with the surrounding soil is another major concern of geotechnical engineering. This issue arises in many geotechnical problems whether related to retaining soil mass, foundation engineering, underground construction, or even soil improvement systems; and is one of the most important and challenging aspects of geotechnical numerical modeling since it is inherently nonlinear and complex. Diﬀerent approaches have been proposed over the past 40 years that range from simple interaction springs (p-y, t-z,and Q-z springs) to methods based on contact mechanics (thin layer and interface elements); different codes address the problem differently. Simpliﬁed models rely heavily on empirical methods, and extrapolating these methods to more complicated and general cases requires extreme scrutiny of the problem at hand and method used. The more advanced the methods for modeling soil–structure interaction are, the more complex and costly they become in terms of computations. PLAXIS, FLAC, ABAQUS, and Real-ESSI include interface elements, and OpenSees offers a suite of elements, including nonlinear springs, interface elements, and new developments to characterize beam–solid interaction. Coupling between structural systems and geotechnical domains rely on the appropriateness of these elements. Continued developments are constantly underway in this field. 
+
+\section{Soil Constitutive Modeling}
+\label{sec:resp_geotech_4}
+
+Soil constitutive models in geotechnical engineering have ranged from relatively simple von Mises, Drucker-Prager, and Mohr-Coulomb plasticity models to more sophisticated alternatives as computing power has increased. Cam-Clay and other critical-state-based plasticity models have been of particular interest in geotechnical engineering. Most these models use isotropic hardening and are useful in static and quasi-static applications. All geotechnical FE codes (PLAXIS, FLAC, OpenSees, Real-ESSI, etc.) include different implementations of these models. For dynamic analysis, kinematic hardening is required to capture the cyclic response. For this purpose, three families of models have been proposed: multi-yield surface models, bounding surface models, and multiple-strain mechanisms models. These approaches differ in the way kinematic hardening is treated. Multi-surface plasticity models (Prevost, 1977, 1985a; Elgamal et al., 2003) have been used to represent the constitutive behavior of both cohesive and cohesionless soils in total and eﬀective stress analyses, respectively, and are available in OpenSees. Bounding surface models were first introduced in geotechnical engineering by Dafalias and coworkers, and extended with critical-state concepts by Manzari and Dafalias to represent the response of liquefiable soils. This model has been implemented and used in OpenSees, Real-ESSI and FLAC. Variations of this model, (PM4Sand and PM4Silt) have been proposed to better represent aspects of the observed soil response in sands and silts. These models are available in FLAC, PLAXIS, and OpenSees. The multi-mechanisms approach is defined in strain space and has been used in Japan, most particularly in its implementation in the Cocktail model proposed by Iai et al. (2011, 2013).
+
+\section{Boundary and Loading Conditions}
+\label{sec:resp_geotech_5}
+
+Boundary conditions for the soil continuum require somewhat greater care to ensure appropriate results. At a minimum, the boundaries must be ﬁxed such that all rigid-body displacement modes are restricted. In static or pseudo-static analyses, the main concern is related to diminishing the eﬀects of the boundary on the portions of the model that are of primary interest. Boundary eﬀects can be controlled for an analysis of a soil–foundation system by extending the limits of the soil continuum away from the location of the foundation elements. Minimizing boundary eﬀects is also critical in dynamic analysis; however, devising proper boundary conditions is more diﬃcult than in static or pseudo-static cases. The particular method used for this purpose depends upon the objective of the numerical model. When creating a numerical model for a site in the ﬁeld, the assumption of rigid boundaries is typically no longer valid. Several strategies have been proposed to accommodate the eﬀect of a semi-inﬁnite subsurface in a numerical model of ﬁnite size. The use of periodic boundary conditions, in which the lateral extents of the model share translational degrees-of-freedom, is one such approach that attempts to appropriately account for the free-ﬁeld response of the soil domain. 
+
+Lysmer and Kuhlemeyer (1969) introduced a technique to capture a transmitting boundary through the use of viscous dashpots. By deﬁning the viscous response of the dashpots based on the density and the pressure and shear-wave velocities of the material beyond the boundary, this approach appropriately captures the outward propagation of wave energy in the numerical model as long as the waves impinge in a near-normal orientation to the boundary. When deﬁning transmitting boundaries using the Lysmer and Kuhlemeyer (1969) method, accelerations are not directly applied to the model. Instead, an effective force is applied using the technique developed by Joyner and Chen (1975). This effective force is proportional to the input velocity and the constitutive properties of the material beyond the boundary. This approach is commonly used in numerical analysis for geotechnical problems to account for the compliance between the soil domain of the model and the semi-inﬁnite media outside of the considered domain.
+
+Better results can be attained using a perfectly match layer (PML), which is an artificial absorbing layer for wave equations commonly used to truncate computational regions in numerical methods to simulate problems with open boundaries, especially in finite-differences and finite-element methods (Basu et al., 2004; Bindel et al., 2005). PML’s are designed so that waves incident upon the PML do not reflect back to the medium at the interface. One caveat with PMLs is that they are only reflectionless for the exact, continuous wave equation. Once the wave equation is discretized for simulation on a computer, some small numerical reflections appear (which vanish with increasing resolution). To mitigate this problem, the required PML absorption coefficient “sigma” is typically turned on gradually from zero (e.g., quadratically) over a short distance on the scale of the wavelength of the wave. In any case PMLs have been shown to produce better results than LK dashpots.
+
+Finally, another technique for use in geotechnical simulations to properly account for the diﬀerences in wave behavior inside the ﬁnite soil domain represented by the model and the wave behavior in the semi-inﬁnite soil medium is the domain reduction method (Bielak et al., 2003; Yoshimura et al., 2003). The domain reduction method (DRM) consists of two phases. The initial phase involves a background geological model that includes both the source of the earthquake and the region of interest. This background model is used to compute the free-ﬁeld displacement wave-ﬁeld demands on the boundary of the smaller region of interest. The second phase involves only the reduced region of interest. In this phase, eﬀective seismic forces are applied at the boundary of the local region. These eﬀective forces are derived from the boundary displacement demand obtained in the initial phase. In general, these methods require coupling data from different codes or accessing databases with recorded or synthetic motions. This is of particular importance in geotechnical earthquake engineering. The propagation of waves in geologic media can be simulated using codes like broad band platform (BBP) based on Green functions and stochastic analysis. In general, these codes cannot represent the extreme soil nonlinearity observed at the surface where FE methods are more appropriate. When the response of a basin is of interest, FE and FD codes, like Hercules or SW4, can be used to simulate the propagation of waves in large heterogeneous geologic domains, but they require extensive HPC resources to run properly. Independent of the tool used, coupling between these codes and conventional FE analysis is required. This is an area that fits perfectly the SimCenter vision, and efforts are underway to facilitate these simulations in frameworks like the NHERI DesignSafe.
+
+\section{Initial Conditions}
+\label{sec:resp_geotech_6}
+
+Representation of the initial state of stress and initial stress history is of paramount importance in geotechnical simulations. The soil response (i.e., stress, strain) greatly depends on the initial conditions. Several approaches can be used to create an appropriate initial state. The typical method is to apply gravitational body forces to the elements in the numerical model prior to any further analysis steps. Most tools allow taking this a step further by using a staged modeling procedure in which gravitational stresses are ﬁrst developed in a base soil mesh. The stress history of the the soil (i.e., its overconsolidation ratio) should also be specified so the soil constitutive model responds correctly when first loaded. After this stage, soil elements can be removed or added and replaced by foundation or additional soil elements, and gravitational stresses are developed for the new conﬁguration.
+
+\section{Verification and validation} 
+\label{sec:resp_geotech_7}
+
+Over the years, as numerical formulations have become more refined they have also become more elaborated, adding complexity to their implementation and use. Therefore, before a newly proposed tool, or model, can be used in research and practice, verification and validation (\emph{V\&V}) processes are necessary. \textbf{\emph{Verification}} is meant to identify and remove programming errors in computer codes and verify numerical algorithms. \textbf{\emph{Validation}} is meant to assess the accuracy at which a numerical model represents reality and includes the essential features of a real model. In contemporary numerical modeling, \emph{V\&V} has become an integral part of software development. Today, all numerical tools undergo exhaustive and continuous \emph{V\&V} processes. Recent comprehensive \emph{V\&V} efforts in geotechnical earthquake engineering include Prenolin, LEAP, and the NGL project. 
+
+\section{Research Gaps and Needs}
+\label{sec:resp_geotech_8}
+
+Development and implementation of advanced constitutive models for geotechnical earthquake engineering applications continue to be a challenge. In addition to model formulation and functionality, robustness and implementation efficiency are of paramount importance.  
+
+Formulations capable of representing multi-phase materials including mixing and separation and large deformations continue to limit the applications of numerical tools to simplified scenarios and conditions. Recent developments in FEM and meshless techniques depict (lay out) a promising forecast, although much more work is needed.  
+
+Performing adequate SSI for major facilities continues to be a challenge and gap. In general, older codes (1970's vintage), continue to be the preferred option. Although very useful, these codes are based on simplified assumptions, and do not offer real high performance computing capabilities, so one is continually forced towards model size reduction compromises.
+
+It is still common to idealize incident ground motions as pure vertically propagating shear and compression waves which is not correct. The research community has engaged time-domain nonlinear SSI, but, there is still a lot of work to do to develop appropriate modeling solutions for regional simulations. This is really important for major bridges founded on soft and saturated soils and selected buildings as well.
+
+Integration of capabilities to execute regional-scale simulations of hazard and risk continues to be a challenge. Software descriptions for earthquake simulations are pretty much stand-alone and don't discuss the end-to-end coupling needed for regional simulations. It is important to start having discussions on approaches, challenges and gaps for effective regional-scale simulation. This should include computational workflow strategies for handling massive amounts of data (both input and output) and rigorously coupling of geophysics and structural models.
+
+One of the important advancements in earthquake simulations has been the expansive availability of parallel platforms to the community. As a result, our ability to compute ground motions to ever higher frequencies is rapidly increasing. A challenge will be how to address geologic model uncertainties - ie how to select optimal subsurface models.
+
+
+\section{Software and Systems}
+\label{sec:eq_landslide_tools}
+
+The following list includes software mentioned in this section and commonly used in geotechnical earthquake engineering applications:\\
+
+\noindent\textbf{OpenSees}\\
+The Open System for Earthquake Engineering Simulation (OpenSees) is an open-source software framework capable of performing fully non-linear dynamic effective stress analyses. OpenSees is maintained by the Pacific Earthquake Engineering Research (PEER) Center and actively developed by researchers at various research institutions. Several commonly used soil constitutive models have been implemented in OpenSees and additional models can be added based on user needs. The framework is capable of running on HPC systems and supports MacOS, Linux, and Windows operating systems.\\
+
+\noindent\textbf{FLAC}\\
+Fast Lagrangian Analaysis of Continua (FLAC), from Itasca Consulting Group, is a proprietary finite-difference based software package capable of performing dynamic nonlinear effective stress analyses. FLAC allows users to import custom soil constitutive models either as pre-compiled dynamic libraries or by using the scripting language FISH. FLAC is not capable of executing on HPC systems and is closed source. Currently only Windows-based operating systems are supported.\\
+
+\noindent\textbf{PLAXIS}\\
+PLAXIS, now part of Bentley Systems, is a finite element software package that can be used to perform dynamic non-linear effective stress analyses. Custom soil constitutive models can be implemented in within the platform. PLAXIS is prorprietary and closed-source. Currently, it is not HPC capable and supports only Windows-based operating systems.\\
+
+\noindent\textbf{General FEM solvers}\\
+LS-Dyna and ABAQUS, both proprietary general Finite Element Method solvers, are capable of fully non-linear dynamic effective stress analyses. Custom material models, such as those required for modeling dynamic soil response, can be implemented in these frameworks. Depending on the license purchased, LS-Dyna and ABAQUS are capable of running on HPC systems. LS-Dyna supports Unix, Linux, and Windows-based operating systems and is currently available on DesignSafe. ABAQUS currently supports Linux and Windows-based operating systems.\\

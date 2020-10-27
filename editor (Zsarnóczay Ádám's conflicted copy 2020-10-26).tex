@@ -1,0 +1,139 @@
+%%%%%%%%%%%%%%%%%%%%%%%% editor.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for the contributions of a "contributed volume"
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[graybox, envcountchap, tocaftauthskip, 12pt]{svmult}
+
+%% use geometry to reduce the margins
+\usepackage{geometry}
+\geometry{
+    letterpaper,
+    heightrounded,
+    hratio=1:1
+}
+
+%% set the reference style
+\usepackage{natbib}
+\bibliographystyle{abbrvnat}
+\setcitestyle{authoryear,open={(},close={)}}
+\setlength{\bibsep}{5pt}
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+%\usepackage{type1cm}        % activate if the above 3 fonts are 
+                             % not available on your system
+                             
+\usepackage{comment}
+
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+\usepackage{newtxtext}       % 
+\usepackage{newtxmath}       % selects Times Roman as basic font
+
+\usepackage{placeins}        % allows the use of floatbarriers
+\usepackage{tabularx}        % creates tables that automatically adjust to contents
+\usepackage{booktabs}        % allows the use of \midrule 
+\usepackage{soul}            % highlighting
+
+% see the list of further useful packages in the Reference Guide
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{import}
+
+\begin{document}
+
+\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\include{editor/dedication}
+%\include{editor/foreword}
+\include{editor/preface}
+\include{editor/acknowledgement}
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+\include{editor/contriblist}
+\include{editor/acronym}
+
+\mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{editor/introduction}
+
+\include{Hazard/main}
+\import{Hazard/Earthquake_Ground_Shaking/}{main}
+\import{Hazard/Earthquake_Surface_Rupture/}{main}
+\import{Hazard/Earthquake_Liquefaction/}{main}
+\import{Hazard/Earthquake_Landslide/}{main}
+\import{Hazard/Storm_Wind/}{main}
+\import{Hazard/Storm_Surge/}{main}
+\import{Hazard/Tsunami/}{main}
+
+\include{Response/main}
+\import{Response/Structural/}{main}
+\import{Response/Geotechnical/}{main}
+\import{Response/CFD_Wind/}{main}
+\import{Response/CFD_Water/}{main}
+
+\include{Performance/main}
+\import{Performance/Buildings/}{main}
+\import{Performance/Transportation/}{main}
+\import{Performance/Pipelines/}{main}
+\import{Performance/Power/}{main}
+
+\include{Recovery/main}
+\import{Recovery/Communities/}{main}
+\import{Recovery/Infrastructure_Systems/}{main}
+\import{Recovery/Housing/}{main}
+\import{Recovery/Businesses/}{main}
+
+\include{CrossCutting/main}
+\import{CrossCutting/Uncertainty/}{main}
+\import{CrossCutting/AI/}{main}
+
+%
+
+\backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{partbacktext}
+\part{Appendix}
+
+\appendix
+\include{editor/appendix}
+
+\end{partbacktext}
+
+\include{editor/glossary}
+
+\bibliographystyle{abbrvnat}
+\bibliography{
+    Hazard/Earthquake_Surface_Rupture/references,
+    Hazard/Earthquake_Liquefaction/references,
+    Hazard/Earthquake_Landslide/references,
+    Hazard/Storm_Surge/references,
+    Response/Geotechnical/references,
+    Recovery/references,
+    references
+}
+
+\printindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
