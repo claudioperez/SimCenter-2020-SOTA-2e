@@ -31,9 +31,11 @@
     6. NGA-West2
     7. FEMA Mitigation Division
     8. Hazard/Storm_Wind/main Fang et al., 2018b
-    9. CrossCutting/AI: "Market Research Future, 2019" / "future2019global"
+    9. CrossCutting/AI: `Market Research Future, 2019` , `future2019global`
     10. e.g.
     11. NOAA Reanalysis Data 2018
     12. [for example
-    13. MISSING: "Nickel et al., 2016", AI
+    13. MISSING: `Nickel et al., 2016`, AI
     14. all of `CFD_Water.tex`
+    15. all of `Response/Structural`
+    16. MISSING: `(Berger et al., 2011, Mandli et al., 2014)`
