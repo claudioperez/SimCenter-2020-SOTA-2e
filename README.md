@@ -18,9 +18,7 @@
     - No. of substitution commands executed
     - No. of citations with no matches
 7. Run `citecmd.py` to wrap references in appropriate commands.
-
 8. Run `grep-bib.sh` to identify remaining raw references.
-9. Compile full `.tex` project and check for any outliers by hand
 10. Loop over pre-existing `.bib` files replace changed citekeys
 11. Check special cases:
     1. Error detecting command "*"
@@ -31,11 +29,40 @@
     6. NGA-West2
     7. FEMA Mitigation Division
     8. Hazard/Storm_Wind/main Fang et al., 2018b
-    9. CrossCutting/AI: `Market Research Future, 2019` , `future2019global`
     10. e.g.
     11. NOAA Reanalysis Data 2018
     12. [for example
-    13. MISSING: `Nickel et al., 2016`, AI
-    14. all of `CFD_Water.tex`
-    15. all of `Response/Structural`
-    16. MISSING: `(Berger et al., 2011, Mandli et al., 2014)`
+    13. CrossCutting/AI:  `Market Research Future, 2019` , `future2019global`
+    14. Duenas-Osorio et al., 2007
+    15. Change et al., 2000
+    16. Miller and Baker, 2016
+12. Finalize wrapping citations
+13. Color citations and proof read
+
+## Missing
+
+- CrossCutting/AI:
+  - Nickel et al., 2016
+- Hazards/Tsunami
+  - all
+- Hazards/Storm_Surge: 
+  - `Berger et al., 2011` 
+  - `Mandli et al., 2014`
+- Response/CFD_wind
+  - All
+- Response/CFD_water
+  - All
+- Response/Structural
+  - All
+
+
+## Questions
+
+### CrossCutting
+
+#### AI
+
+- Hyperlink formatting?
+
+### Appendix
+
