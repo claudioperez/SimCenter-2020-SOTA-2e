@@ -1,0 +1,107 @@
+import os, logging
+from typing import List, Tuple
+
+import yaml, coloredlogs
+
+logger = logging.getLogger(__name__)
+coloredlogs.install()
+
+# find top-dir -type f -name 'file*.txt' \
+#     -exec grep -q 'PATTERN' {} \; \
+#     -exec vim -c '%s/PATTERN/REPLACEMENT/gc' -c 'wq' {} \;
+
+# for fname in file*.tex; do
+#     grep -q '{pattern}' "$fname" && vim -c '%s/{pattern}/{replacement}/gc' -c 'wq' "$fname"
+# done
+
+
+def generate_patterns(ref: dict)->str:
+    if "author" in ref:
+        if len(ref["author"]) == 1:
+            if "family" in ref["author"][0]:
+                pass
+                # return f"{ref['author'][0]['family']}, {ref['issued'][0]['year']}"
+                # return f"{ref['author'][0]['family']} {ref['issued'][0]['year']}"
+                # return f"{ref['author'][0]['family']}, \\({ref['issued'][0]['year']}\\)"
+                # return f"{ref['author'][0]['family']} \\({ref['issued'][0]['year']}\\)"
+            else:
+                pass
+                # return f"{ref['author'][0]['literal']}, {ref['issued'][0]['year']}"
+                # return f"{ref['author'][0]['literal']} {ref['issued'][0]['year']}"
+                # return f"{ref['author'][0]['literal']}, \\({ref['issued'][0]['year']}\\)"
+                # return f"{ref['author'][0]['literal']} \\({ref['issued'][0]['year']}\\)"
+        elif len(ref["author"])==2:
+            pass
+            # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']}, {ref['issued'][0]['year']}"
+            # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']} {ref['issued'][0]['year']}"
+            # # text citations - year in parentheses
+            return f"{ref['author'][0]['family']} and {ref['author'][1]['family']}, ({ref['issued'][0]['year']})"
+            # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']} ({ref['issued'][0]['year']})"
+        elif len(ref["author"]) > 2:
+            if "family" in ref["author"][0]:
+                pass                                                                                                            #    et al         with "and"
+                # return f"{ref['author'][0]['family']} et al\\., {ref['issued'][0]['year']}"                                   # period, comma
+                # return f"{ref['author'][0]['family']} et al\\. {ref['issued'][0]['year']}"                                    # period
+                # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']} et al\\., {ref['issued'][0]['year']}"  # period, comma       and
+                # return f"{ref['author'][0]['family']} et al\\., ({ref['issued'][0]['year']})"
+                return f"{ref['author'][0]['family']} et al\\. ({ref['issued'][0]['year']})"
+            else:
+                pass
+
+def generate_patterns2(ref: dict)->str:
+    patterns = [] 
+    if "author" in ref:
+        if len(ref["author"]) == 1:
+            if "family" in ref["author"][0]:
+                patterns.append(f"{ref['author'][0]['family']}, {ref['issued'][0]['year']}")
+                patterns.append(f"{ref['author'][0]['family']} {ref['issued'][0]['year']}")
+                # patterns.append(f"{ref['author'][0]['family']}, {ref['author'][0]['given']} ({ref['issued'][0]['year']})")
+            else:
+                return f"{ref['author'][0]['literal']}, {ref['issued'][0]['year']}"
+        elif len(ref["author"])==2:
+            return f"{ref['author'][0]['family']} and {ref['author'][1]['family']}, {ref['issued'][0]['year']}"
+        elif len(ref["author"]) > 2:
+            if "family" in ref["author"][0]:
+                return f"{ref['author'][0]['family']} et al\\., {ref['issued'][0]['year']}"
+            else:
+                pass
+def generate_script(pattern:str, replacement:str)->str: return f"""
+find . -type f -name '*.tex' \\
+    -exec grep -q "{pattern}" {{}} \\; \\
+    -exec nvim -c "%s/{pattern}/{replacement}/gc" -c 'wq' {{}} \\;
+"""
+
+def dry_script(pattern:str, replacement:str)->str: return f"""
+find . -type f -name '*.tex' \\
+    -exec grep -l "{pattern}" {{}} \\; \\
+    -exec echo "%s/{pattern}/{replacement}/gc" \\;
+"""
+
+
+def main():
+
+    with open("refs.yaml", "r") as f:
+        refs = yaml.load(f,Loader=yaml.Loader)["references"]
+
+    rng = refs[:]
+    n = len(rng)
+    for i, ref in enumerate(rng):
+        logger.info(f"Entering ref {ref['id']} ({i}/{n})")
+        patterns = [generate_patterns(ref)]
+        for pattern in patterns:
+            # str_text = "%r"%pattern
+            # pattern = str_text[1:-1]
+            if pattern:
+                if "'" in pattern:
+                    logger.warning("Apostrophe found in {}".format(ref["id"]))
+                    # pattern = pattern.replace("'","'\"\'\"\'")
+                    logger.warning(pattern)
+                # script: str = dry_script(pattern, ref["id"])
+                script: str = generate_script(pattern, ref["id"])
+                # script: str = generate_script(pattern, ref["id"])
+                logger.info(f"Executing script: {script}")
+                os.system(script)
+            else:
+                logger.warning(f"No pattern generated for {ref['id']}")
+
+if __name__=="__main__": main()
