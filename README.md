@@ -23,7 +23,7 @@
 9. Compile full `.tex` project and check for any outliers by hand
 10. Loop over pre-existing `.bib` files replace changed citekeys
 11. Check special cases:
-    1. Error dececting command "*"
+    1. Error detecting command "*"
     2. FEMA/HAZUS/ATC references
     3. ISO (i.s.o)
     4. NIC
