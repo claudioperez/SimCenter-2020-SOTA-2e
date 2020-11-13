@@ -1,0 +1,210 @@
+name 00texlive.installation
+category TLCore
+depend opt_autobackup:1
+depend opt_backupdir:tlpkg/backups
+depend opt_create_formats:1
+depend opt_desktop_integration:1
+depend opt_file_assocs:1
+depend opt_generate_updmap:0
+depend opt_install_docfiles:0
+depend opt_install_srcfiles:1
+depend opt_location:http://mirror.ctan.org/systems/texlive/tlnet
+depend opt_post_code:1
+depend opt_sys_bin:/usr/local/bin
+depend opt_sys_info:/usr/local/share/info
+depend opt_sys_man:/usr/local/share/man
+depend opt_w32_multi_user:1
+depend setting_available_architectures:
+depend setting_usertree:1
+
+name comment
+category Package
+revision 41927
+shortdesc Selectively include/exclude portions of text
+longdesc Selectively include/exclude pieces of text, allowing the user
+longdesc to define new, separately controlled, comment versions. All
+longdesc text between \comment ... \endcomment or \begin{comment} ...
+longdesc \end{comment} is discarded. The opening and closing commands
+longdesc should appear on a line of their own. No starting spaces,
+longdesc nothing after it. This environment should work with arbitrary
+longdesc amounts of comment, and the comment can be arbitrary text.
+longdesc Other 'comment' environments are defined and
+longdesc selected/deselected with \includecomment{versiona} and
+longdesc \excludecoment{versionb} These environments are used as
+longdesc \versiona ... \endversiona or \begin{versiona} ...
+longdesc \end{versiona} with the opening and closing commands again on a
+longdesc line of their own.
+containersize 4124
+containerchecksum 36b5b4c4d4345a4fcf706f5040c02c2de52567fae76146a06b7f084d59b12d151e65faba1ee4aeeaebee018d81200c2902feb81ae575de35a68c00fa14ed6ba3
+doccontainersize 535056
+doccontainerchecksum d5a360c6a0c549fee1d46fa0e9c3f9aaaa4b19b30ac48046e736008ddb42393062824950684185175f8ab569cec221bc8f9a798a07623dbe26cc92a3fd6bc72b
+runfiles size=3
+ tex/latex/comment/comment.sty
+catalogue-ctan /macros/latex/contrib/comment
+catalogue-license gpl2
+catalogue-topics cond-comp editorial
+catalogue-version 3.8
+
+name footmisc
+category Package
+revision 23330
+shortdesc A range of footnote options
+longdesc A collection of ways to change the typesetting of footnotes.
+longdesc The package provides means of changing the layout of the
+longdesc footnotes themselves (including setting them in 'paragraphs' --
+longdesc the para option), a way to number footnotes per page (the
+longdesc perpage option), to make footnotes disappear in a 'moving'
+longdesc argument (stable option) and to deal with multiple references
+longdesc to footnotes from the same place (multiple option). The package
+longdesc also has a range of techniques for labelling footnotes with
+longdesc symbols rather than numbers. Some of the functions of the
+longdesc package are overlap with the functionality of other packages.
+longdesc The para option is also provided by the manyfoot and bigfoot
+longdesc packages, though those are both also portmanteau packages.
+longdesc (Don't be seduced by fnpara, whose implementation is improved
+longdesc by the present package.) The perpage option is also offered by
+longdesc footnpag and by the rather more general-purpose perpage
+containersize 5904
+containerchecksum 50d0d02b243936d2455ad2353c0da1b77aab9f8f822033a98062d979b686163b94798784dc6b8496dda3ef38eadbd04a21e153f0fa9a76b499c50159c169fb85
+doccontainersize 325412
+doccontainerchecksum 3a732fe8a1ca364275a7b0849be097e307ba322ff611a650a4625cc47792410b974055c75165b62ec8d5d2a128b0d6a194d798248bcd6bae266c7638ffe67e01
+srccontainersize 19772
+srccontainerchecksum 3489b4c09a145ba19d25120a48368470d65c2407a8c5697946ae669fdd63f0dc7176ea171ccd2a815055a6fc16f02523f7b2ca084c60159c1768a8a3b2eccf11
+srcfiles size=20
+ source/latex/footmisc/footmisc.dtx
+ source/latex/footmisc/footmisc.ins
+runfiles size=7
+ tex/latex/footmisc/footmisc.sty
+catalogue-also endnotes ftnright footmisx
+catalogue-contact-bugs https://github.com/FrankMittelbach/fmitex/issues
+catalogue-ctan /macros/latex/contrib/footmisc
+catalogue-license lppl1.3
+catalogue-topics footnote
+catalogue-version 5.5b
+
+name framed
+category Package
+revision 26789
+shortdesc Framed or shaded regions that can break across pages
+longdesc The package creates three environments: framed, which puts an
+longdesc ordinary frame box around the region, shaded, which shades the
+longdesc region, and leftbar, which places a line at the left side. The
+longdesc environments allow a break at their start (the \FrameCommand
+longdesc enables creation of a title that is "attached" to the
+longdesc environment); breaks are also allowed in the course of the
+longdesc framed/shaded matter. There is also a command \MakeFramed to
+longdesc make your own framed-style environments.
+containersize 7916
+containerchecksum 06f0da36c24ba42959b2176066d3e95f23dfed41753f4e4b07c1f92c4789e68d1b246c61cbdeacbb9c00b6eb990ea2b3ec75dff8ac57845102a867dfdf2c72c7
+doccontainersize 239020
+doccontainerchecksum 1f48ac19f74f5003df88700ff85c072c8a655d4623b82bc3b7c6570a548c0a7b7e97fe292f8557a72188c0047fc28e280bc3ab65f58559804fa78e89317fd67e
+runfiles size=6
+ tex/latex/framed/framed.sty
+catalogue-also mdframed
+catalogue-ctan /macros/latex/contrib/framed
+catalogue-license other-free
+catalogue-topics boxing box-breaking decoration
+catalogue-version 0.96
+
+name ntheorem
+category Package
+revision 27609
+shortdesc Enhanced theorem environment
+longdesc The package offers enhancements for theorem-like environments:
+longdesc easier control of layout; proper placement of endmarks even
+longdesc when the environment ends with \end{enumerate} or
+longdesc \end{displaymath} (including support for amsmath
+longdesc displayed-equation environments); and support for making a list
+longdesc of theorems, analagous to \listoffigures.
+containersize 9652
+containerchecksum aabab9d6f1a5d9e9bd2ee2ec4b9ca8200098a8f3dc786b9c06d4b0e00431dd66f32a254d452bce7e1bb595454e178dcdd71d724b8d835b6f1c9ad9de41107295
+doccontainersize 420704
+doccontainerchecksum fdea81cedc9ceca6ee29ee006867a05f018f210db2cb59c763adc4bc15db65a7e96ffc93bcd576a4c1a50e7e55d4b199132371686538216eba6fed65dce77ba1
+srccontainersize 46428
+srccontainerchecksum bb0eb98e3344c4be782d113a0e5f1c91d615a5530e1c0a786938b1cf608fe8828d59d365c0d1011e62517f0f76139ea13bad1857f2e1315a2b919af1de3335d2
+srcfiles size=52
+ source/latex/ntheorem/ntheorem.drv
+ source/latex/ntheorem/ntheorem.dtx
+ source/latex/ntheorem/ntheorem.ins
+runfiles size=12
+ tex/latex/ntheorem/ntheorem.std
+ tex/latex/ntheorem/ntheorem.sty
+catalogue-also amsthm thmtools empheq
+catalogue-contact-home http://user.informatik.uni-goettingen.de/~may/Ntheorem/
+catalogue-ctan /macros/latex/contrib/ntheorem
+catalogue-license lppl
+catalogue-topics maths-theorem
+catalogue-version 1.33
+
+name placeins
+category Package
+revision 19848
+shortdesc Control float placement
+longdesc Defines a \FloatBarrier command, beyond which floats may not
+longdesc pass; useful, for example, to ensure all floats for a section
+longdesc appear before the next \section command.
+containersize 2300
+containerchecksum 618eb33f1fce0b089fe111b083b0153c146e0d8abbcfc235a86dc6a698a2fad080f8ac38e04037e06b0e1e2782291ca6d01ae69922d181b26b4c809d6aba262a
+doccontainersize 257616
+doccontainerchecksum 2ac2312083ae8abd3fe3f85da7dc65032a4c6bed4d1778c058120b48292f459d1b77d40e4eb6f0afaf88a5160d4fb0eb7f353ba1d93b7ec672f054e58de4d6f5
+runfiles size=1
+ tex/latex/placeins/placeins.sty
+catalogue-ctan /macros/latex/contrib/placeins
+catalogue-license pd
+catalogue-topics layout float
+catalogue-version 2.2
+
+name soul
+category Package
+revision 56495
+shortdesc Hyphenation for letterspacing, underlining, and more
+longdesc Provides hyphenatable spacing out (letterspacing), underlining,
+longdesc striking out, etc., using the TeX hyphenation algorithm to find
+longdesc the proper hyphens automatically. The package also provides a
+longdesc mechanism that can be used to implement similar tasks, that
+longdesc have to treat text syllable by syllable. This is shown in two
+longdesc examples. The package itself does not support UTF-8 input in
+longdesc ordinary (PDF)LaTeX; some UTF-8 support is offered by package
+longdesc soulutf8
+containersize 5976
+containerchecksum 91b2f65fa3cc1ead06d4450c273d279c8d3428a71fd895beb8b675b76b02139ed8db2d01f64352ed26bd13428c0aef8b0e542d39e8ffe6afb31d05d0f63bdd72
+doccontainersize 308320
+doccontainerchecksum 282fb6039f870e869f650ad2c4523dd4222c9d5c01359c6242c33c2b4d29b494e0c047e67ec44adc0830043ab0594d49e9251c6c9b256ff9709e9764d7432e19
+srccontainersize 35876
+srccontainerchecksum 0dba1d0c988a6e66b34b897337480588da1466c672e9423d2370a18403cdee587916c969b04169f86a1818be27574aec3f26111b8b431338ca93e51436471bf2
+srcfiles size=35
+ source/generic/soul/Makefile
+ source/generic/soul/soul.dtx
+ source/generic/soul/soul.ins
+runfiles size=6
+ tex/generic/soul/soul.sty
+catalogue-ctan /macros/generic/soul
+catalogue-license lppl
+catalogue-topics underline letterspace macro-gen
+catalogue-version 2.4
+
+name xstring
+category Package
+revision 49946
+shortdesc String manipulation for (La)TeX
+longdesc The package provides macros for manipulating strings -- testing
+longdesc a string's contents, extracting substrings, substitution of
+longdesc substrings and providing numbers such as string length,
+longdesc position of, or number of recurrences of, a substring. The
+longdesc package works equally in Plain TeX and LaTeX (though e-TeX is
+longdesc always required). The strings to be processed may contain
+longdesc (expandable) macros.
+containersize 11216
+containerchecksum 82254f103053d91eeea4c6230142de06138c392542cac63731c7b34fec5130984bbdebc29ac3b56998717dca11ad444c44f410215b6b89e6748029721a9daac6
+doccontainersize 656876
+doccontainerchecksum c0c17b82ad0d5aad95d312935e0214a7e5404a23b9a284a56ac92ec9ea936a9bfd3a68a5b01e29c131b7850a3fd3922ac87020166eaf0a7ed9d695dc80d0a931
+runfiles size=13
+ tex/generic/xstring/xstring.sty
+ tex/generic/xstring/xstring.tex
+catalogue-contact-bugs https://framagit.org/unbonpetit/xstring/issues
+catalogue-contact-repository https://framagit.org/unbonpetit/xstring/tree/master
+catalogue-ctan /macros/generic/xstring
+catalogue-license lppl1.3c
+catalogue-topics string
+catalogue-version 1.83
+

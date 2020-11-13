@@ -1,0 +1,28 @@
+name soul
+category Package
+revision 56495
+shortdesc Hyphenation for letterspacing, underlining, and more
+longdesc Provides hyphenatable spacing out (letterspacing), underlining,
+longdesc striking out, etc., using the TeX hyphenation algorithm to find
+longdesc the proper hyphens automatically. The package also provides a
+longdesc mechanism that can be used to implement similar tasks, that
+longdesc have to treat text syllable by syllable. This is shown in two
+longdesc examples. The package itself does not support UTF-8 input in
+longdesc ordinary (PDF)LaTeX; some UTF-8 support is offered by package
+longdesc soulutf8
+containersize 5976
+containerchecksum 91b2f65fa3cc1ead06d4450c273d279c8d3428a71fd895beb8b675b76b02139ed8db2d01f64352ed26bd13428c0aef8b0e542d39e8ffe6afb31d05d0f63bdd72
+doccontainersize 308320
+doccontainerchecksum 282fb6039f870e869f650ad2c4523dd4222c9d5c01359c6242c33c2b4d29b494e0c047e67ec44adc0830043ab0594d49e9251c6c9b256ff9709e9764d7432e19
+srccontainersize 35876
+srccontainerchecksum 0dba1d0c988a6e66b34b897337480588da1466c672e9423d2370a18403cdee587916c969b04169f86a1818be27574aec3f26111b8b431338ca93e51436471bf2
+srcfiles size=35
+ source/generic/soul/Makefile
+ source/generic/soul/soul.dtx
+ source/generic/soul/soul.ins
+runfiles size=6
+ tex/generic/soul/soul.sty
+catalogue-ctan /macros/generic/soul
+catalogue-license lppl
+catalogue-topics underline letterspace macro-gen
+catalogue-version 2.4
