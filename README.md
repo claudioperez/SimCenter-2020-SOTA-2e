@@ -42,17 +42,17 @@
 ## Missing
 
 - CrossCutting/AI:
-  - Nickel et al., 2016
-- Hazards/Tsunami
+  - `Nickel et al., 2016`
+- [ ] Hazards/Tsunami
   - all
 - Hazards/Storm_Surge: 
-  - `Berger et al., 2011` 
+  - `Berger et al., 2011`
   - `Mandli et al., 2014`
-- Response/CFD_wind
+- [ ] Response/CFD_wind
   - All
-- Response/CFD_water
+- [ ] Response/CFD_water
   - All
-- Response/Structural
+- [ ] Response/Structural
   - All
 
 
@@ -63,6 +63,7 @@
 #### AI
 
 - Hyperlink formatting?
+- hyperlinks
 
 ### Appendix
 
