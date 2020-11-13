@@ -1,0 +1,146 @@
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for your "contribution" to a contributed volume
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title{Earthquake - Slope Stability and Landslides}
+% Use \titlerunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+\author{
+    \textbf{Michael Gardner} 
+    \and Jonathan D. Bray
+    \and Chaofeng Wang}
+\tocauthor{}
+\authorrunning{Gardner et al.}
+% Use \authorrunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+%\institute{Name of First Author \at Name, Address of Institute, %\email{name@email.address}
+%\and Name of Second Author \at Name, Address of Institute %\email{name@email.address}}
+%
+% Use the package "url.sty" to avoid
+% problems with special characters
+% used in your e-mail or web address
+%
+\maketitle
+
+Earth structures and natural slopes may experience deformation when subjected to seismic loading. When considering the response of these systems, it is important to first identify whether materials that may lose significant strength as a result of cyclic loading are present. If so, the system may be at risk of a flow slide, typically associated with liquefaction, which may lead to large deformations that can severely compromise an engineered system. Except for a dynamic nonlinear effective stress analysis, the methods presented in this section assume that liquefaction does not occur, and slopes will instead undergo some amount of deformation due to incremental displacements during seismic shaking due to inertial loading.
+
+In the simplest case, a pseudostatic seismic slope stability analysis provides a FS for a given system based on a specified seismic event or hazard, while more advanced methods provide an estimate of the range of seismic permanent displacement anticipated. Regardless of the analytical procedure employed, important aspects to capture in the analysis are the earthquake ground motion, the material properties of the system being considered and its foundation, its geometry, and the initial state of stress and pore-water pressure in the system and its foundation. Much depends on the intensity, frequency content, and duration of the earthquake ground motion, the dynamic resistance of the earth slope, which is defined by its yield coefficient, and the dynamic response characteristics of the earth or waste system being shaken.
+
+\section{Input and Output Data}
+\label{sec:eq_landslide_input_output}
+
+\subsection{Input Data}
+\label{subsec:eq_landslide_input}
+Whether employing a simplified method or performing a dynamic nonlinear effective stress analysis, the required inputs define the 1.) the characteristics of the seismic loading, and 2.) the characteristics of the earth or waste system that have the greatest impact on the overall response. The input data can be classified as follows:\\[0.5em]
+
+\noindent\textbf{Moment Magnitude}\\
+Moment magnitude is a quantitative measure of the earthquake size or magnitude. It is the only magnitude scale that is
+not subject to saturation, as it is based on seismic moment as opposed to the ground shaking level.\\
+
+\noindent\textbf{Spectral Acceleration at the Degraded Period of the Sliding Mass}\\
+Due to material non-linearity, it has been shown that using the spectral acceleration at the degraded period instead of at the initial period of the sliding mass is an optimal intensity measure across a range of fundamental periods for the sliding mass \citep{bray2007simplified}.\\
+
+\noindent\textbf{Arias Intensity}\\
+The Arias Intensity is a ground motion parameter that includes the effects of both amplitude and frequency content while also providing a good measure of the energy associated with a particular ground motion. The computation of Arias Intensity is over the entire duration of the ground motion and, as such, is not sensitive to how duration of strong motion is defined.\\
+
+\noindent\textbf{Peak Ground Acceleration}\\
+Peak ground acceleration (PGA), a measure of the ground motion amplitude, is one of the most commonly used ground motion parameters. The PGA of a motion is taken as the largest absolute value of the vector sum of orthogonal acceleration components.\\
+
+\noindent\textbf{Peak Ground Velocity}\\
+Similarly to PGA, the peak ground velocity (PGV) is a good measure of the ground motion amplitude. Since PGV is less sensitive to higher-frequency components of a ground motion, it is likely a better measure of ground motion amplitude at intermediate frequencies \citep{kramer1996geotechnical}.\\
+
+\noindent\textbf{Initial and Degraded Period of the Sliding Mass}\\
+In some idealized sliding mass models, the dynamic stiffness of the sliding mass is represented by the initial fundamental period while the average reduction in the earth or waste slope being analysed is captured by the degraded period.\\
+
+\noindent\textbf{Seismic Yield Coefficient}\\
+The seismic yield coefficient, $k_y$, is used to represent the slope's dynamic strength when using simplified sliding block procedures. Estimating the value of $k_y$ requires careful consideration of the materials being analysed as it is governed by the critical strata in the slope. Simplified procedures for estimating $k_y$ can be found in \cite{bray1998simplified}.\\ 
+
+\noindent\textbf{Soil Constitutive Model}\\
+For dynamic non-linear effective stress analyses, a soil constitutive model is used to describe the evolution of stress and strain within the soil. These models can also capture the interaction between the soil and pore water by considering changes in pore water pressure that depend on the soil type and boundary conditions in the numerical model. Examples of constitutive models employed in dynamic analyses are \cite{yang2003computational, byrne2004numerical, boulanger2017pm4sand} and \cite{boulanger2018pm4silt}.
+
+\subsection{Output Data}
+\label{subsec:eq_landslide_output}
+Depending on the type of analytical procedure used, one or more of the following outputs can be produced:\\[0.5em]
+
+\noindent\textbf{Factor of Safety}\\
+Pseudostatic stability analyses generally provide results in terms of a Factor of Safety (FS) similar to what would be attained from a static limit equilibrium analysis. With an appropriately calibrated analysis, the FS gives an indication of magnitude of potential displacement.\\
+
+\noindent\textbf{Seismic Displacement}\\
+Sliding block-type analyses generally provide output in terms of an estimated range of seismic displacement. Additionally, some methods provide probabilistic seismic displacement results as either the probability of a range of displacement occurring, or the probability of exceeding a specified displacement threshold.\\
+
+\noindent\textbf{Full Description of Displacement, Stress, and Pore-Water Pressure Fields}\\
+When performing dynamic non-linear effective stress analyses, the simulations can provide the full time histories of the displacement, stress, and pore-water pressure fields estimated by the numerical model. These results provide insight into the site-specific response and can highlight localized phenomena that might not be captured by simplified methods.
+
+\section{Procedures for Evaluating Seismic Slope Displacement}
+\label{sec:eq_landslide_methods}
+
+There are three primary approaches employed currently in estimating seismic slope displacements, which are listed in order of increasing complexity:
+\newline
+
+\noindent\textbf{Pseudostatic Stability Analyses} \\
+This class of seismic slope stability analysis is analogous to a static limit equilibrium analysis where the earthquake loading is represented as an additional constant horizontal load applied to the slope. This horizonal seismic coefficient is a function of the characteristics of earthquake shaking and the dynamic response characteristics of the slope. The seismic coefficient is estimated as a percentage of the maximum value of the summation of the differential masses of the sliding blocks each multiplied by the acceleration acting on them over time divided by the total weight of the sliding mass, which is the maximum seismic coefficient. The percentage of the maximum coefficient used in the pseudostatic slope stability analysis is a function of the allowable seismically induced permanent displacement \citep{bray2009pseudostatic}. For this type of analysis, the required inputs are soil-strength parameters, slope geometry, water pressures, and the pseudostatic seismic coefficient. Results are provided in terms of a FS which, when appropriately calibrated, give an indication of the level of potential displacement. Prevalent pseudostatic methods used are \cite{seed1979considerations, hynes-griffin1984rationalizing, bray2009pseudostatic, macedo2018performancebased}, and \cite{bray2019procedure}.
+\newline
+
+\noindent\textbf{Sliding Block Analyses} \\
+Newmark-type sliding block analyses provide a range of anticipated seismically induced permanent displacements that serve as an index of seismic performance of a system. These procedures consider the dynamic response of the sliding mass if assumed to be non-rigid and calculates the sliding displacement. Methods that consider the dynamic response of the sliding mass consider this response as either decoupled or fully coupled. Typical inputs for these procedures provide information about the characteristics of the earthquake shaking being considered\textemdash moment magnitude, spectral acceleration at the degraded period of the sliding mass, Arias intensity, PGA, and PGV\textemdash as well as dynamic properties of the sliding mass\textemdash the initial and degraded fundamental period of the sliding mass, and the seismic coefficient at which the sliding mass will yield, which is called the yield coefficient. From these inputs, the analysis provides estimates of the seismic slope displacement, the probability of some displacement occurring or, in some cases, the probability of exceeding an allowable displacement. These methods are semi-empirical and are applicable primarily to events exhibiting similar features to those contained in the dataset used to develop a procedure. Commonly used procedures include \cite{makdisi1978simplified, jibson2007regression, bray2007simplified, saygili2008empirical, rathje2014probabilistic} and \cite{bray2019procedure} for shallow crustal earthquakes and \cite{bray2018simplified} for subduction zone earthquakes.
+\newline
+
+\noindent\textbf{Dynamic nonlinear effective stress analyses} \\
+Continuum-based methods, such as finite-element or finite-difference methods, are employed with soil constitutive models to analyze the dynamic response of the system to earthquake loading. This type of analysis requires greater effort computationally as the partial differential equations describing the mechanical response of the soil are numerically integrated over the full time history of earthquake shaking. Additionally, extensive information about the soil conditions at the site is required such that constitutive models can be sufficiently calibrated to attain meaningful results. Unlike the pseudostatic and simplified methods, this type of analysis is still applicable in the event that liquefaction is anticipated to occur at the site. It is the state-of-practice to employ dynamic nonlinear effective stress analyses in the evaluation of critical earth systems, such as dams, tailing dams, ports, and large earth-retention systems. Examples of constitutive models employed for dynamic analyses are \cite{yang2003computational, byrne2004numerical, boulanger2017pm4sand} and \cite{boulanger2018pm4silt}.
+
+\section{Research Gaps and Opportunities}
+\label{sec:eq_landslide_research}
+The vast majority of seismic slope displacement methods focus on analysing a single slope and the resolution at which this slope is analysed varies greatly between different methods. Simplified methods, while not capable of fully capturing the site-specific response of individual slopes, provide reasonable estimates of seismic slope displacement at negligible computational cost. Comparatively, dynamic nonlinear numerical analyses can be meticulously calibrated to provide insight into localized response, but require detailed knowledge of the site being analyzed, additional computational resources, and necessitate a greater level of skill from the end-user. The limitations of these methods will be dependent on the application and scale at which they are to be applied\textemdash many engineering applications do not require a fully non-linear analysis, while it also is not possible to perform high-fidelity, full-physics numerical simulations at a regional scale. The varied application of seismic slope stability methods provides many opportunities in which to advance the field (e.g. \cite{bray2017new}).
+
+For site-specific, high-resolution simulations, continued research is required to better resolve grain-level dynamics and fluid-solid interaction. Much progress has been made in continuum simulations of soils and several models are available that are capable of describing the non-linear, plastic behavior of soil during seismic loading while also considering the impact of excess pore water pressure generation during earthquake shaking. However, at the grain-level there is opportunity for exploring the interaction between water and soil particles and how material type and fabric interplay with transient pore water pressure within the soil matrix. Beyond the constitutive and numerical models describing soil response, there is a need to implement, validate, and calibrate these models in open-source software that is capable of leveraging high-performance computing resources. This ultimately will broaden their impact and accessibility to the natural hazards community.
+
+In terms of regional scale seismic slope stability, the opposing demands of detailed response models and capturing large regions pose unique challenges and provide opportunities for further development. Most regional-scale coseismic landslide hazard models are based on an infinite slope analysis which largely ignores local geology and the associated failure modes. The work by \cite{grant2016multimodal} presents a multimodal landslide hazard assessment tool that accounts for local geological as well as topographical conditions that may contribute to the expected failure mode and corresponding hazard. There is opportunity to build upon this work by leveraging coseismic landslide databases for developing tools that run more sophisticated models in regions where more data is available, perhaps providing insight into how these results could be extrapolated to regions where data is sparse. Additionally, advances in remote sensing provide exciting opportunities to dynamically inform hazard models such that updated predictions could be made from real-time observations to help guide emergency response.
+
+%%Balancing the need to capture the site-specific response of the slope being analysed with the need to obtain re
+%%Most seismic slope displacement methods currently employed in research and practice focus primarily on a single slope
+
+\section{Software and Systems}
+\label{sec:eq_landslide_tools}
+
+The following list of software is commonly used in assessing the potential for seismic slope displacement:\\
+
+\noindent\textbf{SLAMMER}\\
+SLAMMER \citep{jibson2013slammer} is capable of performing Newmark-type sliding block analyses. It allows users to choose from various simplified methods as well as running rigid block, decoupled sliding block, and fully coupled displacement calculations on time histories selected from an included catalog. Since SLAMMER is Java based, it is capable of running on any operating system through the Java Virtual Machine (JVM). The source code is available at \href{https://github.com/mjibson/slammer}{on GitHub}. \\
+
+\noindent\textbf{OpenSees}\\
+The Open System for Earthquake Engineering Simulation (OpenSees) is an open-source software framework capable of performing fully non-linear dynamic effective stress analyses. OpenSees is maintained by the Pacific Earthquake Engineering Research (PEER) Center and actively developed by researchers at various research institutions. Several commonly used soil constitutive models have been implemented in OpenSees and additional models can be added based on user needs. The framework is capable of running on HPC systems and supports MacOS, Linux, and Windows operating systems.\\
+
+\noindent\textbf{Spreadsheet Solutions}\\
+Spreadsheet solutions are routinely used for Newmark-type sliding block analyses, with some authors releasing pre-programmed spreadsheets that implement their methods. To a lesser extent, spreadsheets are also used for pseudostatic stability analyses. Spreadsheet solutions can be implemented readily on any operating system using either Microsoft Excel or LibreOffice Calc; however, pre-programmed spreadsheet solutions tend to be available in Microsoft Excel which cannot be guaranteed to operate correctly in LibreOffice Calc.\\
+
+\noindent\textbf{UTEXAS4}\\
+UTEXAS4, available from ENSOFT, is a two dimensional limit equilibrium analysis program capable of performing psuedostatic stability analysis. This software is proprietary and only supports Windows-based operating systems.\\
+
+\noindent\textbf{Slide2 and Slide3}\\
+Slide2 and Slide3 are two and three dimensional limit equilibrium analyses programs developed by RocScience that is routinely used for pseudostatic analyses. These tools only support Windows-based operating systems and are proprietary.\\
+
+\noindent\textbf{Slope/W}\\
+Slope/W a proprietary program developed by GEOSLOPE. Similar to Slide2, it is a two-dimensional limit equilibrium solver that is capable of performing pseudostatic analysis. Currently only Windows-based operating systems are supported.\\
+
+\noindent\textbf{FLAC}\\
+Fast Lagrangian Analaysis of Continua (FLAC), from Itasca Consulting Group, is a proprietary finite-difference based software package capable of performing dynamic nonlinear effective stress analyses. FLAC allows users to import custom soil constitutive models either as pre-compiled dynamic libraries or by using the scripting language FISH. FLAC is not capable of executing on HPC systems and is closed source. Currently only Windows-based operating systems are supported.\\
+
+\noindent\textbf{PLAXIS}\\
+PLAXIS, now part of Bentley Systems, is a finite element software package that can be used to perform dynamic non-linear effective stress analyses. Custom soil constitutive models can be implemented in within the platform. PLAXIS is prorprietary and closed-source. Currently, it is not HPC capable and supports only Windows-based operating systems.\\
+
+\noindent\textbf{General FEM solvers}\\
+LS-Dyna and ABAQUS, both proprietary general Finite Element Method solvers, are capable of fully non-linear dynamic effective stress analyses. Custom material models, such as those required for modeling dynamic soil response, can be implemented in these frameworks. Depending on the license purchased, LS-Dyna and ABAQUS are capable of running on HPC systems. LS-Dyna supports Unix, Linux, and Windows-based operating systems and is currently available on DesignSafe. ABAQUS currently supports Linux and Windows-based operating systems.\\
+
+
+%%In terms of pseudostatic analyses, spreadsheet solutions or, more commonly, proprietary software is used to solve for the limit equilibrium factor of safety. Commonly-used proprietary packages include Slide from RocScience, Slope/W from GEOSLOPE, and UTEXAS4 from ENSOFT. None of these packages are available open source. They only support Windows-based operating systems.
+
+%Newmark-type sliding block analyses are widely used in spreadsheet solutions and some authors have released pre-programmed spreadsheets that implement their methods. Additionally, SLAMMER, an open-source Java application, allows users to choose from various simplified methods as well as running rigid block, decoupled sliding block, and fully coupled displacement calculations on time histories selected from an included catalog. Users can also add records to the catalog. Since SLAMMER is Java based, it is capable of running on any operating system through the Java Virtual Machine (JVM). The source code is available at https://github.com/mjibson/slammer.
+
+%%Should a full dynamic nonlinear effective stress analysis be required, several proprietary software packages capable of performing this type of simulation are available. In both practice and research, FLAC, developed by the Itasca Consulting Group, is commonly used to perform dynamic analyses. In general, Itasca software is Windows based and closed source. In addition to the software offered by Itasca, the geotechnical FEM software suite PLAXIS is also able to perform dynamic analyses; it is also proprietary, closed source, and restricted to Windows. General FEM solvers such as LS-Dyna and ABAQUS support user-defined constitutive models and have been used successfully for large-scale dynamic analyses but are proprietary. The only open-source software available capable of performing dynamic nonlinear effective stress simulations is OpenSees. Though less commonly used in engineering practice, OpenSees has gained in popularity within the research community, and users are able to select from many pre-programmed soil constitutive models. Additional constitutive models can also be added. OpenSees is supported on MacOS, Windows, and Linux operating systems.
+
+%\end{document}

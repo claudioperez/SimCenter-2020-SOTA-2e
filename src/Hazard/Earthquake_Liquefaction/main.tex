@@ -1,0 +1,140 @@
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for your "contribution" to a contributed volume
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[graybox]{svmult}
+%
+%% choose options for [] as required from the list
+%% in the Reference Guide
+%
+%\usepackage{mathptmx}       % selects Times Roman as basic font
+%\usepackage{helvet}         % selects Helvetica as sans-serif font
+%\usepackage{courier}        % selects Courier as typewriter font
+%\usepackage{type1cm}        % activate if the above 3 fonts are
+                             % not available on your system
+%
+%\usepackage{makeidx}         % allows index generation
+%\usepackage{graphicx}        % standard LaTeX graphics tool
+%                             % when including figure files
+%\usepackage{multicol}        % used for the two-column index
+%\usepackage[bottom]{footmisc}% places footnotes at page bottom
+%
+%% see the list of further useful packages
+%% in the Reference Guide
+%
+%\makeindex             % used for the subject index
+%                       % please use the style svind.ist with
+%                       % your makeindex program
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\begin{document}
+
+\title{Earthquake - Soil Liquefaction}
+% Use \titlerunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+\author{
+    \textbf{Chaofeng Wang} 
+    \and Jonathan D. Bray
+    \and Michael Gardner}
+\tocauthor{}
+\authorrunning{Wang et al.}
+% Use \authorrunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+%\institute{Name of First Author \at Name, Address of Institute, %\email{name@email.address}
+%\and Name of Second Author \at Name, Address of Institute %\email{name@email.address}}
+%
+% Use the package "url.sty" to avoid
+% problems with special characters
+% used in your e-mail or web address
+%
+\maketitle
+
+Soil liquefaction has cause much damage in recent earthquakes \citep[e.g.][]{cubrinovski2011geotechnical,cubrinovski2017liquefaction,bray2017new}. The recent National Academy of Engineering’s recent report ``State of the Art and Practice in the Assessment of Earthquake-Induced Soil Liquefaction and its Consequences'' states \citep{national2016state}: Liquefaction occurs when stress-es and deformation in the ground caused by earthquake shaking disturb the soil structure (i.e., the arrangement of individual soil grains—namely, the soil fabric) of saturated, geologically unconsolidated soils. Water in the pore spaces between soil particles will resist the natural tendency of the soils to consolidate into a denser and more stable arrangement during shaking. Because the soil cannot change in volume until water is drained from the pore spaces, porewater pressure will rise, and soil particles may lose contact with each other. This chain of events is referred to as liquefaction triggering. When liquefaction triggering occurs, the soil may lose much of its stiffness and strength, and it may also become easier to deform and may flow laterally. Similarly, the soil may also lose its ability to support an overlying structure or buried utility. 
+
+As summarized in the \cite{national2016state} report, consequences of liquefaction may include vertically or laterally displaced ground, landslides, slumped embankments, foundation failures, and mixtures of soil and water erupting at the ground surface. These effects may lead, in turn, to settlement, distortion, and the collapse of buildings; the disruption of roadways; the failure of earth-retaining structures; the cracking, sliding, and overtopping of dams, highway embankments, and other earth structures; the rupture or severing of sewer, water, fuel, and other lifeline infrastructure; the lateral displacement and shear failure of piles and pier walls supporting bridges and waterfront structures; and the uplift of underground structures.
+
+\section{Input and Output Data}
+
+Input data for assessing liquefaction hazard describe the earthquake intensity measures,the characteristics of geologic and technical site conditions, and the topography of the site.
+
+\subsection{Input Data}
+\label{subsec:eq_liquefaction_input}
+
+\noindent\textbf{Ground motion and intensity measures}\\
+Mechanics-based numerical simulation of liquefaction requires ground motions as input data. Simplified empirical methods takes earthquake moment magnitude and intensity measures as input data, for example, peak ground acceleration (PGA), spectral acceleration (Sa), Arias Intensity ($I_A$), etc. Which intensity measure to use depends on the chosen analysis models. \\
+
+
+\noindent\textbf{Site characteristics}\\
+Site characteristics include geologic and technical site conditions, water table, slope and topography. \\
+
+\noindent{Geologic characteristics}\\
+Regional liquefaction assessment depends on geologic information.
+Youd and Perkins (1987) proposed a generic method for classifying the liquefaction susceptibility of numerous geologic units. This requires the mapping of geologic units, which are generally characterized by their age, lithology and thickness.\\
+
+\noindent{Geotechnical characteristics}\\
+Geotechnical characterization of the site consists primarily of identifying soil properties, such as soil type, shear strength, density, fines content, water saturation, etc. These parameters can be obtained by laboratory testings of soil samples, or by in-situ testings, such as standard Penetration test (SPT), cone penetration test (CPT), and measurement of in-situ shear-wave velocity (Vs).\\
+
+\noindent{Topography}\\
+Ground topographic parameters (e.g., ground slope, free face height, and the distance to a free face) define the boundary condition of a local site, hence are input data for liquefaction analysis. 
+
+
+\subsection{Output Data}
+\label{subsec:eq_liquefaction_output}
+Depending on the modeling approach used, one or more of the following outputs can be produced:\\
+
+\noindent\textbf{Liquefaction indices at local sites}\\
+Base on input data collected at a local site, various liquefaction indices can be calculated: liquefaction potential index (LPI), liquefaction severity number (LSN), etc. \\
+
+\noindent\textbf{Induced ground displacement at local sites}\\
+Liquefaction in the underlying soil can lead to the deformation of the ground surface, such as vertical settlement and lateral spreading. \\
+
+\noindent\textbf{Liquefaction maps}\\
+Maps of liquefaction susceptibility or liquefaction-induced ground damage can be the outputs of regional liquefaction assessment. 
+
+\section{Modeling Approaches}
+\label{sec:eq_liq_methods}
+
+Analysis of liquefaction and its consequences remains one of the more active areas of re-search and development in geotechnical engineering. Methods for estimating liquefaction triggering and its consequences vary. They fall into two categories: simplified methods and mechanics-based numerical methods.
+\newline
+
+\noindent\textbf{Simplified methods} \\
+In 1998, a consensus was reached within the geotechnical community on the use of an empirical stress-based approach for liquefaction triggering assessment called the “simplified method,” first developed in \cite{seed1971simplified}. This method is still the most commonly used application in practice \citep{youd2001liquefaction,national2016state}.
+
+In a simplified method, a factor of safety (FS) against liquefaction triggering, defined as the ratio between the seismic loading required to trigger liquefaction (i.e., the liquefaction resistance) and the seismic loading expected from the earthquake (i.e., the seismic demand), is computed. Both the seismic demand and the liquefaction resistance are characterized as cyclic stress ratios, defined as the ratio of the cyclic shear stress to the initial vertical effective stress. The seismic demand is the earthquake-induced cyclic stress ratio (CSR), and the liquefaction resistance is the cyclic resistance ratio (CRR): that is, the cyclic stress ratio required to trigger liquefaction. 
+
+\cite{seed1971simplified} proposed a simplified equation, based on Newton’s second law, to compute a representative CSR for a given earthquake magnitude. This model was later improved by \cite{idriss1999update,cetin2004nonlinear,idriss2008soil,boulanger2014cpt}.
+
+The most common approaches used in practice to compute CRR are based on geotechnical field data, e.g., SPT, CPT, and $V_s$.
+The most commonly used relationships to predict CRR from SPT blow count are those pro-posed by \cite{youd2001liquefaction,cetin2004nonlinear,idriss2008soil,boulanger2014cpt}. The most commonly used relationships to predict CRR from a CPT profile are those developed by \cite{robertson1998evaluating,idriss2008soil,kayen2013shearwave}. The most popular and best Vs-based correlation method available is that of \cite{andrus2000liquefaction}, which is well documented in the NCEER workshop summary paper \citep{youd2001liquefaction}. \\
+
+
+\noindent\textbf{Mechanics-based numerical simulation} \\The development and rigorous validation of numerical analysis tools and procedures for predicting the effects of liquefaction on the built environment is identified as an overarching re-search need \citep{bray2017new}. Numerical analysis is critical for several reasons, including obtaining insights on field mechanisms that cannot be discerned empirically, providing a rational basis for developing or constraining practice-oriented engineering models, and providing the essential tool for evaluating complex structures with unique characteristics that are outside the range of empirical observations. 
+
+Finite-element and finite-difference procedures are the most common procedures used in engineering practice. As pointed out in \cite{bray2017new}, there are major challenges to developing robust validated numerical analysis procedures for the effects of liquefaction on civil infrastructure systems due to the variety of multiscale, multi-physics coupled nonlinear interactions that come to the forefront in different scenarios where analytical capabilities for liquefaction effects have not been validated (or, worse yet, have been invalidated). Currently, neither research nor commercial software platforms are able to incorporate the best available solution techniques/options for each of the challenging problems, such as the coupled, large-deformation analysis of strain-softening, localizations, cracking, and interfaces in two or three dimensions with complex constitutive models. 
+
+\section{Research Gaps and Opportunities}
+\label{sec:eq_liq_gaps}
+
+Liquefaction risk analyses has focused on assessing the likelihood of triggering of liquefaction, resulting in maps of susceptibility. The consequences of liquefaction, i.e., the induced damages to the ground are not sufficiently studied. Well established and universally applicable methods for quantifying liquefaction-related damages to the ground are still to be developed. HAZUS provides a method derived from engineering experiences for evaluating liquefaction-induced permanent ground deformation (PGD), given PGA and site-specific liquefaction susceptibility. However, the HAZUS method was developed based on observations of relatively old events. In recent years, with more liquefaction cases observed \citep{cubrinovski2017liquefaction,bray2017new} and the creation of large liquefaction databases \citep{brandenberg2020nextgeneration}, new regression-based ground damage models are being developed \citep{khoshnevisan2015probabilistic,stewart2016peerngl} and tested for different regions \citep{chen2016probabilistic}. New insights into the consequent damages to upper structure and its fragility are also being developed \citep{fotopoulou2018vulnerability,macedo2018key}. In regional simulations, large-scale assessment of liquefaction is needed. Traditionally, regional liquefaction can be coarsely assessed based on geological data \citep{holzer2006liquefaction}. In recent years, techniques such as random fields are proposed for regional-scale modeling of liquefaction hazard, which can account for spatial uncertainties while considering both geotechnical and geological information \citep{zhu2017updated,wang2017spatial,wang2018hybrid}.
+
+
+
+\section{Software and Systems}
+\label{sec:eq_liq_tools}
+
+Systems for liquefaction evaluation are divided by two categories according to the method used: simplified empirical methods and mechanics-based numerical methods.\\
+
+\noindent\textbf{Simplified methods}\\
+Simplified methods have been developed for rapid engineering evaluations of site-specific liquefaction. To date, no open-source software is available. LiqIT, Cliq, NovoLIQ, and Liquefy-Pro are all Windows based. These tools provide a user interface that can let the user input the soil profiles and earthquake intensity, and then visualize the liquefaction index for each soil layer. \\
+
+\noindent\textbf{Numerical methods}\\
+For mechanics-based numerical methods, creating a constitutive model that reflects the soil’s behavior under cyclic loads is crucial. Commercial software such as PLAXIS and FLAC are widely used by the geotechnical community. Both of them are Windows based. OpenSees is the only open-source software identified for dealing with liquefaction. Several well-known liquefaction-capable constitutive models are: PM4Sand, PM4SILT, PDMY02, UBCSAND, and DAFALIAS-MANZARI. Except for UBCSAND, they are all available in OpenSees.
+
+%\end{document}

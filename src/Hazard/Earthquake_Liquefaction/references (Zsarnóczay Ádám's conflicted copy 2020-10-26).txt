@@ -1,0 +1,236 @@
+% Encoding: UTF-8
+
+
+@article{zhu2017updated,
+  title={An Updated Geospatial Liquefaction Model for Global ApplicationAn Updated Geospatial Liquefaction Model for Global Application},
+  author={Zhu, Jing and Baise, Laurie G and Thompson, Eric M},
+  journal={Bulletin of the Seismological Society of America},
+  volume={107},
+  number={3},
+  pages={1365--1385},
+  year={2017},
+  publisher={GeoScienceWorld}
+}
+
+@article{grant2016multimodal,
+  title={Multimodal method for coseismic landslide hazard assessment},
+  author={Grant, Alex and Wartman, Joseph and Abou-Jaoude, Grace},
+  journal={Engineering Geology},
+  volume={212},
+  pages={146--160},
+  year={2016},
+  publisher={Elsevier}
+}
+
+@article{wang2017spatial,
+  title={On the spatial variability of CPT-based geotechnical parameters for regional liquefaction evaluation},
+  author={Wang, Chaofeng and Chen, Qiushi and Shen, Mengfen and Juang, C Hsein},
+  journal={Soil Dynamics and Earthquake Engineering},
+  volume={95},
+  pages={153--166},
+  year={2017},
+  publisher={Elsevier}
+}
+
+@article{wang2018hybrid,
+  title={A hybrid geotechnical and geological data-based framework for multiscale regional liquefaction hazard mapping},
+  author={Wang, C and Chen, Q},
+  journal={G{\'e}otechnique},
+  volume={68},
+  number={7},
+  pages={614--625},
+  year={2018},
+  publisher={Thomas Telford Ltd}
+}
+
+@article{cubrinovski2017liquefaction,
+  title={Liquefaction effects and associated damages observed at the Wellington CentrePort from the 2016 Kaikoura earthquake},
+  author={Cubrinovski, Misko and Bray, Jonathan D and De La Torre, Christopher and Olsen, Michael J and Bradley, Brendon A and Chiaro, Gabriele and Stocks, Emilia and Wotherspoon, Liam},
+  journal={Bulletin of the New Zealand Society for Earthquake Engineering},
+  volume={50},
+  number={2},
+  pages={152--173},
+  year={2017}
+}
+
+@techreport{Bray2017,
+author = {Bray, Jonathan D, Ross W Boulanger, Misko Cubrinovski, Kohji Tokimatsu, Steven L Kramer, Thomas O’Rourke, Ellen Rathje, Russell A Green, Peter K Robertson, and Christine Z Beyzaei},
+title = {{U.S. – New Zealand – Japan International Workshop on ‘Liquefaction-Induced Ground Movements Effects.}}, 
+series = {University of California, Berkeley: Pacific Earthquake Engineering Research Center},
+year = {2017}
+}
+
+@article{brandenberg2020next,
+  title={Next-generation liquefaction database},
+  author={Brandenberg, Scott J and Zimmaro, Paolo and Stewart, Jonathan P and Kwak, Dong Youp and Franke, Kevin W and Moss, Robb ES and {\c{C}}etin, K {\"O}nder and Can, Gizem and Ilgac, Makbule and Stamatakos, John and others},
+  journal={Earthquake Spectra},
+  pages={8755293020902477},
+  year={2020},
+  publisher={SAGE Publications Sage UK: London, England}
+}
+
+@article{khoshnevisan2015probabilistic,
+  title={Probabilistic assessment of liquefaction-induced lateral spreads using CPT—focusing on the 2010--2011 Canterbury earthquake sequence},
+  author={Khoshnevisan, Sara and Juang, Hsein and Zhou, Yan-Guo and Gong, Wenping},
+  journal={Engineering Geology},
+  volume={192},
+  pages={113--128},
+  year={2015},
+  publisher={Elsevier}
+}
+
+@article{stewart2016peer,
+  title={PEER-NGL project: Open source global database and model development for the next-generation of liquefaction assessment procedures},
+  author={Stewart, JP and Kramer, SL and Kwak, DY and Greenfield, MW and Kayen, RE and Tokimatsu, K and Bray, JD and Beyzaei, CZ and Cubrinovski, M and Sekiguchi, T and others},
+  journal={Soil Dynamics and Earthquake Engineering},
+  volume={91},
+  pages={317--328},
+  year={2016},
+  publisher={Elsevier}
+}
+
+@article{chen2016probabilistic,
+  title={Probabilistic and spatial assessment of liquefaction-induced settlements through multiscale random field models},
+  author={Chen, Qiushi and Wang, Chaofeng and Juang, C Hsein},
+  journal={Engineering Geology},
+  volume={211},
+  pages={135--149},
+  year={2016},
+  publisher={Elsevier}
+}
+
+@article{fotopoulou2018vulnerability,
+  title={Vulnerability assessment of low-code reinforced concrete frame buildings subjected to liquefaction-induced differential displacements},
+  author={Fotopoulou, Stavroula and Karafagka, Stella and Pitilakis, Kyriazis},
+  journal={Soil Dynamics and Earthquake Engineering},
+  volume={110},
+  pages={173--184},
+  year={2018},
+  publisher={Elsevier}
+}
+
+@article{macedo2018key,
+  title={Key trends in liquefaction-induced building settlement},
+  author={Macedo, Jorge and Bray, Jonathan D},
+  journal={Journal of Geotechnical and Geoenvironmental Engineering},
+  volume={144},
+  number={11},
+  pages={04018076},
+  year={2018},
+  publisher={American Society of Civil Engineers}
+}
+
+@article{holzer2006liquefaction,
+  title={Liquefaction hazard mapping with LPI in the greater Oakland, California, area},
+  author={Holzer, Thomas L and Bennett, Michael J and Noce, Thomas E and Padovani, Amy C and Tinsley III, John C},
+  journal={Earthquake Spectra},
+  volume={22},
+  number={3},
+  pages={693--708},
+  year={2006},
+  publisher={SAGE Publications Sage UK: London, England}
+}
+
+@article{cubrinovski2011geotechnical,
+  title={Geotechnical aspects of the 22 February 2011 Christchurch earthquake},
+  author={Cubrinovski, Misko and Bradley, Brendon and Wotherspoon, Liam and Green, Russell and Bray, Jonathan and Wood, Clint and Pender, Michael and Allen, John and Bradshaw, Aaron and Rix, Glenn and others},
+  journal={Bulletin of the New Zealand Society for Earthquake Engineering},
+  volume={44},
+  number={4},
+  pages={205--226},
+  year={2011}
+}
+
+@article{national2016state,
+  title={State of the art and practice in the assessment of earthquake-induced soil liquefaction and its consequences},
+  author={Kavazanjian, E., and Andrade, J., and Arulmoli, K.A., and Atwater, B.F., and Christian, J.T., and Green, R., and Kramer, S.L., and Mejia, L., and Mitchell, J.K., and Rathje, E., et al.},
+  journal={Washington, DC: The National Academies Press},
+  volume={1017226},
+  pages={23474},
+  year={2016}
+}
+
+@article{seed1971simplified,
+  title={Simplified procedure for evaluating soil liquefaction potential},
+  author={Seed, Harry Bolton and Idriss, Izzat M},
+  journal={Journal of Soil Mechanics \& Foundations Div},
+  year={1971}
+}
+
+@article{youd2001liquefaction,
+  title={Liquefaction resistance of soils: summary report from the 1996 NCEER and 1998 NCEER/NSF workshops on evaluation of liquefaction resistance of soils},
+  author={Youd, T Leslie and Idriss, Izzat M},
+  journal={Journal of geotechnical and geoenvironmental engineering},
+  volume={127},
+  number={4},
+  pages={297--313},
+  year={2001},
+  publisher={American Society of Civil Engineers}
+}
+
+@article{idriss1999update,
+  title={An update to the Seed-Idriss simplified procedure for evaluating liquefaction potential},
+  author={Idriss, IM},
+  journal={Proc., TRB Worshop on New Approaches to Liquefaction, Pubbl. n. FHWA-RD-99-165, Federal Highway Administation},
+  year={1999}
+}
+
+@article{cetin2004nonlinear,
+  title={Nonlinear shear mass participation factor (rd) for cyclic shear stress ratio evaluation},
+  author={Cetin, K Onder and Seed, Raymond B},
+  journal={Soil Dynamics and Earthquake Engineering},
+  volume={24},
+  number={2},
+  pages={103--113},
+  year={2004},
+  publisher={Elsevier}
+}
+
+@book{idriss2008soil,
+  title={Soil liquefaction during earthquakes},
+  author={Idriss, Izzat M and Boulanger, Ross W},
+  year={2008},
+  publisher={Earthquake Engineering Research Institute}
+}
+
+@article{boulanger2014cpt,
+  title={CPT and SPT based liquefaction triggering procedures},
+  author={Boulanger, RW and Idriss, IM},
+  journal={Report No. UCD/CGM.-14},
+  volume={1},
+  year={2014}
+}
+
+@article{robertson1998evaluating,
+  title={Evaluating cyclic liquefaction potential using the cone penetration test},
+  author={Robertson, Peter K and Wride, CE},
+  journal={Canadian geotechnical journal},
+  volume={35},
+  number={3},
+  pages={442--459},
+  year={1998},
+  publisher={NRC Research Press}
+}
+
+@article{kayen2013shear,
+  title={Shear-wave velocity--based probabilistic and deterministic assessment of seismic soil liquefaction potential},
+  author={Kayen, Robert and Moss, RES and Thompson, EM and Seed, RB and Cetin, KO and Kiureghian, A Der and Tanaka, Y and Tokimatsu, K},
+  journal={Journal of Geotechnical and Geoenvironmental Engineering},
+  volume={139},
+  number={3},
+  pages={407--419},
+  year={2013},
+  publisher={American Society of Civil Engineers}
+}
+
+@article{andrus2000liquefaction,
+  title={Liquefaction resistance of soils from shear-wave velocity},
+  author={Andrus, Ronald D and Stokoe II, Kenneth H},
+  journal={Journal of geotechnical and geoenvironmental engineering},
+  volume={126},
+  number={11},
+  pages={1015--1025},
+  year={2000},
+  publisher={American Society of Civil Engineers}
+}
+
