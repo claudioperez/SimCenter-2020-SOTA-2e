@@ -38,42 +38,42 @@ In the simplest case, a pseudostatic seismic slope stability analysis provides a
 \label{subsec:eq_landslide_input}
 Whether employing a simplified method or performing a dynamic nonlinear effective stress analysis, the required inputs define the 1.) the characteristics of the seismic loading, and 2.) the characteristics of the earth or waste system that have the greatest impact on the overall response. The input data can be classified as follows:\\[0.5em]
 
-\noindent\textbf{Moment Magnitude}\\
+\paragraph{Moment Magnitude}
 Moment magnitude is a quantitative measure of the earthquake size or magnitude. It is the only magnitude scale that is
 not subject to saturation, as it is based on seismic moment as opposed to the ground shaking level.\\
 
-\noindent\textbf{Spectral Acceleration at the Degraded Period of the Sliding Mass}\\
-Due to material non-linearity, it has been shown that using the spectral acceleration at the degraded period instead of at the initial period of the sliding mass is an optimal intensity measure across a range of fundamental periods for the sliding mass \citep{bray2007simplified}.\\
+\paragraph{Spectral Acceleration at the Degraded Period of the Sliding Mass}
+Due to material non-linearity, it has been shown that using the spectral acceleration at the degraded period instead of at the initial period of the sliding mass is an optimal intensity measure across a range of fundamental periods for the sliding mass \citep{bray2007simplified}.
 
-\noindent\textbf{Arias Intensity}\\
-The Arias Intensity is a ground motion parameter that includes the effects of both amplitude and frequency content while also providing a good measure of the energy associated with a particular ground motion. The computation of Arias Intensity is over the entire duration of the ground motion and, as such, is not sensitive to how duration of strong motion is defined.\\
+\paragraph{Arias Intensity}
+The Arias Intensity is a ground motion parameter that includes the effects of both amplitude and frequency content while also providing a good measure of the energy associated with a particular ground motion. The computation of Arias Intensity is over the entire duration of the ground motion and, as such, is not sensitive to how duration of strong motion is defined.
 
-\noindent\textbf{Peak Ground Acceleration}\\
-Peak ground acceleration (PGA), a measure of the ground motion amplitude, is one of the most commonly used ground motion parameters. The PGA of a motion is taken as the largest absolute value of the vector sum of orthogonal acceleration components.\\
+\paragraph{Peak Ground Acceleration}
+Peak ground acceleration (PGA), a measure of the ground motion amplitude, is one of the most commonly used ground motion parameters. The PGA of a motion is taken as the largest absolute value of the vector sum of orthogonal acceleration components.
 
-\noindent\textbf{Peak Ground Velocity}\\
-Similarly to PGA, the peak ground velocity (PGV) is a good measure of the ground motion amplitude. Since PGV is less sensitive to higher-frequency components of a ground motion, it is likely a better measure of ground motion amplitude at intermediate frequencies \citep{kramer1996geotechnical}.\\
+\paragraph{Peak Ground Velocity}
+Similarly to PGA, the peak ground velocity (PGV) is a good measure of the ground motion amplitude. Since PGV is less sensitive to higher-frequency components of a ground motion, it is likely a better measure of ground motion amplitude at intermediate frequencies \citep{kramer1996geotechnical}.
 
-\noindent\textbf{Initial and Degraded Period of the Sliding Mass}\\
-In some idealized sliding mass models, the dynamic stiffness of the sliding mass is represented by the initial fundamental period while the average reduction in the earth or waste slope being analysed is captured by the degraded period.\\
+\paragraph{Initial and Degraded Period of the Sliding Mass}
+In some idealized sliding mass models, the dynamic stiffness of the sliding mass is represented by the initial fundamental period while the average reduction in the earth or waste slope being analysed is captured by the degraded period.
 
-\noindent\textbf{Seismic Yield Coefficient}\\
-The seismic yield coefficient, $k_y$, is used to represent the slope's dynamic strength when using simplified sliding block procedures. Estimating the value of $k_y$ requires careful consideration of the materials being analysed as it is governed by the critical strata in the slope. Simplified procedures for estimating $k_y$ can be found in \cite{bray1998simplified}.\\ 
+\paragraph{Seismic Yield Coefficient}
+The seismic yield coefficient, $k_y$, is used to represent the slope's dynamic strength when using simplified sliding block procedures. Estimating the value of $k_y$ requires careful consideration of the materials being analysed as it is governed by the critical strata in the slope. Simplified procedures for estimating $k_y$ can be found in \cite{bray1998simplified}.
 
-\noindent\textbf{Soil Constitutive Model}\\
+\paragraph{Soil Constitutive Model}
 For dynamic non-linear effective stress analyses, a soil constitutive model is used to describe the evolution of stress and strain within the soil. These models can also capture the interaction between the soil and pore water by considering changes in pore water pressure that depend on the soil type and boundary conditions in the numerical model. Examples of constitutive models employed in dynamic analyses are \cite{yang2003computational, byrne2004numerical, boulanger2017pm4sand} and \cite{boulanger2018pm4silt}.
 
 \subsection{Output Data}
 \label{subsec:eq_landslide_output}
 Depending on the type of analytical procedure used, one or more of the following outputs can be produced:\\[0.5em]
 
-\noindent\textbf{Factor of Safety}\\
-Pseudostatic stability analyses generally provide results in terms of a Factor of Safety (FS) similar to what would be attained from a static limit equilibrium analysis. With an appropriately calibrated analysis, the FS gives an indication of magnitude of potential displacement.\\
+\paragraph{Factor of Safety}
+Pseudostatic stability analyses generally provide results in terms of a Factor of Safety (FS) similar to what would be attained from a static limit equilibrium analysis. With an appropriately calibrated analysis, the FS gives an indication of magnitude of potential displacement.
 
-\noindent\textbf{Seismic Displacement}\\
-Sliding block-type analyses generally provide output in terms of an estimated range of seismic displacement. Additionally, some methods provide probabilistic seismic displacement results as either the probability of a range of displacement occurring, or the probability of exceeding a specified displacement threshold.\\
+\paragraph{Seismic Displacement}
+Sliding block-type analyses generally provide output in terms of an estimated range of seismic displacement. Additionally, some methods provide probabilistic seismic displacement results as either the probability of a range of displacement occurring, or the probability of exceeding a specified displacement threshold.
 
-\noindent\textbf{Full Description of Displacement, Stress, and Pore-Water Pressure Fields}\\
+\paragraph{Full Description of Displacement, Stress, and Pore-Water Pressure Fields}
 When performing dynamic non-linear effective stress analyses, the simulations can provide the full time histories of the displacement, stress, and pore-water pressure fields estimated by the numerical model. These results provide insight into the site-specific response and can highlight localized phenomena that might not be captured by simplified methods.
 
 \section{Procedures for Evaluating Seismic Slope Displacement}
