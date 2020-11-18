@@ -1,7 +1,7 @@
 $makeindex  = 'makeindex -s svind.ist %O -o %D %S';
 
-$ENV{'TEXINPUTS'}='./style//:' . $ENV{'TEXINPUTS'}; 
-$ENV{'BSTINPUTS'}='./style//:' . $ENV{'BSTINPUTS'}; 
+$ENV{'TEXINPUTS'}='./texmf//:' . $ENV{'TEXINPUTS'}; 
+$ENV{'BSTINPUTS'}='./texmf//:' . $ENV{'BSTINPUTS'}; 
 
 ###############################
 # Post processing of pdf file #
