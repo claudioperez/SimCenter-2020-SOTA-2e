@@ -1,0 +1,265 @@
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for your "contribution" to a contributed volume
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[graybox]{svmult}
+%
+%% choose options for [] as required from the list
+%% in the Reference Guide
+%
+%\usepackage{mathptmx}       % selects Times Roman as basic font
+%\usepackage{helvet}         % selects Helvetica as sans-serif font
+%\usepackage{courier}        % selects Courier as typewriter font
+%\usepackage{type1cm}        % activate if the above 3 fonts are
+                             % not available on your system
+%
+%\usepackage{makeidx}         % allows index generation
+%\usepackage{graphicx}        % standard LaTeX graphics tool
+%                             % when including figure files
+%\usepackage{multicol}        % used for the two-column index
+%\usepackage[bottom]{footmisc}% places footnotes at page bottom
+%
+%% see the list of further useful packages
+%% in the Reference Guide
+%
+%\makeindex             % used for the subject index
+%                       % please use the style svind.ist with
+%                       % your makeindex program
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\begin{document}
+
+\title{Water, Sewer, and Gas Pipelines}
+% Use \titlerunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+\author{
+    \textbf{Iris Tien}
+    \and {Jack W. Baker}
+    \and {Craig Davis}
+    \and {Thomas O'Rourke}
+    \and {Adam Zsarnóczay}}
+\tocauthor{}
+\authorrunning{Tien et al.}
+% Use \authorrunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+%\institute{Name of First Author \at Name, Address of Institute, %\email{name@email.address}
+%\and Name of Second Author \at Name, Address of Institute %\email{name@email.address}}
+%
+% Use the package "url.sty" to avoid
+% problems with special characters
+% used in your e-mail or web address
+%
+\maketitle
+
+There are many methods available for modeling and simulation of lifeline networks. These include empirical, agent-based, system dynamics-based, economics theory-based, and network-based approaches. The reader is referred to resources including \cite{ouyang2014review} and Johansen et al. (2016) for a discussion of the general methods available and the varying measures existing for assessing community outcomes based on lifeline performance. The techniques described in the works referenced are general and can be applied to any lifeline network; they are not described in more detail here. The focus in this report is on modeling and simulation software for specific lifeline types with parameters particular to the lifeline and resource flow type. The emphasis is on open and publicly available software tools.
+
+The objective of water, sewer, and gas pipeline network simulation is to assess the ability to provide critical water, wastewater, and natural gas services for populations under varying scenarios. As relevant for natural hazards engineering, the purpose is to assess the states of these lifeline systems under hazard events and inform decision making on approaches to improve the expected performance of these systems when subjected to these hazards. The reader is referred to resources such as \cite{johnson2016critical} on the role of lifelines in natural hazard engineering and recovery, and \cite{orourke2014earthquakeresilient} and New York City (2013) for information on lifeline resilience to earthquake and hurricane hazards, respectively. The creation of digital twins, where parallel computational models for water supply, wastewater, and gas and liquid fuel delivery systems are created as a cyber system counterpart to the real system, are also relevant for the modeling and simulation of lifelines (orourke2010geohazards; Fan et. al., 2019). Such a digital model of the real system allows users to look into natural hazards effects and use the digital twin to improve the real system. For water, sewer, and gas pipeline natural hazard simulations, the underlying physics lie mainly with the simulation of individual components in the system, e.g., pipes, junctions, and valves, and subsequently system-level analysis based on the component-level information through the use of network graphs or by more detailed hydraulic flow and pressure analysis through the network.
+ 
+\section{Input and Output Data}
+\label{sec:perf_pipeline_io}
+
+The information needed to describe the natural hazard at a regional scale is similar to the hazard characterization explained for transportation networks in the previous section. The hazard models provide a regional distribution of IMs that are used as proxies to express the severity of the hazard in the area. The type of IM depends on the hazard type and the network component under investigation. While the effect of a seismic event on structures is typically described using PGA or spectral acceleration, the analysis of pipelines requires information about the PGV and the permanent ground deformation and their geographic distributions \citep{romero2010seismic}.
+
+Lifeline models require information about the geographical location and classification of the lifeline components. Such information is often hard to obtain, especially at a sufficiently high resolution for detailed regional assessment. This lack of data stems from privacy and national security concerns, the fact that the databases are privately owned, and due to lack of records. Water, sewer, and gas pipeline simulation relies on information about component locations, size (e.g., pipe diameter), pressure, and connectivity. Other assets of interest in modeling the performance of water, sewer, and gas systems include pump station, reservoir, treatment plant, regulator station, and compressor station components.
+
+Output data will typically be water, wastewater, or gas pressures, flows, or volumes at specific locations. Of particular interest is the ability to provide these services at final distribution points in the network. These analyses should be conducted at various times after an event to capture the time-related consequences of system damage and the geographic distribution of system service losses, and how these change with system repairs.
+
+\section{Modeling Approaches}
+\label{sec:perf_pipeline_methods}
+
+The modeling approach in the simulation is often determined and constrained by the amount and resolution of available information. Regardless of the modeling fidelity, the approach is almost always based on the following two steps: 
+
+\begin{itemize}
+    \item First, given an IM at the site, component damage is estimated by assigning a DS to each component. In HAZUS, this is done using component-specific fragility curves to estimate the damage to a given component under the hazard. For facilities and building-like structures, the damage evaluation is similar to the HAZUS method described in Section 3.1. For pipeline networks (i.e., water, sewer, and gas), two types of damages are considered: leaks and breaks. Buried pipeline fragility functions are continuing to be developed, including in terms of ground strain and peak ground displacement. The sophistication of damage evaluation heavily depends on the level of analysis and the available IMs. 
+    \item The second step, given estimated damage to lifeline components, is to assess network-level consequences. In HAZUS, the direct consequences are evaluated using empirical relationships based on past experience. Direct consequences are typically limited to restoration time and replacement cost in HAZUS. Indirect consequences can have much greater social and economic impacts; however, these are often difficult to capture within a single software system.
+\end{itemize}
+
+The HAZUS earthquake model is the most sophisticated among the HAZUS models for lifeline modeling and simulation. For natural hazards engineering, HAZUS hurricane and tsunami models are limited to buildings and do not cover lifelines. The HAZUS flood model provides damage and loss estimates only for a subset of potable water, wastewater, and natural gas facilities. Damage is a function of flooding as measured by water level in feet. The information below is based on the earthquake hazard modeling.
+
+The default inventory for potable water networks in HAZUS contains estimates of pipelines aggregated at the census tract level (based on U.S. Census TIGER street file datasets). The HAZUS methodology suggests three levels of analysis for potable water networks:
+
+\begin{itemize}
+    \item Level 1 is based on the default HAZUS inventory (i.e., census tract estimates).
+    \item Level 2 requires additional information on transmission aqueducts, distribution pipelines, reservoirs, water treatment plants, wells, pumping stations, and storage tanks. 
+    \item Level 3 requires additional information on junctions, hydrants, and valves, and further data about connectivity and serviceability (i.e., demand pressures, and flow demands at different distribution nodes). Such information is typically available in KYPIPE, EPANET, or CYBERNET format.
+\end{itemize}
+
+\noindent Analysis of other lifelines requires similar types of information:
+
+\begin{itemize}
+    \item Wastewater networks are described by the geographical layout and characteristics of the transmission network and its treatment components.
+    \item Natural gas networks are described by the geographical layout and characteristics of buried or elevated pipelines and compressor stations.
+\end{itemize}
+
+The diameter of pipes is not considered as a parameter in the damage functions. However, it may be a good proxy for capacity of the given network element and used in network performance assessment in more sophisticated analyses. The rigidity of the pipes in a network is an important input parameter that heavily influences the damage to the pipelines by earthquakes. 
+
+\noindent In HAZUS, three levels of modeling fidelity are described that correspond to the previously introduced analysis level: 
+
+\begin{itemize}
+    \item Level 1: Results are limited to number of leaks and breaks per census tract resulting in a simplified evaluation of network performance (i.e., total number of households without water).
+    \item Level 2: The network is modeled as a graph. This approach allows for estimates of component functionality, component damage ratio, and flow reduction to each area served by the network. Overall network performance can be estimated as a function of the average repair rate (repairs/km) of the pipes in the network. Such evaluations have been performed for San Francisco \citep{markov1994evaluation}, Oakland \citep{geengineeringsystems1994nibs}, and Tokyo \citep{isoyama1982reliability}.
+    \item Level 3: The suggested model is based on the work of Khater and Waisman (1999). It provides more accurate estimates of the hydraulic flow in the network. This translates into improved accuracy and reliability of results when compared to Level 2 analyses.
+\end{itemize}
+
+\section{Software Systems}
+\label{sec:perf_pipeline_tools}
+
+\noindent\textbf{HAZUS 4.2} \\This methodology classifies potable water, wastewater, oil, natural gas, electric power, and communication systems as lifelines. It provides a similar methodology for the modeling and simulation of these systems. Electrical networks are the only lifelines that have influence on other lifelines in the HAZUS methodology (i.e., damage to the electrical network and the consequent loss of power results in loss of function and potential damage in other lifelines). Electrical system modeling is described in more detail in Section 3.4.
+
+The dependency between network component repair times is not considered by HAZUS. The dependencies of one lifeline damage or the consequences of such damage on other lifelines is not taken into consideration in the HAZUS methodology, with the exception of electrical networks. Assessment of network performance is out of the scope of the HAZUS methodology for wastewater systems. In general, HAZUS 4.2 allows estimation of lifeline damage and consequent reduction in network performance. Further details of the software and its limitations are explained in Section 1.1.
+\newline
+
+\noindent\textbf{EPANET} \\EPANET is a software package developed by the U.S. Environmental Protection Agency (EPA) for water pipeline distribution modeling and simulation. It has been widely adopted by municipalities and water utilities as a standard format to evaluate their systems. Its two main uses are for hydraulic modeling, including for maintaining flows and pressures in a system, and for contaminant transport simulation. EPANET files can be used as input files for water distribution pipeline information. EPANET modeling and simulation does not include the ability to assess the impacts of natural hazards on lifeline components or network performance. Using EPANET information, the pressure dependent demand (PDD) approach is becoming the preferred approach to hydraulic network modeling of water distribution systems heavily damaged by earthquakes and model hydraulic networks that are damaged and/or sustain heavy demands. The reader is referred to references including \cite{jun2013iterative} and \cite{sayyed2014modelling} for modeling the relation between pressure and flow in EPANET. Available flow at a network node depends on the available pressure.
+\newline
+
+\noindent\textbf{GIRAFFE} \\The Graphical Iterative Response Analysis for Flow Following Earthquakes (GIRAFFE) was developed at Cornell University to provide a performance assessment tool for pipeline networks \citep{wang2008seismic}. It uses the EPANET engine to define the water network and perform hydraulic network analysis. Performance estimates are presented in a user interface using a GIS framework. Compared to EPANET, the software is able to analyze performance of leaking systems.
+\newline
+
+\noindent\textbf{WNTR} \\WNTR (Water Network Tool for Resilience) is an open-source library of functions developed in the Python programming language by Sandia Laboratories. It uses input data in the EPANET format to define a network and perform an analysis that is similar to the Level 2 and 3 analyses in the HAZUS methodology. WNTR adds the hazard element to water pipeline simulation. Using WNTR requires basic Python programming skills, but in return it provides a platform-independent solution that can easily work in a HPC environment. In addition to the damages and estimated restoration times, it provides estimates of the hydraulic performance of the damaged network. The library is hazard-agnostic; as long as the IMs and the corresponding fragility curves are supplied, it performs the damage calculations and evaluates the estimated consequences of the damage. Compared to GIRAFFE, WNTR incorporates emitters as an improvement to modeling damaged systems.
+\newline
+
+\noindent\textbf{Gas pipeline simulation software} \\Compared to water pipeline simulation software, natural gas pipeline modeling and simulation software is mostly commercial and proprietary, e.g., Synergi Gas from DNV-GL that conducts hydraulic modeling and analysis and NextGen from Gregg Engineering to create hydraulic simulation models to run simulations and calculate pressures, flow rates, and other operational parameters. Given the emphasis on open-source software in this report, these are not discussed in more detail.
+
+\section{Research Gaps and Needs}
+\label{sec:perf_pipeline_gaps}
+
+There is the need for improved fragility functions for buried pipelines, e.g., in terms of ground strain. Advancing component-level fragility curves and improved simulation of structural response for critical facilities will lead to a better estimate of expected damage, both in terms of accuracy and resolution in a simulation. In lifeline modeling and simulation, there is the need for improved consideration of interdependencies between lifelines (Duenas-Osorio et al., 2007, johansen2018probabilistic). This will enable researchers to better understand the impacts of natural hazards on communities. Finally, improved simulation of the recovery process \citep{tabucchi2010simulation, he2019disaster, tomar2020hindcasting} will enable researchers to better understand performance and recovery of lifeline services during and after disasters.
+
+\section{References}
+
+% TODO: These are the references that need to be added to the references.bib file
+
+% Applied Technology Council (1985) ATC-13: Earthquake Damage Evaluation Data for California, ATC, Redwood City, CA, USA
+
+% ARUP (2013) Resilience-based Earthquake Design Initiative for the Next Generation of Buildings, ARUP, USA
+
+% Attary N., Unnikrishnan V.U., van de Lindt J.W., Cox D.T., Barbosa A.R. (2017) Performance-Based Tsunami Engineering methodology for risk assessment of structures, Engineering Structures, 141:676-686
+
+% Baker JW, Lin T, Shahi SK, Jayaram N (2011). New ground motion selection procedures and selected motions for the PEER transportation research program. PEER Report 2011/03, Paciﬁc Earthquake Engineering Research Center, University of California, Berkeley, CA.
+
+% Barbato M., Petrini F., Unnikrishnan V.U., Ciampoli M. (2013) Performance-Based Hurricane Engineering (PBHE) framework, Structural Safety 45: 24-35, doi: 10.1016/j.strusafe.2013.07.002
+
+% Bradley B.A., Lee D.S., Broughton R., Price C. (2010) Efficient Evaluation of Performance-Based Earthquake Engineering Equations
+
+% Bradley B.A. (2013) A critical examination of seismic response uncertainty analysis in earthquake engineering, Earthquake Engineering and Structural Dynamics, 42:1717-1729
+
+% Carey, T.J., Mason, H.B., Barbosa, A.R., and Scott, M.H. "Multi-hazard earthquake and tsunami effects on soil-foundation-bridge systems." Journal of Bridge Engineering, Accepted, August 2018
+
+% Caltrans—California Department of Transportation (2013). “Caltrans Seismic Design Criteria, Version 1.7.” California Department of Transportation, Sacramento, CA.
+
+% Chang SE, Shinozuka M, Moore JE. Probabilistic Earthquake Scenarios: Extending Risk Analysis Methodologies to Spatially Distributed Systems. Earthq Spectra 2000;16:557–72.
+
+% Chmielewski H., Guidotti R., McAllister T., Gardoni P. (2016) Response of Water Systems under Extreme Events: A Comprehensive Approach to Modeling Water System Resilience, In: Proc. 16th World Environmental and Water Resources Congress, 475-486
+
+% Choi E., DesRoches R., Nielson B. (2004) Seismic fragility of typical bridges in moderate seismic zones, Engineering Structures, 26:187-199
+
+% Dueñas‐Osorio, L., Craig, J. I., & Goodno, B. J. (2007). Seismic response of critical interdependent networks. Earthquake engineering & structural dynamics, 36(2), 285-306.
+
+% G&E Engineering Systems, Inc. (G&E), NIBS Earthquake Loss Estimation Methods, Technical Manual, (Water Systems), May 1994.
+
+% Fajfar P., Krawinkler H. (ed.) (2004) Performance-Based Seismic Design Concepts and Implementation, Proceedings of an International Workshop, Bled Slovenia
+
+% Fan, C., Zhang, C., Yahja, A., & Mostafavi, A. (2019). Disaster City Digital Twin: A vision for integrating artificial and human intelligence for disaster management. International Journal of Information Management, 102049.
+
+% FEMA Mitigation Division (2017) HAZUS – Tsunami Model Technical Guidance, FEMA, Washington D.C., 183p
+
+% FEMA Mitigation Division (2018a) Hazus 4.2 software, FEMA, Washington D.C., 2018
+
+% FEMA Mitigation Division (2018b) HAZUS – Multi-hazard Loss Estimation Methodology 2.1, Earthquake Model Technical Manual, FEMA, Washington D.C., 718p, (Accessed: 14 Nov. 2018)
+
+% FEMA Mitigation Division (2018c) HAZUS – Multi-hazard Loss Estimation Methodology 2.1, Hurricane Model Technical Manual, FEMA, Washington D.C., 1456p, (Accessed: 14 Nov. 2018)
+
+% FEMA Mitigation Division (2018d) HAZUS – Multi-hazard Loss Estimation Methodology, Flood Model Technical Manual, FEMA, Washington D.C., 569p, (Accessed: 14 Nov. 2018)
+
+% FEMA (2012) Seismic Performance Assessment of Buildings Volume 1 – Methodology, FEMA P58-1, FEMA, Washington D.C.
+
+% FEMA (2018) Seismic Performance Assessment of Buildings Volume 3 – Performance Assessment Calculation Tool (PACT) Version 2.9.65, FEMA, Washington D.C.
+
+% Han Y, Davidson RA. Probabilistic seismic hazard analysis for spatially distributed infrastructure. Earthq Eng Struct Dyn 2012;41:2141–2158. doi:10.1002/eqe.2179.
+
+% He, X. (2019). Disaster risk management of interdependent infrastructure systems for community resilience planning (Doctoral dissertation, University of Illinois at Urbana-Champaign).
+
+% Isoyama R. and Katayama T. (1982) Reliability Evaluation of Water Supply Systems During Earthquakes
+
+% Jacob, K., Deodatis, G., Atlas, J., Whitcomb, M., Lopeman, M., Markogiannaki, O., Kennett, Z., Morla, A., Leichenko, R. and Vancura, P. (2011). “Responding to Climate Change in New York State: The ClimAID Integrated Assessment for Effective Climate Change Adaptation in New York State: Transportation,” Annals of the New York Academy of Sciences, Vol. 1244, No. 1, pp. 299-362.
+
+% Johansen C., Horney J., and Tien I. (2016) Metrics for evaluating and improving community resilience, 23(2). ASCE Journal of Infrastructure Systems. doi:10.1061/(ASCE) IS.1943-555X.0000329
+
+% Johansen, C., & Tien, I. (2018). Probabilistic multi-scale modeling of interdependencies between critical infrastructure systems for resilience. Sustainable and Resilient Infrastructure, 3(1), 1-15.
+
+% Johnson, L. and T.D. O’Rourke (2016) “Critical Assessment of Lifeline System Performance: Understanding Societal Needs in Disaster Recovery”, NIST CGR 16-917-39, Applied Technology Council, Redwood City, CA. 
+
+% Jun, L. and Y. Guoping (2013) “Iterative Methodology of Pressure-Dependent Demand Based on EPANET for Pressure-Deficient Water Distribution Analysis” Journal of Water Resources Panning and Management, ASCE, 139(1), 34-44. 
+
+% Karaman H, Şahin M, Elnashai AS (2008). Earthquake loss assessment features of Maeviz-Istanbul (Hazturk). Journal of Earthquake Engineering, 12:175-186
+
+% Kaviani P, Zareian F, Taciroglu E (2012). “Seismic behavior of reinforced concrete bridges with skew-angled abutments,” Engineering Structures, 45, 137-150.
+
+% Kiremidjian AS, Moore J, Fan YY, Basoz N, Yazali O, Williams M (2006) Pacific Earthquake Engineering Research Center Highway Demonstration Project. PEER 2006/02
+
+% Klise K.A., Moriarty D., Bynum M.L., Murray R., Burkhardt J., and Haxton T.M., Water Network Tool for Resilience (WNTR) User Manual, U.S. Environmental Protection Agency, Washington D.C., EPA/600/R-17/264, 2017
+
+% Lange D., Devaney S., Usmani A. (2014) An application of the PEER performance based earthquake engineering framework to structures in fire, Engineering Structures, 66:100-115
+
+% Lee R, Kiremidjian AS (2006) Uncertainty and Correlation for Loss Assessment of Spatially Distributed Systems, under review Earthquake Spectra
+
+% Loth C., and Baker J.W. (2013) A spatial cross-correlation model of ground motion spectral accelerations at multiple periods. Earthquake Engineering & Structural Dynamics, 42(3), 397-417
+
+% Mangalathu S, Jeon JS, Padgett JE, DesRoches R (2016). ANCOVA-based grouping of bridge classes for seismic fragility assessment, Engineering Structures, 123, 379-394.
+
+% Mangalathu S, Soleimani F, Jeon J-S (2017). Bridge classes for regional seismic risk assessment: improving HAZUS models, Engineering Structures, 148, 755-766.
+
+% Markov I., Grigoriu M., and O'Rourke T., An evaluation of Seismic Serviceability of Water Supply Networks with Application to San Francisco Auxiliary Water Supply System, NCEER Report No. 94-0001, 1994.
+
+% McKenna F, Zsarnóczay A., Elhaddad W., Performance Based Engineering Application User Manual, 2018
+
+% Moore JE, Little RG, Cho S, Lee S (2005) Using Regional Economic Models to Estimate the Costs of Infrastructure Failures: The Cost of a Limited Interruption in Electric Power in the Los Angeles Region. Keston Institute for Infrastructure, University of Southern California
+
+% New York City Department of Environmental Protection (2013), “New York City Wastewater Resiliency Plan” https://www1.nyc.gov/assets/dep/downloads/pdf/climate-resiliency/climate-plan-single-page.pdf 
+
+% O’Rourke, T.D. (2010) “Geohazards and Large Geographically Distributed Systems”, 2009 Rankine Lecture, Geotechnique, Vol. LX, No. 7, July, 2010, pp. 503- 543.
+
+% O’Rourke, T.D., (2014) “Earthquake-Resilient Lifelines: NEHRP Research, Development and Implementation Roadmap” NIST GCR 14-917-33, NEHRP Consultants Joint Venture, Redwood City, CA. 
+
+% Ouyang M. Review on modeling and simulation of interdependent critical infrastructure systems. Reliability Engineering and System Safety, 121, 43–60. doi:10.1016/j. ress.2014.06.040, 2014
+
+% M. Pagani, D. Monelli, G. Weatherill, L. Danciu, H. Crowley, V. Silva, P. Henshaw, L. Butler, M. Nastasi, L. Panzeri, M. Simionato and D. Vigano, OpenQuake Engine: An Open Hazard (and Risk) Software for the Global Earthquake Model, Seismological Research Letters, vol. 85, no. 3, pp. 692-702, 2014.
+
+% Park Y-J, and Ang A. H-S. (1985) Mechanistic seismic damage model for reinforced concrete. Journal of structural engineering 111.4: 722-739.
+
+% Pitilakis K, Franchin P, Khazai B, Wenzel H (eds) (2014). SYNER-G: Systemic seismic vulnerability and risk assessment of complex urban, utility, lifeline systems and critical facilities. Methodology and applications. Geotechnical, Geological and Earthquake Engineering, 31, ISBN 978-94-017-8834-2, Springer, The Netherlands.
+
+% Porter K.A., Kiremidjian A.S., LeGrue J.S. (2001) Assembly-Based Vulnerability of Buildings and Its Use in Performance Evaluation, Earthquake Spectra, 17:291-312
+
+% Rathje, E., Dawson, C. Padgett, J.E., Pinelli, J.-P., Stanzione, D., Adair, A., Arduino, P., Brandenberg, S.J., Cockerill, T., Dey, C., Esteva, M., Haan, Jr., F.L., Hanlon, M., Kareem, A., Lowes, L., Mock, S., and Mosqueda, G. 2017. “DesignSafe: A New Cyberinfrastructure for Natural Hazards Engineering,” ASCE Natural Hazards Review, doi:10.1061/(ASCE)NH.1527-6996.0000246.
+
+% Reese S., Bradley B.A., Bind J., Smart G., Power W., Sturman J. (2011) Empirical Building fragilities from observed damage in the 2009 South Pacific tsunami, Earth-Science Reviews, 107:156-173
+
+% Romero N., O’Rourke T.D., Nozick L.K., Davis C.A. (2010) Seismic Hazards and Water Supply Performance, Journal of Earthquake Engineering, 14:1022-1043
+
+% Rossman L.A., EPANET 2 Users Manual, U.S. Environmental Protection Agency, Cincinnati, OH, 2000
+
+% Sayyed, M.A.H., R. Gupta, and T.T. Tanyimboh (2014) “Modelling Pressure Deficient Water Distribution Networks in EPANET”, 16th Conf. on Water Distr. Sys, Analysis, Procedia Engineering 89, 626-631. 
+
+% Stergiou E and Kiremidjian AS (2006) Treatment of Uncertainties in Seismic Risk Analysis of Transportation Systems. The John A. Blume Earthquake Engineering Center, Report No. 156, Stanford University, Stanford, CA
+
+% Tabucchi, T., Davidson, R., & Brink, S. (2010). Simulation of post-earthquake water supply system restoration. Civil Engineering and Environmental Systems, 27(4), 263-279.
+
+% Tang A. and Wong F., Observation on Telecommunications Lifeline Performance in the Northridge Earthquake of January 17, 1994, Magnitude 6.6, 1994.
+
+% Tomar, A., Burton, H. V., Mosleh, A., & Yun Lee, J. (2020). Hindcasting the Functional Loss and Restoration of the Napa Water System Following the 2014 Earthquake Using Discrete-Event Simulation. Journal of Infrastructure Systems, 26(4), 04020035.
+
+% Wang Y., O’Rourke T.D. (2008) Seismic Performance Evaluation of Water Supply Systems, MCEER Technical Report 08-0015, MCEER, Buffalo, NY
+
+% Werner S.D., Cho S., Taylor C.E., Lavoie J-P., Huyck C., Eguchi R.T. (2006), REDARS 2 Demonstration Project for Seismic Risk Analysis of Highway Systems, California Department of Transportation, Sacramento, California
+
+% Zhu M, Elkhetali I, Scott MH (2018), Validation of OpenSees for Tsunami Loading on Bridge Superstructures, Journal of Bridge Engineering, 23:4
+
+% Zsarnóczay A. (2018) PELICUN – Probabilistic Estimation of Losses, Injuries and Community resilience Under Natural disasters, https://github.com/NHERI-SimCenter/pelicun, doi: 10.5281/zenodo.1489230
