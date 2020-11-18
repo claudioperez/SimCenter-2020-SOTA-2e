@@ -79,3 +79,19 @@ mktexlsr: Updating /home/claudio/texlive/texmf-local/ls-R...
 mktexlsr: Done.
 --end of output of mktexlsr.
 
+[Wed Nov 18 11:29:58 2020] running mktexlsr
+[Wed Nov 18 11:29:59 2020] success, output:
+mktexlsr: Updating /home/claudio/texlive/2020/texmf-config/ls-R... 
+mktexlsr: Updating /home/claudio/texlive/2020/texmf-dist/ls-R... 
+mktexlsr: Updating /home/claudio/texlive/2020/texmf-var/ls-R... 
+mktexlsr: Updating /home/claudio/texlive/texmf-local/ls-R... 
+mktexlsr: Done.
+--end of output of mktexlsr.
+
+[Wed Nov 18 11:29:59 2020] running updmap
+[Wed Nov 18 11:29:59 2020] error, status: 1, output:
+updmap [ERROR]: Either -sys or -user mode is required.
+updmap [ERROR]: In nearly all cases you should use updmap -sys.
+updmap [ERROR]: For special cases see https://tug.org/texlive/scripts-sys-user.html
+--end of output of updmap.
+

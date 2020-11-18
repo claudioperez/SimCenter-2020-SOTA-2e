@@ -6,7 +6,9 @@ export BSTINPUTS:=./texmf//:${BSTINPUTS}
 # LUAINPUTS=${TEXINPUTS}:${LUAINPUTS}
 
 all:
-	-  pdflatex -output-directory=build -interaction=nonstopmode ./editor.tex
+	# -  pdflatex -output-directory=build -interaction=nonstopmode ./editor.tex
+	-  lualatex --output-directory=build --interaction=nonstopmode ./editor.tex
 	-  bibtex ./build/editor.aux
-	-  pdflatex -output-directory=build -interaction=nonstopmode ./editor.tex
+	# -  pdflatex -output-directory=build -interaction=nonstopmode ./editor.tex
+	-  lualatex --output-directory=build --interaction=nonstopmode ./editor.tex
 
