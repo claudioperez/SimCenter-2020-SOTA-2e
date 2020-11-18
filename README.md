@@ -37,6 +37,8 @@
     15. Change et al., 2000
     16. Miller and Baker, 2016
     17. ESDU (1983)
+    18. Johansen et al. (2016)
+    19. Fan et al., 2019
 
 12. Finalize wrapping citations
 13. Color citations and proof read
