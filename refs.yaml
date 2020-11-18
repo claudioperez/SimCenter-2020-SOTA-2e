@@ -10101,8 +10101,8 @@ references:
   author:
     - family: Mudd
       given: L.
-    - family: P.J
-      given: Vickery
+    - family: Vickery
+      given: P.J.
   container-title: '14th international conference on wind Engineering,Porto'
   event-place: 'Alegre, Brazil'
   issued:
@@ -13931,7 +13931,7 @@ references:
   type: article-journal
   volume: '47'
 
-- id: vickery2009hurricane
+- id: vickery2009hurricane-a
   author:
     - family: Vickery
       given: P.J.
@@ -13951,7 +13951,7 @@ references:
   type: article-journal
   volume: '97'
 
-- id: vickery2009hurricanea
+- id: vickery2009hurricane-b
   author:
     - family: Vickery
       given: P.J.
@@ -13973,7 +13973,7 @@ references:
   type: article-journal
   volume: '48'
 
-- id: vickery2009hurricaneb
+- id: vickery2009hurricane-c
   author:
     - family: Vickery
       given: P.J.
