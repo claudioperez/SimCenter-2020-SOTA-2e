@@ -1966,6 +1966,24 @@ references:
   URL: 'https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29GT.1943-5606.0000012'
   volume: '135'
 
+- id: bray20176th
+  author:
+    - family: Bray
+      given: Jonathan D
+    - family: Macedo
+      given: Jorge
+  container-title: Soil Dynamics and Earthquake Engineering
+  DOI: 10/gcgmnp
+  issued:
+    - year: 2017
+  page: 215–231
+  publisher: Elsevier
+  title: >-
+    6th Ishihara lecture: Simplified procedure for estimating
+    liquefaction-induced building settlement
+  type: article-journal
+  volume: '102'
+
 - id: bray2017new
   author:
     - family: Bray
@@ -2380,6 +2398,62 @@ references:
     evaluation
   type: article-journal
   volume: '24'
+
+- id: cetin2018spt
+  author:
+    - family: Cetin
+      given: K Onder
+    - family: Seed
+      given: Raymond B
+    - family: Kayen
+      given: Robert E
+    - family: Moss
+      given: Robb ES
+    - family: Bilge
+      given: H Tolga
+    - family: Ilgac
+      given: Makbule
+    - family: Chowdhury
+      given: Khaled
+  container-title: Soil Dynamics and Earthquake Engineering
+  DOI: 10/ghkftx
+  issued:
+    - year: 2018
+  page: 698–709
+  publisher: Elsevier
+  title: >-
+    SPT-based probabilistic and deterministic assessment of seismic soil
+    liquefaction triggering hazard
+  type: article-journal
+  volume: '115'
+
+- id: cetin2018spt
+  author:
+    - family: Cetin
+      given: K Onder
+    - family: Seed
+      given: Raymond B
+    - family: Kayen
+      given: Robert E
+    - family: Moss
+      given: Robb ES
+    - family: Bilge
+      given: H Tolga
+    - family: Ilgac
+      given: Makbule
+    - family: Chowdhury
+      given: Khaled
+  container-title: Soil Dynamics and Earthquake Engineering
+  DOI: 10/ghkftx
+  issued:
+    - year: 2018
+  page: 698–709
+  publisher: Elsevier
+  title: >-
+    SPT-based probabilistic and deterministic assessment of seismic soil
+    liquefaction triggering hazard
+  type: article-journal
+  volume: '115'
 
 - id: cha2012riskaverse
   author:
@@ -9871,6 +9945,60 @@ references:
   URL: 'https://arxiv.org/abs/1908.02781'
   volume: '10'
 
+- id: moss2006cpt
+  author:
+    - family: Moss
+      given: RE
+    - family: Seed
+      given: Raymond B
+    - family: Kayen
+      given: Robert E
+    - family: Stewart
+      given: Jonathan P
+    - family: Der Kiureghian
+      given: Armen
+    - family: Cetin
+      given: K Onder
+  container-title: Journal of Geotechnical and Geoenvironmental Engineering
+  DOI: 10/cwmmgv
+  issue: '8'
+  issued:
+    - year: 2006
+  page: 1032–1051
+  publisher: American Society of Civil Engineers
+  title: >-
+    CPT-based probabilistic and deterministic assessment of in situ seismic soil
+    liquefaction potential
+  type: article-journal
+  volume: '132'
+
+- id: moss2006cpt
+  author:
+    - family: Moss
+      given: RE
+    - family: Seed
+      given: Raymond B
+    - family: Kayen
+      given: Robert E
+    - family: Stewart
+      given: Jonathan P
+    - family: Der Kiureghian
+      given: Armen
+    - family: Cetin
+      given: K Onder
+  container-title: Journal of Geotechnical and Geoenvironmental Engineering
+  DOI: 10/cwmmgv
+  issue: '8'
+  issued:
+    - year: 2006
+  page: 1032–1051
+  publisher: American Society of Civil Engineers
+  title: >-
+    CPT-based probabilistic and deterministic assessment of in situ seismic soil
+    liquefaction potential
+  type: article-journal
+  volume: '132'
+
 - id: moss2011probabilistic
   author:
     - family: Moss
@@ -10208,6 +10336,61 @@ references:
     Liquefaction and Its Consequences
   type: book
   URL: 'https://www.nap.edu/catalog/23474'
+
+- id: national2016state
+  author:
+    - family: Kavazanjian
+      given: Edward
+    - family: Andrade
+      given: José E.
+    - family: Arulmoli
+      given: Kandiah
+    - family: Atwater
+      given: Brian F.
+    - family: Christian
+      given: John T.
+    - family: Green
+      given: Eussell
+    - family: L.
+      given: Kramer Steven
+    - family: Mejia
+      given: Lelio
+    - family: Mitchell
+      given: James K.
+    - family: Rathje
+      given: Ellen
+    - family: Rice
+      given: James R.
+    - family: Wang
+      given: Yumei
+  DOI: 10.17226/23474
+  event-place: 'Washington, D.C.'
+  ISBN: 978-0-309-44027-1
+  issued:
+    - year: 2016
+  page: '23474'
+  publisher: National Academies Press
+  publisher-place: 'Washington, D.C.'
+  title: >-
+    State of the Art and Practice in the Assessment of Earthquake-Induced Soil
+    Liquefaction and Its Consequences
+  type: book
+
+- id: national2016state_option2
+  author:
+    - literal: National Academies of Engineering
+  DOI: 10.17226/23474
+  event-place: 'Washington, D.C.'
+  ISBN: 978-0-309-44027-1
+  issued:
+    - year: 2016
+  page: '23474'
+  publisher: National Academies Press
+  publisher-place: 'Washington, D.C.'
+  title: >-
+    State of the Art and Practice in the Assessment of Earthquake-Induced Soil
+    Liquefaction and Its Consequences
+  type: book
 
 - id: national2019building
   author:
@@ -11867,6 +12050,21 @@ references:
   title: Evaluating cyclic liquefaction potential using the cone penetration test
   type: article-journal
   volume: '35'
+
+- id: robertson2009interpretation
+  author:
+    - family: Robertson
+      given: Peter K
+  container-title: Canadian geotechnical journal
+  DOI: 10/b4n873
+  issue: '11'
+  issued:
+    - year: 2009
+  page: 1337–1355
+  publisher: NRC Research Press
+  title: Interpretation of cone penetration tests—a unified approach
+  type: article-journal
+  volume: '46'
 
 - id: roelvink2009modelling
   author:
