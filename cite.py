@@ -12,19 +12,19 @@ def generate_patterns(ref: dict)->str:
         if len(ref["author"]) == 1:
             if "family" in ref["author"][0]:
                 pass
-                # return f"{ref['author'][0]['family']}, {ref['issued'][0]['year']}"
+                return f"{ref['author'][0]['family']}, {ref['issued'][0]['year']}"
                 # return f"{ref['author'][0]['family']} {ref['issued'][0]['year']}"
-                return f"{ref['author'][0]['family']}, ({ref['issued'][0]['year']})"
+                # return f"{ref['author'][0]['family']}, ({ref['issued'][0]['year']})"
                 # return f"{ref['author'][0]['family']} ({ref['issued'][0]['year']})"
             else:
                 pass
-                # return f"{ref['author'][0]['literal']}, {ref['issued'][0]['year']}"
+                return f"{ref['author'][0]['literal']}, {ref['issued'][0]['year']}"
                 # return f"{ref['author'][0]['literal']} {ref['issued'][0]['year']}"
                 # return f"{ref['author'][0]['literal']}, \\({ref['issued'][0]['year']}\\)"
                 # return f"{ref['author'][0]['literal']} \\({ref['issued'][0]['year']}\\)"
         elif len(ref["author"])==2:
             pass
-            # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']}, {ref['issued'][0]['year']}"
+            return f"{ref['author'][0]['family']} and {ref['author'][1]['family']}, {ref['issued'][0]['year']}"
             # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']} {ref['issued'][0]['year']}"
             # # text citations - year in parentheses
             # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']}, ({ref['issued'][0]['year']})"
@@ -32,12 +32,12 @@ def generate_patterns(ref: dict)->str:
         elif len(ref["author"]) > 2:
             if "family" in ref["author"][0]:
                 pass                                                                                                            #    et al         with "and"
-                # return f"{ref['author'][0]['family']} et al\\., {ref['issued'][0]['year']}"                                   # period, comma
+                return f"{ref['author'][0]['family']} et al\\., {ref['issued'][0]['year']}"                                   # period, comma
                 # return f"{ref['author'][0]['family']} et al\\. {ref['issued'][0]['year']}"                                    # period
                 # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']} et al\\., {ref['issued'][0]['year']}"  # period, comma       and
                 # return f"{ref['author'][0]['family']} et al\\., ({ref['issued'][0]['year']})"
                 # return f"{ref['author'][0]['family']} et al\\. ({ref['issued'][0]['year']})"
-                return f"{ref['author'][0]['family']} et al, ({ref['issued'][0]['year']})"
+                #return f"{ref['author'][0]['family']} et al, ({ref['issued'][0]['year']})"
             else:
                 pass
 
@@ -77,7 +77,7 @@ def main():
     with open("refs.yaml", "r") as f:
         refs = yaml.load(f,Loader=yaml.Loader)["references"]
 
-    rng = refs[:]
+    rng = refs[773:]
     n = len(rng)
     for i, ref in enumerate(rng):
         logger.info(f"Entering ref {ref['id']} ({i}/{n})")

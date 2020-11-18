@@ -1,4 +1,4 @@
-\begin{thebibliography}{643}
+\begin{thebibliography}{668}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -347,6 +347,15 @@ B.~A. Benowitz and G.~Deodatis.
   147:\penalty0 154--163, 2015.
 \newblock \doi{10/f74qgt}.
 
+\bibitem[Berger et~al.(2011)Berger, George, LeVeque, and
+  Mandli]{berger2011geoclaw}
+M.~Berger, D.~George, R.~LeVeque, and K.~Mandli.
+\newblock The {{GeoClaw}} software for depth-averaged flows with adaptive
+  refinement.
+\newblock \emph{Advances in Water Resources}, 34\penalty0 (9):\penalty0
+  1195--1206, 2011.
+\newblock \doi{10/cqptn7}.
+
 \bibitem[Bernier and Padgett(2019)]{bernier2019fragility}
 C.~Bernier and J.~E. Padgett.
 \newblock Fragility and risk assessment of aboveground storage tanks subjected
@@ -444,6 +453,13 @@ M.~A. Biot.
 \newblock Mechanics of deformation and acoustic propagation in porous media.
 \newblock \emph{Journal of Applied Physics}, 33:\penalty0 1482--1498, 1962.
 \newblock \doi{10/dz7cmr}.
+
+\bibitem[Biscarini(2010)]{biscarini2010computational}
+C.~Biscarini.
+\newblock Computational fluid dynamics modelling of landslide generated water
+  waves.
+\newblock \emph{Landslides}, 7\penalty0 (2):\penalty0 117--124, 2010.
+\newblock \doi{10/dfgbzw}.
 
 \bibitem[Bishop(1995)]{bishop1995neural}
 C.~Bishop.
@@ -916,6 +932,13 @@ H.~Chmielewski, R.~Guidotti, T.~McAllister, and P.~Gardoni.
   approach to modeling water system resilience.
 \newblock In \emph{Proc. 16th World Environmental and Water Resources
   Congress}, pages 475--486, 2016.
+
+\bibitem[Choi et~al.(2007)Choi, Kim, Pelinovsky, and
+  Woo]{choi2007threedimensional}
+B.~Choi, D.~Kim, E.~Pelinovsky, and S.~Woo.
+\newblock Three-dimensional simulation of tsunami run-up around conical island.
+\newblock \emph{Coastal Engineering}, 54\penalty0 (8):\penalty0 618--629, 2007.
+\newblock \doi{10/b3qf5f}.
 
 \bibitem[Choi et~al.(2004)Choi, DesRoches, and B]{choi2004seismic}
 E.~Choi, R.~DesRoches, and N.~B.
@@ -1629,6 +1652,20 @@ R.~Gentile and C.~Galasso.
 \newblock \emph{Structural Safety}, 87:\penalty0 101980, 2020.
 \newblock \doi{10/ghg5vt}.
 
+\bibitem[George(2008)]{george2008augmented}
+D.~George.
+\newblock Augmented {{Riemann}} solvers for the shallow water equations over
+  variable topography with steady states and inundation.
+\newblock \emph{Journal of Computational Physics}, 227\penalty0 (6):\penalty0
+  3089--3113, 2008.
+\newblock \doi{10/fdg4mx}.
+
+\bibitem[George(2004)]{george2004numerical}
+D.~L. George.
+\newblock \emph{Numerical Approximation of the Nonlinear Shallow Water
+  Equations with Topography and Dry Beds : {{A}} Godunov-Type Scheme}.
+\newblock Masters {{Thesis}}, University of Washington, 2004.
+
 \bibitem[Georgiou(1986)]{georgiou1986design}
 P.~Georgiou.
 \newblock \emph{Design Wind Speeds in Tropical Cyclone-Prone Regions}.
@@ -1739,6 +1776,13 @@ B.~U. Gokkaya, J.~W. Baker, and G.~G. Deierlein.
   (10):\penalty0 1661--1683, 2016.
 \newblock ISSN 1096-9845.
 \newblock \doi{10/f9dzzw}.
+
+\bibitem[Gonz{\'a}lez et~al.(2013)Gonz{\'a}lez, LeVeque, and
+  Adams]{gonzalez2013tsunami}
+F.~Gonz{\'a}lez, R.~LeVeque, and L.~Adams.
+\newblock Tsunami hazard assessment of the ocosta school site in westport,
+  {{WA}}.
+\newblock In \emph{15}. 2013.
 
 \bibitem[Gorissen et~al.(2010)Gorissen, Couckuyt, Demeester, Dhaene, and
   Crombecq]{gorissen2010surrogate}
@@ -1980,6 +2024,12 @@ T.~L. Holzer, M.~J. Bennett, T.~E. Noce, A.~C. Padovani, and J.~C. Tinsley~III.
 \newblock \emph{Earthquake Spectra}, 22\penalty0 (3):\penalty0 693--708, 2006.
 \newblock \doi{10/b2jkcm}.
 
+\bibitem[Hu et~al.(2000)Hu, Mingham, and Causon]{hu2000numerical}
+K.~Hu, C.~Mingham, and D.~Causon.
+\newblock \emph{Numerical Simulation of Wave Overtopping of Coastal Structures
+  Using the Non-Linear Shallow Water Equations}.
+\newblock {Coastal Engineering}, 2000.
+
 \bibitem[Hu et~al.(2015)Hu, Chen, and Wang]{hu2015numerical}
 K.~Hu, Q.~Chen, and H.~Wang.
 \newblock A numerical study of vegetation impact on reducing storm surge by
@@ -2009,6 +2059,12 @@ W.~Huang and Y.~Xu.
   terrain.
 \newblock \emph{Struct. Eng. Mech}, 45\penalty0 (1):\penalty0 1--18, 2013.
 \newblock \doi{10/f5cqx4}.
+
+\bibitem[Hubbard and Dodd(2002)]{hubbard20022d}
+M.~Hubbard and N.~Dodd.
+\newblock A {{2D}} numerical model of wave run-up and overtopping.
+\newblock \emph{Coastal Engineering}, 47\penalty0 (1):\penalty0 1--26, 2002.
+\newblock \doi{10/fkj2jm}.
 
 \bibitem[Hwang et~al.(2015)Hwang, Park, Lee, Lee, and
   Kim]{hwang2015postdisaster}
@@ -2464,6 +2520,23 @@ T.~{Kijewski-Correa}, N.~Smith, A.~Taflanidis, A.~Kennedy, C.~Liu, M.~Krusche,
   133:\penalty0 211--224,, 2014.
 \newblock \doi{10/f6mhdd}.
 
+\bibitem[Kim et~al.(2009)Kim, Lynett, and Socolofsky]{kim2009depthintegrated}
+D.~Kim, P.~Lynett, and S.~Socolofsky.
+\newblock A depth-integrated model for weakly dispersive, turbulent, and
+  rotational fluid flows.
+\newblock \emph{Ocean Modelling, Elsevier Ltd}, 27\penalty0 (3\textendash
+  4):\penalty0 198--214, 2009.
+\newblock \doi{10/d44qbh}.
+
+\bibitem[Kim et~al.(2017)Kim, Pedersen, L{\o}vholt, and
+  LeVeque]{kim2017boussinesq}
+J.~Kim, G.~Pedersen, F.~L{\o}vholt, and R.~LeVeque.
+\newblock A {{Boussinesq}} type extension of the {{GeoClaw}} model - a study of
+  wave breaking phenomena applying dispersive long wave models.
+\newblock \emph{Coastal Engineering, Elsevier}, 122\penalty0
+  (January):\penalty0 75--86, 2017.
+\newblock \doi{10/f96bb5}.
+
 \bibitem[Kim et~al.(2016)Kim, Matsumi, Pan, and Mase]{kim2016realtime}
 S.~Kim, Y.~Matsumi, S.~Pan, and H.~Mase.
 \newblock A real-time forecast model using artificial neural network for
@@ -2567,6 +2640,14 @@ A.~Langousis.
 \newblock \emph{Extreme Rainfall Intensities and Long-Term Rainfall Risk from
   Tropical Cyclones}.
 \newblock Ph. {{D}}.,, Massachusetts Institute of Technology, 2008.
+
+\bibitem[Larsen et~al.(2017)Larsen, Fuhrman, Baykal, and
+  Sumer]{larsen2017tsunamiinduced}
+B.~Larsen, D.~Fuhrman, C.~Baykal, and B.~Sumer.
+\newblock Tsunami-induced scour around monopile foundations.
+\newblock \emph{Coastal Engineering, Elsevier Ltd}, 129\penalty0
+  (August):\penalty0 36--49, 2017.
+\newblock \doi{10/gcgr9m}.
 
 \bibitem[Lauren et~al.(2014)Lauren, Yue, Chris, and David]{lauren2014assessing}
 M.~Lauren, W.~Yue, L.~Chris, and R.~David.
@@ -2844,6 +2925,14 @@ P.~Lynett, T.~Wu, and P.-F. Liu.
 \newblock \emph{Coastal Engineering}, 46\penalty0 (2):\penalty0 89--107, 2002.
 \newblock \doi{10/fh66sv}.
 
+\bibitem[Lynett et~al.(2010)Lynett, Melby, and Kim]{lynett2010application}
+P.~Lynett, J.~Melby, and D.~Kim.
+\newblock An application of {{Boussinesq}} modeling to {{Hurricane}} wave
+  overtopping and inundation.
+\newblock \emph{Ocean Engineering, Elsevier}, 37\penalty0 (1):\penalty0
+  135--153, 2010.
+\newblock \doi{10/cjcb3p}.
+
 \bibitem[Lysmer and Kuhlemeyer(1969)]{Lysmer69}
 J.~Lysmer and A.~M. Kuhlemeyer.
 \newblock Finite dynamic model for infinite media.
@@ -2863,6 +2952,33 @@ J.~Macedo, J.~Bray, N.~Abrahamson, and T.~Travasarou.
 \newblock Performance-based probabilistic seismic slope displacement procedure.
 \newblock \emph{Earthquake Spectra}, 34\penalty0 (2):\penalty0 673--695, 2018.
 \newblock \doi{10/gd2trk}.
+
+\bibitem[Mac{\'i}as et~al.(2016)Mac{\'i}as, Mercado, {Gonz{\'a}lez-Vida},
+  Ortega, and Castro]{macias2016comparison}
+J.~Mac{\'i}as, A.~Mercado, J.~{Gonz{\'a}lez-Vida}, S.~Ortega, and M.~Castro.
+\newblock Comparison and computational performance of tsunami-hysea and
+  {{MOST}} models for {{LANTEX}} 2013 scenario: {{Impact}} assessment on puerto
+  rico coasts.
+\newblock \emph{Pure and Applied Geophysics}, 173\penalty0 (12):\penalty0
+  3973--3997, 2016.
+\newblock \doi{10/f9c6xk}.
+
+\bibitem[Madsen and S{\o}rensen(1992)]{madsen1992new}
+P.~Madsen and O.~S{\o}rensen.
+\newblock A new form of the {{Boussinesq}} equations with improved linear
+  dispersion characteristics. {{Part}} 2. {{A}} slowly-varying bathymetry.
+\newblock \emph{Coastal Engineering}, 18\penalty0 (3\textendash 4):\penalty0
+  183--204, 1992.
+\newblock \doi{10/bw5pv3}.
+
+\bibitem[Madsen et~al.(2003)Madsen, Bingham, and
+  Schaffer]{madsen2003boussinesqtype}
+P.~Madsen, H.~Bingham, and H.~Schaffer.
+\newblock Boussinesq-type formulations for fully nonlinear and extremely
+  dispersive water waves: Derivation and analysis.
+\newblock \emph{Proceedings of the Royal Society A: Mathematical, Physical and
+  Engineering Sciences}, 459\penalty0 (2033):\penalty0 1075--1104, 2003.
+\newblock \doi{10/bxkqfn}.
 
 \bibitem[Maechling et~al.(2015)Maechling, Silva, Callaghan, and
   Jordan]{maechling2015scec}
@@ -2967,6 +3083,14 @@ J.~Mayer, S.~Moradi, A.~Nejat, S.~Ghosh, Z.~Cong, and D.~Liang.
 \newblock \emph{International Journal of Disaster Risk Reduction}, page 101643,
   2020.
 \newblock \doi{10/ghhz5b}.
+
+\bibitem[Mayer and Madsen(2000)]{mayer2000simulation}
+S.~Mayer and P.~Madsen.
+\newblock Simulation of breaking waves in the surf zone using a navier-stokes
+  solver.
+\newblock In \emph{Proceeding to Coastal Engineering Conference}, volume~I,
+  pages 928--941, 2000.
+\newblock \doi{10.1061/40549(276)72}.
 
 \bibitem[McDaniels et~al.(2008)McDaniels, Chang, Cole, Mikawoz, and
   Longstaff]{McDaniels2008}
@@ -3102,6 +3226,13 @@ J.~{Mitrani-Reiser}, M.~Mahoney, W.~T. Holmes, J.~C. De~La~Llera, R.~Bissell,
   473--502, 2012.
 \newblock \doi{10/f38w6t}.
 
+\bibitem[Montagna et~al.(2011)Montagna, Bellotti, and Di~Risio]{montagna20113d}
+F.~Montagna, G.~Bellotti, and M.~Di~Risio.
+\newblock {{3D}} numerical modeling of landslide-generated tsunamis around a
+  conical island.
+\newblock \emph{Natural Hazards}, 58\penalty0 (1):\penalty0 591--608, 2011.
+\newblock \doi{10/btmx93}.
+
 \bibitem[Montgomery et~al.(2014)Montgomery, Abarca, Smith, Wu, and
   Huang]{montgomery2014comments}
 M.~Montgomery, S.~Abarca, R.~Smith, C.-C. Wu, and Y.-H. Huang.
@@ -3148,6 +3279,14 @@ R.~Moss and Z.~Ross.
 \newblock \emph{Bulletin of the Seismological Society of America},
   101:\penalty0 1542--1553, 2011.
 \newblock \doi{10/dd8d5r}.
+
+\bibitem[Motley et~al.(2016)Motley, Wong, Qin, Winter, and
+  Eberhard]{motley2016}
+M.~R. Motley, H.~K. Wong, X.~Qin, A.~O. Winter, and M.~O. Eberhard.
+\newblock Tsunami-{{Induced Forces}} on {{Skewed Bridges}}.
+\newblock \emph{Journal of Waterway, Port, Coastal, and Ocean Engineering},
+  142\penalty0 (3):\penalty0 04015025, May 2016.
+\newblock \doi{10/f8jtc3}.
 
 \bibitem[Mousavi and Beroza(2020)]{mousavi2020machine}
 S.~Mousavi and G.~Beroza.
@@ -3545,6 +3684,14 @@ V.~Picheny, D.~Ginsbourger, O.~Roustant, R.~T. Haftka, and N.~H. Kim.
 PLAXIS.
 \newblock {{PLAXIS}}.
 
+\bibitem[Popinet(2012)]{popinet2012adaptive}
+S.~Popinet.
+\newblock Adaptive modelling of long-distance wave propagation and fine-scale
+  flooding during the {{Tohoku}} tsunami.
+\newblock \emph{Natural Hazards and Earth System Science}, 12\penalty0
+  (4):\penalty0 1213--1227, 2012.
+\newblock \doi{10/f3zqpr}.
+
 \bibitem[Porter et~al.(2001)Porter, Kiremidjian, and
   LeGrue]{porter2001assemblybased}
 K.~Porter, A.~Kiremidjian, and J.~LeGrue.
@@ -3594,6 +3741,21 @@ J.~H. Prevost.
 \bibitem[Proshake()]{ProShake}
 Proshake.
 \newblock {{ProShake}}.
+
+\bibitem[Qin et~al.(2016)Qin, Motley, and Marafi]{qin2016threedimensional}
+X.~Qin, M.~Motley, and N.~Marafi.
+\newblock Three-dimensional modeling of tsunami forces on coastal communities.
+\newblock \emph{Coastal Engineering}, 2016.
+
+\bibitem[Qin et~al.(2018)Qin, Motley, Leveque, Gonzalez, and
+  Mueller]{qin2018comparison}
+X.~Qin, M.~Motley, R.~Leveque, F.~Gonzalez, and K.~Mueller.
+\newblock A comparison of a two-dimensional depth-averaged flow model and a
+  three-dimensional {{RANS}} model for predicting tsunami inundation and fluid
+  forces.
+\newblock \emph{Natural Hazards and Earth System Sciences}, 18\penalty0
+  (9):\penalty0 2489--2506, 2018.
+\newblock \doi{10/gfbrxc}.
 
 \bibitem[Quiroz et~al.(2018)Quiroz, Tran, Villani, and
   Kohn]{quiroz2018speeding}
@@ -3843,6 +4005,13 @@ G.~Santin and B.~Haasdonk.
 \newblock Kernel methods for surrogate modeling.
 \newblock 2019.
 
+\bibitem[Sarfaraz and Pak(2017)]{sarfaraz2017sph}
+M.~Sarfaraz and A.~Pak.
+\newblock {{SPH}} numerical simulation of tsunami wave forces impinged on
+  bridge superstructures.
+\newblock \emph{Coastal Engineering, Elsevier}, 121:\penalty0 145--157, 2017.
+\newblock \doi{10/f9vvht}.
+
 \bibitem[Saygili and Rathje(2008)]{saygili2008empirical}
 G.~Saygili and E.~Rathje.
 \newblock Empirical predictive models for earthquake-induced sliding
@@ -3897,6 +4066,15 @@ X.~Shen.
 \newblock \emph{Development of a Hybrid Simulation Model for Understanding
   Community Resilience to Fuel Disruption}.
 \newblock PhD thesis, University of British Columbia, 2017.
+
+\bibitem[Shi et~al.(2012)Shi, Kirby, Harris, Geiman, and
+  Grilli]{shi2012highorder}
+F.~Shi, J.~Kirby, J.~Harris, J.~Geiman, and S.~Grilli.
+\newblock A high-order adaptive time-stepping {{TVD}} solver for {{Boussinesq}}
+  modeling of breaking waves and coastal inundation.
+\newblock \emph{Ocean Modelling, Elsevier Ltd}, 43\textendash 44:\penalty0
+  36--51, 2012.
+\newblock \doi{10/d273xk}.
 
 \bibitem[Shields et~al.(2011)Shields, Deodatis, and
   Bocchini]{shields2011simple}
@@ -4212,6 +4390,12 @@ J.~Thomas, K.~Bowyer, and A.~Kareem.
   resolution images.
 \newblock In \emph{13th International Conference on Wind Engineering}, pages
   10--15, 2011.
+
+\bibitem[Titov and Gonzalez(1997)]{titov1997implementation}
+V.~Titov and F.~Gonzalez.
+\newblock Implementation and testing of the method of splitting tsunami
+  ({{MOST}}) model.
+\newblock In \emph{{{NOAA}} Technical Memorandum {{ERL PMEL}}-112}. 1997.
 
 \bibitem[Tomar et~al.(2020)Tomar, Burton, Mosleh, and
   Yun~Lee]{tomar2020hindcasting}
@@ -4533,6 +4717,12 @@ J.~Willard, X.~Jia, S.~Xu, M.~Steinbach, and V.~Kumar.
 \newblock Integrating physics-based modeling with machine learning: {{A}}
   survey.
 \newblock 2020.
+
+\bibitem[Williams and Fuhrman(2016)]{williams2016numerical}
+I.~Williams and D.~Fuhrman.
+\newblock Numerical simulation of tsunami-scale wave boundary layers.
+\newblock \emph{Coastal Engineering, Elsevier B.V}, 110:\penalty0 17--31, 2016.
+\newblock \doi{10/f8dvsw}.
 
 \bibitem[Winkler et~al.(2018)Winkler, Haltmeier, Kleidorfer, Rauch, and
   {Tscheikner-Gratl}]{winkler2018pipe}

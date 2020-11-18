@@ -12,22 +12,22 @@ A level-1 auxiliary file: Response/main.aux
 A level-1 auxiliary file: Performance/main.aux
 A level-1 auxiliary file: Recovery/main.aux
 A level-1 auxiliary file: CrossCutting/main.aux
-White space in argument---line 804 of file ./build/editor.aux
+White space in argument---line 812 of file ./build/editor.aux
  : \citation{Nickel
  :                  et al.,2016}
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: editor/appendix.aux
 A level-1 auxiliary file: editor/glossary.aux
-Illegal, another \bibstyle command---line 847 of file ./build/editor.aux
+Illegal, another \bibstyle command---line 855 of file ./build/editor.aux
  : \bibstyle
  :          {abbrvnat}
 I'm skipping whatever remains of this command
 I couldn't open database file .bib
----line 848 of file ./build/editor.aux
+---line 856 of file ./build/editor.aux
  : \bibdata{zotero-refs.bib,
  :                          }
 I'm skipping whatever remains of this command
-Reallocated field_info (elt_size=4) to 23060 items from 5000.
+Reallocated field_info (elt_size=4) to 23816 items from 5000.
 Database file #1: zotero-refs.bib
 Repeated entry---line 2035 of file zotero-refs.bib
  : @misc{desaster
@@ -42,9 +42,11 @@ Repeated entry---line 6068 of file zotero-refs.bib
  : @article{petersen2011fault
  :                           ,
 I'm skipping whatever remains of this entry
+Reallocated str_pool (elt_size=1) to 195000 items from 130000.
 Warning--I didn't find a database entry for "kepert2001dynamicsa"
 Warning--I didn't find a database entry for "deltaressystemsDelft3D2011"
-Reallocated str_pool (elt_size=1) to 195000 items from 130000.
+Warning--I didn't find a database entry for "Ash"
+Warning--I didn't find a database entry for "2015"
 Warning--empty year in ABAQUS
 Warning--empty journal in alesch2001organizations
 Warning--empty year in Anura3D
@@ -73,6 +75,7 @@ Warning--empty journal in gao2018structural
 Warning--empty journal in garcia2018creation
 Warning--empty institution in geengineeringsystems1994nibs
 Warning--empty publisher in gidaris2014surrogate
+Warning--empty publisher in gonzalez2013tsunami
 Warning--empty institution in goulet2017ngaeast
 Warning--empty publisher in haukaas2012reliabilitybased
 Warning--empty journal in isoyama1982reliability
@@ -101,50 +104,51 @@ Warning--empty journal in spanos1983arma
 Warning--there's a number but no volume in stergiou2006treatment
 Warning--empty year in Strata
 Warning--empty publisher in subramanian2013constructing
+Warning--empty publisher in titov1997implementation
 Warning--empty year in Uintah
 Warning--empty journal in willard2020integrating
 Warning--empty publisher in wu2020comprehensive
 Warning--empty publisher in yu2019building
 Warning--empty journal in zeldin1996random
-You've used 643 entries,
+You've used 668 entries,
             2773 wiz_defined-function locations,
-            4088 strings with 130637 characters,
-and the built_in function-call counts, 322659 in all, are:
-= -- 29047
-> -- 20815
-< -- 335
-+ -- 7044
-- -- 6384
-* -- 27980
-:= -- 50372
-add.period$ -- 2357
-call.type$ -- 643
-change.case$ -- 4031
-chr.to.int$ -- 626
-cite$ -- 1347
-duplicate$ -- 13455
-empty$ -- 24354
-format.name$ -- 7364
-if$ -- 66649
+            4230 strings with 135520 characters,
+and the built_in function-call counts, 335149 in all, are:
+= -- 30205
+> -- 21539
+< -- 347
++ -- 7288
+- -- 6603
+* -- 29084
+:= -- 52303
+add.period$ -- 2454
+call.type$ -- 668
+change.case$ -- 4178
+chr.to.int$ -- 651
+cite$ -- 1399
+duplicate$ -- 13985
+empty$ -- 25345
+format.name$ -- 7620
+if$ -- 69238
 int.to.chr$ -- 18
 int.to.str$ -- 1
-missing$ -- 637
-newline$ -- 3630
-num.names$ -- 2523
-pop$ -- 7317
+missing$ -- 662
+newline$ -- 3775
+num.names$ -- 2623
+pop$ -- 7572
 preamble$ -- 1
-purify$ -- 3422
+purify$ -- 3545
 quote$ -- 0
-skip$ -- 10581
+skip$ -- 10972
 stack$ -- 0
-substring$ -- 11952
-swap$ -- 1094
-text.length$ -- 46
+substring$ -- 12511
+swap$ -- 1131
+text.length$ -- 48
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 6803
-warning$ -- 61
-while$ -- 2730
+type$ -- 7073
+warning$ -- 63
+while$ -- 2845
 width$ -- 0
-write$ -- 9040
+write$ -- 9402
 (There were 6 error messages)

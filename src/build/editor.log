@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.2)  12 NOV 2020 17:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.2)  17 NOV 2020 15:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -788,50 +788,50 @@ LaTeX Warning: Label `sec:resp_cfd_wind_flow_modeling' multiply defined.
 (build/editor/glossary.aux))
 \openout1 = `editor.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 64.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 65.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
- 64.
+ 65.
 
 (/home/claudio/texlive/2020/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 65.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
-64.
+65.
 
 (/home/claudio/texlive/2020/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 65.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
- 64.
+ 65.
 
 (/home/claudio/texlive/2020/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 65.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
-e 64.
+e 65.
 
 (/home/claudio/texlive/2020/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
 
 (/home/claudio/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -893,7 +893,7 @@ e
 \c@mv@tabular=\count333
 \c@mv@boldtabular=\count334
 \AtBeginShipoutBox=\box100
-Package hyperref Info: Link coloring OFF on input line 64.
+Package hyperref Info: Link coloring OFF on input line 65.
 (/home/claudio/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -906,9 +906,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count335
 )
-LaTeX Info: Redefining \ref on input line 64.
-LaTeX Info: Redefining \pageref on input line 64.
-LaTeX Info: Redefining \nameref on input line 64.
+LaTeX Info: Redefining \ref on input line 65.
+LaTeX Info: Redefining \pageref on input line 65.
+LaTeX Info: Redefining \nameref on input line 65.
  (build/editor.out) (build/editor.out)
 \@outlinefile=\write6
 \openout6 = `editor.out'.
@@ -1096,7 +1096,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--89
 \openout2 = `Hazard/main.aux'.
 
  (./Hazard/main.tex
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/sc' will be
+(Font)              scaled to size 16.0pt on input line 3.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/sc' will be
 (Font)              scaled to size 18.0pt on input line 3.
  [5
 
@@ -1682,7 +1684,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--95
  []
 
 [47]
-<Hazard/Storm_Surge/Figures/GEOCLAW_ADCIRC_comparison.png, id=1499, 1200.98688p
+<Hazard/Storm_Surge/Figures/GEOCLAW_ADCIRC_comparison.png, id=1500, 1200.98688p
 t x 599.74063pt>
 File: Hazard/Storm_Surge/Figures/GEOCLAW_ADCIRC_comparison.png Graphic file (ty
 pe png)
@@ -1693,7 +1695,7 @@ ng  used on input line 100.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.0pt on input line 101.
  [48 <./Hazard/Storm_Surge/Figures/GEOCLAW_ADCIRC_comparison.png>]
-<Hazard/Storm_Surge/Figures/surge_validation.png, id=1529, 660.96938pt x 541.02
+<Hazard/Storm_Surge/Figures/surge_validation.png, id=1530, 660.96938pt x 541.02
 126pt>
 File: Hazard/Storm_Surge/Figures/surge_validation.png Graphic file (type png)
 <use Hazard/Storm_Surge/Figures/surge_validation.png>
@@ -1759,20 +1761,26 @@ Missing character: There is no ˆ in font nullfont!
 ) (./Hazard/Tsunami/main.tex [54] [55] [56
 
 
-] [57] [58]) [59]
+] [57] [58]
+
+Package natbib Warning: Citation `Ash' on page 59 undefined on input line 56.
+
+
+Package natbib Warning: Citation `2015' on page 59 undefined on input line 56.
+
+) [59]
 \openout2 = `Response/main.aux'.
 
-
-(./Response/main.tex [60
-
-
-
-] [61] [62]) (./Response/Structural/main.tex [63
+ (./Response/main.tex [60
 
 
 
-]
-[64] [65]
+] [61] [62]) (./Response/Structural/main.tex
+[63
+
+
+
+] [64] [65]
 Underfull \hbox (badness 10000) in paragraph at lines 89--91
 
  []
@@ -2137,7 +2145,7 @@ Missing character: There is no g in font nullfont!
 
 
 ] [117]
-<Recovery/Communities/Figures/CommunityRecovery.png, id=2155, 427.5975pt x 344.
+<Recovery/Communities/Figures/CommunityRecovery.png, id=2235, 427.5975pt x 344.
 03531pt>
 File: Recovery/Communities/Figures/CommunityRecovery.png Graphic file (type png
 )
@@ -2150,7 +2158,7 @@ ed on input line 96.
 
 
 ] [123]
-<Recovery/Infrastructure_Systems/Figures/Interdependencies.png, id=2236, 589.24
+<Recovery/Infrastructure_Systems/Figures/Interdependencies.png, id=2316, 589.24
 14pt x 277.9986pt>
 File: Recovery/Infrastructure_Systems/Figures/Interdependencies.png Graphic fil
 e (type png)
@@ -2164,7 +2172,7 @@ ies.png  used on input line 79.
 
 
 ] [131] [132]
-<Recovery/Housing/Figures/HousingRecovery.png, id=2558, 351.714pt x 422.5386pt>
+<Recovery/Housing/Figures/HousingRecovery.png, id=2638, 351.714pt x 422.5386pt>
 
 File: Recovery/Housing/Figures/HousingRecovery.png Graphic file (type png)
 <use Recovery/Housing/Figures/HousingRecovery.png>
@@ -2246,7 +2254,7 @@ Missing character: There is no ˆ in font nullfont!
 Missing character: There is no ˆ in font nullfont!
 Missing character: There is no ˆ in font nullfont!
  [160]
-<CrossCutting/AI/Figures/AI_NHE_Computational_Framework.png, id=4033, 1103.6231
+<CrossCutting/AI/Figures/AI_NHE_Computational_Framework.png, id=4113, 1103.6231
 2pt x 459.21562pt>
 File: CrossCutting/AI/Figures/AI_NHE_Computational_Framework.png Graphic file (
 type png)
@@ -2255,14 +2263,14 @@ Package pdftex.def Info: CrossCutting/AI/Figures/AI_NHE_Computational_Framework
 .png  used on input line 79.
 (pdftex.def)             Requested size: 430.00462pt x 178.9252pt.
  [161 <./CrossCutting/AI/Figures/AI_NHE_Computational_Framework.png>]
-<CrossCutting/AI/Figures/BIM_to_SAM.png, id=4048, 1151.30125pt x 531.48563pt>
+<CrossCutting/AI/Figures/BIM_to_SAM.png, id=4128, 1151.30125pt x 531.48563pt>
 File: CrossCutting/AI/Figures/BIM_to_SAM.png Graphic file (type png)
 <use CrossCutting/AI/Figures/BIM_to_SAM.png>
 Package pdftex.def Info: CrossCutting/AI/Figures/BIM_to_SAM.png  used on input 
 line 94.
 (pdftex.def)             Requested size: 430.00462pt x 198.50374pt.
  [162] [163 <./CrossCutting/AI/Figures/BIM_to_SAM.png>]
-<CrossCutting/AI/Figures/soft_story_identification.png, id=4083, 1188.94188pt x
+<CrossCutting/AI/Figures/soft_story_identification.png, id=4162, 1188.94188pt x
  755.82375pt>
 File: CrossCutting/AI/Figures/soft_story_identification.png Graphic file (type 
 png)
@@ -2271,7 +2279,7 @@ Package pdftex.def Info: CrossCutting/AI/Figures/soft_story_identification.png
  used on input line 109.
 (pdftex.def)             Requested size: 430.00462pt x 273.35342pt.
  [164 <./CrossCutting/AI/Figures/soft_story_identification.png>] [165]
-<CrossCutting/AI/Figures/AI_workflow_for_regional_analysis.png, id=4114, 1142.2
+<CrossCutting/AI/Figures/AI_workflow_for_regional_analysis.png, id=4193, 1142.2
 675pt x 710.655pt>
 File: CrossCutting/AI/Figures/AI_workflow_for_regional_analysis.png Graphic fil
 e (type png)
@@ -2374,7 +2382,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--57
 ] [183]
 [184] [185] [186] [187] [188] [189] [190] [191] [192] [193] [194] [195]
 [196] [197] [198] [199] [200] [201] [202] [203] [204] [205] [206] [207]
-[208]
+[208] [209]
 
 ! Package inputenc Error: Unicode character ×³ (U+05F3)
 (inputenc)                not set up for use with LaTeX.
@@ -2383,20 +2391,20 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2642   first-order {{Sobol}}×³
+l.2723   first-order {{Sobol}}×³
                                  index.
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-[209] [210] [211] [212] [213] [214] [215] [216] [217] [218] [219]
+[210] [211] [212] [213] [214] [215] [216] [217] [218] [219] [220] [221]
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/it' will be
-(Font)              scaled to size 11.5pt on input line 3699.
+(Font)              scaled to size 11.5pt on input line 3861.
 
 ! Font TS1/ntxtlf/m/it/11.5=ts1-qtmri at 11.5pt not loadable: Metric (TFM) file
  not found.
 <to be read again> 
                    relax 
-l.3699   Retrieval}
+l.3861   Retrieval}
                    , 14\penalty0 (4):\penalty0 1--158, 2020.
 I wasn't able to read the size data for this font,
 so I will ignore the font specification.
@@ -2405,7 +2413,7 @@ You might try inserting a different font spec;
 e.g., type `I\font<same font id>=<substitute font name>'.
 
 Missing character: There is no ® in font nullfont!
-[220] [221] [222] [223] [224] [225] [226] [227] [228] [229] [230] [231])
+[222] [223] [224] [225] [226] [227] [228] [229] [230] [231] [232] [233])
 No file editor.ind.
 \tf@thm=\write8
 \openout8 = `editor.thm'.
@@ -2413,17 +2421,17 @@ No file editor.ind.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 145.
-[232]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 145.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 146.
+[234]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
  (build/editor.aux (build/editor/preface.aux)
 (build/editor/acknowledgement.aux) (build/editor/contriblist.aux)
 (build/editor/acronym.aux) (build/editor/introduction.aux)
 (build/Hazard/main.aux) (build/Response/main.aux) (build/Performance/main.aux)
 (build/Recovery/main.aux) (build/CrossCutting/main.aux)
 (build/editor/appendix.aux) (build/editor/glossary.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 145.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 145.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 146.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
 Package rerunfilecheck Info: File `editor.out' has not changed.
 (rerunfilecheck)             Checksum: 85F50EC0ABD4B151ED0A31D2885B7555;9197.
 
@@ -2440,16 +2448,17 @@ LaTeX Warning: There were multiply-defined labels.
 ### semi simple group (level 1) entered at line 109 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 15802 strings out of 482841
- 251183 string characters out of 5955997
- 555876 words of memory out of 5000000
- 29592 multiletter control sequences out of 15000+600000
- 605222 words of font info for 107 fonts, out of 8000000 for 9000
+ 15907 strings out of 482841
+ 253850 string characters out of 5955997
+ 557222 words of memory out of 5000000
+ 29669 multiletter control sequences out of 15000+600000
+ 608521 words of font info for 108 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 43i,10n,43p,2814b,1853s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,10n,43p,2814b,1903s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/home/claudio/texlive/2020/texmf-dist/fonts/enc/dvips/newtx/nt
 x-ec-tlf.enc}{/home/claudio/texlive/2020/texmf-dist/fonts/enc/dvips/newtx/ntx-o
-t1-tlf.enc}</home/claudio/texlive/2020/texmf-dist/fonts/type1/public/newtx/NewT
+t1-tlf.enc}{/home/claudio/texlive/2020/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-
+tlf-pc.enc}</home/claudio/texlive/2020/texmf-dist/fonts/type1/public/newtx/NewT
 XMI.pfb></home/claudio/texlive/2020/texmf-dist/fonts/type1/public/newtx/NewTXMI
 7.pfb></home/claudio/texlive/2020/texmf-dist/fonts/type1/public/newtx/txexs.pfb
 ></home/claudio/texlive/2020/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></h
@@ -2458,10 +2467,10 @@ laudio/texlive/2020/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></home/claudio
 /texlive/2020/texmf-dist/fonts/type1/public/newtx/ztmbi.pfb></home/claudio/texl
 ive/2020/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></home/claudio/texlive/20
 20/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on build/editor.pdf (246 pages, 11979422 bytes).
+Output written on build/editor.pdf (248 pages, 11992754 bytes).
 PDF statistics:
- 4854 PDF objects out of 5155 (max. 8388607)
- 4163 compressed objects within 42 object streams
- 1096 named destinations out of 1200 (max. 500000)
+ 4952 PDF objects out of 5155 (max. 8388607)
+ 4257 compressed objects within 43 object streams
+ 1123 named destinations out of 1200 (max. 500000)
  1062 words of extra memory for PDF output out of 10000 (max. 10000000)
 

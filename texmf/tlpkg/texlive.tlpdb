@@ -106,6 +106,106 @@ catalogue-license other-free
 catalogue-topics boxing box-breaking decoration
 catalogue-version 0.96
 
+name listings
+category Package
+revision 55265
+shortdesc Typeset source code listings using LaTeX
+longdesc The package enables the user to typeset programs (programming
+longdesc code) within LaTeX; the source code is read directly by TeX--no
+longdesc front-end processor is needed. Keywords, comments and strings
+longdesc can be typeset using different styles (default is bold for
+longdesc keywords, italic for comments and no special style for
+longdesc strings). Support for hyperref is provided. To use,
+longdesc \usepackage{listings}, identify the language of the object to
+longdesc typeset, using a construct like: \lstset{language=Python}, then
+longdesc use environment lstlisting for inline code. External files may
+longdesc be formatted using \lstinputlisting to process a given file in
+longdesc the form appropriate for the current language. Short (in-line)
+longdesc listings are also available, using either \lstinline|...| or
+longdesc |...| (after defining the | token with the \lstMakeShortInline
+longdesc command).
+containersize 146224
+containerchecksum b9e3dc1a3394305803007927e2b9d446801d59bb7b8a62d4fa757b7d42b56c27dcf9ebaf6ee1fb1e7d8e437182df9fbbbcbd7ceb8f42db7d1999cbcd6b9d6f6e
+doccontainersize 2163008
+doccontainerchecksum 0a19a7148ec9f902e7eccb3d65724db899e030d326dd0291ed9fd15a540dcf4e3e61a15576fbb16ebb6736751b484356aa78785108aae44f866de97f56d34b09
+srccontainersize 267480
+srccontainerchecksum be76355265cfb208ca069d79ae598fd317b6fe3cc1d81f0ce02e4154e3c03c2b298ec91e8e95cede3a8bf301ae1b6156cb42740e38e138c66b451f561ea49073
+srcfiles size=275
+ source/latex/listings/Makefile
+ source/latex/listings/listings.dtx
+ source/latex/listings/listings.ins
+ source/latex/listings/lstdrvrs.dtx
+ source/latex/listings/lstdrvrs.ins
+ source/latex/listings/ltxdoc.cfg
+runfiles size=145
+ tex/latex/listings/listings-acm.prf
+ tex/latex/listings/listings-bash.prf
+ tex/latex/listings/listings-fortran.prf
+ tex/latex/listings/listings-hansl.prf
+ tex/latex/listings/listings-lua.prf
+ tex/latex/listings/listings-python.prf
+ tex/latex/listings/listings.cfg
+ tex/latex/listings/listings.sty
+ tex/latex/listings/lstdoc.sty
+ tex/latex/listings/lstlang1.sty
+ tex/latex/listings/lstlang2.sty
+ tex/latex/listings/lstlang3.sty
+ tex/latex/listings/lstmisc.sty
+catalogue-also listing
+catalogue-ctan /macros/latex/contrib/listings
+catalogue-license lppl1.3c
+catalogue-topics listing synt-hlt macro-demo
+catalogue-version 1.8d
+
+name memoir
+category Package
+revision 56572
+shortdesc Typeset fiction, non-fiction and mathematical books
+longdesc The memoir class is for typesetting poetry, fiction,
+longdesc non-fiction, and mathematical works. Permissible document
+longdesc 'base' font sizes range from 9 to 60pt. There is a range of
+longdesc page-styles and well over a dozen chapter-styles to choose
+longdesc from, as well as methods for specifying your own layouts and
+longdesc designs. The class also provides the functionality of over
+longdesc thirty of the more popular packages, thus simplifying document
+longdesc sources. Users who wish to use the hyperref package, in a
+longdesc document written with the memoir class, should also use the
+longdesc memhfixc package (part of this bundle). Note, however, that any
+longdesc current version of hyperref actually loads the package
+longdesc automatically if it detects that it is running under memoir.
+containersize 75512
+containerchecksum 968bb181532e93db167996763b29ac5fd35da9a09b102ccce1ca24a91bc6394f95720069380a641359b2524543d119caa02c5e58a531e319985b6f90c65bf758
+doccontainersize 3101108
+doccontainerchecksum bf606654a024cc9b16aab0727f88eb4feea97c26dbed99578fc94dc2d3d188ccf3b5fa656f5e6e2d060de42df6a2eda1c24172f4b3c3a2520794f18b80bee962
+srccontainersize 242364
+srccontainerchecksum a3988ac14f32c3ffb480f76508c7cf7b43f48d744a86c82f25111b962f81ed19603e573ac722b6e15e95ff8c00dfe29ee7dc0bd5842957b914f9d197f107df26
+srcfiles size=320
+ source/latex/memoir/memoir.dtx
+ source/latex/memoir/memoir.ins
+ source/latex/memoir/mempatch.dtx
+ source/latex/memoir/mempatch.ins
+runfiles size=120
+ makeindex/memoir/basic.gst
+ tex/latex/memoir/mem10.clo
+ tex/latex/memoir/mem11.clo
+ tex/latex/memoir/mem12.clo
+ tex/latex/memoir/mem14.clo
+ tex/latex/memoir/mem17.clo
+ tex/latex/memoir/mem20.clo
+ tex/latex/memoir/mem25.clo
+ tex/latex/memoir/mem30.clo
+ tex/latex/memoir/mem36.clo
+ tex/latex/memoir/mem48.clo
+ tex/latex/memoir/mem60.clo
+ tex/latex/memoir/mem9.clo
+ tex/latex/memoir/memhfixc.sty
+ tex/latex/memoir/memoir.cls
+catalogue-also memdesign
+catalogue-ctan /macros/latex/contrib/memoir
+catalogue-license lppl1.3
+catalogue-topics book-pub class
+catalogue-version 3.7n
+
 name ntheorem
 category Package
 revision 27609
