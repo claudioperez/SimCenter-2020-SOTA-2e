@@ -6,36 +6,6 @@
 %
 %%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-%% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\documentclass[graybox]{svmult}
-%
-%% choose options for [] as required from the list
-%% in the Reference Guide
-%
-%\usepackage{mathptmx}       % selects Times Roman as basic font
-%\usepackage{helvet}         % selects Helvetica as sans-serif font
-%\usepackage{courier}        % selects Courier as typewriter font
-%\usepackage{type1cm}        % activate if the above 3 fonts are
-                             % not available on your system
-%
-%\usepackage{makeidx}         % allows index generation
-%\usepackage{graphicx}        % standard LaTeX graphics tool
-%                             % when including figure files
-%\usepackage{multicol}        % used for the two-column index
-%\usepackage[bottom]{footmisc}% places footnotes at page bottom
-%
-%% see the list of further useful packages
-%% in the Reference Guide
-%
-%\makeindex             % used for the subject index
-%                       % please use the style svind.ist with
-%                       % your makeindex program
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%\begin{document}
-
 \title{Water, Sewer, and Gas Pipelines}
 % Use \titlerunning{Short Title} for an abbreviated version of
 % your contribution title if the original one is too long
@@ -105,32 +75,32 @@ The diameter of pipes is not considered as a parameter in the damage functions. 
 \begin{itemize}
     \item Level 1: Results are limited to number of leaks and breaks per census tract resulting in a simplified evaluation of network performance (i.e., total number of households without water).
     \item Level 2: The network is modeled as a graph. This approach allows for estimates of component functionality, component damage ratio, and flow reduction to each area served by the network. Overall network performance can be estimated as a function of the average repair rate (repairs/km) of the pipes in the network. Such evaluations have been performed for San Francisco \citep{markov1994evaluation}, Oakland \citep{geengineeringsystems1994nibs}, and Tokyo \citep{isoyama1982reliability}.
-    \item Level 3: The suggested model is based on the work of Khater and Waisman (1999). It provides more accurate estimates of the hydraulic flow in the network. This translates into improved accuracy and reliability of results when compared to Level 2 analyses.
+    \item Level 3: The suggested model is based on the work of \cite{khater1999potable}. It provides more accurate estimates of the hydraulic flow in the network. This translates into improved accuracy and reliability of results when compared to Level 2 analyses.
 \end{itemize}
 
 \section{Software Systems}
 \label{sec:perf_pipeline_tools}
 
-\noindent\textbf{HAZUS 4.2} \\This methodology classifies potable water, wastewater, oil, natural gas, electric power, and communication systems as lifelines. It provides a similar methodology for the modeling and simulation of these systems. Electrical networks are the only lifelines that have influence on other lifelines in the HAZUS methodology (i.e., damage to the electrical network and the consequent loss of power results in loss of function and potential damage in other lifelines). Electrical system modeling is described in more detail in Section 3.4.
+\paragraph{HAZUS 4.2} This methodology classifies potable water, wastewater, oil, natural gas, electric power, and communication systems as lifelines. It provides a similar methodology for the modeling and simulation of these systems. Electrical networks are the only lifelines that have influence on other lifelines in the HAZUS methodology (i.e., damage to the electrical network and the consequent loss of power results in loss of function and potential damage in other lifelines). Electrical system modeling is described in more detail in Section 3.4.
 
 The dependency between network component repair times is not considered by HAZUS. The dependencies of one lifeline damage or the consequences of such damage on other lifelines is not taken into consideration in the HAZUS methodology, with the exception of electrical networks. Assessment of network performance is out of the scope of the HAZUS methodology for wastewater systems. In general, HAZUS 4.2 allows estimation of lifeline damage and consequent reduction in network performance. Further details of the software and its limitations are explained in Section 1.1.
-\newline
+% \newline
 
 \paragraph{EPANET} EPANET is a software package developed by the U.S. Environmental Protection Agency (EPA) for water pipeline distribution modeling and simulation. It has been widely adopted by municipalities and water utilities as a standard format to evaluate their systems. Its two main uses are for hydraulic modeling, including for maintaining flows and pressures in a system, and for contaminant transport simulation. EPANET files can be used as input files for water distribution pipeline information. EPANET modeling and simulation does not include the ability to assess the impacts of natural hazards on lifeline components or network performance. Using EPANET information, the pressure dependent demand (PDD) approach is becoming the preferred approach to hydraulic network modeling of water distribution systems heavily damaged by earthquakes and model hydraulic networks that are damaged and/or sustain heavy demands. The reader is referred to references including \cite{jun2013iterative} and \cite{sayyed2014modelling} for modeling the relation between pressure and flow in EPANET. Available flow at a network node depends on the available pressure.
-\newline
+% \newline
 
 \paragraph{GIRAFFE} The Graphical Iterative Response Analysis for Flow Following Earthquakes (GIRAFFE) was developed at Cornell University to provide a performance assessment tool for pipeline networks \citep{wang2008seismic}. It uses the EPANET engine to define the water network and perform hydraulic network analysis. Performance estimates are presented in a user interface using a GIS framework. Compared to EPANET, the software is able to analyze performance of leaking systems.
-\newline
+% \newline
 
 \paragraph{WNTR} WNTR (Water Network Tool for Resilience) is an open-source library of functions developed in the Python programming language by Sandia Laboratories. It uses input data in the EPANET format to define a network and perform an analysis that is similar to the Level 2 and 3 analyses in the HAZUS methodology. WNTR adds the hazard element to water pipeline simulation. Using WNTR requires basic Python programming skills, but in return it provides a platform-independent solution that can easily work in a HPC environment. In addition to the damages and estimated restoration times, it provides estimates of the hydraulic performance of the damaged network. The library is hazard-agnostic; as long as the IMs and the corresponding fragility curves are supplied, it performs the damage calculations and evaluates the estimated consequences of the damage. Compared to GIRAFFE, WNTR incorporates emitters as an improvement to modeling damaged systems.
-\newline
+% \newline
 
 \paragraph{Gas pipeline simulation software} Compared to water pipeline simulation software, natural gas pipeline modeling and simulation software is mostly commercial and proprietary, e.g., Synergi Gas from DNV-GL that conducts hydraulic modeling and analysis and NextGen from Gregg Engineering to create hydraulic simulation models to run simulations and calculate pressures, flow rates, and other operational parameters. Given the emphasis on open-source software in this report, these are not discussed in more detail.
 
 \section{Research Gaps and Needs}
 \label{sec:perf_pipeline_gaps}
 
-There is the need for improved fragility functions for buried pipelines, e.g., in terms of ground strain. Advancing component-level fragility curves and improved simulation of structural response for critical facilities will lead to a better estimate of expected damage, both in terms of accuracy and resolution in a simulation. In lifeline modeling and simulation, there is the need for improved consideration of interdependencies between lifelines (Duenas-Osorio et al., 2007, johansen2018probabilistic). This will enable researchers to better understand the impacts of natural hazards on communities. Finally, improved simulation of the recovery process \citep{tabucchi2010simulation, he2019disaster, tomar2020hindcasting} will enable researchers to better understand performance and recovery of lifeline services during and after disasters.
+There is the need for improved fragility functions for buried pipelines, e.g., in terms of ground strain. Advancing component-level fragility curves and improved simulation of structural response for critical facilities will lead to a better estimate of expected damage, both in terms of accuracy and resolution in a simulation. In lifeline modeling and simulation, there is the need for improved consideration of interdependencies between lifelines \citep{duenas-osorio2007seismic, johansen2018probabilistic}. This will enable researchers to better understand the impacts of natural hazards on communities. Finally, improved simulation of the recovery process \citep{tabucchi2010simulation, he2019disaster, tomar2020hindcasting} will enable researchers to better understand performance and recovery of lifeline services during and after disasters.
 
 % \section{References}
 

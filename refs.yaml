@@ -7660,6 +7660,18 @@ references:
   type: article-journal
   volume: '14'
 
+- id: khater1999potable
+  author:
+    - family: Khater
+      given: M.
+    - family: Waisman
+      given: F.
+  issued:
+    - year: 1999
+  publisher: National institute of Building Sciences
+  title: Potable Water System Analysis Model (POWSAM)
+  type: report
+
 - id: khoshnevisan2015probabilistic
   author:
     - family: Khoshnevisan
@@ -8511,7 +8523,7 @@ references:
   page: 110-121
   title: >-
     An efficient modularized sample-based method to estimate the first-order
-    Sobol׳ index
+    Sobol' index
   type: article-journal
   volume: '153'
 
