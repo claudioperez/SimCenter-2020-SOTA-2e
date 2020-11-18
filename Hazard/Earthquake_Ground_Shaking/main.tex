@@ -6,36 +6,6 @@
 %
 %%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-%% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\documentclass[graybox]{svmult}
-%
-%% choose options for [] as required from the list
-%% in the Reference Guide
-%
-%\usepackage{mathptmx}       % selects Times Roman as basic font
-%\usepackage{helvet}         % selects Helvetica as sans-serif font
-%\usepackage{courier}        % selects Courier as typewriter font
-%\usepackage{type1cm}        % activate if the above 3 fonts are
-                             % not available on your system
-%
-%\usepackage{makeidx}         % allows index generation
-%\usepackage{graphicx}        % standard LaTeX graphics tool
-%                             % when including figure files
-%\usepackage{multicol}        % used for the two-column index
-%\usepackage[bottom]{footmisc}% places footnotes at page bottom
-%
-%% see the list of further useful packages
-%% in the Reference Guide
-%
-%\makeindex             % used for the subject index
-%                       % please use the style svind.ist with
-%                       % your makeindex program
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%\begin{document}
-
 \title{Earthquake - Ground Shaking}
 % Use \titlerunning{Short Title} for an abbreviated version of
 % your contribution title if the original one is too long
@@ -85,7 +55,7 @@ Scenario-based analysis typically requires a hypocenter location, earthquake mag
 %\newline
 
 \paragraph{Logic tree} Logic trees have become a popular means to consider the epistemic uncertainty in the ground-shaking hazard. Branches of the trees are populated with various modeling assumptions (e.g., GMPEs, seismic-source models, maximum magnitudes, site data, etc.) and a corresponding set of weights are defined that are proportional to the level of confidence experts have in each option. Notwithstanding the problems inherent in such a strategy for uncertainty quantification \citep{bommer2008use}, recent research has shown several examples where the logic-tree approach provides additional insight that would otherwise not be available \citep[see e.g.][]{goulet2017ngaeast}
-\newline
+% \newline
 
 \noindent One or more of the following outputs are produced to describe the ground-shaking hazard:
 % \newline
@@ -99,16 +69,16 @@ Scenario-based analysis typically requires a hypocenter location, earthquake mag
 \paragraph{Response spectra} A response spectrum is often used as a proxy to describe the ground-motion intensity. It is a collection of IMs that describe the response of single-degree-of-freedom oscillators to the ground-motion record of interest. Acceleration response spectra, for example, are defined through a set of Sa(T) values. The larger the number of vibration periods considered, the more detailed the resulting spectrum becomes. In GMPE-based simulations, the resolution of the response spectrum is typically limited by the vibration-period discretization used in the attenuation relationship. In physics-based simulations, the response spectrum is determined from the simulated ground-motion seismogram.
 % \newline
 
-\noindent\textbf{Hazard curve } \\Rather than focusing on ground motions from a single event, probabilistic assessments characterize the hazard through the annual exceedance rate of various IMs at the site of interest. This information is represented by a hazard curve. Each IM has its corresponding hazard curve. Studies typically focus on obtaining hazard curves for a set of Sa(T) IMs. 
-\newline
+\paragraph{Hazard curve } Rather than focusing on ground motions from a single event, probabilistic assessments characterize the hazard through the annual exceedance rate of various IMs at the site of interest. This information is represented by a hazard curve. Each IM has its corresponding hazard curve. Studies typically focus on obtaining hazard curves for a set of Sa(T) IMs. 
+% \newline
 
 \paragraph{Hazard spectrum} Given a set of hazard curves corresponding to Sa(Ti) for Ti in a sufficiently wide range of vibration periods, it is possible to collect the Sa(Ti) corresponding to a pre-defined annual exceedance rate. These Sa(Ti) values describe the so-called uniform hazard spectrum (UHS), which is the collection of spectral accelerations that have the same (uniform) probability of exceedance. An alternative to the UHS is the so-called Conditional Spectra (CS), where the spectra are conditioned on the probability of exceedance of response at a specified period T. The UHS and CS are often used to describe the hazard in a probabilistic framework.
-\newline
+% \newline
 
 \paragraph{Hazard map} Given a particular annual exceedance rate (or return period, or exceedance probability over a pre-defined time period) and a corresponding hazard curve at various sites in a region, one can create a map of IM levels that describe the intensity of expected ground shaking. The engineering community uses a small set of pre-defined return periods (such as 475 years, which is equivalent to 10\% probability of exceedance over 50 years) to describe the hazard for structural design and performance assessment purposes. Using the same return periods within the community facilitates the comparison of hazard maps among different regions and within different parts of the same region.
-\newline
+% \newline
 
-\noindent\textbf{Disaggregation of the hazard } \\Probabilistic Seismic Hazard Analysis aggregates the contributions of several sources to produce a hazard curve for a site. Disaggregation provides a break-down of the contribution of various seismic sources to the total seismic hazard. This allows researchers to estimate the characteristic features of the earthquake scenarios (typically magnitude and source-to-site distance) that are the main contributors to the seismic hazard at the site. Information about such features complements the estimated IMs and provides a more detailed understanding of the seismic hazard at the site.
+\paragraph{Disaggregation of the hazard} Probabilistic Seismic Hazard Analysis aggregates the contributions of several sources to produce a hazard curve for a site. Disaggregation provides a break-down of the contribution of various seismic sources to the total seismic hazard. This allows researchers to estimate the characteristic features of the earthquake scenarios (typically magnitude and source-to-site distance) that are the main contributors to the seismic hazard at the site. Information about such features complements the estimated IMs and provides a more detailed understanding of the seismic hazard at the site.
 
 \section{Modeling Approaches}
 \label{sec:eq_shake_models}
