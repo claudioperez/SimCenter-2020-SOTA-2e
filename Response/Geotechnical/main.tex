@@ -128,31 +128,31 @@ Over the years, as numerical formulations have become more refined they have als
 
 The following list includes software mentioned in this section and commonly used in geotechnical earthquake engineering applications:\\
 
-\noindent\textbf{OpenSees}\\
+\paragraph{OpenSees}
 The Open System for Earthquake Engineering Simulation (OpenSees) is an open-source software framework capable of performing fully non-linear dynamic effective stress analyses \citep{mckenna2011opensees}. OpenSees is maintained by the Pacific Earthquake Engineering Research (PEER) Center and actively developed by researchers at various research institutions. Several commonly used soil constitutive models have been implemented in OpenSees and additional models can be added based on user needs. The framework is capable of running on HPC systems and supports MacOS, Linux, and Windows operating systems (see https://opensees.berkeley.edu/).\\
 
-\noindent\textbf{FLAC}\\
+\paragraph{FLAC}
 Fast Lagrangian Analaysis of Continua (FLAC), from Itasca Consulting Group, is a proprietary finite-difference based software package capable of performing dynamic nonlinear effective stress analyses. FLAC allows users to import custom soil constitutive models either as pre-compiled dynamic libraries or by using the scripting language FISH. FLAC is not capable of executing on HPC systems and is closed source. Currently only Windows-based operating systems are supported (see https://www.itascacg.com/software/FLAC).\\
 
-\noindent\textbf{PLAXIS}\\
+\paragraph{PLAXIS}
 PLAXIS, now part of Bentley Systems, is a finite element software package that can be used to perform dynamic non-linear effective stress analyses. Custom soil constitutive models can be implemented in within the platform. PLAXIS is prorprietary and closed-source. Currently, it is not HPC capable and supports only Windows-based operating systems (see https://www.bentley.com/en/products/brands/plaxis).\\
 
 \paragraph{FEAP} The Finite Element Analysis Program (FEAP) is a general-purpose finite-element program for solving nonlinear, static, and transient partial differential equations. Its primary applications are directed to the solution of problems in solid mechanics; however, the system may be extended to solve problems in other subject areas by adding user developed modules to address problems in fluid dynamics, flow through porous media, thermo-electric fields, and others. The software is available to run on UNIX/Linux/Mac or Windows environments (see http://feap.berkeley.edu/).\\
 
-\noindent\textbf{Real-Essi}\\ The Real-ESSI Simulator ( Realistic Modeling and Simulation of Earthquakes, Soils, and Structures and their Interaction) is a finite element framework for high performance (sequential or parallel) analysis of linear and nonlinear geotechnical and structural systems including soil structure interaction. The software is developed at the University of California, Davis and it is available to run on UNIX/Linux/Mac or Windows environments (see http://real-essi.us/)
-\newline 
+\paragraph{Real-Essi} The Real-ESSI Simulator ( Realistic Modeling and Simulation of Earthquakes, Soils, and Structures and their Interaction) is a finite element framework for high performance (sequential or parallel) analysis of linear and nonlinear geotechnical and structural systems including soil structure interaction. The software is developed at the University of California, Davis and it is available to run on UNIX/Linux/Mac or Windows environments (see http://real-essi.us/)
+% \newline 
 
-\noindent\textbf{General FEM solvers}\\
+\paragraph{General FEM solvers}
 LS-Dyna and ABAQUS, both proprietary general Finite Element Method solvers, are capable of fully non-linear dynamic effective stress analyses. Custom material models, such as those required for modeling dynamic soil response, can be implemented in these frameworks. Depending on the license purchased, LS-Dyna and ABAQUS are capable of running on HPC systems. LS-Dyna supports Unix, Linux, and Windows-based operating systems and is currently available on DesignSafe. ABAQUS currently supports Linux and Windows-based operating systems.\\
 
-\noindent\textbf{General 1D tools}\\
+\paragraph{General 1D tools}
 Strata (see https://github.com/arkottke/strata), Proshake (see http://www.proshake.com/), and Deepsoil (see http://deepsoil.cee.illinois.edu/) are well establish tools to perform one-dimensional linear-elastic and equivalent-linear (SHAKE-type) site response analyses. Deepsoil also including nonlinear capabilities and pore water pressure generation and dissipation models.\\
 
-\noindent\textbf{General MPM solvers}\\
+\paragraph{General MPM solvers}
 In recent years several MPM codes have been proposed. Among them the CB-Geo MPM, Claymore, Uintah, and Anura3D are well established open source MPM frameworks. CB-Geo MPM is a highly parallel distributed material point method for solving large-deformation problems in geotechnical engineering. The code supports isoparametric elements, multiphase materials, and photorealistic rendering.
 (see https://github.com/cb-geo/mpm). Claymore is a massively parallel and scalable multi-GPU MPM framework for simulating physical behaviors of materials undergoing complex topological changes, self-collision, and large deformations (see https://github.com/penn-graphics-research/claymore). The Uintah software suite is a set of libraries and applications for solving partial differential equations on structured adaptive grids using hundreds to thousands of processors. MPM functionality have been added to the code and used for simulating granular flow, high impact metal deformation, and fluid-strcuture interaction (see http://uintah.utah.edu/ ). The Anura3D Software is a 3D implementation of the material point method developed and used alongside field and laboratory experiments for understanding the physics involved in soil–water–structure interaction (see http://www.mpm-dredge.eu/).\\
 
-\noindent\textbf{General DEM solvers}\\
+\paragraph{General DEM solvers}
 Several DEM codes are available. Among them PFC, LIGGHTS, and LS-DEM have been used in geotechnical and geological settings.
 PFC is a general Discrete-Element Method (DEM) framework from the Itasca Consulting group. Together with FLAC this tool is commonly used for the analysis of geotechnical and geological problems.
 LIGGGHTS, an open-source (at least partially) DEM package, is capable of performing both pseudostatic and dynamic analyses. Some functionality within LIGGGHTS is not available in the public version (see https://github.com/CFDEMproject/LIGGGHTS-PUBLIC). LS-DEM is a variant of DEM that uses level set functions to represent the shapes of constituent particles \citep{kawamoto2018}. When used to represent a particle, a level set function is an implicit function whose value, at a given point, is the signed distance from that point to the surface of the particle. In a DEM framework, this formulation is convenient because two of the most important ingredients in DEM contact detection, interparticle penetration distance and contact normal, are given. Using this methodology the tool is able to handle real, complex particle morphologies which enabled reproduction and prediction of the bulk behavior of experimental specimens.
