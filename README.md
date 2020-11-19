@@ -9,10 +9,10 @@
     - Fix reversed author names
     - Validate DOIs
     - run `cite.py --dry` to identify malformed citekeys
-3. Export Zotero library to `fullBib.bib`
+3. Export Zotero library to `zotero-refs.bib`
 4. Replace `custom_rules.yaml` to disambiguate a/b references.
-5. Run `cite.py` to identify all references to items in `fullBib.bib`. This will produce the following effects and outcomes:
-    - Replace identified references with cite keys from `fullBib.bib`
+5. Run `cite.py` to identify all references to items in `zotero-refs.bib`. This will produce the following effects and outcomes:
+    - Replace identified references with cite keys from `zotero-refs.bib`
     - Generate a log
 6. Run `grep-log.sh` to analyze log file
     - No. of substitution commands executed
@@ -21,11 +21,16 @@
 8. Run `grep-bib.sh` to identify remaining raw references.
 10. Loop over pre-existing `.bib` files replace changed citekeys
 11. Check special cases
+1.  Finalize wrapping citations
+2.  Color citations and proof read
 
 ## Special Cases
 
+> an `x` denotes a resolved case
+
   - [x] Error detecting command "*"
   - [ ] FEMA/HAZUS/ATC references
+  - [ ] Science and Technology Council, 2016a/b
   - [ ] ISO (i.s.o)
   - [ ] NIC
   - [ ] AWP-ODC
@@ -34,7 +39,7 @@
   - [ ] Hazard/Storm_Wind/main: Fang et al., 2018b
   - [x] "e.g."
   - [ ] NOAA Reanalysis Data 2018
-  - [ ] [for example
+  - [ ] `[for example`
   - [ ] CrossCutting/AI:  `Market Research Future, 2019` , `future2019global`
   - [x] Duenas-Osorio et al., 2007
   - [ ] Change et al., 2000
@@ -52,9 +57,9 @@
   - [ ] Zhang and Taflanidis 2018a
   - [ ] Ramancha et al. 2021b
   - [ ] Ramancha et al. 2021a., 2019
+  - [x] Gao and Mosalam 2018a
+  - [x] Gao and Mosalam 2018b
 
-12. Finalize wrapping citations
-13. Color citations and proof read
 
 ## Missing
 
