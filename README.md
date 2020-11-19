@@ -20,44 +20,46 @@
 7. Run `citecmd.py` to wrap references in appropriate commands.
 8. Run `grep-bib.sh` to identify remaining raw references.
 10. Loop over pre-existing `.bib` files replace changed citekeys
-11. Check special cases:
-    1. Error detecting command "*"
-    2. FEMA/HAZUS/ATC references
-    3. ISO (i.s.o)
-    4. NIC
-    5. AWP-ODC
-    6. NGA-West2
-    7. FEMA Mitigation Division
-    8. Hazard/Storm_Wind/main Fang et al., 2018b
-    10. e.g.
-    11. NOAA Reanalysis Data 2018
-    12. [for example
-    13. CrossCutting/AI:  `Market Research Future, 2019` , `future2019global`
-    14. Duenas-Osorio et al., 2007
-    15. Change et al., 2000
-    16. Miller and Baker, 2016
-    17. ESDU (1983)
-    18. Johansen et al. (2016)
-    19. Fan et al
-    
-    - Au and Beck 2003b
-    - Au and Beck 2003a
-    - Deb et al. 2019a
-    - Deb et al. 2019b
-    - Zhang and Taflanidis 2018b
-    - Zhang and Taflanidis 2018a
-    - Ramancha et al. 2021b
-    - Ramancha et al. 2021a., 2019
+11. Check special cases
+
+## Special Cases
+
+  - [x] Error detecting command "*"
+  - [ ] FEMA/HAZUS/ATC references
+  - [ ] ISO (i.s.o)
+  - [ ] NIC
+  - [ ] AWP-ODC
+  - [ ] NGA-West2
+  - [ ] FEMA Mitigation Division
+  - [ ] Hazard/Storm_Wind/main: Fang et al., 2018b
+  - [x] "e.g."
+  - [ ] NOAA Reanalysis Data 2018
+  - [ ] [for example
+  - [ ] CrossCutting/AI:  `Market Research Future, 2019` , `future2019global`
+  - [x] Duenas-Osorio et al., 2007
+  - [ ] Change et al., 2000
+  - [ ] Miller and Baker, 2016
+  - [ ] ESDU (1983)
+  - [ ] Johansen et al. (2016)
+  - [ ] Fan et al
+  
+  - [x] Au and Beck 2003b
+  - [x] Au and Beck 2003a
+  - [x] Deb et al. 2019a
+  - [x] Deb et al. 2019b
+  - [ ] Zhang and Taflanidis 2018b
+  - [ ] Zhang and Taflanidis 2018a
+  - [ ] Ramancha et al. 2021b
+  - [ ] Ramancha et al. 2021a., 2019
 
 12. Finalize wrapping citations
 13. Color citations and proof read
 
 ## Missing
 
-- CrossCutting/AI:
-  - `Nickel et al., 2016`
-- [ ] Hazards/Tsunami
-  - all
+- [ ] CrossCutting/AI:
+  - [ ] `Nickel et al., 2016`
+- [x] Hazards/Tsunami
 - Hazards/Storm_Surge: 
   - `Berger et al., 2011`
   - `Mandli et al., 2014`
