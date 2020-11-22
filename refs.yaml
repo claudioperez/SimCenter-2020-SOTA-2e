@@ -7134,7 +7134,7 @@ references:
   type: article-journal
   volume: '12'
 
-- id: kareem2018generalized
+- id: kareem2019generalized
   author:
     - family: Kareem
       given: A.
@@ -7145,12 +7145,15 @@ references:
     - family: Kwon
       given: D.K.
   container-title: Journal of Structural Engineering
+  issue: '10'
   issued:
-    - year: 2018
+    - year: 2019
+  page: 04019092
   title: >-
     Generalized wind loading chain: A time-frequency modeling framework for
     nonstationary winds effects on structures
   type: article-journal
+  volume: '145'
 
 - id: karlaftis2007fund
   author:
@@ -12169,18 +12172,6 @@ references:
     an explainable AI competition
   type: article-journal
   URL: 'https://hdsr.mitpress.mit.edu/pub/f9kuryi8/release/5)'
-
-- id: russell1969probability
-  author:
-    - family: Russell
-      given: L.R.
-  issued:
-    - year: 1969
-  publisher: 'Stanford University, Ann Arbor'
-  title: >-
-    Probability distributions for texas gulf coast hurricane effects of
-    engineering interest
-  type: thesis
 
 - id: rust2006financial
   author:
