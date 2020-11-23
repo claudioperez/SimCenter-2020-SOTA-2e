@@ -1,5 +1,13 @@
 ---
 references:
+- id: 1998american
+  container-title: AIAA
+  issued:
+    - year: 1998
+  publisher: American Institute of Aeronautics and Astronautics
+  title: American institute of aeronautics and astronautics
+  type: article-journal
+
 - id: 2013new
   issued:
     - year: 2013
@@ -14,6 +22,49 @@ references:
       month: 10
       day: 15
   type: article-journal
+
+- id: 2018direct
+  issued:
+    - year: 2018
+  title: Direct numerical simulation
+  type: article-journal
+  URL: 'https://en.wikipedia.org/wiki/Direct_numerical_simulation'
+
+- id: 2018exascale
+  issued:
+    - year: 2018
+  title: Exascale computing project
+  type: article-journal
+  URL: 'https://www.exascaleproject.org/'
+
+- id: 2018large
+  issued:
+    - year: 2018
+  title: Large eddy simulation
+  type: article-journal
+  URL: 'https://en.wikipedia.org/wiki/Large_eddy_simulation'
+
+- id: 2018navierstokes
+  issued:
+    - year: 2018
+  title: Navier-stokes equations
+  type: article-journal
+  URL: 'https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations'
+
+- id: 2018reynoldsaveraged
+  issued:
+    - year: 2018
+  title: Reynolds-averaged navier-stokes equations
+  type: article-journal
+  URL: >-
+    https://en.wikipedia.org/wiki/Reynolds-averaged_Navier%E2%80%93Stokes_equations
+
+- id: 2018volume
+  issued:
+    - year: 2018
+  title: Volume of fluid method
+  type: article-journal
+  URL: 'https://en.wikipedia.org/wiki/Volume_of_fluid_method.'
 
 - id: ABAQUS
   title: ABAQUS
@@ -426,6 +477,18 @@ references:
   URL: 'https://doi.org/10.1007/s10518-008-9078-1'
   volume: '6'
 
+- id: ancheta2013peer
+  author:
+    - family: Ancheta
+      given: T.
+  event-place: Berkeley
+  issued:
+    - year: 2013
+  publisher: 'Pacific Earthquake Engineering Research Center, University of California'
+  publisher-place: Berkeley
+  title: PEER NGA-West2 database
+  type: report
+
 - id: ancheta2014ngawest2
   author:
     - family: Ancheta
@@ -653,6 +716,24 @@ references:
   type: article-journal
   volume: '103'
 
+- id: ataei2015influential
+  author:
+    - family: Ataei
+      given: N.
+    - family: Padgett
+      given: J.E.
+  container-title: 'Structure and Infrastructure Engineering, Taylor Francis'
+  DOI: 10/ghk56v
+  issue: '3'
+  issued:
+    - year: 2015
+  page: 321–333
+  title: >-
+    Influential fluid–structure interaction modelling parameters on the response
+    of bridges vulnerable to coastal storms"
+  type: article-journal
+  volume: '11'
+
 - id: atc2015handbook
   author:
     - literal: ATC
@@ -697,6 +778,27 @@ references:
   type: report
   URL: >-
     https://www.fema.gov/media-library-data/1557508320921-d67f745e88e04e54a1f40f8e94835042/FEMA_P-58-1-SE_Volume1_Methodology.pdf
+
+- id: attary2016methodology
+  author:
+    - family: Attary
+      given: N.
+    - family: Lindt
+      given: J.W.
+    - family: Unnikrishnan
+      given: V.U.
+    - family: Barbosa
+      given: A.R.
+    - family: Cox
+      given: D.T.
+  container-title: 'Jl. Struct.Engrg., ASCE'
+  issue: '5'
+  issued:
+    - year: 2016
+  page: '04016223'
+  title: Methodology for development of physics-based tsunami fragilities
+  type: article-journal
+  volume: '143'
 
 - id: attary2017performancebased
   author:
@@ -825,6 +927,21 @@ references:
     analysis
   type: article-journal
   volume: '129'
+
+- id: aviram2008guidelines
+  author:
+    - family: Aviram
+      given: A.
+    - family: Mackie
+      given: K.R.
+    - family: Stojadinovic
+      given: B.
+  container-title: Rpt
+  issued:
+    - year: 2008
+  publisher: 'Pacific Earthquake Engineering Research Center, University of California'
+  title: Guidelines for nonlinear analysis of bridge structures in California
+  type: article-journal
 
 - id: awpodc
   title: AWP-ODC
@@ -1193,6 +1310,24 @@ references:
     wave based model
   type: article-journal
   volume: '147'
+
+- id: beran2017uncertainty
+  author:
+    - family: Beran
+      given: P.
+    - family: Stanford
+      given: B.
+    - family: Schrock
+      given: C.
+  container-title: 'Annual Review of Fluid Mechanics, Vol 43'
+  container-title-short: Annu Rev Fluid Mech
+  DOI: 10/ghk56w
+  issued:
+    - year: 2017
+  page: 361–386
+  title: Uncertainty quantification in aeroelasticity
+  type: article-journal
+  volume: '49'
 
 - id: berger2011geoclaw
   author:
@@ -2314,6 +2449,14 @@ references:
   URL: 'https://doi.org/10.1139/t03-088'
   volume: '41'
 
+- id: c.o.m.s.o.l.2018
+  author:
+    - literal: C.O.M.S.O.L.
+  issued:
+    - year: 2018
+  type: article-journal
+  URL: 'https://www.comsol.com.'
+
 - id: carey2018multihazard
   author:
     - family: Carey
@@ -3151,6 +3294,18 @@ references:
     https://ascelibrary.org/doi/abs/10.1061/%28ASCE%290733-9410%281984%29110%3A5%28599%29
   volume: '110'
 
+- id: collins2008multifidelity
+  author:
+    - family: Collins
+      given: K.B.
+  issued:
+    - year: 2008
+  publisher: Georgia Institute of Technology
+  title: >-
+    A multi-fidelity framework for physics based rotor blade simulation and
+    optimization
+  type: book
+
 - id: comerio2006estimating
   author:
     - family: Comerio
@@ -3796,10 +3951,42 @@ references:
   type: article-journal
   volume: '123'
 
+- id: deborst2012nonlinear
+  author:
+    - family: De Borst
+      given: R.
+    - family: Crisfield
+      given: M.A.
+    - family: Remmers
+      given: J.J.C.
+    - family: Verhoosel
+      given: C.L.
+  edition: '2'
+  issued:
+    - year: 2012
+  publisher: 'Wiley, West Sussex, UK'
+  title: Non-linear finite element analysis of solids and structures
+  type: book
+
 - id: DeepSoil
   title: DeepSoil
   type: book
   URL: 'http://deepsoil.cee.illinois.edu/'
+
+- id: deierlein2010nonlinear
+  author:
+    - family: Deierlein
+      given: G.G.
+    - family: Reinhorn
+      given: A.M.
+    - family: Willford
+      given: M.R.
+  container-title: 'NEHRP seismic design technical brief no. 4, NIST GCR'
+  issued:
+    - year: 2010
+  page: 10–917–5
+  title: Nonlinear structural analysis for seismic design
+  type: chapter
 
 - id: deltaressystems2011delft3d
   accessed:
@@ -3903,6 +4090,41 @@ references:
     A framework for enhancing resilience of community by expediting post
     disaster recovery
   type: article-journal
+
+- id: dettmer2004theoretical
+  author:
+    - family: Dettmer
+      given: W.
+    - family: Reese
+      given: S.
+  container-title: 'Computer Methods in Applied Mechanics and Engineering, Elsevier'
+  DOI: 10/bhqr2t
+  issue: 1-2
+  issued:
+    - year: 2004
+  page: 87–116
+  title: >-
+    On the theoretical and numerical modelling of Armstrong-Frederick kinematic
+    hardening in the finite strain regime
+  type: article-journal
+  volume: '193'
+
+- id: dhakal2002pathdependent
+  author:
+    - family: Dhakal
+      given: R.P.
+    - family: Maekawa
+      given: K.
+  container-title: 'Engineering Structures, Elsevier'
+  DOI: 10/dczgnx
+  issued:
+    - year: 2002
+  page: 1383–1396
+  title: >-
+    Path-dependent cyclic stress-strain relationship of reinforcing bar
+    including buckling
+  type: article-journal
+  volume: '24'
 
 - id: DHS_CI
   author:
@@ -4014,6 +4236,21 @@ references:
   type: article-journal
   volume: '58'
 
+- id: ding2018aerodynamic
+  author:
+    - family: Ding
+      given: F.
+    - family: Kareem
+      given: A.
+    - family: Wan
+      given: J.
+  container-title: Structural Engineering International
+  DOI: 10/ghk56t
+  issued:
+    - year: 2018
+  title: Aerodynamic tailoring of structures using computational fluid dynamics
+  type: article-journal
+
 - id: ding2018multifidelity
   author:
     - family: Ding
@@ -4072,6 +4309,77 @@ references:
     technical manual
   title-short: Flood Model
   type: report
+
+- id: do2017damage
+  author:
+    - family: Do
+      given: T.N.
+    - family: Filippou
+      given: F.C.
+  container-title: 'EESD, Wiley'
+  issued:
+    - year: 2017
+  page: 311–332
+  title: A damage model for structures with degrading response
+  type: article-journal
+  volume: '47'
+
+- id: do2018damage
+  abstract: >-
+    The paper presents a hysteretic damage model for the response simulation of
+    structural components with strength and stiffness deterioration under cyclic
+    loading. The model is based on 1D continuum damage mechanics and relates any
+    2 work-conjugate response variables such as force-displacement,
+    moment-rotation, or stress-strain. The strength and stiffness deterioration
+    is described by a continuous damage variable. The formulation uses a
+    criterion based on the hysteretic energy and the maximum or minimum
+    deformation for damage initiation with a cumulative probability distribution
+    function for the damage evolution. A series of structural component response
+    simulations showcase the ability of the model to describe different types of
+    hysteretic behavior. The relation of the model's damage variable to the
+    Park-Ang damage index is also discussed. Because of its consistent and
+    numerically robust formulation, the model is suitable for the large-scale
+    seismic response simulation of structural systems with strength and
+    stiffness deterioration.
+  accessed:
+    - year: 2020
+      month: 11
+      day: 23
+  author:
+    - family: Do
+      given: Thanh N.
+    - family: Filippou
+      given: Filip C.
+  container-title: Earthquake Engineering & Structural Dynamics
+  DOI: 10/gcwp7m
+  ISSN: 1096-9845
+  issue: '2'
+  issued:
+    - year: 2018
+  language: en
+  note: '_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/eqe.2952'
+  page: 311-332
+  source: Wiley Online Library
+  title: A damage model for structures with degrading response
+  type: article-journal
+  URL: 'https://onlinelibrary.wiley.com/doi/abs/10.1002/eqe.2952'
+  volume: '47'
+
+- id: dodd1995model
+  author:
+    - family: Dodd
+      given: L.L.
+    - family: Restrepo-Posada
+      given: J.I.
+  container-title: 'Jl. Struct. Engrg., ASCE'
+  DOI: 10/fgs3ct
+  issue: '3'
+  issued:
+    - year: 1995
+  page: 433–445
+  title: Model for predicting cyclic behavior of reinforcing steel
+  type: article-journal
+  volume: '121'
 
 - id: dossantos2016incremental
   author:
@@ -4815,6 +5123,26 @@ references:
   type: article-journal
   volume: '74'
 
+- id: field2003openshaa
+  author:
+    - family: Field
+      given: E.H.
+    - family: Jordan
+      given: T.H.
+    - family: Cornell
+      given: C.A.
+  container-title: Seismological Research Letters
+  DOI: 10/ccn2qb
+  issue: '4'
+  issued:
+    - year: 2003
+  page: 406–419
+  title: >-
+    OpenSHA: A developing community-modeling environment for seismic hazard
+    analysis
+  type: article-journal
+  volume: '74'
+
 - id: field2014uniform
   author:
     - family: Field
@@ -4918,6 +5246,15 @@ references:
     sustainable buildings
   type: book
 
+- id: fluent2018
+  author:
+    - family: Fluent
+      given: A.N.S.Y.S.
+  issued:
+    - year: 2018
+  type: article-journal
+  URL: 'https://www.ansys.com/products/fluids/ansys-fluent.'
+
 - id: folz2001saws
   author:
     - family: Folz
@@ -4969,6 +5306,21 @@ references:
   source: Open WorldCat
   title: A computer program for seismic analysis of woodframe structures
   type: report
+
+- id: forrester2007multifidelity
+  author:
+    - family: Forrester
+      given: A.I.J.
+    - family: Sóbester
+      given: A.
+    - family: Keane
+      given: A.J.
+  container-title: PRoy SocA-Math Phy
+  issued:
+    - year: 2007
+  title: Multi-fidelity optimization via surrogate modelling
+  type: article-journal
+  volume: '463'
 
 - id: fotopoulou2018vulnerability
   author:
@@ -5790,6 +6142,14 @@ references:
   type: article-journal
   volume: '83'
 
+- id: h.e.l.y.x.2018
+  author:
+    - literal: H.E.L.Y.X.
+  issued:
+    - year: 2018
+  type: article-journal
+  URL: 'https://engys.com/.'
+
 - id: hallsworth2000urban
   author:
     - family: Hallsworth
@@ -6132,6 +6492,24 @@ references:
   type: article-journal
   volume: '20'
 
+- id: hoarau2016progress
+  author:
+    - family: Hoarau
+      given: Y.
+    - family: Peng
+      given: S.-H.
+    - family: Schwamborn
+      given: D.
+    - family: Revell
+      given: A.
+  container-title: Methods-a Companion to Methods in Enzymology
+  container-title-short: Methods
+  issued:
+    - year: 2016
+  title: Progress in hybrid RANS-LES modelling
+  type: article-journal
+  volume: '26'
+
 - id: hofmann2008kernel
   author:
     - family: Hofmann
@@ -6246,6 +6624,21 @@ references:
     area
   type: article-journal
   volume: '22'
+
+- id: hoshiya1972simulation
+  author:
+    - family: Hoshiya
+      given: M.
+  container-title: P Jpn Soc Civil Eng
+  DOI: 10/bhrp5h
+  issued:
+    - year: 1972
+  page: 121–128
+  title: >-
+    Simulation of multi-correlated random processes and application to
+    structural vibration problems
+  type: article-journal
+  volume: '204'
 
 - id: hu2000numerical
   author:
@@ -6378,6 +6771,22 @@ references:
   type: article-journal
   volume: '47'
 
+- id: hube2008experimental
+  author:
+    - family: Hube
+      given: M.A.
+    - family: Mosalam
+      given: K.M.
+  event-place: Berkeley
+  issued:
+    - year: 2008
+  publisher: 'Pacific Earthquake Engineering Research Center, University of California'
+  publisher-place: Berkeley
+  title: >-
+    Experimental and computational evaluation of current and innovative in-span
+    hinge details in reinforced concrete box-girder bridges
+  type: report
+
 - id: huling2015simulating
   author:
     - family: Huling
@@ -6391,6 +6800,26 @@ references:
   page: 248–253
   title: Simulating disaster recovery as discrete event processes using python
   type: paper-conference
+
+- id: hutchinson2001inelastic
+  author:
+    - family: Hutchinson
+      given: T.C.
+    - family: Boulanger
+      given: R.W.
+    - family: Chai
+      given: Y.H.
+    - family: Idriss
+      given: I.M.
+  event-place: Berkeley
+  issued:
+    - year: 2001
+  publisher: 'Pacific Earthquake Engineering Research Center, University of California'
+  publisher-place: Berkeley
+  title: >-
+    Inelastic seismic response of extended pile shaft supported bridge
+    structures
+  type: report
 
 - id: hutchinson2004inelastic
   abstract: >-
@@ -6550,6 +6979,95 @@ references:
   type: article-journal
   volume: '37'
 
+- id: iai2011dilatancy
+  author:
+    - family: Iai
+      given: S.
+    - family: Tobita
+      given: T.
+    - family: Ozutsumi
+      given: O.
+    - family: Ueda
+      given: K.
+  container-title: International Journal for Numerical and Analytical Methods in Geomechanics
+  DOI: 10/dr6ss8
+  issue: '3'
+  issued:
+    - year: 2011
+  page: 360–392
+  title: Dilatancy of granular materials in a strain space multiple mechanism model
+  type: article-journal
+  volume: '35'
+
+- id: iai2013finite
+  author:
+    - family: Iai
+      given: S.
+    - family: Ueda
+      given: K.
+    - family: Tobita
+      given: T.
+    - family: Ozutsumi
+      given: O.
+  container-title: International Journal for Numerical and Analytical Methods in Geomechanics
+  DOI: 10/f42d35
+  issue: '9'
+  issued:
+    - year: 2013
+  page: 1189–1212
+  title: >-
+    Finite strain formulation of a strain space multiple mechanism model for
+    granular materials
+  type: article-journal
+  volume: '37'
+
+- id: ibarra2005hysteretic
+  abstract: >-
+    This paper presents the description, calibration and application of
+    relatively simple hysteretic models that include strength and stiffness
+    deterioration properties, features that are critical for demand predictions
+    as a structural system approaches collapse. Three of the basic hysteretic
+    models used in seismic demand evaluation are modified to include
+    deterioration properties: bilinear, peak-oriented, and pinching. The
+    modified models include most of the sources of deterioration: i.e. various
+    modes of cyclic deterioration and softening of the post-yielding stiffness,
+    and also account for a residual strength after deterioration. The models
+    incorporate an energy-based deterioration parameter that controls four
+    cyclic deterioration modes: basic strength, post-capping strength, unloading
+    stiffness, and accelerated reloading stiffness deterioration. Calibration of
+    the hysteretic models on steel, plywood, and reinforced-concrete components
+    demonstrates that the proposed models are capable of simulating the main
+    characteristics that influence deterioration. An application of a
+    peak-oriented deterioration model in the seismic evaluation of
+    single-degree-of-freedom (SDOF) systems is illustrated. The advantages of
+    using deteriorating hysteretic models for obtaining the response of highly
+    inelastic systems are discussed. Copyright © 2005 John Wiley & Sons, Ltd.
+  accessed:
+    - year: 2020
+      month: 11
+      day: 23
+  author:
+    - family: Ibarra
+      given: Luis F.
+    - family: Medina
+      given: Ricardo A.
+    - family: Krawinkler
+      given: Helmut
+  container-title: Earthquake Engineering & Structural Dynamics
+  DOI: 10/bkfq6n
+  ISSN: 1096-9845
+  issue: '12'
+  issued:
+    - year: 2005
+  language: en
+  note: '_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/eqe.495'
+  page: 1489-1511
+  source: Wiley Online Library
+  title: Hysteretic models that incorporate strength and stiffness deterioration
+  type: article-journal
+  URL: 'https://onlinelibrary.wiley.com/doi/abs/10.1002/eqe.495'
+  volume: '34'
+
 - id: idriss1999update
   author:
     - family: Idriss
@@ -6578,6 +7096,14 @@ references:
   publisher: Earthquake Engineering Research Institute
   title: Soil liquefaction during earthquakes
   type: book
+
+- id: ihfoam2018
+  author:
+    - literal: IHFOAM
+  issued:
+    - year: 2018
+  type: article-journal
+  URL: 'https://ihfoam.ihcantabria.com/.'
 
 - id: imagenet
   title: ImageNet
@@ -6752,6 +7278,28 @@ references:
     application to floor framing generation
   type: article-journal
   volume: '7'
+
+- id: jarrin2006syntheticeddymethod
+  author:
+    - family: Jarrin
+      given: N.
+    - family: Benhamadouche
+      given: S.
+    - family: Laurence
+      given: D.
+    - family: Prosser
+      given: R.
+  container-title: Int J Heat Fluid Flow
+  DOI: 10/btk8vb
+  issue: '4'
+  issued:
+    - year: 2006
+  page: 585–593
+  title: >-
+    A synthetic-eddy-method for generating inflow conditions for large-eddy
+    simulations
+  type: article-journal
+  volume: '27'
 
 - id: jayaram2010efficient
   author:
@@ -7289,6 +7837,32 @@ references:
   type: article-journal
   volume: '12'
 
+- id: kareem2017computational
+  author:
+    - family: Kareem
+      given: A.
+  issued:
+    - year: 2017
+  title: >-
+    Computational modeling and simulation of wind effects on built environment
+    at NSF’s NHERI SimCenter and its role in EFs Florida International
+    University
+  type: article-journal
+  URL: 'https://www.youtube.com/watch?v=j0DUvdKTWXg'
+
+- id: kareem2018fusion
+  author:
+    - family: Kareem
+      given: A.
+    - family: Ding
+      given: F.
+    - family: Wan
+      given: J.
+  issued:
+    - year: 2018
+  title: 'A fusion of CFD, stochastics, machine learning and beyond'
+  type: article-journal
+
 - id: kareem2019generalized
   author:
     - family: Kareem
@@ -7395,6 +7969,22 @@ references:
   title: Seismic behavior of reinforced concrete bridges with skew-angled abutments
   type: article-journal
   volume: '45'
+
+- id: kaviani2014performancebased
+  author:
+    - family: Kaviani
+      given: P.
+    - family: Zareian
+      given: F.
+    - family: Taciroglu
+      given: E.
+  event-place: 'Berkeley, CA'
+  issued:
+    - year: 2014
+  publisher: Pacific Earthquake Engineering Research Center
+  publisher-place: 'Berkeley, CA'
+  title: Performance-based seismic assessment of skewed bridges
+  type: report
 
 - id: kawamoto2018
   author:
@@ -7818,6 +8408,32 @@ references:
   type: article-journal
   volume: '14'
 
+- id: khalili-tehrani2014nonlinear
+  author:
+    - family: Khalili-Tehrani
+      given: P.
+    - family: Ahlberg
+      given: E.
+    - family: Rha
+      given: C.S.
+    - family: Stewart
+      given: J.P.
+    - family: Taciroglu
+      given: E.
+    - family: Wallace
+      given: J.W.
+  container-title: 'Journal of Geotechnical & Geoenvironmental Engineering, ASCE'
+  DOI: 10/gbf38x
+  issue: '3'
+  issued:
+    - year: 2014
+  page: '04013022'
+  title: >-
+    Nonlinear load-deflection behavior of reinforced concrete drilled piles in
+    stiff clay
+  type: article-journal
+  volume: '140'
+
 - id: khater1999potable
   author:
     - family: Khater
@@ -8045,6 +8661,27 @@ references:
   type: book
   volume: '20'
 
+- id: klein2003digital
+  author:
+    - family: Klein
+      given: M.
+    - family: Sadiki
+      given: A.
+    - family: Janicka
+      given: J.
+  container-title: Journal of Computational Physics
+  container-title-short: J Comput Phys
+  DOI: 10/cstkxs
+  issue: '2'
+  issued:
+    - year: 2003
+  page: 652–665
+  title: >-
+    A digital filter based generation of inflow data for spatially developing
+    direct numerical or large eddy simulations
+  type: article-journal
+  volume: '186'
+
 - id: klise2017water
   author:
     - family: Klise
@@ -8124,6 +8761,21 @@ references:
   type: article-journal
   volume: '32'
 
+- id: kojic2005inelastic
+  author:
+    - family: Kojic
+      given: M.
+    - family: Bathe
+      given: K.J.
+  DOI: 10.1007/b137717
+  event-place: Berlin Heidelberg
+  issued:
+    - year: 2005
+  publisher: Springer-Verlag
+  publisher-place: Berlin Heidelberg
+  title: Inelastic analysis of solids and structures
+  type: book
+
 - id: koller2009probabilistic
   author:
     - family: Koller
@@ -8163,6 +8815,20 @@ references:
   publisher: American Society of Civil Engineers
   title: Expert systems in civil engineering
   type: book
+
+- id: kraichnan1970diffusion
+  author:
+    - family: Kraichnan
+      given: R.H.
+  container-title: Physics of Fluids
+  DOI: 10/fpbx84
+  issue: '1'
+  issued:
+    - year: 1970
+  page: 22–31
+  title: Diffusion by a random velocity field
+  type: article-journal
+  volume: '13'
 
 - id: kramer1996geotechnical
   author:
@@ -8264,6 +8930,24 @@ references:
   page: 472–480
   title: Using machine learning to assess the risk of and rrevent water main breaks
   type: paper-conference
+
+- id: kunnath2009nonlinear
+  author:
+    - family: Kunnath
+      given: S.K.
+    - family: Heo
+      given: Y.
+    - family: Mohle
+      given: J.F.
+  container-title: 'Jl. Struct. Engrg., ASCE'
+  DOI: 10/crx3kp
+  issue: '4'
+  issued:
+    - year: 2009
+  page: 335–343
+  title: Nonlinear uniaxial material model for reinforcing steel bars
+  type: article-journal
+  volume: '135'
 
 - id: kwasinski2016conceptual
   author:
@@ -8433,6 +9117,27 @@ references:
   type: article-journal
   volume: '231'
 
+- id: leary2003knowledgebased
+  author:
+    - family: Leary
+      given: S.J.
+    - family: Bhaskar
+      given: A.
+    - family: Keane
+      given: A.J.
+  container-title: Journal of Global Optimization
+  container-title-short: J Global Optim
+  DOI: 10/d4m2cc
+  issue: '3'
+  issued:
+    - year: 2003
+  page: 297–319
+  title: >-
+    A knowledge-based approach to response surface modelling in multifidelity
+    optimization
+  type: article-journal
+  volume: '26'
+
 - id: lecun2015deep
   author:
     - family: LeCun
@@ -8449,6 +9154,22 @@ references:
   title: Deep learning
   type: article-journal
   volume: '521'
+
+- id: lee1998plasticdamage
+  author:
+    - family: Lee
+      given: J.
+    - family: Fenves
+      given: G.L.
+  container-title: 'Jl. Engrg. Mech., ASCE'
+  DOI: 10/c6tqw6
+  issue: '8'
+  issued:
+    - year: 1998
+  page: 892–900
+  title: Plastic-damage model for cyclic loading of concrete structures
+  type: article-journal
+  volume: '124'
 
 - id: lee2006uncertainty
   author:
@@ -8496,6 +9217,20 @@ references:
   type: article-journal
   URL: 'https://doi.org/10.1007/s41064-020-00101-4.'
   volume: '88'
+
+- id: lemaitre1990mechanics
+  author:
+    - family: Lemaitre
+      given: J.
+    - family: Chaboche
+      given: J.L.
+  container-title: Cambridge University Press
+  issue: BN-13
+  issued:
+    - year: 1990
+  page: 978–0521328531
+  title: Mechanics of solid materials
+  type: article-journal
 
 - id: lemnitzer2010nonlinear
   abstract: >-
@@ -9174,6 +9909,22 @@ references:
     https://ascelibrary.org/doi/abs/10.1061/%28ASCE%290733-9445%282003%29129%3A12%281686%29
   volume: '129'
 
+- id: lowes2003modelinga
+  author:
+    - family: Lowes
+      given: L.N.
+    - family: Altoontash
+      given: A.
+  container-title: 'Jl.of Structural Engineering, ASCE'
+  DOI: 10/dp6sqn
+  issue: '12'
+  issued:
+    - year: 2003
+  page: 1686–1697
+  title: Modeling reinforced-concrete beam-column joints subjected to cyclic loading
+  type: article-journal
+  volume: '129'
+
 - id: LS-DYNA
   title: LS-DYNA
   type: book
@@ -9509,6 +10260,23 @@ references:
   type: article-journal
   volume: '86'
 
+- id: maekawa2003nonlinear
+  author:
+    - family: Maekawa
+      given: K.
+    - family: Pimanmas
+      given: A.
+    - family: Okamura
+      given: H.
+  event-place: NY
+  ISBN: '0'
+  issued:
+    - year: 2003
+  publisher: 'Spon Press, Tylor & Francis Group'
+  publisher-place: NY
+  title: Nonlinear mechanics of reinforced concrete
+  type: book
+
 - id: makdisi1978simplified
   author:
     - family: Makdisi
@@ -9523,6 +10291,47 @@ references:
     deformations
   type: article-journal
   volume: '104'
+
+- id: malley2010modeling
+  author:
+    - family: Malley
+      given: J.O.
+    - family: Deierlein
+      given: G.G.
+    - family: Krawinkler
+      given: H.
+    - family: Maffei
+      given: J.R.
+    - family: Pourzanjani
+      given: M.
+    - family: Wallace
+      given: J.
+    - family: Heintz
+      given: J.A.
+  issued:
+    - year: 2010
+  title: >-
+    Modeling and acceptance criteria for seismic design and analysis of tall
+    buildings
+  type: report
+
+- id: mander1998theoretical
+  author:
+    - family: Mander
+      given: J.B.
+    - family: Priestley
+      given: M.J.N.
+    - family: Park
+      given: R.
+  container-title: 'Jl. Struct. Engrg., ASCE'
+  DOI: 10/cwzrtg
+  issue: '8'
+  issued:
+    - year: 1998
+  page: 1804–1826
+  title: Theoretical stress-strain model for confined concrete
+  type: article-journal
+  volume: '114'
 
 - id: mandli2016clawpack
   author:
@@ -9996,6 +10805,25 @@ references:
   type: article-journal
   volume: '57'
 
+- id: menegotto1973method
+  author:
+    - family: Menegotto
+      given: M.
+    - family: Pinto
+      given: P.E.
+  container-title: >-
+    Preliminary report for symposium on resistance and ultimate deformability of
+    structures, IABSE
+  issued:
+    - year: 1973
+  page: 15–22
+  title: >-
+    Method of analysis of cyclically loaded RC plane frames including changes in
+    geometry and non-elastic behavior of elements under normal force and
+    bending"
+  type: paper-conference
+  volume: '13'
+
 - id: meng1995analytical
   author:
     - family: Meng
@@ -10112,6 +10940,60 @@ references:
   type: article-journal
   volume: '20'
 
+- id: miller2015estimating
+  author:
+    - family: Miller
+      given: M.
+    - family: Cortes
+      given: S.
+    - family: Ory
+      given: D.
+    - family: Baker
+      given: J.W.
+  container-title: Transportation research board 94th annual meeting
+  event-place: Washington DC
+  issued:
+    - year: 2015
+  publisher-place: Washington DC
+  title: >-
+    Estimating impacts of catastrophic network damage from earthquakes using an
+    activity-based travel model
+  type: paper-conference
+
+- id: minjie2014modeling
+  author:
+    - family: Minjie
+      given: Zhu
+    - family: Scott
+      given: M.H.
+  container-title: Computers & Structures
+  DOI: 10/f5r5g4
+  issued:
+    - year: 2014
+  page: 12–21
+  title: >-
+    Modeling fluid–structure interaction by the particle finite element method
+    in OpenSees
+  type: article-journal
+  volume: '132'
+
+- id: minjie2018validation
+  author:
+    - family: Minjie
+      given: Z.
+    - family: Elkhetali
+      given: I.
+    - family: Scott
+      given: M.H.
+  container-title: 'J. Bridge Eng., ASCE'
+  issue: '4'
+  issued:
+    - year: 2018
+  page: 04018015
+  title: Validation of OpenSees for tsunami loading on bridge superstructures"
+  type: article-journal
+  volume: '23'
+
 - id: mitrani2007ounce
   author:
     - family: Mitrani-Reiser
@@ -10152,6 +11034,20 @@ references:
 - id: mm5
   title: MM5
   type: book
+
+- id: moehle2004framework
+  author:
+    - family: Moehle
+      given: J.
+    - family: Deierlein
+      given: G.
+  container-title: 13th world conference on earthquake engineering
+  event-place: 'Vancouver BC, Canada'
+  issued:
+    - year: 2004
+  publisher-place: 'Vancouver BC, Canada'
+  title: A Framework methodology for performance-based earthquake engineering
+  type: paper-conference
 
 - id: montagna20113d
   author:
@@ -10570,6 +11466,66 @@ references:
   type: article-journal
   volume: '29'
 
+- id: n.b.i.2016national
+  author:
+    - literal: N.B.I.
+  issued:
+    - year: 2016
+  publisher: Federal Highway Administration
+  title: 'National bridge inventory system, US department of transportation'
+  type: book
+  URL: >-
+    https://catalog.data.gov/dataset/national-bridge-inventory-system-nbi-1992-b9105.
+
+- id: n.i.s.t.-a.t.c.2018blind
+  author:
+    - literal: N.I.S.T.-A.T.C.
+  issued:
+    - year: 2018
+  title: 'Blind prediction contenst on deep, wide-flange structural steel beam-columns'
+  type: article-journal
+  URL: 'https://www.atcouncil.org/atc-106-blind-contest'
+
+- id: n.i.s.t.2017guidelines
+  author:
+    - literal: N.I.S.T.
+  issued:
+    - year: 2017
+  title: >-
+    Guidelines for nonlinear structural analysis for design of buildings: Part I
+    – general
+  type: article-journal
+
+- id: n.i.s.t.2017guidelinesa
+  author:
+    - literal: N.I.S.T.
+  issued:
+    - year: 2017
+  title: >-
+    Guidelines for nonlinear structural analysis for design of buildings: Part
+    IIa – steel moment frames
+  type: article-journal
+
+- id: n.i.s.t.2017guidelinesb
+  author:
+    - literal: N.I.S.T.
+  issued:
+    - year: 2017
+  title: >-
+    Guidelines for nonlinear structural analysis for design of buildings: Part
+    ib – concrete moment frames
+  type: article-journal
+
+- id: n.i.s.t.2017recommended
+  author:
+    - literal: N.I.S.T.
+  issued:
+    - year: 2017
+  title: >-
+    Recommended modeling parameters and acceptance criteria for nonlinear
+    analysis in support of seismic evaluation, retrofit and design
+  type: article-journal
+
 - id: Nabil2004
   author:
     - family: Loukaitou-Sideris
@@ -10939,6 +11895,26 @@ references:
   type: article-journal
   volume: '37:W170-W173'
 
+- id: nurbaiah17modelling
+  author:
+    - family: Nurbaiah
+      given: M.N.
+    - family: Liberatore
+      given: L.
+    - family: Mollaioli
+      given: F.
+    - family: Tesfamariam
+      given: S.
+  container-title: 'Engineering Structures, Elsevier'
+  issued:
+    - year: 17
+  page: 599–621
+  title: >-
+    Modelling of masonry infilled RC frames subjected to cyclic loads: State of
+    the art review and modelling with OpenSees"
+  type: article-journal
+  volume: '150'
+
 - id: nwogu2010infragravity
   author:
     - family: Nwogu
@@ -10969,6 +11945,37 @@ references:
   title: Seismic fragility curves for on-grade steel tanks
   type: article-journal
   volume: '16'
+
+- id: oberkampf2004verification
+  author:
+    - family: Oberkampf
+      given: W.L.
+    - family: Roy
+      given: C.
+  issued:
+    - year: 2004
+  page: 6–7
+  title: >-
+    Verification and validation in computational simulation, AIAA professional
+    development short-course
+  type: article-journal
+
+- id: oberkampf2008verification
+  author:
+    - family: Oberkampf
+      given: W.L.
+    - family: Trucano
+      given: T.G.
+  container-title: Nuclear Engineering and Design
+  container-title-short: Nucl Eng Des
+  DOI: 10/bt6kkq
+  issue: '3'
+  issued:
+    - year: 2008
+  page: 716–743
+  title: Verification and validation benchmarks
+  type: article-journal
+  volume: '238'
 
 - id: oettle2013geotechnical
   abstract: >-
@@ -11054,6 +12061,14 @@ references:
   type: article-journal
   volume: '22'
 
+- id: olaflow2018
+  author:
+    - literal: olaFlow
+  issued:
+    - year: 2018
+  type: article-journal
+  URL: 'https://sites.google.com/view/olaflowcfd/home.'
+
 - id: olea2012geostatistics
   author:
     - family: Olea
@@ -11122,6 +12137,51 @@ references:
   URL: 'http://www.tandfonline.com/doi/abs/10.1080/01944360608976735'
   volume: '72'
 
+- id: omrani2015guidelines
+  author:
+    - family: Omrani
+      given: R.
+    - family: Mobasher
+      given: B.
+    - family: Liang
+      given: X.
+    - family: Gunay
+      given: S.
+    - family: Mosalam
+      given: K.M.
+    - family: Zareian
+      given: F.
+    - family: Taciroglu
+      given: E.
+  container-title: Caltrans Final Report
+  issue: 15-65A0454
+  issued:
+    - year: 2015
+  title: 'Guidelines for nonlinear seismic analysis of ordinary bridges: Version 2.0'
+  type: article-journal
+
+- id: omrani2017variability
+  author:
+    - family: Omrani
+      given: R.
+    - family: Mobasher
+      given: B.
+    - family: Zareian
+      given: F.
+    - family: Taciroglu
+      given: E.
+  container-title: Engineering Structures
+  DOI: 10/gbzfws
+  issued:
+    - year: 2017
+  page: 718–738
+  title: >-
+    Variability in the predicted seismic performance of a typical seat-type
+    bridge due to epistemic uncertainties in its abutment backfill and shear-key
+    models
+  type: article-journal
+  volume: 148C
+
 - id: openfoam
   abstract: >-
     Home of OpenFOAM, the CFD software licensed free and open source only, by us
@@ -11134,6 +12194,14 @@ references:
   title: OpenFOAM | Free CFD Software | The OpenFOAM Foundation
   type: webpage
   URL: 'https://openfoam.org/'
+
+- id: openfoam2018
+  author:
+    - literal: OpenFOAM
+  issued:
+    - year: 2018
+  type: article-journal
+  URL: 'https://openfoam.org.'
 
 - id: openquake
   title: OpenQuake
@@ -11623,6 +12691,25 @@ references:
   URL: 'https://zenodo.org/record/1063644#.X5PqWe1lBhE'
   version: '2.01'
 
+- id: petrone2017fragility
+  author:
+    - family: Petrone
+      given: C.
+    - family: Rossetto
+      given: T.
+    - family: Goda
+      given: K.
+  container-title: Engineering Structures
+  DOI: 10/f9263h
+  issued:
+    - year: 2017
+  page: 36–53
+  title: >-
+    Fragility assessment of a RC structure under tsunami actions via nonlinear
+    static and dynamic analyses
+  type: article-journal
+  volume: '136'
+
 - id: pham2016comparative
   author:
     - family: Pham
@@ -11797,6 +12884,17 @@ references:
     component
   type: article-journal
   volume: '93'
+
+- id: powell2010modeling
+  author:
+    - family: Powell
+      given: G.H.
+  issued:
+    - year: 2010
+  title: >-
+    Modeling for structural analysis: behavior and basics, Computers and
+    Structures
+  type: article-journal
 
 - id: Prevost77
   author:
@@ -12363,6 +13461,15 @@ references:
   type: article-journal
   volume: '21'
 
+- id: roache1998verification
+  author:
+    - family: Roache
+      given: P.J.
+  issued:
+    - year: 1998
+  title: Verification and validation in computational science and engineering
+  type: article-journal
+
 - id: robertson1998evaluating
   author:
     - family: Robertson
@@ -12470,6 +13577,24 @@ references:
   title: 'EPANET 2 users manual, U.S'
   type: book
 
+- id: roy2011comprehensive
+  author:
+    - family: Roy
+      given: C.J.
+    - family: Oberkampf
+      given: W.L.
+  container-title: Comput Methods Appl Mech Eng
+  DOI: 10/b5bt9z
+  issue: 25-28
+  issued:
+    - year: 2011
+  page: 2131–2144
+  title: >-
+    A comprehensive framework for verification, validation, and uncertainty
+    quantification in scientific computing
+  type: article-journal
+  volume: '200'
+
 - id: rudin2019why
   author:
     - family: Rudin
@@ -12514,6 +13639,14 @@ references:
     The financial services roundtable blue ribbon commission on
     Mega-Catastrophes: A call to action
   type: book
+
+- id: s.t.a.r.-c.c.m.+2018
+  author:
+    - literal: S.T.A.R.-C.C.M.+
+  issued:
+    - year: 2018
+  type: article-journal
+  URL: 'https://mdx.plm.automation.siemens.com/star-ccm-plus.'
 
 - id: sacks2018bim
   author:
@@ -12876,6 +14009,28 @@ references:
   type: chapter
   URL: 'https://plato.stanford.edu/archives/spr2020/entries/bounded-rationality/'
 
+- id: shamsabadi2010validated
+  author:
+    - family: Shamsabadi
+      given: A.
+    - family: Khalili-Tehrani
+      given: P.
+    - family: Stewart
+      given: J.P.
+    - family: Taciroglu
+      given: E.
+  container-title: ASCE Journal of Bridge Engineering
+  DOI: 10/d65qzh
+  issue: '3'
+  issued:
+    - year: 2010
+  page: 302–311
+  title: >-
+    Validated simulation models for lateral response of bridge abutments with
+    typical backfills
+  type: article-journal
+  volume: '15'
+
 - id: shapiro1983asymmetric
   author:
     - family: Shapiro
@@ -12986,6 +14141,24 @@ references:
   type: chapter
   volume: '95'
 
+- id: silva2009seismic
+  author:
+    - family: Silva
+      given: P.F.
+    - family: Megally
+      given: S.
+    - family: Seible
+      given: F.
+  container-title: Earthquake Spectra
+  DOI: 10/dpvnwf
+  issue: '3'
+  issued:
+    - year: 2009
+  page: 1 – 11
+  title: Seismic performance of sacrificial exterior shear keys in bridge abutments
+  type: article-journal
+  volume: '25'
+
 - id: silva2014fragility
   abstract: >-
     This chapter describes the SYNER-G Fragility Function Manager, which has
@@ -13031,6 +14204,18 @@ references:
   title: Fragility Function Manager Tool
   type: chapter
   URL: 'https://doi.org/10.1007/978-94-007-7872-6_13'
+
+- id: simo1998computational
+  author:
+    - family: Simo
+      given: J.C.
+    - family: Hughes
+      given: T.J.R.
+  issued:
+    - year: 1998
+  publisher: 'Springer-Verlag, NY'
+  title: Computational inelasticity
+  type: book
 
 - id: simon1973structure
   author:
@@ -13347,6 +14532,31 @@ references:
   type: article-journal
   volume: '149'
 
+- id: spacone2004nonlinear
+  author:
+    - family: Spacone
+      given: E.
+    - family: El-Tawil
+      given: S.
+  container-title: 'Jl. Struct. Engrg., ASCE'
+  issue: '2'
+  issued:
+    - year: 2004
+  title: 'Nonlinear analysis of steel-concrete composite structures: State of the art'
+  type: article-journal
+  volume: '130'
+
+- id: spalart2010reflections
+  author:
+    - family: Spalart
+      given: P.
+  container-title: Progress in hybrid RANS-LES modelling
+  issued:
+    - year: 2010
+  page: 7–24
+  title: Reflections on RANS modelling
+  type: chapter
+
 - id: spall2003introduction
   author:
     - family: Spall
@@ -13615,6 +14825,14 @@ references:
     Efficient Uncertainty Quantification of Wharf Structures under Seismic
     Scenarios Using Gaussian Process Surrogate Model
   type: article-journal
+
+- id: su22018
+  author:
+    - literal: SU2
+  issued:
+    - year: 2018
+  type: article-journal
+  URL: 'https://su2code.github.io/.'
 
 - id: subramanian2013constructing
   author:
@@ -13940,6 +15158,23 @@ references:
     earthquake of
   type: article-journal
 
+- id: terzic2015concrete
+  author:
+    - family: Terzic
+      given: V.
+    - family: Schoettler
+      given: M.J.
+    - family: Restrepo
+      given: J.I.
+    - family: Mahin
+      given: S.A.
+  container-title: Rpt
+  issued:
+    - year: 2015
+  publisher: 'Pacific Earthquake Engineering Research Center, University of California'
+  title: 'Concrete column blind prediction contest 2010: outcomes and observations'
+  type: article-journal
+
 - id: thomas2011robust
   author:
     - family: Thomas
@@ -14131,6 +15366,22 @@ references:
   title: 'Chi-Chi, Taiwan, earthquake of September 21, 1999, reconnaissance report'
   type: article-journal
   volume: '17'
+
+- id: vamvatsikos2002incremental
+  author:
+    - family: Vamvatsikos
+      given: D.
+    - family: Cornell
+      given: C.A.
+  container-title: Earthquake Engineering & Structural Dynamics
+  DOI: 10/cctw6s
+  issue: '3'
+  issued:
+    - year: 2002
+  page: 491–514
+  title: Incremental dynamic analysis
+  type: article-journal
+  volume: '31'
 
 - id: vamvatsikos2013derivation
   author:
@@ -15354,6 +16605,21 @@ references:
     earthquake in Taiwan
   type: thesis
 
+- id: wu2017inflow
+  author:
+    - family: Wu
+      given: X.
+  container-title: 'Annual Review of Fluid Mechanics, Vol 43'
+  container-title-short: Annu Rev Fluid Mech
+  DOI: 10/ghk56x
+  issue: '1'
+  issued:
+    - year: 2017
+  page: 23–49
+  title: Inflow turbulence generation methods
+  type: article-journal
+  volume: '49'
+
 - id: wu2020comprehensive
   author:
     - family: Wu
@@ -15460,6 +16726,24 @@ references:
   title: Optimizing scheduling of post-earthquake electric power restoration tasks
   type: article-journal
   volume: '36'
+
+- id: xu2011hysteretic
+  author:
+    - family: Xu
+      given: S.-Y.
+    - family: Zhang
+      given: J.
+  container-title: Earthquake Engineering & Structural Dynamics
+  DOI: 10/cgsctn
+  issue: '3'
+  issued:
+    - year: 2011
+  page: 315–337
+  title: >-
+    Hysteretic shear-flexure interaction model of reinforced concrete columns
+    for seismic response assessment of bridges
+  type: article-journal
+  volume: '40'
 
 - id: xu2014conditional
   author:
@@ -15691,6 +16975,45 @@ references:
   title: A methodology for probabilistic fault displacement hazard analysis (PFDHA)
   type: article-journal
   volume: '19'
+
+- id: yu1998parametric
+  author:
+    - family: Yu
+      given: D.
+    - family: Kareem
+      given: A.
+  container-title: J Wind Eng Ind Aerodyn
+  DOI: 10/dvqnfp
+  issued:
+    - year: 1998
+  page: 653–662
+  title: Parametric study of flow around rectangular prisms using LES
+  type: article-journal
+  volume: 77-78
+
+- id: yu2013simulation
+  author:
+    - family: Yu
+      given: D.
+    - family: Butler
+      given: K.
+    - family: Kareem
+      given: A.
+    - family: Glimm
+      given: J.
+    - family: Sun
+      given: J.
+  container-title: J Eng Mech
+  DOI: 10/ggcxrw
+  issue: '4'
+  issued:
+    - year: 2013
+  page: 429–438
+  title: >-
+    Simulation of the influence of aspect ratio on the aerodynamics of
+    rectangular prisms
+  type: article-journal
+  volume: '139'
 
 - id: yu2016image
   author:
