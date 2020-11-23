@@ -12173,6 +12173,21 @@ references:
   type: article-journal
   URL: 'https://hdsr.mitpress.mit.edu/pub/f9kuryi8/release/5)'
 
+- id: russell1969probability
+  author:
+    - family: Russell
+      given: Larry Bayner
+  issued:
+    - year: 1969
+  language: English
+  note: 'OCLC: 25796013'
+  publisher: Stanford University
+  source: Open WorldCat
+  title: >-
+    Probability distributions for Texas gulf coast hurricane effects of
+    engineering interest.
+  type: thesis
+
 - id: rust2006financial
   author:
     - family: Rust
