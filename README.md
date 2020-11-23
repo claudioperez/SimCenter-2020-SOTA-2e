@@ -46,7 +46,7 @@
   - [ ] Miller and Baker, 2016
   - [ ] ESDU (1983)
   - [ ] Johansen et al. (2016)
-  - [ ] Fan et al
+  - [x] Fan et al
   - [x] Kepert, 2010a
   - [x] Kepert, 2010b
   - [x] Au and Beck 2003b

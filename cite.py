@@ -18,17 +18,19 @@ def generate_patterns(ref: dict)->str:
                 # return f"{ref['author'][0]['family']} ({ref['issued'][0]['year']})"
             else:
                 pass
-                return f"{ref['author'][0]['literal']}, {ref['issued'][0]['year']}"
+                #return f"{ref['author'][0]['literal']}, {ref['issued'][0]['year']}"
                 # return f"{ref['author'][0]['literal']} {ref['issued'][0]['year']}"
-                # return f"{ref['author'][0]['literal']}, \\({ref['issued'][0]['year']}\\)"
+                return f"{ref['author'][0]['literal']}, ({ref['issued'][0]['year']})"
                 # return f"{ref['author'][0]['literal']} \\({ref['issued'][0]['year']}\\)"
         elif len(ref["author"])==2:
-            pass
-            return f"{ref['author'][0]['family']} and {ref['author'][1]['family']}, {ref['issued'][0]['year']}"
-            # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']} {ref['issued'][0]['year']}"
-            # # text citations - year in parentheses
-            # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']}, ({ref['issued'][0]['year']})"
-            # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']} ({ref['issued'][0]['year']})"
+            if "issued" in ref:
+                return f"{ref['author'][0]['family']} and {ref['author'][1]['family']}, {ref['issued'][0]['year']}"
+                # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']} {ref['issued'][0]['year']}"
+                # # text citations - year in parentheses
+                # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']}, ({ref['issued'][0]['year']})"
+                # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']} ({ref['issued'][0]['year']})"
+            else:
+                pass
         elif len(ref["author"]) > 2:
             if "family" in ref["author"][0]:
                 pass                                                                                                            #    et al         with "and"
@@ -60,7 +62,8 @@ def generate_patterns(ref: dict)->str:
 #                 pass
 
 def generate_script(pattern:str, replacement:str)->str: return f"""
-find . -type f -name '*.tex' \\
+#find . -type f -name '*.tex' \\
+find Response/Structural -type f -name 'main.tex' \\
     -exec grep -q "{pattern}" {{}} \\; \\
     -exec nvim -c "%s/{pattern}/{replacement}/gc" -c 'wq' {{}} \\;
 """
@@ -77,7 +80,7 @@ def main():
     with open("refs.yaml", "r") as f:
         refs = yaml.load(f,Loader=yaml.Loader)["references"]
 
-    rng = refs[773:]
+    rng = refs[:]
     n = len(rng)
     for i, ref in enumerate(rng):
         logger.info(f"Entering ref {ref['id']} ({i}/{n})")
@@ -95,3 +98,4 @@ def main():
                 logger.warning(f"No pattern generated for {ref['id']}")
 
 if __name__=="__main__": main()
+
