@@ -7906,7 +7906,7 @@ references:
   volume: '133'
 
 - id: kartam1997artificial
-  editor:
+  author:
     - family: Kartam
       given: N.
     - family: Flood
@@ -11930,22 +11930,6 @@ references:
   type: article-journal
   volume: '136'
 
-- id: o2000seismic
-  author:
-    - family: O'Rourke
-      given: Michael J
-    - family: So
-      given: Pak
-  container-title: Earthquake spectra
-  DOI: 10/fc7s32
-  issue: '4'
-  issued:
-    - year: 2000
-  page: 801–815
-  title: Seismic fragility curves for on-grade steel tanks
-  type: article-journal
-  volume: '16'
-
 - id: oberkampf2004verification
   author:
     - family: Oberkampf
@@ -12237,6 +12221,22 @@ references:
     assessment
   type: article-journal
   volume: '84'
+
+- id: orourke2000seismic
+  author:
+    - family: O'Rourke
+      given: Michael J
+    - family: So
+      given: Pak
+  container-title: Earthquake spectra
+  DOI: 10/fc7s32
+  issue: '4'
+  issued:
+    - year: 2000
+  page: 801–815
+  title: Seismic fragility curves for on-grade steel tanks
+  type: article-journal
+  volume: '16'
 
 - id: orourke2010geohazards
   author:
@@ -14831,7 +14831,7 @@ references:
     - literal: SU2
   issued:
     - year: 2018
-  type: article-journal
+  type: book
   URL: 'https://su2code.github.io/.'
 
 - id: subramanian2013constructing

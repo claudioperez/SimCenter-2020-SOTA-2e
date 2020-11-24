@@ -59,7 +59,11 @@
   - [ ] Ramancha et al. 2021a., 2019
   - [x] Gao and Mosalam 2018a
   - [x] Gao and Mosalam 2018b
-
+  - [ ] Zsarnóczay, 2018 [pelicun]
+  - [ ] Youd and Perkins (1987)
+  - [ ] Mandli and Dawson (2014)
+  - [ ] Hoarau, 2016
+  - [ ] National Science and Technology Council, 2016a, 2016b, 2019
 
 ## Missing
 

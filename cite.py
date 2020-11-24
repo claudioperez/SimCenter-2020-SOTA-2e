@@ -64,7 +64,7 @@ def generate_patterns(ref: dict)->str:
 
 def generate_script(pattern:str, replacement:str)->str: return f"""
 #find . -type f -name '*.tex' \\
-find Response/ -type f -name 'main.tex' \\
+find . -type f -name 'main.tex' \\
     -exec grep -q "{pattern}" {{}} \\; \\
     -exec nvim -c "%s/{pattern}/{replacement}/gc" -c 'wq' {{}} \\;
 """
