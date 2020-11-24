@@ -22,13 +22,15 @@
 }
 
 %% set the reference style
-\usepackage{natbib}
-\bibliographystyle{abbrvnat}
-\setcitestyle{authoryear,open={(},close={)}}
-\setlength{\bibsep}{5pt}
+% \usepackage{natbib}
+% \bibliographystyle{abbrvnat}
+% \setcitestyle{authoryear,open={(},close={)}}
+% \setlength{\bibsep}{5pt}
+\usepackage[natbib,refsegment=section,backend=biber]{biblatex}
+\addbibresource{zotero-refs-BLT.bib}
 
-% choose options for [] as required from the list
-% in the Reference Guide
+
+
 
 %\usepackage{type1cm}        % activate if the above 3 fonts are 
                              % not available on your system
@@ -63,6 +65,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{import}
+% \newcommand{\seginclude}[1]{\endrefsegment\newrefsegment\include{#1}}
 
 \begin{document}
 
@@ -122,15 +125,19 @@
 \part{Appendix}
 
 \appendix
+% \input{SoftwareIndex}\pagebreak
 \include{editor/appendix}
 
 \end{partbacktext}
 
 \include{editor/glossary}
 
-\bibliographystyle{abbrvnat}
-\bibliography{
-    zotero-refs.bib,
+\printbibliography
+\printbibliography[segment=1]
+\printbibliography[segment=2]
+% \bibliographystyle{abbrvnat}
+% \bibliography{
+    % zotero-refs.bib,
     % autobib-NO-EDITS,
     % Hazard/Earthquake_Surface_Rupture/references,
     % Hazard/Earthquake_Liquefaction/references,
@@ -139,7 +146,7 @@
     % Response/Geotechnical/references,
     % Recovery/references,
     % references
-}
+% }
 
 \printindex
 

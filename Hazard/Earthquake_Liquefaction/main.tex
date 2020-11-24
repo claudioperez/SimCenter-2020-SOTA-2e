@@ -105,11 +105,11 @@ Analysis of liquefaction and its consequences is an active area of research and 
 % \newline
 
 \paragraph{Simplified methods} 
-In 1998, a consensus was reached within the geotechnical community on the use of an empirical stress-based approach for liquefaction triggering assessment called the “simplified method,” first developed in \cite{seed1971simplified}. This method is still commonly used in practice today \citep{youd2001liquefaction,national2016state}.
+In 1998, a consensus was reached within the geotechnical community on the use of an empirical stress-based approach for liquefaction triggering assessment called the ``simplified method,'' first developed in \cite{seed1971simplified}. This method is still commonly used in practice today \citep{youd2001liquefaction,national2016state}.
 
 In a simplified method, a factor of safety (FS) against liquefaction triggering, defined as the ratio between the seismic loading required to trigger liquefaction (i.e., the liquefaction resistance) and the seismic loading expected from the earthquake (i.e., the seismic demand), is computed. Both the seismic demand and the liquefaction resistance are characterized as cyclic stress ratios, defined as the ratio of the equivalent cyclic shear stress to the initial vertical effective stress. The seismic demand is the earthquake-induced cyclic stress ratio (CSR), and the liquefaction resistance is the cyclic resistance ratio (CRR): that is, the cyclic stress ratio required to trigger liquefaction. 
 
-\cite{seed1971simplified} proposed a simplified equation, based on Newton’s second law, to compute a representative CSR for a given earthquake magnitude. This model was later revised by \cite{idriss1999update}, \cite{cetin2004nonlinear}, \cite{idriss2008soil}, and \cite{boulanger2014cpt}.
+\cite{seed1971simplified} proposed a simplified equation, based on Newton's second law, to compute a representative CSR for a given earthquake magnitude. This model was later revised by \cite{idriss1999update}, \cite{cetin2004nonlinear}, \cite{idriss2008soil}, and \cite{boulanger2014cpt}.
 
 %NOTE: reword?
 The most common approaches used in practice to compute CRR are based on geotechnical field data, e.g., CPT, SPT, and $V_s$.
@@ -139,4 +139,4 @@ Systems for liquefaction evaluation are divided by two categories according to t
 Simplified methods have been developed for rapid engineering evaluations of site-specific liquefaction. To date, no open-source software is available. LiqIT, Cliq, NovoLIQ, and Liquefy-Pro are all Windows based. These tools provide a user interface that can let the user input the soil profiles and earthquake loading, and then visualize the liquefaction index for each soil layer.
 
 \paragraph{Numerical methods}
-For mechanics-based numerical methods, creating a constitutive model that captures the soil’s behavior under cyclic loads is crucial. Commercial software such as PLAXIS and FLAC are widely used by the geotechnical community. Both of them are Windows based. OpenSees is the only open-source software identified for dealing with liquefaction. Several well-known liquefaction-capable constitutive models are: PM4Sand, PM4SILT, PDMY02, UBCSAND, and DAFALIAS-MANZARI. Except for UBCSAND, they are all available in OpenSees.
+For mechanics-based numerical methods, creating a constitutive model that captures the soil's behavior under cyclic loads is crucial. Commercial software such as PLAXIS and FLAC are widely used by the geotechnical community. Both of them are Windows based. OpenSees is the only open-source software identified for dealing with liquefaction. Several well-known liquefaction-capable constitutive models are: PM4Sand, PM4SILT, PDMY02, UBCSAND, and DAFALIAS-MANZARI. Except for UBCSAND, they are all available in OpenSees.
