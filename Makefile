@@ -2,13 +2,8 @@
 export TEXINPUTS:=./texmf//:${TEXINPUTS}
 export BSTINPUTS:=./texmf//:${BSTINPUTS}
 
-#TEXINPUTS=./texmf//;
-# LUAINPUTS=${TEXINPUTS}:${LUAINPUTS}
-
 all:
-	# -  pdflatex -output-directory=build -interaction=nonstopmode ./editor.tex
-	-  lualatex --output-directory=build --interaction=nonstopmode ./editor.tex
-	-  bibtex ./build/editor.aux
-	# -  pdflatex -output-directory=build -interaction=nonstopmode ./editor.tex
-	-  lualatex --output-directory=build --interaction=nonstopmode ./editor.tex
+	-  lualatex --output-directory=build --interaction=nonstopmode ./editor.tex > /dev/null
+	-  bibtex ./build/editor.aux | grep -i "warning"
+	-  lualatex --output-directory=build --interaction=nonstopmode ./editor.tex | grep -i "Warning"
 
