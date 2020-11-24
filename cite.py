@@ -12,30 +12,30 @@ def generate_patterns(ref: dict)->str:
         if len(ref["author"]) == 1:
             if "family" in ref["author"][0]:
                 pass
-                # return f"{ref['author'][0]['family']}, {ref['issued'][0]['year']}"
+                return f"{ref['author'][0]['family']}, {ref['issued'][0]['year']}"
                 # return f"{ref['author'][0]['family']} {ref['issued'][0]['year']}"
-                return f"{ref['author'][0]['family']} ({ref['issued'][0]['year']})"
+                # return f"{ref['author'][0]['family']} ({ref['issued'][0]['year']})"
                 # return f"{ref['author'][0]['family']} ({ref['issued'][0]['year']})"
             else:
                 pass
-                #return f"{ref['author'][0]['literal']}, {ref['issued'][0]['year']}"
+                return f"{ref['author'][0]['literal']}, {ref['issued'][0]['year']}"
                 # return f"{ref['author'][0]['literal']} {ref['issued'][0]['year']}"
-                return f"{ref['author'][0]['literal']} ({ref['issued'][0]['year']})"
-                # return f"{ref['author'][0]['literal']} \\({ref['issued'][0]['year']}\\)"
+                # return f"{ref['author'][0]['literal']} ({ref['issued'][0]['year']})"
+                # return f"{ref['author'][0]['literal']} ({ref['issued'][0]['year']})"
         elif len(ref["author"])==2:
             if "issued" in ref:
-                # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']}, {ref['issued'][0]['year']}"
+                return f"{ref['author'][0]['family']} and {ref['author'][1]['family']}, {ref['issued'][0]['year']}"
                 # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']} {ref['issued'][0]['year']}"
                 # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']}, ({ref['issued'][0]['year']})"
                 # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']} ({ref['issued'][0]['year']})"
-                return fr"{ref['author'][0]['family']} et al\. ({ref['issued'][0]['year']})"
+                # return fr"{ref['author'][0]['family']} et al\. ({ref['issued'][0]['year']})"
             else:
                 pass
         elif len(ref["author"]) > 2:
             if "family" in ref["author"][0]:
                 pass                                                                                                            #    et al         with "and"
-                # return f"{ref['author'][0]['family']} et al\\., {ref['issued'][0]['year']}"                                   # period, comma
-                return f"{ref['author'][0]['family']} et al\\. ({ref['issued'][0]['year']})"                                   # period, comma
+                return f"{ref['author'][0]['family']} et al\\., {ref['issued'][0]['year']}"                                   # period, comma
+                # return f"{ref['author'][0]['family']} et al\\. ({ref['issued'][0]['year']})"                                   # period, comma
                 # return f"{ref['author'][0]['family']} et al\\. {ref['issued'][0]['year']}"                                    # period
                 # return f"{ref['author'][0]['family']} and {ref['author'][1]['family']} et al\\., {ref['issued'][0]['year']}"  # period, comma       and
                 # return f"{ref['author'][0]['family']} et al\\., ({ref['issued'][0]['year']})"
@@ -64,7 +64,7 @@ def generate_patterns(ref: dict)->str:
 
 def generate_script(pattern:str, replacement:str)->str: return f"""
 #find . -type f -name '*.tex' \\
-find Response/Structural -type f -name 'main.tex' \\
+find Response/ -type f -name 'main.tex' \\
     -exec grep -q "{pattern}" {{}} \\; \\
     -exec nvim -c "%s/{pattern}/{replacement}/gc" -c 'wq' {{}} \\;
 """
