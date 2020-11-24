@@ -1,0 +1,43 @@
+%Copied from numeric.cbx to imitate numerical citations.
+\providebool{bbx:subentry}
+\newbibmacro*{citenum}{%Note: the original macro was called "cite". I did not redefine "cite", but instead defined a new macro "citenum", because the author-year citations use the "cite" macro too. "\renewbibmacro*{cite}" would have caused all the author-year citations to become numeric too.
+  \printtext[bibhyperref]{%If you ever want to use hyperref
+    \printfield{prefixnumber}%
+    \printfield{labelnumber}%
+    \ifbool{bbx:subentry}
+      {\printfield{entrysetcount}}
+      {}}}
+
+%Copied from numeric.cbx to define a new numeric citation command for @online entries.
+\DeclareCiteCommand{\citeprgm}[\mkbibbrackets]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \usebibmacro{citenum}}%Note: this was originally "cite" but I changed it to "citenum" to avoid clashes with the author-year style.
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+% \begin{document}
+% Cite books, \parencite{Book} \parencite{Book2}
+
+% Cite online stuff, \citeprgm{Online} \citeprgm{Online2}
+
+% %Print the normal author-year bibliography
+% \printbibliography[nottype=online]
+
+% %Redefine the bibliography environment to imitate the numeric citation style
+% \defbibenvironment{bibliography}
+% {\list
+% {\printfield[labelnumberwidth]{labelnumber}}
+% {\setlength{\labelwidth}{\labelnumberwidth}%
+% \setlength{\leftmargin}{\labelwidth}%
+% \setlength{\labelsep}{\biblabelsep}%
+% \addtolength{\labelsep}{1em}
+% \addtolength{\leftmargin}{\labelsep}%
+% \setlength{\itemsep}{\bibitemsep}%
+% \setlength{\parsep}{\bibparsep}}%
+% \renewcommand*{\makelabel}[1]{\hss##1}}
+% {\endlist}
+% {\item}
+% \DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}\hspace{-1.1em}}
+% \printbibliography[type=online,title=Online,resetnumbers]
+% \end{document}
