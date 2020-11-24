@@ -65,7 +65,7 @@ For dynamic non-linear effective stress analyses, a soil constitutive model is u
 
 \subsection{Output Data}
 \label{subsec:eq_landslide_output}
-Depending on the type of analytical procedure used, one or more of the following outputs can be produced:\\[0.5em]
+Depending on the type of analytical procedure used, one or more of the following outputs can be produced:
 
 \paragraph{Factor of Safety}
 Pseudostatic stability analyses generally provide results in terms of a Factor of Safety (FS) similar to what would be attained from a static limit equilibrium analysis. With an appropriately calibrated analysis, the FS gives an indication of magnitude of potential displacement.
@@ -110,28 +110,28 @@ In terms of regional scale seismic slope stability, the opposing demands of deta
 The following list of software is commonly used in assessing the potential for seismic slope displacement:\\
 
 \noindent\textbf{SLAMMER}\\
-SLAMMER \citep{jibson2013slammer} is capable of performing Newmark-type sliding block analyses. It allows users to choose from various simplified methods as well as running rigid block, decoupled sliding block, and fully coupled displacement calculations on time histories selected from an included catalog. Since SLAMMER is Java based, it is capable of running on any operating system through the Java Virtual Machine (JVM). The source code is available at \href{https://github.com/mjibson/slammer}{on GitHub}. \\
+SLAMMER \citep{jibson2013slammer} is capable of performing Newmark-type sliding block analyses. It allows users to choose from various simplified methods as well as running rigid block, decoupled sliding block, and fully coupled displacement calculations on time histories selected from an included catalog. Since SLAMMER is Java based, it is capable of running on any operating system through the Java Virtual Machine (JVM). The source code is available at \href{https://github.com/mjibson/slammer}{on GitHub}.
 
-\noindent\textbf{OpenSees}\\
-The Open System for Earthquake Engineering Simulation (OpenSees) is an open-source software framework capable of performing fully non-linear dynamic effective stress analyses. OpenSees is maintained by the Pacific Earthquake Engineering Research (PEER) Center and actively developed by researchers at various research institutions. Several commonly used soil constitutive models have been implemented in OpenSees and additional models can be added based on user needs. The framework is capable of running on HPC systems and supports MacOS, Linux, and Windows operating systems.\\
+\paragraph{OpenSees}
+The Open System for Earthquake Engineering Simulation (OpenSees) is an open-source software framework capable of performing fully non-linear dynamic effective stress analyses. OpenSees is maintained by the Pacific Earthquake Engineering Research (PEER) Center and actively developed by researchers at various research institutions. Several commonly used soil constitutive models have been implemented in OpenSees and additional models can be added based on user needs. The framework is capable of running on HPC systems and supports MacOS, Linux, and Windows operating systems.
 
-\noindent\textbf{Spreadsheet Solutions}\\
-Spreadsheet solutions are routinely used for Newmark-type sliding block analyses, with some authors releasing pre-programmed spreadsheets that implement their methods. To a lesser extent, spreadsheets are also used for pseudostatic stability analyses. Spreadsheet solutions can be implemented readily on any operating system using either Microsoft Excel or LibreOffice Calc; however, pre-programmed spreadsheet solutions tend to be available in Microsoft Excel which cannot be guaranteed to operate correctly in LibreOffice Calc.\\
+\paragraph{Spreadsheet Solutions}
+Spreadsheet solutions are routinely used for Newmark-type sliding block analyses, with some authors releasing pre-programmed spreadsheets that implement their methods. To a lesser extent, spreadsheets are also used for pseudostatic stability analyses. Spreadsheet solutions can be implemented readily on any operating system using either Microsoft Excel or LibreOffice Calc; however, pre-programmed spreadsheet solutions tend to be available in Microsoft Excel which cannot be guaranteed to operate correctly in LibreOffice Calc.
 
-\noindent\textbf{UTEXAS4}\\
-UTEXAS4, available from ENSOFT, is a two dimensional limit equilibrium analysis program capable of performing psuedostatic stability analysis. This software is proprietary and only supports Windows-based operating systems.\\
+\paragraph{UTEXAS4}
+UTEXAS4, available from ENSOFT, is a two dimensional limit equilibrium analysis program capable of performing psuedostatic stability analysis. This software is proprietary and only supports Windows-based operating systems.
 
-\noindent\textbf{Slide2 and Slide3}\\
-Slide2 and Slide3 are two and three dimensional limit equilibrium analyses programs developed by RocScience that is routinely used for pseudostatic analyses. These tools only support Windows-based operating systems and are proprietary.\\
+\paragraph{Slide2 and Slide3}
+Slide2 and Slide3 are two and three dimensional limit equilibrium analyses programs developed by RocScience that is routinely used for pseudostatic analyses. These tools only support Windows-based operating systems and are proprietary.
 
-\noindent\textbf{Slope/W}\\
-Slope/W a proprietary program developed by GEOSLOPE. Similar to Slide2, it is a two-dimensional limit equilibrium solver that is capable of performing pseudostatic analysis. Currently only Windows-based operating systems are supported.\\
+\paragraph{Slope/W}
+Slope/W a proprietary program developed by GEOSLOPE. Similar to Slide2, it is a two-dimensional limit equilibrium solver that is capable of performing pseudostatic analysis. Currently only Windows-based operating systems are supported.
 
-\noindent\textbf{FLAC}\\
-Fast Lagrangian Analaysis of Continua (FLAC), from Itasca Consulting Group, is a proprietary finite-difference based software package capable of performing dynamic nonlinear effective stress analyses. FLAC allows users to import custom soil constitutive models either as pre-compiled dynamic libraries or by using the scripting language FISH. FLAC is not capable of executing on HPC systems and is closed source. Currently only Windows-based operating systems are supported.\\
+\paragraph{FLAC}
+Fast Lagrangian Analaysis of Continua (FLAC), from Itasca Consulting Group, is a proprietary finite-difference based software package capable of performing dynamic nonlinear effective stress analyses. FLAC allows users to import custom soil constitutive models either as pre-compiled dynamic libraries or by using the scripting language FISH. FLAC is not capable of executing on HPC systems and is closed source. Currently only Windows-based operating systems are supported.
 
-\noindent\textbf{PLAXIS}\\
-PLAXIS, now part of Bentley Systems, is a finite element software package that can be used to perform dynamic non-linear effective stress analyses. Custom soil constitutive models can be implemented in within the platform. PLAXIS is prorprietary and closed-source. Currently, it is not HPC capable and supports only Windows-based operating systems.\\
+\paragraph{PLAXIS}
+PLAXIS, now part of Bentley Systems, is a finite element software package that can be used to perform dynamic non-linear effective stress analyses. Custom soil constitutive models can be implemented in within the platform. PLAXIS is prorprietary and closed-source. Currently, it is not HPC capable and supports only Windows-based operating systems.
 
 \noindent\textbf{General FEM solvers}\\
 LS-Dyna and ABAQUS, both proprietary general finite element method solvers, are capable of fully non-linear dynamic effective stress analyses. Custom material models, such as those required for modeling dynamic soil response, can be implemented in these frameworks. Depending on the license purchased, LS-Dyna and ABAQUS are capable of running on HPC systems. LS-Dyna supports Unix, Linux, and Windows-based operating systems and is currently available on DesignSafe. ABAQUS currently supports Linux and Windows-based operating systems.\\

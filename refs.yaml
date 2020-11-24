@@ -1,12 +1,5 @@
 ---
 references:
-- id: 1998american
-  container-title: AIAA
-  issued:
-    - year: 1998
-  publisher: American Institute of Aeronautics and Astronautics
-  title: American institute of aeronautics and astronautics
-
 - id: 2013new
   issued:
     - year: 2013
@@ -144,6 +137,15 @@ references:
     Capacity planning and reconfiguration for disaster-resilient health
     infrastructure
   volume: '26'
+
+- id: aiaa1998guide
+  container-title: AIAA
+  issued:
+    - year: 1998
+  publisher: American Institute of Aeronautics and Astronautics
+  title: >-
+    Guide for the Verification and Validation of Computational Fluid Dynamics
+    Simulations
 
 - id: airriess2008church
   container-title: Geoforum
@@ -2811,21 +2813,6 @@ references:
   title: A fast intensity simulator for tropical cyclone risk analysis
   volume: '88'
 
-- id: engineeringsciencesdataunit2008strong
-  collection-number: ESDU 83045
-  event-place: London
-  ISBN: 978-0-85679-460-5
-  issued:
-    - year: 2008
-  language: English
-  note: 'OCLC: 804219318'
-  publisher: ESDU International plc
-  publisher-place: London
-  source: Open WorldCat
-  title: >-
-    Strong winds in the atmospheric boundary layer. Part 2: discrete gust
-    speeds.
-
 - id: erazo2018bayesian
   container-title: Structural Control and Health Monitoring
   DOI: 10/ghg5vq
@@ -2844,6 +2831,21 @@ references:
   publisher: Cornell University
   title: Scalable kernel methods and their use in black-box optimization
   type: 'PhD thesis,'
+
+- id: esdu2008strong
+  collection-number: ESDU 83045
+  event-place: London
+  ISBN: 978-0-85679-460-5
+  issued:
+    - year: 2008
+  language: English
+  note: 'OCLC: 804219318'
+  publisher: ESDU International plc
+  publisher-place: London
+  source: Open WorldCat
+  title: >-
+    Strong winds in the atmospheric boundary layer. Part 2: discrete gust
+    speeds.
 
 - id: esposito2015simulation
   container-title: Computer‐Aided Civil and Infrastructure Engineering
@@ -4081,16 +4083,6 @@ references:
   publisher: Army Engineer Waterways Experiment Station Vicksburg Ms Geotechnical Lab
   title: Rationalizing the seismic coefficient method
 
-- id: i.s.o.2016building
-  issued:
-    - year: 2016
-      month: 5
-  number: 'ISO 29481-1:2016'
-  publisher: ISO
-  title: >-
-    Building information Modeling—Information delivery Manual—Part 1:
-    Methodology and format
-
 - id: Iai11
   container-title: International Journal for Numerical and Analytical Methods in Geomechanics
   DOI: 10/dr6ss8
@@ -4216,6 +4208,16 @@ references:
   title: >-
     Wind field model and mixed probability distribution function for typhoon
     simulation
+
+- id: iso2016building
+  issued:
+    - year: 2016
+      month: 5
+  number: 'ISO 29481-1:2016'
+  publisher: ISO
+  title: >-
+    Building information Modeling—Information delivery Manual—Part 1:
+    Methodology and format
 
 - id: isoyama1982reliability
   issued:

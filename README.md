@@ -31,7 +31,7 @@
   - [x] Error detecting command "*"
   - [ ] FEMA/HAZUS/ATC references
   - [ ] Science and Technology Council, 2016a/b
-  - [ ] ISO (i.s.o)
+  - [x] ISO (i.s.o)
   - [ ] NIC
   - [ ] AWP-ODC
   - [ ] NGA-West2
@@ -42,9 +42,7 @@
   - [ ] `[for example`
   - [ ] CrossCutting/AI:  `Market Research Future, 2019` , `future2019global`
   - [x] Duenas-Osorio et al., 2007
-  - [ ] Change et al., 2000
-  - [ ] Miller and Baker, 2016
-  - [ ] ESDU (1983)
+  - [x] ESDU (1983)
   - [x] Johansen et al. (2016)
   - [x] Fan et al
   - [x] Kepert, 2010a
@@ -55,18 +53,21 @@
   - [x] Deb et al. 2019b
   - [ ] Zhang and Taflanidis 2018b
   - [ ] Zhang and Taflanidis 2018a
-  - [ ] Ramancha et al. 2021b
-  - [ ] Ramancha et al. 2021a., 2019
+  - [x] Ramancha et al. 2021b
+  - [x] Ramancha et al. 2021a., 2019
   - [x] Gao and Mosalam 2018a
   - [x] Gao and Mosalam 2018b
-  - [ ] Zsarnóczay, 2018 [pelicun]
-  - [ ] Youd and Perkins (1987)
-  - [ ] Mandli and Dawson (2014)
-  - [ ] Hoarau, 2016
   - [ ] National Science and Technology Council, 2016a, 2016b, 2019
 
 ## Missing
 
+  - [ ] Change et al., 2000
+  - [ ] Miller and Baker, 2016
+  - [ ] Youd and Perkins (1987)
+  - [ ] Mandli and Dawson (2014)
+  - [ ] Zsarnóczay, 2018 [pelicun]
+  - [ ] Hoarau, 2016
+  - [x] Oberkampf et al. 2004 `Assume same as Oberkampf and Roy 2004`
 - [ ] CrossCutting/AI:
   - [ ] `Nickel et al., 2016`
 - [x] Hazards/Tsunami
