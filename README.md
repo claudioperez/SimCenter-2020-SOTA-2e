@@ -36,7 +36,7 @@
   - [ ] AWP-ODC
   - [ ] NGA-West2
   - [ ] FEMA Mitigation Division
-  - [ ] Hazard/Storm_Wind/main: Fang et al., 2018b
+  - [x] Hazard/Storm_Wind/main: Fang et al., 2018b
   - [x] "e.g."
   - [ ] NOAA Reanalysis Data 2018
   - [ ] `[for example`
@@ -45,7 +45,7 @@
   - [ ] Change et al., 2000
   - [ ] Miller and Baker, 2016
   - [ ] ESDU (1983)
-  - [ ] Johansen et al. (2016)
+  - [x] Johansen et al. (2016)
   - [x] Fan et al
   - [x] Kepert, 2010a
   - [x] Kepert, 2010b
