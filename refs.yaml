@@ -50,6 +50,64 @@ references:
   title: Volume of fluid method
   URL: 'https://en.wikipedia.org/wiki/Volume_of_fluid_method.'
 
+- id: abadi2016tensorflow
+  abstract: >-
+    TensorFlow is an interface for expressing machine learning algorithms, and
+    an
+
+    implementation for executing such algorithms. A computation expressed using
+
+    TensorFlow can be executed with little or no change on a wide variety of
+
+    heterogeneous systems, ranging from mobile devices such as phones and
+    tablets
+
+    up to large-scale distributed systems of hundreds of machines and thousands
+    of
+
+    computational devices such as GPU cards. The system is flexible and can be
+    used
+
+    to express a wide variety of algorithms, including training and inference
+
+    algorithms for deep neural network models, and it has been used for
+    conducting
+
+    research and for deploying machine learning systems into production across
+    more
+
+    than a dozen areas of computer science and other fields, including speech
+
+    recognition, computer vision, robotics, information retrieval, natural
+    language
+
+    processing, geographic information extraction, and computational drug
+
+    discovery. This paper describes the TensorFlow interface and an
+    implementation
+
+    of that interface that we have built at Google. The TensorFlow API and a
+
+    reference implementation were released as an open-source package under the
+
+    Apache 2.0 license in November, 2015 and are available at
+    www.tensorflow.org.
+  accessed:
+    - year: 2020
+      month: 11
+      day: 25
+  issued:
+    - year: 2016
+      month: 3
+      day: 14
+  language: en
+  source: arxiv.org
+  title: >-
+    TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed
+    Systems
+  title-short: TensorFlow
+  URL: 'https://arxiv.org/abs/1603.04467v2'
+
 - id: ABAQUS
   title: ABAQUS
   URL: www.simulia.com
@@ -351,10 +409,10 @@ references:
   title: 'X-TMCMC: Adaptive kriging for Bayesian inverse modeling'
   volume: '289'
 
-- id: ansys2018fluent
+- id: ansysfluent
   issued:
     - year: 2018
-  title: Fluent
+  title: ANSYS Fluent
   URL: 'https://www.ansys.com/products/fluids/ansys-fluent.'
 
 - id: Anura3D
@@ -1120,7 +1178,7 @@ references:
 - id: boulanger2018pm4silt
   issued:
     - year: 2018
-  publisher: UC Davis
+  publisher: 'University of California, Davis'
   title: >-
     PM4Silt (version 1): A silt plasticity model for earthquake engineering
     applications.
@@ -1501,10 +1559,27 @@ references:
   URL: 'https://doi.org/10.1139/t03-088'
   volume: '41'
 
-- id: c.o.m.s.o.l.2018
+- id: CAFFE
+  abstract: >-
+    Caffe: a fast open framework for deep learning. Contribute to BVLC/caffe
+    development by creating an account on GitHub.
+  accessed:
+    - year: 2020
+      month: 11
+      day: 25
   issued:
-    - year: 2018
-  URL: 'https://www.comsol.com.'
+    - year: 2020
+      month: 11
+      day: 25
+  original-date:
+    - year: 2013
+      month: 9
+      day: 12
+  programming-language: C++
+  publisher: Berkeley Vision and Learning Center
+  source: GitHub
+  title: CAFFE
+  URL: 'https://caffe.berkeleyvision.org/'
 
 - id: carey2018multihazard
   container-title: 'Journal of Bridge Engineering, Accepted'
@@ -1968,6 +2043,26 @@ references:
     Methods in Structural Reliaiblity,
     https://rdrr.io/github/clemlaflemme/mistral/f/
 
+- id: CNTK
+  abstract: 'Microsoft Cognitive Toolkit (CNTK), an open source deep-learning toolkit'
+  accessed:
+    - year: 2020
+      month: 11
+      day: 25
+  issued:
+    - year: 2020
+      month: 11
+      day: 24
+  original-date:
+    - year: 2015
+      month: 11
+      day: 26
+  programming-language: C++
+  publisher: Microsoft
+  source: GitHub
+  title: CNTK
+  URL: 'https://docs.microsoft.com/en-us/cognitive-toolkit/'
+
 - id: cohn1992knowledgebased
   issued:
     - year: 1992
@@ -2024,8 +2119,14 @@ references:
   title: 'Disaster recovery and community renewal: Housing approaches'
   volume: '16'
 
-- id: compdyn
+- id: COMPDYN
   title: COMPDYN
+
+- id: COMSOL
+  issued:
+    - year: 2018
+  title: COMSOL
+  URL: 'https://www.comsol.com.'
 
 - id: cooner2016detection
   container-title: Remote Sensing
@@ -2974,10 +3075,20 @@ references:
     HAZUS – multi-hazard loss estimation methodology, flood model technical
     manual
 
-- id: fema2018hazusb
+- id: fema2018hazus
+  event-place: Washington D.C
+  issued:
+    - year: 2018
+  publisher-place: Washington D.C
+  title: Hazus
+  version: '4.2'
+
+- id: fema2018hazusa
+  event-place: Washington D.C
   issued:
     - year: 2018
   publisher: FEMA Mitigation Division
+  publisher-place: Washington D.C
   title: Hazus 4.2
   version: '4.2'
 
@@ -3000,14 +3111,6 @@ references:
   publisher-place: Washington D.C
   title: Seismic performance assessment of buildings
   volume: '3'
-
-- id: femamitigationdivision2018hazus
-  event-place: Washington D.C
-  issued:
-    - year: 2018
-  publisher-place: Washington D.C
-  title: Hazus
-  version: '4.2'
 
 - id: fenton1990simulation
   container-title: Journal of Engineering Mechanics
@@ -4364,6 +4467,54 @@ references:
       month: 6
       day: 18
   title: Adaptive stochastic sampling using kernel density approximations
+
+- id: jia2014caffe
+  abstract: >-
+    Caffe provides multimedia scientists and practitioners with a clean and
+
+    modifiable framework for state-of-the-art deep learning algorithms and a
+
+    collection of reference models. The framework is a BSD-licensed C++ library
+
+    with Python and MATLAB bindings for training and deploying general-purpose
+
+    convolutional neural networks and other deep models efficiently on commodity
+
+    architectures. Caffe fits industry and internet-scale media needs by CUDA
+    GPU
+
+    computation, processing over 40 million images a day on a single K40 or
+    Titan
+
+    GPU ($\approx$ 2.5 ms per image). By separating model representation from
+
+    actual implementation, Caffe allows experimentation and seamless switching
+
+    among platforms for ease of development and deployment from prototyping
+
+    machines to cloud environments. Caffe is maintained and developed by the
+
+    Berkeley Vision and Learning Center (BVLC) with the help of an active
+    community
+
+    of contributors on GitHub. It powers ongoing research projects, large-scale
+
+    industrial applications, and startup prototypes in vision, speech, and
+
+    multimedia.
+  accessed:
+    - year: 2020
+      month: 11
+      day: 25
+  issued:
+    - year: 2014
+      month: 6
+      day: 20
+  language: en
+  source: arxiv.org
+  title: 'Caffe: Convolutional Architecture for Fast Feature Embedding'
+  title-short: Caffe
+  URL: 'https://arxiv.org/abs/1408.5093v1'
 
 - id: jia2016surrogate
   container-title: Natural Hazards
@@ -6975,9 +7126,10 @@ references:
     IASC-ASCE Benchmark Problem
   volume: '22'
 
-- id: olaflow2018
+- id: olaFlow
   issued:
     - year: 2018
+  title: olaFlow
   URL: 'https://sites.google.com/view/olaflowcfd/home.'
 
 - id: olea2012geostatistics
@@ -7051,9 +7203,10 @@ references:
   title: OpenFOAM | Free CFD Software | The OpenFOAM Foundation
   URL: 'https://openfoam.org/'
 
-- id: openfoam2018
+- id: OpenFOAM
   issued:
     - year: 2018
+  title: OpenFOAM
   URL: 'https://openfoam.org.'
 
 - id: openquake
@@ -8775,11 +8928,33 @@ references:
     Observation on telecommunications lifeline performance in the northridge
     earthquake of
 
+- id: TensorFlow
+  abstract: An Open Source Machine Learning Framework for Everyone
+  accessed:
+    - year: 2020
+      month: 11
+      day: 25
+  issued:
+    - year: 2020
+      month: 11
+      day: 25
+  original-date:
+    - year: 2015
+      month: 11
+      day: 7
+  programming-language: C++
+  publisher: tensorflow
+  source: GitHub
+  title: TensorFlow
+  URL: 'https://www.tensorflow.org/'
+
 - id: terzic2015concrete
-  container-title: Rpt
+  event-place: 'Berkeley, CA'
   issued:
     - year: 2015
-  publisher: 'Pacific Earthquake Engineering Research Center, University of California'
+  number: PEER-2015/1
+  publisher: Pacific Earthquake Engineering Research Center
+  publisher-place: 'Berkeley, CA'
   title: 'Concrete column blind prediction contest 2010: outcomes and observations'
 
 - id: thomas2011robust

@@ -481,9 +481,9 @@ passing it to article class \MessageBreak
 \pagestyle{headings}%
 \clearemptydoublepage %\@mainmatterfalse
 \let\appendix=\bppendix
-\def\bibsection{\chapter*{\refname}\@mkboth{\refname}{\refname}%
-     \addcontentsline{toc}{chapter}{\refname}%
-     \csname biblst@rthook\endcsname\par}%
+% \def\bibsection{\chapter*{\refname}\@mkboth{\refname}{\refname}%
+%      \addcontentsline{toc}{chapter}{\refname}%
+%      \csname biblst@rthook\endcsname\par}%
 }
 
 \renewenvironment{titlepage}
@@ -1112,95 +1112,95 @@ passing it to article class \MessageBreak
 % Names of theorem like environments are already defined
 % but must be translated if another language is chosen
 %
-% French section
-\def\switcht@francais{\svlanginfo
- \def\abbrsymbname{Liste des abbr\'eviations et symboles}%
- \def\abstractname{R\'esum\'e.}%
- \def\ackname{Remerciements.}%
- \def\andname{et}%
- \def\lastandname{ et}%
- \def\appendixname{Appendice}%
- \def\bibname{Bibliographie}%
- \def\chaptername{Chapitre}%
- \def\claimname{Pr\'etention}%
- \def\conjecturename{Hypoth\`ese}%
- \def\contentsname{Table des mati\`eres}%
- \def\corollaryname{Corollaire}%
- \def\definitionname{D\'efinition}%
- \def\emailname{e-mail}%
- \def\examplename{Exemple}%
- \def\exercisename{Exercice}%
- \def\figurename{Fig.}%
- \def\forewordname{Avant-propos}%
- \def\keywordname{{\bf Mots-cl\'e:}}%
- \def\indexname{Index}%
- \def\lemmaname{Lemme}%
- \def\contriblistname{Liste des contributeurs}%
- \def\listfigurename{Liste des figures}%
- \def\listtablename{Liste des tables}%
- \def\mailname{{\it Correspondence to\/}:}%
- \def\noteaddname{Note ajout\'ee \`a l'\'epreuve}%
- \def\notename{Remarque}%
- \def\partname{Partie}%
- \def\prefacename{Pr\'eface}%
- \def\problemname{Probl\`eme}%
- \def\proofname{Preuve}%
- \def\propertyname{Caract\'eristique}%
-%\def\propositionname{Proposition}%
- \def\questionname{Question}%
- \def\refname{Litt\'erature}%
- \def\remarkname{Remarque}%
- \def\seename{voir}%
- \def\solutionname{Solution}%
- \def\subclassname{{\it Subject Classifications\/}:}%
- \def\tablename{Tableau}%
- \def\theoremname{Th\'eor\`eme}%
-}
-%
-% German section
-\def\switcht@deutsch{\svlanginfo
- \def\abbrsymbname{Abk\"urzungs- und Symbolverzeichnis}%
- \def\abstractname{Zusammenfassung}%
- \def\ackname{Danksagung}%
- \def\andname{und}%
- \def\lastandname{ und}%
- \def\appendixname{Anhang}%
- \def\bibname{Literaturverzeichnis}%
- \def\chaptername{Kapitel}%
- \def\claimname{Behauptung}%
- \def\conjecturename{Hypothese}%
- \def\contentsname{Inhaltsverzeichnis}%
- \def\corollaryname{Korollar}%
-%\def\definitionname{Definition}%
- \def\emailname{E-mail}%
- \def\examplename{Beispiel}%
- \def\exercisename{\"Ubung}%
- \def\figurename{Abb.}%
- \def\forewordname{Geleitwort}%
- \def\keywordname{{\bf Schl\"usselw\"orter:}}%
- \def\indexname{Sachverzeichnis}%
-%\def\lemmaname{Lemma}%
- \def\contriblistname{Mitarbeiter}%
- \def\listfigurename{Abbildungsverzeichnis}%
- \def\listtablename{Tabellenverzeichnis}%
- \def\mailname{{\it Correspondence to\/}:}%
- \def\noteaddname{Nachtrag}%
- \def\notename{Anmerkung}%
- \def\partname{Teil}%
- \def\prefacename{Vorwort}%
-%\def\problemname{Problem}%
- \def\proofname{Beweis}%
- \def\propertyname{Eigenschaft}%
-%\def\propositionname{Proposition}%
- \def\questionname{Frage}%
- \def\refname{Literaturverzeichnis}%
- \def\remarkname{Anmerkung}%
- \def\seename{siehe}%
- \def\solutionname{L\"osung}%
- \def\subclassname{{\it Subject Classifications\/}:}%
- \def\tablename{Tabelle}%
-%\def\theoremname{Theorem}%
-}
+% % French section
+% \def\switcht@francais{\svlanginfo
+%  \def\abbrsymbname{Liste des abbr\'eviations et symboles}%
+%  \def\abstractname{R\'esum\'e.}%
+%  \def\ackname{Remerciements.}%
+%  \def\andname{et}%
+%  \def\lastandname{ et}%
+%  \def\appendixname{Appendice}%
+%  \def\bibname{Bibliographie}%
+%  \def\chaptername{Chapitre}%
+%  \def\claimname{Pr\'etention}%
+%  \def\conjecturename{Hypoth\`ese}%
+%  \def\contentsname{Table des mati\`eres}%
+%  \def\corollaryname{Corollaire}%
+%  \def\definitionname{D\'efinition}%
+%  \def\emailname{e-mail}%
+%  \def\examplename{Exemple}%
+%  \def\exercisename{Exercice}%
+%  \def\figurename{Fig.}%
+%  \def\forewordname{Avant-propos}%
+%  \def\keywordname{{\bf Mots-cl\'e:}}%
+%  \def\indexname{Index}%
+%  \def\lemmaname{Lemme}%
+%  \def\contriblistname{Liste des contributeurs}%
+%  \def\listfigurename{Liste des figures}%
+%  \def\listtablename{Liste des tables}%
+%  \def\mailname{{\it Correspondence to\/}:}%
+%  \def\noteaddname{Note ajout\'ee \`a l'\'epreuve}%
+%  \def\notename{Remarque}%
+%  \def\partname{Partie}%
+%  \def\prefacename{Pr\'eface}%
+%  \def\problemname{Probl\`eme}%
+%  \def\proofname{Preuve}%
+%  \def\propertyname{Caract\'eristique}%
+% %\def\propositionname{Proposition}%
+%  \def\questionname{Question}%
+%  \def\refname{Litt\'erature}%
+%  \def\remarkname{Remarque}%
+%  \def\seename{voir}%
+%  \def\solutionname{Solution}%
+%  \def\subclassname{{\it Subject Classifications\/}:}%
+%  \def\tablename{Tableau}%
+%  \def\theoremname{Th\'eor\`eme}%
+% }
+% %
+% % German section
+% \def\switcht@deutsch{\svlanginfo
+%  \def\abbrsymbname{Abk\"urzungs- und Symbolverzeichnis}%
+%  \def\abstractname{Zusammenfassung}%
+%  \def\ackname{Danksagung}%
+%  \def\andname{und}%
+%  \def\lastandname{ und}%
+%  \def\appendixname{Anhang}%
+%  \def\bibname{Literaturverzeichnis}%
+%  \def\chaptername{Kapitel}%
+%  \def\claimname{Behauptung}%
+%  \def\conjecturename{Hypothese}%
+%  \def\contentsname{Inhaltsverzeichnis}%
+%  \def\corollaryname{Korollar}%
+% %\def\definitionname{Definition}%
+%  \def\emailname{E-mail}%
+%  \def\examplename{Beispiel}%
+%  \def\exercisename{\"Ubung}%
+%  \def\figurename{Abb.}%
+%  \def\forewordname{Geleitwort}%
+%  \def\keywordname{{\bf Schl\"usselw\"orter:}}%
+%  \def\indexname{Sachverzeichnis}%
+% %\def\lemmaname{Lemma}%
+%  \def\contriblistname{Mitarbeiter}%
+%  \def\listfigurename{Abbildungsverzeichnis}%
+%  \def\listtablename{Tabellenverzeichnis}%
+%  \def\mailname{{\it Correspondence to\/}:}%
+%  \def\noteaddname{Nachtrag}%
+%  \def\notename{Anmerkung}%
+%  \def\partname{Teil}%
+%  \def\prefacename{Vorwort}%
+% %\def\problemname{Problem}%
+%  \def\proofname{Beweis}%
+%  \def\propertyname{Eigenschaft}%
+% %\def\propositionname{Proposition}%
+%  \def\questionname{Frage}%
+%  \def\refname{Literaturverzeichnis}%
+%  \def\remarkname{Anmerkung}%
+%  \def\seename{siehe}%
+%  \def\solutionname{L\"osung}%
+%  \def\subclassname{{\it Subject Classifications\/}:}%
+%  \def\tablename{Tabelle}%
+% %\def\theoremname{Theorem}%
+% }
 
 \def\getsto{\mathrel{\mathchoice {\vcenter{\offinterlineskip
 \halign{\hfil
@@ -1934,73 +1934,73 @@ to\z@{\kern0.55\wd0\vrule\@height0.45\ht0\hss}\box0}}}}
 
 % redefinition of the "bibliography" environment
 %
-\def\biblstarthook#1{\gdef\biblst@rthook{#1}}
+% \def\biblstarthook#1{\gdef\biblst@rthook{#1}}
 %
-\AtBeginDocument{%
-\ifx\chpbibl\undefined
-  \def\bibsection{\section*{\refname}\ifx\sectionmark\@gobble\else
-      \markright{\refname}\fi
-      \addcontentsline{toc}{section}{\refname}%
-      \mtaddtocont{\protect\contentsline{mtchap}{\refname}{\thepage}\hyperhrefextend}%
-      \csname biblst@rthook\endcsname\par}
-\else
- \def\bibsection{\chapter*{\refname}\@mkboth{\refname}{\refname}%
-     \addcontentsline{toc}{chapter}{\refname}%
-     \csname biblst@rthook\endcsname\par}
-\fi}
-\ifx\oribibl\undefined % Springer way of life
-   \renewenvironment{thebibliography}[1]{\bibsection
-         \global\let\biblst@rthook=\undefined
-         \def\@biblabel##1{##1.}
-         \small
-         \list{\@biblabel{\@arabic\c@enumiv}}%
-              {\settowidth\labelwidth{\@biblabel{#1}}%
-               \leftmargin\labelwidth
-               \advance\leftmargin\labelsep
-               \if@openbib
-                 \advance\leftmargin\bibindent
-                 \itemindent -\bibindent
-                 \listparindent \itemindent
-                 \parsep \z@
-               \fi
-               \usecounter{enumiv}%
-               \let\p@enumiv\@empty
-               \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-         \if@openbib
-           \renewcommand\newblock{\par}%
-         \else
-           \renewcommand\newblock{\hskip .11em \@plus.33em \@minus.07em}%
-         \fi
-         \sloppy\clubpenalty4000\widowpenalty4000%
-         \sfcode`\.=\@m}
-        {\def\@noitemerr
-          {\@latex@warning{Empty `thebibliography' environment}}%
-         \endlist}
-   \def\@lbibitem[#1]#2{\item[{[#1]}\hfill]\if@filesw
-        {\let\protect\noexpand\immediate
-        \write\@auxout{\string\bibcite{#2}{#1}}}\fi\ignorespaces}
-\else % original bibliography is required
-   \let\bibname=\refname
-   \renewenvironment{thebibliography}[1]
-     {\chapter*{\bibname
-        \markboth{\bibname}{\bibname}}%
-      \list{\@biblabel{\@arabic\c@enumiv}}%
-           {\settowidth\labelwidth{\@biblabel{#1}}%
-            \leftmargin\labelwidth
-            \advance\leftmargin\labelsep
-            \@openbib@code
-            \usecounter{enumiv}%
-            \let\p@enumiv\@empty
-            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-      \sloppy
-      \clubpenalty4000
-      \@clubpenalty \clubpenalty
-      \widowpenalty4000%
-      \sfcode`\.\@m}
-     {\def\@noitemerr
-       {\@latex@warning{Empty `thebibliography' environment}}%
-      \endlist}
-\fi
+% \AtBeginDocument{%
+% \ifx\chpbibl\undefined
+%   \def\bibsection{\section*{\refname}\ifx\sectionmark\@gobble\else
+%       \markright{\refname}\fi
+%       \addcontentsline{toc}{section}{\refname}%
+%       \mtaddtocont{\protect\contentsline{mtchap}{\refname}{\thepage}\hyperhrefextend}%
+%       \csname biblst@rthook\endcsname\par}
+% \else
+%  \def\bibsection{\chapter*{\refname}\@mkboth{\refname}{\refname}%
+%      \addcontentsline{toc}{chapter}{\refname}%
+%      \csname biblst@rthook\endcsname\par}
+% \fi}
+% \ifx\oribibl\undefined % Springer way of life
+%    \renewenvironment{thebibliography}[1]{\bibsection
+%          \global\let\biblst@rthook=\undefined
+%          \def\@biblabel##1{##1.}
+%          \small
+%          \list{\@biblabel{\@arabic\c@enumiv}}%
+%               {\settowidth\labelwidth{\@biblabel{#1}}%
+%                \leftmargin\labelwidth
+%                \advance\leftmargin\labelsep
+%                \if@openbib
+%                  \advance\leftmargin\bibindent
+%                  \itemindent -\bibindent
+%                  \listparindent \itemindent
+%                  \parsep \z@
+%                \fi
+%                \usecounter{enumiv}%
+%                \let\p@enumiv\@empty
+%                \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+%          \if@openbib
+%            \renewcommand\newblock{\par}%
+%          \else
+%            \renewcommand\newblock{\hskip .11em \@plus.33em \@minus.07em}%
+%          \fi
+%          \sloppy\clubpenalty4000\widowpenalty4000%
+%          \sfcode`\.=\@m}
+%         {\def\@noitemerr
+%           {\@latex@warning{Empty `thebibliography' environment}}%
+%          \endlist}
+%    \def\@lbibitem[#1]#2{\item[{[#1]}\hfill]\if@filesw
+%         {\let\protect\noexpand\immediate
+%         \write\@auxout{\string\bibcite{#2}{#1}}}\fi\ignorespaces}
+% \else % original bibliography is required
+%    \let\bibname=\refname
+%    \renewenvironment{thebibliography}[1]
+%      {\chapter*{\bibname
+%         \markboth{\bibname}{\bibname}}%
+%       \list{\@biblabel{\@arabic\c@enumiv}}%
+%            {\settowidth\labelwidth{\@biblabel{#1}}%
+%             \leftmargin\labelwidth
+%             \advance\leftmargin\labelsep
+%             \@openbib@code
+%             \usecounter{enumiv}%
+%             \let\p@enumiv\@empty
+%             \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+%       \sloppy
+%       \clubpenalty4000
+%       \@clubpenalty \clubpenalty
+%       \widowpenalty4000%
+%       \sfcode`\.\@m}
+%      {\def\@noitemerr
+%        {\@latex@warning{Empty `thebibliography' environment}}%
+%       \endlist}
+% \fi
 
 \let\if@threecolind\iffalse
 \def\threecolindex{\let\if@threecolind\iftrue}
@@ -2460,13 +2460,13 @@ to\z@{\kern0.55\wd0\vrule\@height0.45\ht0\hss}\box0}}}}
 
                         %%%SOPHIE TEMPLATE END%%%
 
-\usepackage[thmmarks,thref]{ntheorem} 
-\theoremstyle{nonumberplain}
-\theoremheaderfont{\bfseries\itshape}
-\theorembodyfont{\upshape}
-\theoremsymbol{\ensuremath{\square}}
-\newtheorem{proof}{Proof} 
-\gdef\NoneSymbol{}
+% \usepackage[thmmarks,thref]{ntheorem} 
+% \theoremstyle{nonumberplain}
+% \theoremheaderfont{\bfseries\itshape}
+% \theorembodyfont{\upshape}
+% \theoremsymbol{\ensuremath{\square}}
+% \newtheorem{proof}{Proof} 
+% \gdef\NoneSymbol{}
 
 \endinput
 %end of file svmult.cls

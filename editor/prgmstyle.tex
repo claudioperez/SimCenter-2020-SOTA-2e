@@ -8,11 +8,20 @@
       {\printfield{entrysetcount}}
       {}}}
 
-%Copied from numeric.cbx to define a new numeric citation command for @online entries.
+\newbibmacro*{citetitle}{%
+  \iffieldundef{shorthand}
+  {\usebibmacro{cite:title}}%
+  {\usebibmacro{cite:shorthand}}}
+
+\newbibmacro*{cite:title}{%
+  \printtext[bibhyperref]{%
+    \printfield[citetitle]{labeltitle}}}
+
+%Copied from numeric.cbx to define a new numeric citation command for @software entries.
 \DeclareCiteCommand{\citeprgm}[\mkbibbrackets]
   {\usebibmacro{prenote}}
   {\usebibmacro{citeindex}%
-   \usebibmacro{citenum}}%Note: this was originally "cite" but I changed it to "citenum" to avoid clashes with the author-year style.
+   \usebibmacro{cite:title}}%
   {\multicitedelim}
   {\usebibmacro{postnote}}
 
