@@ -168,7 +168,7 @@ references:
     optimization, parameter estimation, uncertainty quantification, and
     sensitivity analysis: version 5.0 user’s manual
 
-- id: adcirc
+- id: ADCIRC
   accessed:
     - year: 2020
       month: 10
@@ -2464,7 +2464,7 @@ references:
       day: 24
   issued:
     - year: 2011
-  title: Delft3D Home Page- oss.deltares.nl
+  title: Delft3D
   URL: 'https://oss.deltares.nl/web/delft3d'
 
 - id: demirbilek2009wave
@@ -2492,16 +2492,7 @@ references:
   title: Auto-regressive model for nonstationary stochastic processes
   volume: '114'
 
-- id: DESaster
-  issued:
-    - year: 2020
-  title: >-
-    DESaster, A discrete event disaster recovery simulation, currently focused
-    on housing, built on top of the Simpy discrete event simulation Python
-    library.
-  URL: 'https://github.com/milessb/DESaster'
-
-- id: desaster
+- id: DEsaster
   title: DESaster
 
 - id: deshmukh2012framework
@@ -2959,7 +2950,7 @@ references:
   volume: '30'
 
 - id: ESSI
-  title: Real-essi
+  title: Real-ESSI
   URL: 'http://real-essi.us/'
 
 - id: Eusgeld2008a
@@ -3169,6 +3160,33 @@ references:
     Uniform california earthquake rupture forecast, version 3 (UCERF3)—The
     Time‐Independent model
   volume: '104'
+
+- id: filterpy
+  programming-language: Python
+  title: FilterPy
+  URL: 'https://github.com/rlabbe/filterpy'
+
+- id: FilterPy
+  abstract: >-
+    Python Kalman filtering and optimal estimation library. Implements Kalman
+    filter, particle filter, Extended Kalman filter, Unscented Kalman filter,
+    g-h (alpha-beta), least squares, H Infinity, smoo...
+  accessed:
+    - year: 2020
+      month: 11
+      day: 25
+  issued:
+    - year: 2020
+      month: 11
+      day: 24
+  original-date:
+    - year: 2014
+      month: 7
+      day: 15
+  programming-language: Python
+  source: GitHub
+  title: FilterPy
+  URL: 'https://github.com/rlabbe/filterpy'
 
 - id: fischer2019performancebased
   container-title: Journal of Structural Engineering
@@ -4288,9 +4306,10 @@ references:
   publisher: Earthquake Engineering Research Institute
   title: Soil liquefaction during earthquakes
 
-- id: ihfoam2018
+- id: ihfoam2018ihfoam
   issued:
     - year: 2018
+  title: IHFOAM
   URL: 'https://ihfoam.ihcantabria.com/.'
 
 - id: imagenet
@@ -6470,6 +6489,15 @@ references:
   publisher: American Society of Civil Engineers
   title: Community of practice for modeling disaster recovery
   volume: '20'
+
+- id: miles2020desaster
+  issued:
+    - year: 2020
+  title: >-
+    DESaster, A discrete event disaster recovery simulation, currently focused
+    on housing, built on top of the Simpy discrete event simulation Python
+    library.
+  URL: 'https://github.com/milessb/DESaster'
 
 - id: miller2015estimating
   container-title: Transportation research board 94th annual meeting
@@ -8809,7 +8837,11 @@ references:
     Integrative modeling of housing recovery as a physical, economic, and social
     process
 
-- id: synerg
+- id: swan
+  title: SWAN
+  URL: 'http://swanmodel.sourceforge.net/'
+
+- id: SYNERG
   title: SYNER-G Fragility Function Manager
   URL: 'http://www.vce.at/SYNER-G/files/downloads.html'
 
@@ -9051,6 +9083,10 @@ references:
     Performance-based comparison of different storm mitigation techniques for
     residential buildings
   volume: '142'
+
+- id: uqpyl
+  title: UQ-Pyl
+  URL: 'http://www.uq-pyl.com/'
 
 - id: usace2015north
   event-place: 'Vicksburg, MS'
@@ -9335,6 +9371,43 @@ references:
     Cross-entropy-based adaptive importance sampling using von Mises-Fisher
     mixture for high dimensional reliability analysis
   volume: '59'
+
+- id: wang2016gui
+  abstract: >-
+    Uncertainty quantification (UQ) refers to quantitative characterization and
+    reduction of uncertainties present in computer model simulations. It is
+    widely used in engineering and geophysics fields to assess and predict the
+    likelihood of various outcomes. This paper describes a UQ platform called
+    UQ-PyL (Uncertainty Quantification Python Laboratory), a flexible software
+    platform designed to quantify uncertainty of complex dynamical models.
+    UQ-PyL integrates different kinds of UQ methods, including experimental
+    design, statistical analysis, sensitivity analysis, surrogate modeling and
+    parameter optimization. It is written in Python language and runs on all
+    common operating systems. UQ-PyL has a graphical user interface that allows
+    users to enter commands via pull-down menus. It is equipped with a model
+    driver generator that allows any computer model to be linked with the
+    software. We illustrate the different functions of UQ-PyL by applying it to
+    the uncertainty analysis of the Sacramento Soil Moisture Accounting Model.
+    We will also demonstrate that UQ-PyL can be applied to a wide range of
+    applications.
+  accessed:
+    - year: 2020
+      month: 11
+      day: 25
+  container-title: Environmental Modelling & Software
+  container-title-short: Environmental Modelling & Software
+  DOI: 10/ghk8tg
+  ISSN: 1364-8152
+  issued:
+    - year: 2016
+      month: 2
+      day: 1
+  language: en
+  page: 1-12
+  source: ScienceDirect
+  title: A GUI platform for uncertainty quantification of complex dynamical models
+  URL: 'http://www.sciencedirect.com/science/article/pii/S1364815215300955'
+  volume: '76'
 
 - id: wang2016measurements
   container-title: Journal of Wind Engineering and Industrial Aerodynamics
@@ -9671,7 +9744,7 @@ references:
   publisher-place: 'Los Angeles, CA'
   title: An assistive learning workflow on annotating images for object detection
 
-- id: wrf
+- id: WRF
   title: WRF
 
 - id: Wriggers02
@@ -10243,9 +10316,4 @@ references:
 - id: zotero-3888
   archive: >-
     https://chl.erdc.dren.mil/tools/chloldwebsite/CHL%20OLD%20WEBSITE/chl.erdc.usace.army.mil/CHLc5e2.html?p=s&a=software;9
-
-- id: zotero-3890
-  URL: 'http://swanmodel.sourceforge.net/'
-
-- id: zotero-5036
 ...

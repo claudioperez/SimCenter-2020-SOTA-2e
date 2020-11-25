@@ -31,7 +31,6 @@
     natbib,
     defernumbers,
     hyperref=true,
-    refsegment=section,
     backend=biber,
     style=authoryear]{biblatex}
 \defbibheading{subbibliography}{%
@@ -47,7 +46,7 @@
 \usepackage{makeidx}         % allows index generation
 \usepackage{graphicx}        % standard LaTeX graphics tool
                              % when including figure files
-\usepackage{multicol}        % used for the two-column index
+% \usepackage{multicol}        % used for the two-column index
 \usepackage[bottom]{footmisc}% places footnotes at page bottom
 
 \usepackage{newtxtext}       % 
@@ -71,7 +70,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{import}
-% \newcommand{\seginclude}[1]{\endrefsegment\newrefsegment\include{#1}}
+\newcommand{\seginclude}[1]{\endrefsegment\newrefsegment\include{#1}}
+\newcommand{\segimport}[2]{\newrefsegment\import{#1}{#2}\endrefsegment}
 \input{editor/prgmstyle.tex}
 
 
@@ -95,35 +95,35 @@
 \include{editor/introduction}
 
 \include{Hazard/main}
-\import{Hazard/Earthquake_Ground_Shaking/}{main}
-\import{Hazard/Earthquake_Surface_Rupture/}{main}
-\import{Hazard/Earthquake_Liquefaction/}{main}
-\import{Hazard/Earthquake_Landslide/}{main}
-\import{Hazard/Storm_Wind/}{main}
-\import{Hazard/Storm_Surge/}{main}
-\import{Hazard/Tsunami/}{main}
+\segimport{Hazard/Earthquake_Ground_Shaking/}{main}
+\segimport{Hazard/Earthquake_Surface_Rupture/}{main}
+\segimport{Hazard/Earthquake_Liquefaction/}{main}
+\segimport{Hazard/Earthquake_Landslide/}{main}
+\segimport{Hazard/Storm_Wind/}{main}
+\segimport{Hazard/Storm_Surge/}{main}
+\segimport{Hazard/Tsunami/}{main}
 
 \include{Response/main}
-\import{Response/Structural/}{main}
-\import{Response/Geotechnical/}{main}
-\import{Response/CFD_Wind/}{main}
-\import{Response/CFD_Water/}{main}
+\segimport{Response/Structural/}{main}
+\segimport{Response/Geotechnical/}{main}
+\segimport{Response/CFD_Wind/}{main}
+\segimport{Response/CFD_Water/}{main}
 
 \include{Performance/main}
-\import{Performance/Buildings/}{main}
-\import{Performance/Transportation/}{main}
-\import{Performance/Pipelines/}{main}
-\import{Performance/Power/}{main}
+\segimport{Performance/Buildings/}{main}
+\segimport{Performance/Transportation/}{main}
+\segimport{Performance/Pipelines/}{main}
+\segimport{Performance/Power/}{main}
 
 \include{Recovery/main}
-\import{Recovery/Communities/}{main}
-\import{Recovery/Infrastructure_Systems/}{main}
-\import{Recovery/Housing/}{main}
-\import{Recovery/Businesses/}{main}
+\segimport{Recovery/Communities/}{main}
+\segimport{Recovery/Infrastructure_Systems/}{main}
+\segimport{Recovery/Housing/}{main}
+\segimport{Recovery/Businesses/}{main}
 
 \include{CrossCutting/main}
-\import{CrossCutting/Uncertainty/}{main}
-\import{CrossCutting/AI/}{main}
+\segimport{CrossCutting/Uncertainty/}{main}
+\segimport{CrossCutting/AI/}{main}
 
 %
 

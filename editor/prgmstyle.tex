@@ -8,6 +8,29 @@
       {\printfield{entrysetcount}}
       {}}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newbibmacro*{related:default}[1]{%
+  \entrydata*{#1}{%
+    \usedriver
+      {\ifnameundef{savedauthor}
+         {\ifnameundef{savededitor}
+            {}
+            {\ifnamesequal{editor}{savededitor}
+               {\clearname{editor}}
+               {}}}
+         {\ifnamesequal{author}{savedauthor}
+            {\clearname{author}}
+            {}}%
+       \renewbibmacro*{related:init}{}%
+       \DeclareNameAlias{sortname}{default}%
+       \ifbibmacroundef{date+extradate}
+         {}
+         {\renewbibmacro*{date+extradate}{}%
+          \renewbibmacro*{bbx:ifmergeddate}{\@secondoftwo}}%
+       \renewbibmacro*{pageref}{}}
+      {\thefield{entrytype}}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \newbibmacro*{citetitle}{%
   \iffieldundef{shorthand}
   {\usebibmacro{cite:title}}%
@@ -21,7 +44,8 @@
 \DeclareCiteCommand{\citeprgm}
   {\usebibmacro{prenote}}
   {\usebibmacro{citeindex}%
-   \usebibmacro{cite:title}}%
+   \usebibmacro{cite:title}%
+   \usebibmacro{related:default}}%
   {\multicitedelim}
   {\usebibmacro{postnote}}
 
