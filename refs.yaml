@@ -6139,6 +6139,44 @@ references:
     buildings
   type: 'PEER report 2010/11,'
 
+- id: mander1988theoretical
+  abstract: >-
+    A stress‐strain model is developed for concrete subjected to uniaxial
+    compressive loading and confined by transverse reinforcement. The concrete
+    section may contain any general type of confining steel: either spiral or
+    circular hoops; or rectangular hoops with or without supplementary cross
+    ties. These cross ties can have either equal or unequal confining stresses
+    along each of the transverse axes. A single equation is used for the
+    stress‐strain equation. The model allows for cyclic loading and includes the
+    effect of strain rate. The influence of various types of confinement is
+    taken into account by defining an effective lateral confining stress, which
+    is dependent on the configuration of the transverse and longitudinal
+    reinforcement. An energy balance approach is used to predict the
+    longitudinal compressive strain in the concrete corresponding to first
+    fracture of the transverse reinforcement by equating the strain energy
+    capacity of the transverse reinforcement to the strain energy stored in the
+    concrete as a result of the confinement.
+  accessed:
+    - year: 2020
+      month: 11
+      day: 25
+  container-title: Journal of Structural Engineering
+  DOI: 10/cwzrtg
+  ISSN: 0733-9445
+  issue: '8'
+  issued:
+    - year: 1988
+      month: 8
+      day: 1
+  language: EN
+  page: 1804-1826
+  publisher: American Society of Civil Engineers
+  source: ASCE
+  title: Theoretical Stress‐Strain Model for Confined Concrete
+  URL: >-
+    https://ascelibrary.org/doi/abs/10.1061/%28ASCE%290733-9445%281988%29114%3A8%281804%29
+  volume: '114'
+
 - id: mander1998theoretical
   container-title: 'Jl. Struct. Engrg., ASCE'
   DOI: 10/cwzrtg
