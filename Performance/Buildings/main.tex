@@ -107,6 +107,11 @@ The above methodology has been developed to quantify the seismic performance of 
 
 When it comes to building performance assessment under non-seismic hazards, the models and methods are typically more approximate. This partly stems from the lack of publicly available high-quality databases--which would drive more sophisticated model development--and from the different nature of the problem. The impact and disruption of earthquakes and hurricanes are very different in both spatial and temporal distribution, with hurricanes having a severe impact on a larger region over a longer time period. Therefore, the focus for hurricane and flood models have always tended to be more regional where capturing the detailed response of individual structures receives less attention.
 
+\section{Research Gaps and Needs}
+\label{sec:perf_bldg_gaps}
+
+Tom O'Rourke: there is a need to better understand urban seismic vulnerability, the interaction between buildings and also between buildings and the other components of the built environment.
+
 \section{Software and Systems}
 \label{sec:perf_bldg_tools}
 
@@ -116,8 +121,8 @@ The following is a list of software that provides features required for state-of
 \paragraph{CAPRA} Development of the Comprehensive Approach to Probabilistic Risk Assessment (CAPRA) platform was initially supported by the World Bank and the Inter-American Development Bank; it has been managed by Uniandes (Universidad de los Andes in Colombia) since 2017. CAPRA is designed to become a multi-hazard framework based on several modules that handle different tasks of the risk assessment workflow. The currently available modules allow risk assessment using vulnerability functions for several types of hazards (e.g., earthquake, hurricane, and flood). The open source CAPRA framework uses Visual Basic .NET and provides applications in a Windows environment.
 % \newline
 
-\paragraph{ERGO} Developed by the Mid-America Earthquake Center (MAE), ERGO is the successor of mHARP and MAEviz. It is based on the HAZUS methodology for scenario risk assessment and it allows users to write their own extensions. Through these added modules, its functionality is not limited to building performance assessment and allows analysis of infrastructure and lifeline performance as well as indirect consequences in the region. ERGO uses a Windows-based application with a user interface to guide the user through the analysis. It is open source and has been integrated into several European platforms [e.g., SYNER-G \citep{pitilakis2014synerg} and HAZturk \citep{karaman2008earthquake}].
-% \newline
+\paragraph{MAEViz} Developed by the Mid-America Earthquake Center (MAE), 
+MAEViz is based on the HAZUS methodology for scenario risk assessment and it allows users to write their own extensions. Through these added modules, its functionality is not limited to building performance assessment and allows analysis of infrastructure and lifeline performance as well as indirect consequences in the region. It uses a Windows-based application with a user interface to guide the user through the analysis. MAEViz is open source and has been integrated into several platforms in the US [e.g., ERGO, mHARP] and in Europe [e.g., SYNER-G \citep{pitilakis2014synerg} and HAZturk \citep{karaman2008earthquake}].
 
 \paragraph{HAZUS 4.2} The FEMA-supported HAZUS tool was already introduced in Section 1.1. The damage and loss assessment modules in HAZUS use the component-group-based approach and categorize components into structural, non-structural, and content groups. The methodology provides estimates of direct and indirect consequences of damage. Its efficiency allows it to be scaled to a regional level without having to resort to HPC.
 % \newline
