@@ -859,19 +859,19 @@ references:
   URL: >-
     https://www.fema.gov/media-library-data/1426210695633-d9a280e72b32872161efab26a602283b/FEMAP-154_508.pdf
 
-- id: atc2018P-58-1
+- id: atc2018p-58-1
   author:
-    - literal: ATC
+    - literal: Applied Technology Council
+  collection-number: P-58-1
+  edition: Second Edition
   issued:
     - year: 2018
       month: 12
-  number: P-58-1
-  publisher: FEMA
-  title: >-
-    Seismic Performance Assessment of Buildings, Volume 1 -- Methodology, Second
-    Edition
+  publisher: Federal Emergency Management Agency
+  title: 'Seismic Performance Assessment of Buildings, Volume 1 -- Methodology'
   URL: >-
     https://www.fema.gov/media-library-data/1557508320921-d67f745e88e04e54a1f40f8e94835042/FEMA_P-58-1-SE_Volume1_Methodology.pdf
+  volume: '1'
 
 - id: attary2016methodology
   author:
@@ -1030,7 +1030,7 @@ references:
   publisher: 'Pacific Earthquake Engineering Research Center, University of California'
   title: Guidelines for nonlinear analysis of bridge structures in California
 
-- id: awpodc
+- id: AWC-ODC
   title: AWP-ODC
 
 - id: bai2017machine
@@ -4862,22 +4862,6 @@ references:
   title: FEAP
   URL: 'http://feap.berkeley.edu/'
 
-- id: FEMA-P58-1
-  author:
-    - literal: ATC
-  collection-number: P-58-1
-  edition: Second
-  issued:
-    - year: 2018
-      month: 12
-  publisher: Federal Emergency Management Agency
-  title: >-
-    Seismic Performance Assessment of Buildings, Volume 1 -- Methodology, Second
-    Edition
-  URL: >-
-    https://www.fema.gov/media-library-data/1557508320921-d67f745e88e04e54a1f40f8e94835042/FEMA_P-58-1-SE_Volume1_Methodology.pdf
-  volume: '1'
-
 - id: fema2012seismic
   author:
     - literal: FEMA
@@ -4907,17 +4891,6 @@ references:
   title: >-
     HAZUS – multi-hazard loss estimation methodology, flood model technical
     manual
-
-- id: fema2018hazusa
-  author:
-    - literal: FEMA
-  event-place: Washington D.C
-  issued:
-    - year: 2018
-  publisher: FEMA Mitigation Division
-  publisher-place: Washington D.C
-  title: Hazus 4.2
-  version: '4.2'
 
 - id: fema2018hazusb
   author:
@@ -5070,11 +5043,6 @@ references:
     Time‐Independent model
   volume: '104'
 
-- id: filterpy
-  programming-language: Python
-  title: FilterPy
-  URL: 'https://github.com/rlabbe/filterpy'
-
 - id: FilterPy
   abstract: >-
     Python Kalman filtering and optimal estimation library. Implements Kalman
@@ -5100,6 +5068,11 @@ references:
   title: FilterPy
   URL: 'https://github.com/rlabbe/filterpy'
 
+- id: FilterPy
+  programming-language: Python
+  title: FilterPy
+  URL: 'https://github.com/rlabbe/filterpy'
+
 - id: fischer2019performancebased
   author:
     - family: Fischer
@@ -5120,7 +5093,7 @@ references:
   volume: '145'
 
 - id: FLAC
-  title: 'FLAC: Fast lagrangian analysis of continua'
+  title: FLAC
   URL: 'https://www.itascacg.com/software/FLAC'
 
 - id: flint2016developing
@@ -6210,6 +6183,17 @@ references:
     manual
   URL: >-
     https://www.fema.gov/sites/default/files/2020-09/fema_hazus_hurricane-model_user-manual_2.1.pdf
+
+- id: HAZUS4x2
+  author:
+    - literal: FEMA
+  event-place: Washington D.C
+  issued:
+    - year: 2018
+  publisher: FEMA Mitigation Division
+  publisher-place: Washington D.C
+  title: Hazus 4.2
+  version: '4.2'
 
 - id: he2016deep
   author:
@@ -8117,6 +8101,28 @@ references:
     replacement cycles in axisymmetric tropical cyclones?’”
   volume: '71'
 
+- id: Keras
+  abstract: >-
+    Deep Learning for humans. Contribute to keras-team/keras development by
+    creating an account on GitHub.
+  accessed:
+    - year: 2020
+      month: 11
+      day: 26
+  issued:
+    - year: 2020
+      month: 11
+      day: 26
+  original-date:
+    - year: 2015
+      month: 3
+      day: 28
+  programming-language: Dockerfile
+  publisher: Keras
+  source: GitHub
+  title: keras-team/keras
+  URL: 'https://keras.io/'
+
 - id: kerr2013ioos
   accessed:
     - year: 2020
@@ -8867,6 +8873,10 @@ references:
     Computational contact and impact mechanics: Fundamentals of modelling
     interfacial phenomena in nonlinear finite element analysis
 
+- id: LBMC90
+  title: LBMC90
+  URL: 'http://mimetics-engineering.fr/index.php/en/lmgc90-2/'
+
 - id: le2019application
   author:
     - family: Le
@@ -9384,6 +9394,28 @@ references:
     Urban flood mapping with an active self-learning convolutional neural
     network based on TerraSAR-X intensity and interferometric coherence
   volume: '152'
+
+- id: LIGGGHTS
+  abstract: >-
+    official release of the LIGGGHTS® DEM software, by DCS Computing GmbH. For
+    further info, forums, and bug reports, please visit
+  accessed:
+    - year: 2020
+      month: 11
+      day: 26
+  issued:
+    - year: 2020
+      month: 11
+      day: 24
+  original-date:
+    - year: 2012
+      month: 6
+      day: 15
+  programming-language: C++
+  publisher: DCS Computing GmbH
+  source: GitHub
+  title: CFDEMproject/LIGGGHTS-PUBLIC
+  URL: 'https://www.cfdem.com/'
 
 - id: lin1986earthquake
   author:
@@ -11196,16 +11228,6 @@ references:
     Hurricanes Katrina and Rita
   volume: '29'
 
-- id: n.b.i.2016national
-  author:
-    - literal: N.B.I.
-  issued:
-    - year: 2016
-  publisher: Federal Highway Administration
-  title: 'National bridge inventory system, US department of transportation'
-  URL: >-
-    https://catalog.data.gov/dataset/national-bridge-inventory-system-nbi-1992-b9105.
-
 - id: n.i.s.t.-a.t.c.2018blind
   author:
     - literal: N.I.S.T.-A.T.C.
@@ -11402,6 +11424,16 @@ references:
   title: >-
     Building and measuring community resilience: Actions for communities and the
     gulf research program
+
+- id: nbi2016national
+  author:
+    - literal: NBI
+  issued:
+    - year: 2016
+  publisher: Federal Highway Administration
+  title: 'National bridge inventory system, US department of transportation'
+  URL: >-
+    https://catalog.data.gov/dataset/national-bridge-inventory-system-nbi-1992-b9105.
 
 - id: nejat2012agent
   author:
@@ -11855,18 +11887,6 @@ references:
     models
   volume: 148C
 
-- id: openfoam
-  abstract: >-
-    Home of OpenFOAM, the CFD software licensed free and open source only, by us
-    — The OpenFOAM Foundation — developed primarily by CFD Direct.
-  accessed:
-    - year: 2020
-      month: 10
-      day: 24
-  language: en-GB
-  title: OpenFOAM | Free CFD Software | The OpenFOAM Foundation
-  URL: 'https://openfoam.org/'
-
 - id: OpenFOAM
   author:
     - literal: OpenFOAM
@@ -11875,7 +11895,7 @@ references:
   title: OpenFOAM
   URL: 'https://openfoam.org.'
 
-- id: openquake
+- id: OpenQuake
   title: OpenQuake
 
 - id: OpenSees
@@ -11905,6 +11925,20 @@ references:
     CRISIS2008: A flexible tool to perform probabilistic seismic hazard
     assessment
   volume: '84'
+
+- id: ordazrcrisis
+  author:
+    - family: Ordaz
+      given: M.
+    - family: Martinelli
+      given: F.
+    - family: Aguilar
+      given: A.
+    - family: Meletti
+      given: C.
+    - family: D'Amico
+      given: V.
+  title: R-CRISIS. Program and platform for computing seismic hazard.
 
 - id: orourke2000seismic
   author:
@@ -11977,7 +12011,7 @@ references:
   volume: '121'
 
 - id: pact
-  title: 'PACT: Performance Assessment Calculation Tool'
+  title: PACT
   URL: 'https://femap58.atcouncil.org/pact'
 
 - id: padgett2007bridge
@@ -12571,6 +12605,10 @@ references:
 - id: ProShake
   title: ProShake
   URL: 'http://www.proshake.com/'
+
+- id: PyTorch
+  title: PyTorch
+  URL: 'https://pytorch.org/'
 
 - id: qin2016threedimensional
   author:
@@ -13504,6 +13542,10 @@ references:
   title: >-
     The national artificial intelligence research and development strategic
     plan, 2019 update
+
+- id: Scikit-Learn
+  title: Scikit-Learn
+  URL: 'https://scikit-learn.org'
 
 - id: sea
   accessed:
@@ -14502,9 +14544,18 @@ references:
     Integrative modeling of housing recovery as a physical, economic, and social
     process
 
-- id: swan
+- id: SWAN
   title: SWAN
   URL: 'http://swanmodel.sourceforge.net/'
+
+- id: SWIM
+  author:
+    - family: Wang
+      given: C.
+    - family: McKenna
+      given: F.
+  publisher: NHERI-SimCenter
+  title: SWIM
 
 - id: SYNERG
   title: SYNER-G Fragility Function Manager
@@ -14727,6 +14778,29 @@ references:
   publisher-place: 'Berkeley, CA'
   title: 'Concrete column blind prediction contest 2010: outcomes and observations'
 
+- id: Theano
+  abstract: >-
+    Theano is a Python library that allows you to define, optimize, and evaluate
+    mathematical expressions involving multi-dimensional arrays efficiently. It
+    can use GPUs and perform efficient symbolic ...
+  accessed:
+    - year: 2020
+      month: 11
+      day: 26
+  issued:
+    - year: 2020
+      month: 11
+      day: 26
+  original-date:
+    - year: 2011
+      month: 8
+      day: 10
+  programming-language: Python
+  publisher: Theano
+  source: GitHub
+  title: Theano
+  URL: 'http://deeplearning.net/software/theano/'
+
 - id: thomas2011robust
   author:
     - family: Thomas
@@ -14882,7 +14956,7 @@ references:
     residential buildings
   volume: '142'
 
-- id: uqpyl
+- id: UQ-Pyl
   title: UQ-Pyl
   URL: 'http://www.uq-pyl.com/'
 
@@ -15663,15 +15737,6 @@ references:
   title: >-
     Machine learning-based regional scale intelligent modeling of building
     information for natural hazard risk management
-
-- id: wangswim
-  author:
-    - family: Wang
-      given: C.
-    - family: McKenna
-      given: F.
-  publisher: NHERI-SimCenter
-  title: SWIM
 
 - id: watson2020importance
   author:

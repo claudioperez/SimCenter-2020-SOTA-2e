@@ -96,16 +96,12 @@ As our ability to compute ground motions to ever higher frequencies increases as
 \label{sec:eq_shake_tools}
 
 The following is a list of software that is commonly used for characterizing earthquake ground shaking.
-% \newline
 
-\paragraph{AWP-ODC} AWP-ODC is an elastic wave propagation program (AWP-ODC, \cite{cui2010scalable}) that performs a parallel finite-difference wave-propagation simulation. The software can simulate the dynamic rupture and wave propagation that occurs during an earthquake. It was originally written in Fortran and supports parallel computation using the message passing interface (MPI). A version of the software written in C and CUDA is also available to run on graphics processing units (GPUs).
-% \newline
+\paragraph{AWP-ODC} \citeprgm{AWP-ODC} is an elastic wave propagation program (AWP-ODC, \cite{cui2010scalable}) that performs a parallel finite-difference wave-propagation simulation. The software can simulate the dynamic rupture and wave propagation that occurs during an earthquake. It was originally written in Fortran and supports parallel computation using the message passing interface (MPI). A version of the software written in C and CUDA is also available to run on graphics processing units (GPUs).
 
-\paragraph{BBP} The Broadband platform \citep{maechling2015scec} is a software system developed by SCEC that can be used to generate synthetic ground motions using wave-propagation models. The BBP is distributed with data products (velocity models and Green's functions packages) that allows for the generation of seismograms for simulating historical or hypothetical earthquake scenarios in California, the northeast of the U.S., and Japan. The software runs on Linux sys-tems and provides different seismogram generation models.
-% \newline
+\paragraph{BBP} \citeprgm{The Broadband platform} \citep{maechling2015scec} is a software system developed by SCEC that can be used to generate synthetic ground motions using wave-propagation models. The BBP is distributed with data products (velocity models and Green's functions packages) that allows for the generation of seismograms for simulating historical or hypothetical earthquake scenarios in California, the northeast of the U.S., and Japan. The software runs on Linux systems and provides different seismogram generation models.
 
-\paragraph{CyberShake} CyberShake is a computational simulation project on physics-based PSHA, developed and hosted by SCEC. CyberShake simulations have been created from studies that define the in-puts, computational software, and the outputs. Outputs from studies done using CyberShake are stored in publicly accessible databases, which includes studies performed for southern and central California. Data products of CyberShake include seismograms, hazard curves, dis-aggregation, duration results, and hazard maps.
-% \newline
+\paragraph{CyberShake} \citeprgm{CyberShake} is a computational simulation project on physics-based PSHA, developed and hosted by SCEC. CyberShake simulations have been created from studies that define the in-puts, computational software, and the outputs. Outputs from studies done using CyberShake are stored in publicly accessible databases, which includes studies performed for southern and central California. Data products of CyberShake include seismograms, hazard curves, dis-aggregation, duration results, and hazard maps.
 
 \paragraph{HAZ} \citeprgm{HAZ} is a probabilistic seismic hazard analysis tool written and maintained by Norman Abrahamson. It is written in FORTRAN and it is not heavily documented, but it still is a popular tool for several bridge, dam, and nuclear projects.
 %latest activity on the HAZ repository was in 2017.
@@ -126,9 +122,8 @@ The following is a list of software that is commonly used for characterizing ear
 % \newline
 
 \paragraph{PEER Ground Motion Database} The PEER ground motion database (NGA-West2, \cite{ancheta2014ngawest2}) is a comprehensive set of ground-motion records from shallow crustal earthquakes in active seismic regions around the world. The database includes 21,336 records from 599 earthquake events. In addition to the ground-motion records, the database stores detailed metadata that includes different source-site distance measures, site, and rupture characterization. A web service that can perform ground-motion record selection and scaling using the records in database is also provided.
-% \newline
 
-\paragraph{R-CRISIS } R-CRISIS is the latest version of the CRISIS software that has been developed by \cite{ordaz2013crisis2008} and supported by the National Autonomous University of Mexico, and the Italian Department of Civil Protection. The latest version of the software is free and publicly available. It is designed to work with a GUI in a Windows environment. The software is designed to per-form PSHA calculations with a large number of GMPEs built in and seismic-source models available in the literature.
+\paragraph{R-CRISIS } \citeprgm{R-CRISIS} is the latest version of the CRISIS software that has been developed by \cite{ordaz2013crisis2008} and supported by the National Autonomous University of Mexico, and the Italian Department of Civil Protection. The latest version of the software is free and publicly available. It is designed to work with a GUI in a Windows environment. The software is designed to per-form PSHA calculations with a large number of GMPEs built in and seismic-source models available in the literature.
 % \newline
 
 \paragraph{SW4} Seismic waves, 4th order (SW4, \cite{petersson2017geodynamics}) is a software originally developed at the Lawrence Livermore National Lab (LLNL) and currently jointly developed by the LLNL and the Lawrence Berkeley National Lab under the U.S. DOE Exascale Computing Program EQSIM application framework. It can solve three-dimensional (3D) seismic wave-propagation problems. The software was developed using Fortran and C++ and makes use of a distributed memory-programming model using MPI. The software is suitable for running on HPC and is capable of producing synthetic seismograms in different formats.

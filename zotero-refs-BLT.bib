@@ -489,16 +489,33 @@
 % == BibLateX quality report for atc2015rapid:
 % ? Title looks like it was stored in title-case in Zotero
 
-@report{atc2018P-58-1,
-  title = {Seismic {{Performance Assessment}} of {{Buildings}}, {{Volume}} 1 -- {{Methodology}}, {{Second Edition}}},
-  author = {{ATC}},
+@book{atc2018p-58-1,
+  title = {Seismic {{Performance Assessment}} of {{Buildings}}, {{Volume}} 1 -- {{Methodology}}},
+  author = {{Applied Technology Council}},
   date = {2018-12},
-  institution = {{FEMA}},
+  edition = {Second Edition},
+  volume = {1},
+  publisher = {{Federal Emergency Management Agency}},
   url = {https://www.fema.gov/media-library-data/1557508320921-d67f745e88e04e54a1f40f8e94835042/FEMA_P-58-1-SE_Volume1_Methodology.pdf},
-  number = {P-58-1}
+  number = {P-58-1},
+  shortauthor = {ATC}
 }
-% == BibLateX quality report for atc2018P-58-1:
-% Missing required field 'type'
+% == BibLateX quality report for atc2018p-58-1:
+% ? Title looks like it was stored in title-case in Zotero
+
+@book{atc2018p-58-2,
+  title = {Seismic {{Performance Assessment}} of {{Buildings}}, {{Volume}} 2 – {{Implementation Guide}}},
+  author = {Applied Technology Council},
+  date = {2018-12},
+  edition = {Second},
+  volume = {1},
+  publisher = {{Federal Emergency Management Agency}},
+  url = {https://www.fema.gov/media-library-data/1557508320921-d67f745e88e04e54a1f40f8e94835042/FEMA_P-58-1-SE_Volume1_Methodology.pdf},
+  number = {P-58-2},
+  shortauthor = {ATC},
+  related = {pact}
+}
+% == BibLateX quality report for atc2018p-58-2:
 % ? Title looks like it was stored in title-case in Zotero
 
 @article{attary2016methodology,
@@ -585,10 +602,11 @@
 % Unexpected field 'address'
 % Unexpected field 'type'
 
-@software{awpodc,
-  title = {{{AWP}}-{{ODC}}}
+@software{AWC-ODC,
+  title = {{{AWP}}-{{ODC}}},
+  related = {cui2010scalable}
 }
-% == BibLateX quality report for awpodc:
+% == BibLateX quality report for AWC-ODC:
 % Unexpected field 'title'
 
 @article{bai2017machine,
@@ -1518,6 +1536,14 @@
 % Unexpected field 'title'
 % Unexpected field 'organization'
 
+@software{CAPRA,
+  title = {{{CAPRA}}},
+  url = {https://ecapra.org/},
+  related = {3KZI3AFF}
+}
+% == BibLateX quality report for CAPRA:
+% Unexpected field 'title'
+
 @article{carey2018multihazard,
   title = {Multi-Hazard Earthquake and Tsunami Effects on Soil-Foundation-Bridge Systems},
   author = {Carey, T.J. and Mason, H.B. and Barbosa, A.R. and Scott, M.H.},
@@ -1808,7 +1834,8 @@
   volume = {20},
   pages = {159--186},
   doi = {10/fw62c8},
-  number = {1}
+  number = {1},
+  related = {J97HKTXP}
 }
 
 @article{chen2014openfoam,
@@ -2002,6 +2029,13 @@
   journaltitle = {Berkeley, California: Pacific Earthquake Engineering Research Center (PEER)}
 }
 
+@software{Clawpack,
+  title = {Clawpack},
+  url = {https://www.clawpack.org/}
+}
+% == BibLateX quality report for Clawpack:
+% Unexpected field 'title'
+
 @software{Claymore,
   title = {Claymore},
   url = {https://github.com/penn-graphics-research/claymore},
@@ -2142,12 +2176,12 @@
 % == BibLateX quality report for cornell1968engineering:
 % Unexpected field 'publisher'
 
-@software{cossanx,
+@software{COSSAN-X,
   title = {{{COSSAN}}-{{X}}},
   url = {http://www.cossan.co.uk/software/cossan-x.php},
   related = {patelli2017cossan}
 }
-% == BibLateX quality report for cossanx:
+% == BibLateX quality report for COSSAN-X:
 % Unexpected field 'title'
 
 @article{costa2019object,
@@ -2245,7 +2279,8 @@
   author = {Cui, Y. and Olsen, K.B. and Jordan, T.H. and Lee, K. and Zhou, J. and Small, P. and Roten, D. and Ely, G. and Panda, D.K. and Chourasia, A. and Levesque, J. and Day, S.M. and Maechling, P.},
   date = {2010},
   location = {{New Orleans, LA}},
-  doi = {10/bbvk5x}
+  doi = {10/bbvk5x},
+  related = {AWC-ODC}
 }
 % == BibLateX quality report for cui2010scalable:
 % ? Unsure about the formatting of the booktitle
@@ -2275,11 +2310,19 @@
 % == BibLateX quality report for cutter2013disaster:
 % Unexpected field 'publisher'
 
-@software{dacea,
+@software{CyberShake,
+  title = {{{CyberShake}}},
+  url = {https://scec.usc.edu/scecpedia/CyberShake},
+  related = {3SPBUXAF}
+}
+% == BibLateX quality report for CyberShake:
+% Unexpected field 'title'
+
+@software{DACE-A,
   title = {{{DACE}}-{{A}}},
   related = {lophaven2002dacea}
 }
-% == BibLateX quality report for dacea:
+% == BibLateX quality report for DACE-A:
 % Unexpected field 'title'
 
 @article{dacy1969economics,
@@ -2327,12 +2370,12 @@
 % == BibLateX quality report for dahlhamer1998rebounding:
 % Unexpected field 'publisher'
 
-@software{dakota,
+@software{DAKOTA,
   title = {Dakota},
   url = {https://dakota.sandia.gov/},
   related = {adams2009dakota}
 }
-% == BibLateX quality report for dakota:
+% == BibLateX quality report for DAKOTA:
 % Unexpected field 'title'
 
 @article{danciu20172014,
@@ -2958,6 +3001,13 @@
   number = {2}
 }
 
+@software{EPANET,
+  title = {{{EPANET}}},
+  related = {rossman2000epanet}
+}
+% == BibLateX quality report for EPANET:
+% Unexpected field 'title'
+
 @article{erazo2018bayesian,
   title = {Bayesian Structural Identification of a Hysteretic Negative Stiffness Earthquake Protection System Using Unscented {{Kalman}} Filtering},
   author = {Erazo, Kalil and Nagarajaiah, Satish},
@@ -3087,19 +3137,6 @@
 % Unexpected field 'title'
 % Unexpected field 'key'
 
-@book{FEMA-P58-1,
-  title = {Seismic {{Performance Assessment}} of {{Buildings}}, {{Volume}} 1 -- {{Methodology}}, {{Second Edition}}},
-  author = {{ATC}},
-  date = {2018-12},
-  edition = {Second},
-  volume = {1},
-  publisher = {{Federal Emergency Management Agency}},
-  url = {https://www.fema.gov/media-library-data/1557508320921-d67f745e88e04e54a1f40f8e94835042/FEMA_P-58-1-SE_Volume1_Methodology.pdf},
-  number = {P-58-1}
-}
-% == BibLateX quality report for FEMA-P58-1:
-% ? Title looks like it was stored in title-case in Zotero
-
 @article{fema2012seismic,
   title = {Seismic Performance Assessment of Buildings},
   author = {{FEMA}},
@@ -3134,22 +3171,6 @@
 % == BibLateX quality report for fema2018hazus:
 % Unexpected field 'address'
 % Missing required field 'type'
-
-@software{fema2018hazusa,
-  title = {Hazus 4.2},
-  author = {{FEMA}},
-  date = {2018},
-  location = {{Washington D.C}},
-  organization = {{FEMA Mitigation Division}},
-  version = {4.2}
-}
-% == BibLateX quality report for fema2018hazusa:
-% Unexpected field 'title'
-% Unexpected field 'author'
-% Unexpected field 'location'
-% Unexpected field 'organization'
-% Unexpected field 'version'
-% ? Title looks like it was stored in title-case in Zotero
 
 @report{fema2018hazusb,
   title = {{{HAZUS}} – Multi-Hazard Loss Estimation Methodology 2.1, Hurricane Model Technical Manual},
@@ -3268,13 +3289,6 @@
   number = {3}
 }
 
-@software{filterpy,
-  title = {{{FilterPy}}},
-  url = {https://github.com/rlabbe/filterpy}
-}
-% == BibLateX quality report for filterpy:
-% Unexpected field 'title'
-
 @software{FilterPy,
   title = {{{FilterPy}}},
   author = {Labbe, Roger},
@@ -3287,6 +3301,13 @@
 % == BibLateX quality report for FilterPy:
 % Unexpected field 'title'
 % Unexpected field 'author'
+
+@software{FilterPy,
+  title = {{{FilterPy}}},
+  url = {https://github.com/rlabbe/filterpy}
+}
+% == BibLateX quality report for FilterPy:
+% Unexpected field 'title'
 
 @article{fischer2019performancebased,
   title = {Performance-{{Based Structural Fire Engineering}} of {{Steel Building Structures}}: {{Design}}-{{Basis Compartment Fires}}},
@@ -3302,7 +3323,7 @@
 % ? Title looks like it was stored in title-case in Zotero
 
 @software{FLAC,
-  title = {{{FLAC}}: {{Fast}} Lagrangian Analysis of Continua},
+  title = {{{FLAC}}},
   url = {https://www.itascacg.com/software/FLAC},
   key = {FLAC}
 }
@@ -3397,6 +3418,14 @@
 }
 % == BibLateX quality report for future2019global:
 % Missing required field 'institution'
+
+@software{fvcom,
+  title = {{{FVCOM}}},
+  url = {http://fvcom.smast.umassd.edu/fvcom/},
+  related = {chen2003unstructured}
+}
+% == BibLateX quality report for fvcom:
+% Unexpected field 'title'
 
 @article{gao2018deep,
   title = {Deep Transfer Learning for Image-Based Structural Damage Recognition},
@@ -3493,6 +3522,13 @@
   pages = {101980},
   doi = {10/ghg5vt}
 }
+
+@software{GEOCLAW,
+  title = {{{GEOCLAW}}},
+  url = {https://depts.washington.edu/clawpack/geoclaw/}
+}
+% == BibLateX quality report for GEOCLAW:
+% Unexpected field 'title'
 
 @thesis{george2004numerical,
   title = {Numerical Approximation of the Nonlinear Shallow Water Equations with Topography and Dry Beds : {{A}} Godunov-Type Scheme},
@@ -3640,6 +3676,13 @@
   doi = {10/f98vp5}
 }
 
+@software{GIRAFFE,
+  title = {{{GIRAFFE}}},
+  related = {wang2008seismic}
+}
+% == BibLateX quality report for GIRAFFE:
+% Unexpected field 'title'
+
 @article{gizaw2016regional,
   title = {Regional Flood Frequency Analysis Using Support Vector Regression under Historical and Future Climate},
   author = {Gizaw, M.S. and Gan, T.Y.},
@@ -3751,6 +3794,25 @@
 }
 % == BibLateX quality report for grant2016multimodal:
 % Unexpected field 'publisher'
+
+@article{graves2011cybershake,
+  title = {{{CyberShake}}: {{A Physics}}-{{Based Seismic Hazard Model}} for {{Southern California}}},
+  shorttitle = {{{CyberShake}}},
+  author = {Graves, Robert and Jordan, Thomas H. and Callaghan, Scott and Deelman, Ewa and Field, Edward and Juve, Gideon and Kesselman, Carl and Maechling, Philip and Mehta, Gaurang and Milner, Kevin and Okaya, David and Small, Patrick and Vahi, Karan},
+  date = {2011-03-01},
+  journaltitle = {Pure and Applied Geophysics},
+  shortjournal = {Pure Appl. Geophys.},
+  volume = {168},
+  pages = {367--381},
+  issn = {1420-9136},
+  doi = {10/bxxbmm},
+  abstract = {CyberShake, as part of the Southern California Earthquake Center’s (SCEC) Community Modeling Environment, is developing a methodology that explicitly incorporates deterministic source and wave propagation effects within seismic hazard calculations through the use of physics-based 3D ground motion simulations. To calculate a waveform-based seismic hazard estimate for a site of interest, we begin with Uniform California Earthquake Rupture Forecast, Version 2.0 (UCERF2.0) and identify all ruptures within 200~km of the site of interest. We convert the UCERF2.0 rupture definition into multiple rupture variations with differing hypocenter locations and slip distributions, resulting in about 415,000 rupture variations per site. Strain Green Tensors are calculated for the site of interest using the SCEC Community Velocity Model, Version 4 (CVM4), and then, using reciprocity, we calculate synthetic seismograms for each rupture variation. Peak intensity measures are then extracted from these synthetics and combined with the original rupture probabilities to produce probabilistic seismic hazard curves for the site. Being explicitly site-based, CyberShake directly samples the ground motion variability at that site over many earthquake cycles (i.e., rupture scenarios) and alleviates the need for the ergodic assumption that is implicitly included in traditional empirically based calculations. Thus far, we have simulated ruptures at over 200 sites in the Los Angeles region for ground shaking periods of 2~s and longer, providing the basis for the first generation CyberShake hazard maps. Our results indicate that the combination of rupture directivity and basin response effects can lead to an increase in the hazard level for some sites, relative to that given by a conventional Ground Motion Prediction Equation (GMPE). Additionally, and perhaps more importantly, we find that the physics-based hazard results are much more sensitive to the assumed magnitude-area relations and magnitude uncertainty estimates used in the definition of the ruptures than is found in the traditional GMPE approach. This reinforces the need for continued development of a better understanding of earthquake source characterization and the constitutive relations that govern the earthquake rupture process.},
+  langid = {english},
+  number = {3},
+  related = {ZDZ64AMF}
+}
+% == BibLateX quality report for graves2011cybershake:
+% ? Title looks like it was stored in title-case in Zotero
 
 @article{greco2015robust,
   title = {Robust Design of Tuned Mass Dampers Installed on Multi-Degree-of-Freedom Structures Subjected to Seismic Action},
@@ -4003,6 +4065,22 @@
 % == BibLateX quality report for hazus2018hurricaneuser:
 % Unexpected field 'address'
 % Missing required field 'type'
+
+@software{HAZUS4x2,
+  title = {Hazus 4.2},
+  author = {{FEMA}},
+  date = {2018},
+  location = {{Washington D.C}},
+  organization = {{FEMA Mitigation Division}},
+  version = {4.2}
+}
+% == BibLateX quality report for HAZUS4x2:
+% Unexpected field 'title'
+% Unexpected field 'author'
+% Unexpected field 'location'
+% Unexpected field 'organization'
+% Unexpected field 'version'
+% ? Title looks like it was stored in title-case in Zotero
 
 @inproceedings{he2016deep,
   title = {Deep Residual Learning for Image Recognition},
@@ -4422,6 +4500,12 @@
   related = {deng2009imagenet}
 }
 % == BibLateX quality report for imagenet:
+% Unexpected field 'title'
+
+@software{IN-CORE,
+  title = {{{IN}}-{{CORE}}}
+}
+% == BibLateX quality report for IN-CORE:
 % Unexpected field 'title'
 
 @article{InCORE,
@@ -5131,6 +5215,20 @@
   number = {12}
 }
 
+@software{Keras,
+  title = {Keras-Team/Keras},
+  date = {2020-11-26T10:55:43Z},
+  origdate = {2015-03-28T00:35:42Z},
+  url = {https://keras.io/},
+  urldate = {2020-11-26},
+  abstract = {Deep Learning for humans. Contribute to keras-team/keras development by creating an account on GitHub.},
+  organization = {{Keras}}
+}
+% == BibLateX quality report for Keras:
+% Unexpected field 'title'
+% Unexpected field 'organization'
+% ? Title looks like it was stored in lower-case in Zotero
+
 @article{kerr2013ioos,
   title = {U.{{S}}. {{IOOS}} Coastal and Ocean Modeling Testbed: {{Inter}}-Model Evaluation of Tides, Waves, and Hurricane Surge in the {{Gulf}} of {{Mexico}}: {{IOOS TESTBED}}: {{INTER}}-{{MODEL EVALUATION}}},
   shorttitle = {U.{{S}}. {{IOOS}} Coastal and Ocean Modeling Testbed},
@@ -5319,7 +5417,8 @@
   author = {Klise, K.A. and Moriarty, D. and Bynum, M.L. and Murray, R. and Burkhardt, J. and Haxton, T.M.},
   date = {2017},
   journaltitle = {Environmental Protection Agency},
-  pages = {600 --17 264,}
+  pages = {600 --17 264,},
+  related = {NVSQFTXK}
 }
 
 @article{kloss12,
@@ -5552,6 +5651,13 @@
   date = {2002},
   publisher = {{Springer, Berlin}}
 }
+
+@software{LBMC90,
+  title = {{{LBMC90}}},
+  url = {http://mimetics-engineering.fr/index.php/en/lmgc90-2/}
+}
+% == BibLateX quality report for LBMC90:
+% Unexpected field 'title'
 
 @article{le2019application,
   title = {Application of Long Short-Term Memory ({{LSTM}}) Neural Network for Flood Forecasting},
@@ -5861,6 +5967,19 @@
 }
 % == BibLateX quality report for li2020slower:
 % ? Title looks like it was stored in title-case in Zotero
+
+@software{LIGGGHTS,
+  title = {{{CFDEMproject}}/{{LIGGGHTS}}-{{PUBLIC}}},
+  date = {2020-11-24T23:04:40Z},
+  origdate = {2012-06-15T19:14:18Z},
+  url = {https://www.cfdem.com/},
+  urldate = {2020-11-26},
+  abstract = {official release of the LIGGGHTS® DEM software, by DCS Computing GmbH. For further info, forums, and bug reports, please visit},
+  organization = {{DCS Computing GmbH}}
+}
+% == BibLateX quality report for LIGGGHTS:
+% Unexpected field 'title'
+% Unexpected field 'organization'
 
 @article{lin1986earthquake,
   title = {Earthquake Induced Displacements of Sliding Blocks},
@@ -6284,6 +6403,13 @@
 % == BibLateX quality report for maekawa2003nonlinear:
 % 'isbn': not a valid ISBN
 
+@software{MAEViz,
+  title = {{{MAEViz}}},
+  url = {http://mae.cee.illinois.edu/software/software_maeviz.html}
+}
+% == BibLateX quality report for MAEViz:
+% Unexpected field 'title'
+
 @article{makdisi1978simplified,
   title = {Simplified Procedure for Estimating Dam and Embankment Earthquake-Induced Deformations},
   author = {Makdisi, F.I. and Seed, H.B.},
@@ -6456,6 +6582,23 @@
 }
 % == BibLateX quality report for martinovic20153d:
 % ? Unsure about the formatting of the booktitle
+
+@article{marulanda2013probabilistic,
+  title = {Probabilistic Earthquake Risk Assessment Using {{CAPRA}}: Application to the City of {{Barcelona}}, {{Spain}}},
+  shorttitle = {Probabilistic Earthquake Risk Assessment Using {{CAPRA}}},
+  author = {Marulanda, Mabel C. and Carreño, Martha L. and Cardona, Omar D. and Ordaz, Mario G. and Barbat, Alex H.},
+  date = {2013-10-01},
+  journaltitle = {Natural Hazards},
+  shortjournal = {Nat Hazards},
+  volume = {69},
+  pages = {59--84},
+  issn = {1573-0840},
+  doi = {10/f5dn54},
+  abstract = {The risk evaluation model CAPRA (Comprehensive Approach to Probabilistic Risk Assessment) is a techno-scientific methodology and information platform, composed of tools for evaluating and communicating risk at various territorial levels. The model allows evaluating losses on exposed elements using probabilistic metrics, such as the loss exceedance curve, the expected annual loss and the probable maximum loss, useful for multi-hazard risk analyses. In this article, the process of probabilistic seismic risk analysis is described, explaining the main features of the CAPRA modules of hazard, vulnerability and risk estimation applied to the city of Barcelona, Spain. In addition, according to the physical risk results and the information on the socioeconomic indicators of the city, this article presents the holistic evaluation of seismic risk, which is a valuable result to facilitate the integrated risk management by the different stakeholders involved in risk reduction decision making.},
+  langid = {english},
+  number = {1},
+  related = {4FAXPTBI}
+}
 
 @article{masoomi2018community,
   title = {Community-Resilience-Based Design of the Built Environment},
@@ -7004,6 +7147,13 @@
   doi = {10/f75q2z}
 }
 
+@software{MUQ,
+  title = {{{MUQ}}},
+  url = {http://muq.mit.edu/}
+}
+% == BibLateX quality report for MUQ:
+% Unexpected field 'title'
+
 @article{murphy1977correlation,
   title = {The Correlation of Peak Ground Acceleration Amplitude with Seismic Intensity and Other Physical Parameters},
   author = {u Murphy, JR and O'brien, LJ},
@@ -7062,14 +7212,6 @@
 }
 % == BibLateX quality report for myers2008social:
 % Unexpected field 'publisher'
-
-@book{n.b.i.2016national,
-  title = {National Bridge Inventory System, {{US}} Department of Transportation},
-  author = {{N.B.I.}},
-  date = {2016},
-  publisher = {{Federal Highway Administration}},
-  url = {https://catalog.data.gov/dataset/national-bridge-inventory-system-nbi-1992-b9105.}
-}
 
 @article{n.i.s.t.-a.t.c.2018blind,
   title = {Blind Prediction Contenst on Deep, Wide-Flange Structural Steel Beam-Columns},
@@ -7205,6 +7347,14 @@
   author = {{National Academies of Sciences, Engineering, and Medicine and others}},
   date = {2019},
   publisher = {{National Academies Press}}
+}
+
+@book{nbi2016national,
+  title = {National Bridge Inventory System, {{US}} Department of Transportation},
+  author = {{NBI}},
+  date = {2016},
+  publisher = {{Federal Highway Administration}},
+  url = {https://catalog.data.gov/dataset/national-bridge-inventory-system-nbi-1992-b9105.}
 }
 
 @article{nejat2012agent,
@@ -7511,23 +7661,19 @@
   doi = {10/gbzfws}
 }
 
-@software{opencossan,
+@software{OpenCOSSAN,
   title = {{{OpenCOSSAN}}},
   url = {http://www.cossan.co.uk/software/open-cossan-engine.php}
 }
-% == BibLateX quality report for opencossan:
+% == BibLateX quality report for OpenCOSSAN:
 % Unexpected field 'title'
 
-@online{openfoam,
-  title = {{{OpenFOAM}} | {{Free CFD Software}} | {{The OpenFOAM Foundation}}},
-  url = {https://openfoam.org/},
-  urldate = {2020-10-24},
-  abstract = {Home of OpenFOAM, the CFD software licensed free and open source only, by us — The OpenFOAM Foundation — developed primarily by CFD Direct.},
-  langid = {british}
+@software{OpenDSS,
+  title = {{{OpenDSS}}},
+  url = {https://sourceforge.net/p/electricdss/wiki/Home/}
 }
-% == BibLateX quality report for openfoam:
-% Exactly one of 'date' / 'year' must be present
-% ? Title looks like it was stored in title-case in Zotero
+% == BibLateX quality report for OpenDSS:
+% Unexpected field 'title'
 
 @software{OpenFOAM,
   title = {{{OpenFOAM}}},
@@ -7539,11 +7685,11 @@
 % Unexpected field 'title'
 % Unexpected field 'author'
 
-@software{openquake,
+@software{OpenQuake,
   title = {{{OpenQuake}}},
   related = {pagani2014openquake}
 }
-% == BibLateX quality report for openquake:
+% == BibLateX quality report for OpenQuake:
 % Unexpected field 'title'
 
 @software{OpenSees,
@@ -7564,12 +7710,25 @@
 % == BibLateX quality report for opensha:
 % Unexpected field 'title'
 
-@software{openturns,
+@software{OpenSLAT,
+  title = {{{OpenSLAT}}},
+  author = {{openslat}},
+  date = {2019-03-13T00:41:55Z},
+  origdate = {2015-11-22T20:35:13Z},
+  url = {https://github.com/openslat/SLAT},
+  urldate = {2020-11-26},
+  abstract = {'Seismic Loss Assessment Tool' from the UC Quake Centre.}
+}
+% == BibLateX quality report for OpenSLAT:
+% Unexpected field 'title'
+% Unexpected field 'author'
+
+@software{OpenTURNS,
   title = {{{OpenTURNS}}},
   url = {http://www.openturns.org/},
   related = {andrianov2007open}
 }
-% == BibLateX quality report for openturns:
+% == BibLateX quality report for OpenTURNS:
 % Unexpected field 'title'
 
 @article{ordaz2013crisis2008,
@@ -7581,6 +7740,14 @@
   pages = {495--504},
   doi = {10/ghgjmh}
 }
+
+@misc{ordazrcrisis,
+  title = {R-{{CRISIS}}. {{Program}} and Platform for Computing Seismic Hazard.},
+  author = {Ordaz, M. and Martinelli, F. and Aguilar, A. and Meletti, C. and D'Amico, V.},
+  related = {4EEGBNAV}
+}
+% == BibLateX quality report for ordazrcrisis:
+% Exactly one of 'date' / 'year' must be present
 
 @article{orourke2000seismic,
   title = {Seismic Fragility Curves for On-Grade Steel Tanks},
@@ -7643,12 +7810,12 @@
 % Unexpected field 'publisher'
 
 @software{pact,
-  title = {{{PACT}}: {{Performance Assessment Calculation Tool}}},
-  url = {https://femap58.atcouncil.org/pact}
+  title = {{{PACT}}},
+  url = {https://femap58.atcouncil.org/pact},
+  related = {68RC7JHC}
 }
 % == BibLateX quality report for pact:
 % Unexpected field 'title'
-% ? Title looks like it was stored in title-case in Zotero
 
 @article{padgett2007bridge,
   title = {Bridge Functionality Relationships for Improved Seismic Risk Assessment of Transportation Networks},
@@ -7678,7 +7845,7 @@
   pages = {692--702,},
   doi = {10/ghghnx},
   number = {3},
-  related = {openquake}
+  related = {OpenQuake}
 }
 
 @article{palmer1987special,
@@ -7777,6 +7944,19 @@
   doi = {10/gc9zzx}
 }
 
+@software{PBE,
+  title = {{{NHERI}}-{{SimCenter}}/{{PBE}}},
+  date = {2020-10-09T15:56:37Z},
+  origdate = {2018-09-17T20:29:25Z},
+  url = {https://simcenter.designsafe-ci.org/research-tools/pbe-application/},
+  urldate = {2020-11-26},
+  abstract = {SimCenter PBE Application. Contribute to NHERI-SimCenter/PBE development by creating an account on GitHub.},
+  organization = {{NHERI-SimCenter}}
+}
+% == BibLateX quality report for PBE:
+% Unexpected field 'title'
+% Unexpected field 'organization'
+
 @article{peacock2014inequities,
   title = {Inequities in Long-Term Housing Recovery after Disasters},
   author = {Peacock, Walter Gillis and Van Zandt, Shannon and Zhang, Yang and Highfield, Wesley E},
@@ -7801,6 +7981,20 @@
   doi = {10/gd3sm5},
   number = {3}
 }
+
+@software{PELICUN,
+  title = {{{NHERI}}-{{SimCenter}}/Pelicun},
+  date = {2020-11-23T06:21:40Z},
+  origdate = {2018-08-28T23:57:56Z},
+  url = {https://nheri-simcenter.github.io/pelicun/},
+  urldate = {2020-11-26},
+  abstract = {Probabilistic Estimation of Losses, Injuries, and Community resilience Under Natural disasters},
+  organization = {{NHERI-SimCenter}}
+}
+% == BibLateX quality report for PELICUN:
+% Unexpected field 'title'
+% Unexpected field 'organization'
+% ? Title looks like it was stored in lower-case in Zotero
 
 @book{perrault2019ai,
   title = {The {{AI}} Index 2019 Annual Report},
@@ -7879,6 +8073,13 @@
   pages = {36--53},
   doi = {10/f9263h}
 }
+
+@software{PFC,
+  title = {{{PFC}}},
+  url = {https://www.itascainternational.com/software/pfc}
+}
+% == BibLateX quality report for PFC:
+% Unexpected field 'title'
 
 @article{pham2016comparative,
   title = {A Comparative Study of Different Machine Learning Methods for Landslide Susceptibility Assessment: {{A}} Case Study of Uttarakhand Area (India},
@@ -8021,6 +8222,13 @@
 % Unexpected field 'title'
 % Unexpected field 'key'
 
+@software{PyTorch,
+  title = {{{PyTorch}}},
+  url = {https://pytorch.org/}
+}
+% == BibLateX quality report for PyTorch:
+% Unexpected field 'title'
+
 @article{qin2016threedimensional,
   title = {Three-Dimensional Modeling of Tsunami Forces on Coastal Communities},
   author = {Qin, X. and Motley, M.R. and Marafi, N.},
@@ -8049,6 +8257,14 @@
   doi = {10/gb2hr5},
   number = {1}
 }
+
+@software{R-CRISIS,
+  title = {R-{{CRISIS}}},
+  url = {http://www.r-crisis.com/},
+  related = {ordazrcrisis}
+}
+% == BibLateX quality report for R-CRISIS:
+% Unexpected field 'title'
 
 @article{rahman2016fsensitivity,
   title = {The F-Sensitivity Index},
@@ -8345,7 +8561,8 @@
   author = {Rossman, L.A.},
   date = {2000},
   publisher = {{Environmental Protection Agency}},
-  location = {{Cincinnati, OH}}
+  location = {{Cincinnati, OH}},
+  related = {XEIFZE3D}
 }
 
 @article{roy2011comprehensive,
@@ -8508,11 +8725,11 @@
   doi = {10/f9vvht}
 }
 
-@software{saws,
+@software{SAWS,
   title = {{{SAWS}}},
   related = {folz2001saws}
 }
-% == BibLateX quality report for saws:
+% == BibLateX quality report for SAWS:
 % Unexpected field 'title'
 
 @article{saygili2008empirical,
@@ -8580,6 +8797,13 @@
 }
 % == BibLateX quality report for science2019national:
 % Missing required field 'journaltitle'
+
+@software{Scikit-Learn,
+  title = {Scikit-{{Learn}}},
+  url = {https://scikit-learn.org}
+}
+% == BibLateX quality report for Scikit-Learn:
+% Unexpected field 'title'
 
 @online{sea,
   title = {Sea, {{Lake}}, and {{Overland Surges}} from {{Hurricanes}} ({{SLOSH}})},
@@ -8795,7 +9019,8 @@
   title = {Yade Documentation - 2nd Edition},
   author = {Šmilauer, V. and Catalano, E. and Chareyre, B. and Dorofeenko, S. and Duriez, J. and Gladky, A. and Kozicki, J.},
   date = {2015},
-  publisher = {{The Yade Project}}
+  publisher = {{The Yade Project}},
+  related = {TVC25SNR}
 }
 
 @article{smith1968surface,
@@ -8938,6 +9163,13 @@
   pages = {77--88},
   doi = {10/f7945b}
 }
+
+@software{SP3,
+  title = {{{SP3}}},
+  url = {https://www.hbrisk.com/}
+}
+% == BibLateX quality report for SP3:
+% Unexpected field 'title'
 
 @article{spacone2004nonlinear,
   title = {Nonlinear Analysis of Steel-Concrete Composite Structures: {{State}} of the Art},
@@ -9209,13 +9441,24 @@
 % == BibLateX quality report for sutley2019integrative:
 % Missing required field 'journaltitle'
 
-@software{swan,
+@software{SWAN,
   title = {{{SWAN}}},
   url = {http://swanmodel.sourceforge.net/},
   related = {zijlema2010computation}
 }
-% == BibLateX quality report for swan:
+% == BibLateX quality report for SWAN:
 % Unexpected field 'title'
+
+@software{SWIM,
+  title = {{{SWIM}}},
+  author = {Wang, C. and McKenna, F.},
+  organization = {{NHERI-SimCenter}},
+  related = {wang2019swim}
+}
+% == BibLateX quality report for SWIM:
+% Unexpected field 'title'
+% Unexpected field 'author'
+% Unexpected field 'organization'
 
 @software{SYNERG,
   title = {{{SYNER}}-{{G Fragility Function Manager}}},
@@ -9341,6 +9584,19 @@
 % == BibLateX quality report for terzic2015concrete:
 % Missing required field 'type'
 
+@software{Theano,
+  title = {Theano},
+  date = {2020-11-26T01:55:23Z},
+  origdate = {2011-08-10T03:48:06Z},
+  url = {http://deeplearning.net/software/theano/},
+  urldate = {2020-11-26},
+  abstract = {Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. It can use GPUs and perform efficient symbolic ...},
+  organization = {{Theano}}
+}
+% == BibLateX quality report for Theano:
+% Unexpected field 'title'
+% Unexpected field 'organization'
+
 @inproceedings{thomas2011robust,
   title = {Towards a Robust Automated Hurricane Damage Assessment from High Resolution Images},
   booktitle = {13th International Conference on Wind Engineering},
@@ -9351,14 +9607,14 @@
 % == BibLateX quality report for thomas2011robust:
 % ? Unsure about the formatting of the booktitle
 
-@software{tinf2020,
+@software{Tinf,
   title = {Turbulent {{Inflow Tool}}},
   author = {Mackenzie-Helnwein, P. and Wan, J. and McKenna, F.},
   date = {2020},
   url = {https://doi.org/10.5281/zenodo.3462804},
   version = {1.1.0}
 }
-% == BibLateX quality report for tinf2020:
+% == BibLateX quality report for Tinf:
 % Unexpected field 'title'
 % Unexpected field 'author'
 % Unexpected field 'version'
@@ -9479,20 +9735,20 @@
   number = {6}
 }
 
-@software{uqlab,
-  title = {{{UQLab}}},
-  url = {https://www.uqlab.com/},
-  related = {marelli2014uqlab}
-}
-% == BibLateX quality report for uqlab:
-% Unexpected field 'title'
-
-@software{uqpyl,
+@software{UQ-Pyl,
   title = {{{UQ}}-{{Pyl}}},
   url = {http://www.uq-pyl.com/},
   related = {wang2016gui}
 }
-% == BibLateX quality report for uqpyl:
+% == BibLateX quality report for UQ-Pyl:
+% Unexpected field 'title'
+
+@software{UQLab,
+  title = {{{UQLab}}},
+  url = {https://www.uqlab.com/},
+  related = {marelli2014uqlab}
+}
+% == BibLateX quality report for UQLab:
 % Unexpected field 'title'
 
 @report{usace2015north,
@@ -9751,7 +10007,8 @@
   institution = {{MCEER}},
   location = {{Buffalo, NY}},
   number = {08-0015},
-  type = {MCEER technical report}
+  type = {MCEER technical report},
+  related = {VZ4VT7JP}
 }
 
 @article{wang2014modeling,
@@ -9801,7 +10058,7 @@
   doi = {10/ghk8tg},
   abstract = {Uncertainty quantification (UQ) refers to quantitative characterization and reduction of uncertainties present in computer model simulations. It is widely used in engineering and geophysics fields to assess and predict the likelihood of various outcomes. This paper describes a UQ platform called UQ-PyL (Uncertainty Quantification Python Laboratory), a flexible software platform designed to quantify uncertainty of complex dynamical models. UQ-PyL integrates different kinds of UQ methods, including experimental design, statistical analysis, sensitivity analysis, surrogate modeling and parameter optimization. It is written in Python language and runs on all common operating systems. UQ-PyL has a graphical user interface that allows users to enter commands via pull-down menus. It is equipped with a model driver generator that allows any computer model to be linked with the software. We illustrate the different functions of UQ-PyL by applying it to the uncertainty analysis of the Sacramento Soil Moisture Accounting Model. We will also demonstrate that UQ-PyL can be applied to a wide range of applications.},
   langid = {english},
-  related = {uqpyl}
+  related = {UQ-Pyl}
 }
 
 @article{wang2016measurements,
@@ -9933,7 +10190,7 @@
   volume = {1},
   doi = {10/ghgv65},
   number = {0.1},
-  related = {wangswim}
+  related = {SWIM}
 }
 
 @article{wang2020flood,
@@ -9953,17 +10210,6 @@
 }
 % == BibLateX quality report for wang2020machine:
 % Missing required field 'journaltitle'
-
-@software{wangswim,
-  title = {{{SWIM}}},
-  author = {Wang, C. and McKenna, F.},
-  organization = {{NHERI-SimCenter}},
-  related = {wang2019swim}
-}
-% == BibLateX quality report for wangswim:
-% Unexpected field 'title'
-% Unexpected field 'author'
-% Unexpected field 'organization'
 
 @article{watson2020importance,
   title = {Importance of Households in Business Disaster Recovery},
@@ -10154,6 +10400,13 @@
   number = {1}
 }
 
+@software{WNTR,
+  title = {{{WNTR}}},
+  related = {klise2017water}
+}
+% == BibLateX quality report for WNTR:
+% Unexpected field 'title'
+
 @inproceedings{wong2019assistive,
   title = {An Assistive Learning Workflow on Annotating Images for Object Detection},
   booktitle = {{{IEEE}} International Conference on Big Data ({{IEEE BigData}} 2019},
@@ -10299,6 +10552,14 @@
 }
 % == BibLateX quality report for xu2015show:
 % ? Unsure about the formatting of the booktitle
+
+@software{YADE,
+  title = {{{YADE}}},
+  url = {https://yade-dem.org/doc/},
+  related = {smilauer15}
+}
+% == BibLateX quality report for YADE:
+% Unexpected field 'title'
 
 @book{yade2005doc,
   title = {Yade {{Documentation}} 2nd Ed},
@@ -10727,7 +10988,7 @@
   volume = {57},
   pages = {267--277},
   doi = {10/fxfjfx},
-  related = {swan}
+  related = {SWAN}
 }
 
 @article{zimmerman2011matpower,
@@ -10763,6 +11024,7 @@
 
 % == Citekey duplicates in this file:
 % cetin2018spt duplicates: 2
+% % FilterPy duplicates: 2
 % % moss2006cpt duplicates: 2
 % % moss2011probabilistic duplicates: 2
 % % national2016state duplicates: 2

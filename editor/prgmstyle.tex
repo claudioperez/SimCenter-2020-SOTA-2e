@@ -40,10 +40,10 @@
   \printtext[bibhyperref]{%
     \printfield[citetitle]{labeltitle}}}
 
-%Copied from numeric.cbx to define a new numeric citation command for @software entries.
 \DeclareCiteCommand{\citeprgm}
   {\usebibmacro{prenote}}
   {\usebibmacro{citeindex}%
+  {\usebibmacro{citenum}%
    \usebibmacro{cite:title}%
    \usebibmacro{related:default}}%
   {\multicitedelim}
