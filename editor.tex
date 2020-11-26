@@ -28,17 +28,17 @@
 % \setlength{\bibsep}{5pt}
 \usepackage{nameref}
 \usepackage[
-    natbib,
-    defernumbers,
-    hyperref=true,
-    backend=biber,
-    style=authoryear]{biblatex}
+natbib,
+defernumbers,
+hyperref=true,
+backend=biber,
+style=authoryear]{biblatex}
 \defbibheading{subbibliography}{%
-    \section*{References for Section \nameref{refsegment:\therefsegment}}}
+    \section*{References for Section \ref{refsegment:\therefsegment}}}
 \addbibresource{zotero-refs-BLT.bib}
 
 
-%\usepackage{type1cm}        % activate if the above 3 fonts are 
+\usepackage{type1cm}        % activate if the above 3 fonts are 
                              % not available on your system
                              
 \usepackage{comment}
@@ -51,6 +51,9 @@
 
 \usepackage{newtxtext}       % 
 \usepackage{newtxmath}       % selects Times Roman as basic font
+
+%\usepackage{mathptmx}       % selects Times Roman as basic font
+\usepackage{helvet}         % selects Helvetica as sans-serif font
 
 \usepackage{placeins}        % allows the use of floatbarriers
 \usepackage{tabularx}        % creates tables that automatically adjust to contents
@@ -71,7 +74,7 @@
 
 \usepackage{import}
 \newcommand{\seginclude}[1]{\endrefsegment\newrefsegment\include{#1}}
-\newcommand{\segimport}[2]{\newrefsegment\import{#1}{#2}\endrefsegment}
+\newcommand{\segimport}[2]{\begin{refsegment}\import{#1}{#2}\end{refsegment}}
 \input{editor/prgmstyle.tex}
 
 
@@ -140,17 +143,30 @@
 \include{editor/glossary}
 
 % \printbibliography
-\printbibheading
-\bibbysegment[heading=subbibliography,nottype=software]
-% \printbibliography[segment=1,nottype=software,heading=subbibliography]
-% \printbibliography[segment=2,nottype=software,heading=subbibliography]
-% \printbibliography[segment=3,nottype=software,heading=subbibliography]
-% \printbibliography[segment=4,nottype=software,heading=subbibliography]
-% \printbibliography[segment=5,nottype=software,heading=subbibliography]
-% \printbibliography[segment=6,nottype=software,heading=subbibliography]
-% \printbibliography[segment=7,nottype=software,heading=subbibliography]
-% \printbibliography[segment=8,nottype=software,heading=subbibliography]
-% \printbibliography[segment=9,nottype=software,heading=subbibliography]
+% \printbibheading
+
+% \bibbysegment[heading=subbibliography,nottype=misc]
+\printbibliography[segment=1,nottype=software,title={Earthquake - Ground Shaking}]
+\printbibliography[segment=2,nottype=software,title={Earthquake - Surface Fault Rupture}]
+\printbibliography[segment=3,nottype=software,title={Earthquake - Soil Liquefaction}]
+\printbibliography[segment=4,nottype=software,title={Earthquake - Slope Stability and Landslides}]
+\printbibliography[segment=5,nottype=software,title={Tropical Cyclone - Wind}]
+\printbibliography[segment=6,nottype=software,title={Tropical Cyclone - Storm Surge}]
+\printbibliography[segment=7,nottype=software,title={Tsunami - Inundation}]
+\printbibliography[segment=8,nottype=software,title={Structural Systems}]
+\printbibliography[segment=9,nottype=software,title={Geotechnical Systems}]
+\printbibliography[segment=10,nottype=software,title={Computational Cluid Dynamics - Wind}]
+\printbibliography[segment=11,nottype=software,title={Computational Cluid Dynamics - Water}]
+\printbibliography[segment=12,nottype=software,title={Buildings}]
+\printbibliography[segment=13,nottype=software,title={Transportation Networks}]
+\printbibliography[segment=14,nottype=software,title={Water, Sewer, and Gas Pipelines}]
+\printbibliography[segment=15,nottype=software,title={Electrical Transmission Substations and Lines}]
+\printbibliography[segment=16,nottype=software,title={Communities}]
+\printbibliography[segment=17,nottype=software,title={Infrastructure Systems}]
+\printbibliography[segment=18,nottype=software,title={Housing}]
+\printbibliography[segment=19,nottype=software,title={Business}]
+\printbibliography[segment=20,nottype=software,title={Uncertainty Quantification}]
+\printbibliography[segment=21,nottype=software,title={Artificial Intelligence and Machine Learning}]
 %---------------------------------------------
 \defbibenvironment{bibliography}
 {\list
@@ -166,7 +182,29 @@
 {\endlist}
 {\item}
 \DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}\hspace{-1.1em}}
-\printbibliography[type=software,resetnumbers,title=Programs]
+
+% \printbibliography[type=software,resetnumbers,title=Programs]
+\printbibliography[segment=1,type=software,title={Earthquake - Ground Shaking}]
+\printbibliography[segment=2,type=software,title={Earthquake - Surface Fault Rupture}]
+\printbibliography[segment=3,type=software,title={Earthquake - Soil Liquefaction}]
+\printbibliography[segment=4,type=software,title={Earthquake - Slope Stability and Landslides}]
+\printbibliography[segment=5,type=software,title={Tropical Cyclone - Wind}]
+\printbibliography[segment=6,type=software,title={Tropical Cyclone - Storm Surge}]
+\printbibliography[segment=7,type=software,title={Tsunami - Inundation}]
+\printbibliography[segment=8,type=software,title={Structural Systems}]
+\printbibliography[segment=9,type=software,title={Geotechnical Systems}]
+\printbibliography[segment=10,type=software,title={Computational Cluid Dynamics - Wind}]
+\printbibliography[segment=11,type=software,title={Computational Cluid Dynamics - Water}]
+\printbibliography[segment=12,type=software,title={Buildings}]
+\printbibliography[segment=13,type=software,title={Transportation Networks}]
+\printbibliography[segment=14,type=software,title={Water, Sewer, and Gas Pipelines}]
+\printbibliography[segment=15,type=software,title={Electrical Transmission Substations and Lines}]
+\printbibliography[segment=16,type=software,title={Communities}]
+\printbibliography[segment=17,type=software,title={Infrastructure Systems}]
+\printbibliography[segment=18,type=software,title={Housing}]
+\printbibliography[segment=19,type=software,title={Business}]
+\printbibliography[segment=20,type=software,title={Uncertainty Quantification}]
+\printbibliography[segment=21,type=software,title={Artificial Intelligence and Machine Learning}]
 %---------------------------------------------
 
 

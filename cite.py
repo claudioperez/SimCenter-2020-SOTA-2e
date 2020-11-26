@@ -1,10 +1,18 @@
+"""
+"""
+
 import os, logging
 from typing import List, Tuple
 
-import yaml, coloredlogs
+import yaml
 
 logger = logging.getLogger(__name__)
-coloredlogs.install()
+
+try:
+    import coloredlogs
+    coloredlogs.install()
+except:
+    pass
 
 
 def generate_patterns(ref: dict)->str:
@@ -44,23 +52,6 @@ def generate_patterns(ref: dict)->str:
             else:
                 pass
 
-# def generate_patterns2(ref: dict)->str:
-#     patterns = [] 
-#     if "author" in ref:
-#         if len(ref["author"]) == 1:
-#             if "family" in ref["author"][0]:
-#                 patterns.append(f"{ref['author'][0]['family']}, {ref['issued'][0]['year']}")
-#                 patterns.append(f"{ref['author'][0]['family']} {ref['issued'][0]['year']}")
-#                 # patterns.append(f"{ref['author'][0]['family']}, {ref['author'][0]['given']} ({ref['issued'][0]['year']})")
-#             else:
-#                 return f"{ref['author'][0]['literal']}, {ref['issued'][0]['year']}"
-#         elif len(ref["author"])==2:
-#             return f"{ref['author'][0]['family']} and {ref['author'][1]['family']}, {ref['issued'][0]['year']}"
-#         elif len(ref["author"]) > 2:
-#             if "family" in ref["author"][0]:
-#                 return f"{ref['author'][0]['family']} et al\\., {ref['issued'][0]['year']}"
-#             else:
-#                 pass
 
 def generate_script(pattern:str, replacement:str)->str: return f"""
 #find . -type f -name '*.tex' \\
