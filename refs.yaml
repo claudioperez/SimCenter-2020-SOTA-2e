@@ -11634,7 +11634,7 @@ references:
   title: 'BioPortal: Ontologies and integrated data resources at the click of a mouse'
   volume: '37:W170-W173'
 
-- id: nurbaiah17modelling
+- id: nurbaiah2017modelling
   author:
     - family: Nurbaiah
       given: M.N.
@@ -15668,9 +15668,6 @@ references:
     - year: 2020
       month: 10
       day: 28
-  author:
-    - family: Wang
-      given: Charles
   DOI: 10.5281/zenodo.3463676
   issued:
     - year: 2019
@@ -15680,7 +15677,7 @@ references:
   source: Zenodo
   title: SURF
   title-short: SURF
-  URL: 'http://doi.org/10.5281/zenodo.3463676'
+  URL: 'https://nheri-simcenter.github.io/SURF-Documentation/'
   version: 0.2.0
 
 - id: wang2019swim
