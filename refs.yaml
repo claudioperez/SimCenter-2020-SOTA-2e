@@ -8970,11 +8970,15 @@ references:
       given: R.
     - family: Kiremidjian
       given: A.S.
+  container-title: Earthquake Spectra
+  issue: '4'
   issued:
-    - year: 2006
+    - year: 2007
+  page: 753-770
   title: >-
     Uncertainty and correlation for loss assessment of spatially distributed
     systems, under review earthquake spectra
+  volume: '23'
 
 - id: lee2019quantitative
   author:
