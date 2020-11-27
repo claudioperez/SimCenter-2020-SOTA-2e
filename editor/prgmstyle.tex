@@ -43,8 +43,8 @@
 \DeclareCiteCommand{\citeprgm}
   {\usebibmacro{prenote}}
   {\usebibmacro{citeindex}%
-   \usebibmacro{citenum}%
    \usebibmacro{cite:title}%
+   \printtext[bibhyperref]{[\usebibmacro{citenum}]}%
    \usebibmacro{related:default}}%
   {\multicitedelim}
   {\usebibmacro{postnote}}
