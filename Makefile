@@ -5,7 +5,6 @@ export BSTINPUTS:=./texmf//:${BSTINPUTS}
 .PHONY: tex all bib
 
 all:
-	python scripts/index-prgms.py
 	make tex
 	# -  pdflatex -output-directory=build -draftmode -interaction=nonstopmode ./editor.tex
 	make bib
@@ -18,4 +17,6 @@ tex:
 
 bib:
 	-  biber ./build/editor
+idx:
+	python scripts/index-prgms.py
 
