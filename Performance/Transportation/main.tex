@@ -83,13 +83,20 @@ Bridge damage can be estimated directly from intensity measures \citep[e.g.,][]{
 \section{Modeling Approaches}
 \label{sec:perf_transport_methods}
 
-Natural disaster impact on a transportation network uses the assumption of independent calculation steps from building performance assessment \citep{Change et al., 2000, kiremidjian2006pacific, Miller and Baker, 2016}. Hence, the hazard characterization, response estimation, damage estimation, and consequence estimation are performed by independent stochastic models. This allows for the following approach to regional simulation (Figure 3 2):
+Natural disaster impact on a transportation network uses the assumption of independent calculation steps from building performance assessment \citep{Change et al., 2000, kiremidjian2006pacific, Miller and Baker, 2016}. Hence, the hazard characterization, response estimation, damage estimation, and consequence estimation are performed by independent stochastic models. This allows for the following approach to regional simulation (Figure \ref{fig:perf_TranspFramework}):
 
 \begin{itemize}
     \item characterize the hazard in the region using a IM fields;
     \item estimate the response and the corresponding damage in each network component given the IM at the location of the component;
     \item estimate the downtime and repair cost for each network component and assess the performance of the transportation network given the level of damage in network components.
 \end{itemize}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=1.0\textwidth, angle = 0]{Figures/RiskAssessmentFramework.png}
+    \caption{Illustration of the transportation network risk assessment framework from Miller and Baker \cite{miller2015estimating}}
+    \label{fig:perf_TranspFramework}
+\end{figure}
 
 Structural response and damage (but not the consequences) in one network component is typically assumed to be independent of other components. This assumption enables more efficient simulation through parallel calculation of component damage in the region. It is expedient to note that this approach may overlook correlations in certain bridges that are designed and detailed in similar ways (e.g., bridges along major highways that may have been designed and constructed under one project). The spatially correlated IMs still ensure that similar components within a small area will experience similar demands and, consequently, similar damages.
 
