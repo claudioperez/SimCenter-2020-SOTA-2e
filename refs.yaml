@@ -863,12 +863,13 @@ references:
   author:
     - literal: Applied Technology Council
   collection-number: P-58-1
+  collection-title: Seismic Performance Assessment of Buildings
   edition: Second Edition
   issued:
     - year: 2018
       month: 12
   publisher: Federal Emergency Management Agency
-  title: 'Seismic Performance Assessment of Buildings, Volume 1 -- Methodology'
+  title: Methodology
   URL: >-
     https://www.fema.gov/media-library-data/1557508320921-d67f745e88e04e54a1f40f8e94835042/FEMA_P-58-1-SE_Volume1_Methodology.pdf
   volume: '1'
@@ -2514,7 +2515,7 @@ references:
 
 - id: CB-Geo-MPM
   title: CB-Geo-MPM
-  URL: 'https://github.com/cb-geo/mpm'
+  URL: 'https://www.cb-geo.com/research/mpm/'
 
 - id: ccaugnan2006post
   author:
