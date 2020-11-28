@@ -18,5 +18,6 @@ tex:
 bib:
 	-  biber ./build/editor
 idx:
-	python scripts/index-prgms.py
+	python scripts/index-prgms.py > index.sed
+	sed -f index.sed zotero-refs-BLT.bib > zotero-refs-BLT.bib
 
