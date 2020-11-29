@@ -36,6 +36,8 @@ This section provides an overview of the above methods, the data they use, and t
 \section{Input and Output Data}
 \label{sec:eq_shake_io}
 
+\subsection{Input Data}
+
 Ground-motion hazard assessment requires information about the site and the seismic source(s) in its vicinity. These data can be classified as follows:
 % \newline
 
@@ -53,6 +55,8 @@ Scenario-based analysis typically requires a hypocenter location, earthquake mag
 \paragraph{Ground-motion model} The ground-motion model describes the propagation of ground shaking from the earthquake rupture surface to the collection of sites of interest. Ground-Motion Prediction Equations are the commonly used tools for this purpose. They estimate severity of ground shaking in the form of IMs. These estimates are typically based on regression to historical IM data from recorded earthquake ground motions. Depending on the data and the functional form used for the regression, one might arrive at various GMPEs. There are hundreds of GMPEs available \citep{douglas2018ground}. It is important to select the one that is based on data and assumptions matching the seismicity in the region of interest.
 
 \paragraph{Logic tree} Logic trees have become a popular means to consider the epistemic uncertainty in the ground-shaking hazard. Branches of the trees are populated with various modeling assumptions (e.g., GMPEs, seismic-source models, maximum magnitudes, site data, etc.) and a set of weights are defined so that the branches and weights represent a probability distribution on the uncertain issue. Notwithstanding the problems inherent in such a strategy for uncertainty quantification \citep{bommer2008use}, recent research has shown several examples where the logic-tree approach provides additional insight that would otherwise not be available \citep[see e.g.,][]{goulet2017ngaeast}
+
+\subsection{Output Data}
 
 \noindent One or more of the following outputs are produced to describe the ground-shaking hazard:
 
@@ -87,7 +91,7 @@ Two main approaches are typically used in the research community for ground-shak
 
 \paragraph{Estimate ground-motion records using physics-based wave propagation} This type of methodology relies on a physical model of the crust and propagation of seismic waves in that model. It requires a significant amount of information about local geology to arrive at reliable results. Furthermore, the calculations are computationally expensive and usually require a High Performance Computing (HPC) environment. To the extent that the physics-based models are validated and based on reliable model parameters (geologic data), they can represent local geologic effects (such as deep geologic basins) that are not captured as well by empirical GMPEs. The earthquake simulations also provide ground-motion records directly as opposed to the IM proxies used in conventional GMPE approaches. These records can be applied directly in response estimation, which removes part of the uncertainty and ambiguity associated with GMPEs and ground-motion record selection to match IM spectra. There are computational and modeling challenges before this approach becomes commonplace, but early-adopters in the research community (such as SCEC, \url{https://www.scec.org/} , Lawrence Livermore National Laboratory, \url{https://www.llnl.gov}, and USGS, \url{https://earthquake.usgs.gov/} ) are providing physics-based simulations that are being applied for performance and risk assessment.
 
-\section{Research Gaps and Needs}
+\section{Research Gaps and Opportunities}
 \label{sec:eq_shake_gaps}
 
 As our ability to compute ground motions to ever higher frequencies increases as a result of rapid computational advancements, we are outstripping our knowledge of the subsurface geology at fine scale. A challenge will be how to address geologic model uncertainties. [credit: Dave McCallen]
