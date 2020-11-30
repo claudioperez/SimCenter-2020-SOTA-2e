@@ -136,14 +136,25 @@ style=authoryear]{biblatex}
 \begin{partbacktext}
 \part{Appendix}
 
-\appendix
+\begin{appendix}
+% \appendix
 \include{editor/appendix}
+\end{appendix}
+
+%\include{References/main}
+\part{References}
+\include{References/literature}
+\include{References/digital}
+% \segimport{References/}{literature}
+% \segimport{References/}{digital}
 
 \end{partbacktext}
 
 \include{editor/glossary}
 
-\input{references.tex}
+
+% \input{references.tex}
+
 % \printbibliography
 % \printbibheading
 
