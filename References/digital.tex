@@ -1,0 +1,45 @@
+%---------------------------------------------
+\defbibenvironment{bibliography}
+{\list
+{\printfield[labelnumberwidth]{labelnumber}}
+{\setlength{\labelwidth}{\labelnumberwidth}%
+\setlength{\leftmargin}{\labelwidth}%
+\setlength{\labelsep}{\biblabelsep}%
+\addtolength{\labelsep}{1em}
+\addtolength{\leftmargin}{\labelsep}%
+\setlength{\itemsep}{\bibitemsep}%
+\setlength{\parsep}{\bibparsep}}%
+\renewcommand*{\makelabel}[1]{\hss##1}}
+{\endlist}
+{\item}
+\DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}\hspace{-1.1em}}
+
+\Extrachap{Digital Resources}
+
+% \printbibliography[type=software,resetnumbers,title=Programs]
+\printbibliography[segment=1,resetnumbers,type=software,title={Earthquake - Ground Shaking}]
+\printbibliography[segment=2,resetnumbers,type=software,title={Earthquake - Surface Fault Rupture}]
+\printbibliography[segment=3,resetnumbers,type=software,title={Earthquake - Soil Liquefaction}]
+\printbibliography[segment=4,type=software,title={Earthquake - Slope Stability and Landslides}]
+\printbibliography[segment=5,type=software,title={Tropical Cyclone - Wind}]
+\printbibliography[segment=6,type=software,title={Tropical Cyclone - Storm Surge}]
+\printbibliography[segment=7,type=software,title={Tsunami - Inundation}]
+\printbibliography[segment=8,type=software,title={Structural Systems}]
+\printbibliography[segment=9,type=software,title={Geotechnical Systems}]
+\printbibliography[segment=10,type=software,title={Computational Fluid Dynamics - Wind}]
+\printbibliography[segment=11,type=software,title={Computational Fluid Dynamics - Water}]
+\printbibliography[segment=12,type=software,title={Buildings}]
+\printbibliography[segment=13,type=software,title={Transportation Networks}]
+\printbibliography[segment=14,type=software,title={Water, Sewer, and Gas Pipelines}]
+\printbibliography[segment=15,type=software,title={Electrical Transmission Substations and Lines}]
+\printbibliography[segment=16,type=software,title={Communities}]
+\printbibliography[segment=17,type=software,title={Infrastructure Systems}]
+\printbibliography[segment=18,type=software,title={Housing}]
+\printbibliography[segment=19,type=software,title={Business}]
+\printbibliography[segment=20,type=software,title={Uncertainty Quantification}]
+\printbibliography[segment=21,type=software,title={Artificial Intelligence and Machine Learning}]
+%---------------------------------------------
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
