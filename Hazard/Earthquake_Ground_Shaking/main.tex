@@ -27,11 +27,11 @@
 %
 \maketitle
 
-The purpose of using the software tools presented in this section is to characterize the ground shaking intensity due to earthquakes at a given site or region. Although the amount of historical earthquake data at any particular site is small, the improvements in the field since the seminal paper on earthquake hazard by \cite{cornell1968engineering} allows engineers to combine the available information from several sites and create a seismic hazard model that can quantify the expected ground-motion hazard and corresponding uncertainty. 
+The purpose of using the simulation methods and the software tools presented in this section is to characterize the ground shaking intensity due to earthquakes at a specific site or over a group of sites that cover a region. Although the amount of historical earthquake data at any particular site is small, the improvements in the field since the seminal paper on earthquake hazard by \cite{cornell1968engineering} allows engineers to combine the available information from several sites and create a seismic hazard model that can quantify the expected ground-shaking hazard and the corresponding uncertainty. 
 
-Probabilistic Seismic Hazard Assessment (PSHA) and disaggregation of the calculated hazard (Bazzurro and Cornell, 1998) are the most popular methods to characterize ground shaking at a site of interest. The earthquake engineering community is fortunate to have access to a large number of free--and often open-source tools--available for this task. Besides PSHA tools, also presented are tools that perform scenario-based deterministic analysis. Both probabilistic and deterministic analyses are typically based on Ground Motion Prediction Equations (GMPEs)-empirical functions that describe the attenuation of shaking intensity with increasing distance from the hypocenter. Note: the Ground Motion Prediction Model (GMPM) denomination is preferred over GMPE in several recent publications to emphasize that modern attenuation relationships are more complex than a single equation. Other approaches, such as physics-based simulation of ground motions, are also becoming sufficiently robust to be widely applicable for risk assessment and their widespread use is likely to increase in the near future. 
+Probabilistic Seismic Hazard Assessment (PSHA) and disaggregation of the calculated hazard (Bazzurro and Cornell, 1998) are the most popular methods to characterize ground shaking at a site of interest. The earthquake engineering community is fortunate to have access to a large number of free--and often open-source--tools available for this task. Besides PSHA tools, this chapter also covers tools that perform scenario-based deterministic analysis. Most probabilistic and deterministic analyses use empirical Ground Motion Models (GMMs)--empirical models that describe the attenuation of shaking intensity with increasing distance from the hypocenter--to characterize the ground shaking at a site from a fault rupture. (The empirical GMM denomination is preferred over the conventional GMPE (Ground Motion Prediction Equation) in several recent publications to emphasize that modern attenuation relationships are substantially more complex than a single equation.) Other approaches, such as physics-based GMMs and the corresponding simulations are also becoming sufficiently robust to be widely applicable for risk assessment and they are likely to be used more widely in the near future. 
 
-This section provides an overview of the above methods, the data they use, and the tools that have implemented them.
+This chapter reviews the above methods, the data they use, and the tools that have implemented them. The recent book by \cite{baker2021seismic} provides more details about the characterization of ground shaking and the methods available for probabilistic seismic hazard assessment. 
 
 \section{Input and Output Data}
 \label{sec:eq_shake_io}
@@ -39,10 +39,8 @@ This section provides an overview of the above methods, the data they use, and t
 \subsection{Input Data}
 
 Ground-motion hazard assessment requires information about the site and the seismic source(s) in its vicinity. These data can be classified as follows:
-% \newline
 
-\paragraph{Site location(s)} These are latitude and longitude pairs for each site of interest. For regional analyses, the ground-motion hazard characteristics at the nodes of a carefully sized lattice grid are used, and the site-specific results are determined by interpolation.
-% \newline
+\paragraph{Site location(s)} These are latitude and longitude pairs for each site of interest. For regional analyses, ground-shaking is either characterized at the location of each asset (e.g.,  hazard characteristics at the nodes of a carefully designed grid are used, and the site-specific results are determined by interpolation (e.g., 
 
 \paragraph{Site data} Local soil conditions have significant influence on the ground motion at the surface at a particular site. Two neighboring sites with practically identical bedrock hazard might experience fundamentally different surface ground motions if their soil characteristics are different. 
 
