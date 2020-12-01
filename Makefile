@@ -5,11 +5,17 @@ export BSTINPUTS:=./texmf//:${BSTINPUTS}
 .PHONY: tex all bib
 
 all:
-	make tex
-	# -  pdflatex -output-directory=build -draftmode -interaction=nonstopmode ./editor.tex
+	make idx
+	make tex-draft
 	make bib
 	make tex
-	# -  bibtex ./build/editor.aux
+	make tex
+
+inc:
+	make idx
+	make tex-draft
+	make tex
+
 draft:
 	make tex-draft
 	# -  pdflatex -output-directory=build -draftmode -interaction=nonstopmode ./editor.tex
