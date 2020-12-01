@@ -30,3 +30,6 @@ idx:
 	python scripts/index-prgms.py > index.sed
 	sed -i -f index.sed zotero-refs-BLT.bib
 
+%.pdf: %.png
+	echo '$<' '%@'
+	convert '$<' '%@' -density 300 -units PixelsPerInch
