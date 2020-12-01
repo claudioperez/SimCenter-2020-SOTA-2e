@@ -100,16 +100,20 @@ Concerns about the reliability of simulated ground motions have been addressed b
 \begin{figure}[htb]
     \centering
     \includegraphics[width=1.0\textwidth, angle = 0]{Figures/EmpiricalVsSimulated.png}
-    \caption{Illustrative example of the comparison between empirical and physics-based GMMs: Left: RotD50 acceleration response spectra for a site in Oakland, CA, predicted by four empirical GMMs (squares in color) and by a 3D ground motion simulation for the San Francisco Bay Area (circles in black). Right: Distribution of residuals between the simulated and empirical intensity measures over the entire simulation region. The thick black line indicates the median, the boxes show the interquartile range (IQR) (i.e., central 50\% around the median), and the whiskers extend until 1.5 IQR. Outliers are shown as circles. Dashed and dotted lines show between-event uncertainties corresponding to the empirical GMM. \citep{rodgers2019broadband}}
+    \caption{Illustrative example of the comparison between empirical and physics-based GMMs from \citep{rodgers2019broadband}: Left: RotD50 acceleration response spectra for a site in Oakland, CA, predicted by four empirical GMMs (squares in color) and by a 3D ground motion simulation for the San Francisco Bay Area (circles in black). Right: Distribution of residuals between the simulated and empirical intensity measures over the entire simulation region. The thick black line indicates the median, the boxes show the interquartile range (IQR) (i.e., central 50\% around the median), and the whiskers extend until 1.5 IQR. Outliers are shown as circles. Dashed and dotted lines show between-event uncertainties corresponding to the empirical GMM.}
     \label{fig:haz_EmpricalVsSimulated}
 \end{figure}
 
 \section{Research Gaps and Opportunities}
 \label{sec:eq_shake_gaps}
 
+Conventional, empirical GMMs are expected to be replaced by non-ergodic models that can consider local site and path information when available \citep[e.g.,][]{abrahamson2019probabilistic}. In areas with abundant information, such models are expected to reduce the variability in the ground motion and provide a more realistic prediction of the seismic hazard. Because such detailed information is not available in every location, the models need to account for site-specific aleatory and epistemic uncertainty and acknowledge that the uncertainty in the estimated hazard is not uniform in space. This enhanced treatment of uncertainty will also require an expansion of existing logic trees to represent the center, body, and range of the input parameters \citep{gerstenberger2020seismic}.
+The rigorous combination of multiple empirical GMMs \citep[e.g.,][]{goulet2017ngaeast} is also a promising direction that would allow the consideration of model uncertainty in the estimated hazard. Other sources of uncertainty that affect the seismic source model, or the physical model of the crust that is used to estimate soil amplification, for example, are also important to quantify and propagate through the analyses. 
+It is also increasingly recognized that there is long-term variability in the rate of earthquakes and some nations have already adopted time-dependent, non-Poissonian models to estimate the hazard rates more accurately. 
+
 As our ability to compute ground motions to ever higher frequencies increases as a result of rapid computational advancements, we are outstripping our knowledge of the subsurface geology at fine scale. A challenge will be how to address geologic model uncertainties.
 
-... simulated ground motions at higher frequencies and in softer soils; non-ergodic hazard analysis; site amplification with uncertainty; information about site characteristics; Cascadia issues
+... simulated ground motions at higher frequencies and in softer soils; site amplification with uncertainty; information about site characteristics; Cascadia issues; time independent to time dependent
 
 \section{Software and Systems}
 \label{sec:eq_shake_tools}
