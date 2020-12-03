@@ -12,6 +12,7 @@
 % your contribution title if the original one is too long
 \author{
     \textbf{Michael Motley} 
+    \and Ajay Harish
     \and Patrick J. Lynett}
 \tocauthor{}
 \authorrunning{Motley and Lynett}
@@ -26,7 +27,7 @@
 %
 \maketitle
 
-The simulation tools used to model tsunami inundation can generally be categorized as either 2D models or 3D models. Three-dimensional models solve Reynolds average Navier-Stokes (RANS) or Large Eddy Simulation (LES) equations numerically using the CFD techniques introduced in Chapter 12. Two-dimensional models often solve a different category of governing equations derived from the 3D Navier-Stokes (NS) equation by integrating in the vertical dimension, e.g., shallow water equations and Boussinesq wave equations where the two dimensions can be characterized as latitude and longitude, with additional techniques available to consider variations in the vertical direction in some applications. Because such equations are computationally much easier to solve than the RANS and LES equations, they are broadly used in large-scale modeling of geophysical flows, e.g. tsunami, storm surge, and flooding. Two-dimensional models are used especially when computational efficiency is a factor. Examples include building an early warning system, which requires tsunami modeling to be done as quickly as possible after an earthquake, versus a probabilistic assessment that often requires thousands of computational simulations.
+The simulation tools used to model tsunami inundation can generally be categorized as either 2D models or 3D models. Three-dimensional models solve Reynolds average Navier-Stokes (RANS) or Large Eddy Simulation (LES) equations numerically using the CFD techniques introduced in Chapter \ref{chapter:res_water}. Two-dimensional models often solve a different category of governing equations derived from the 3D Navier-Stokes (NS) equation by integrating in the vertical dimension, e.g., shallow water equations and Boussinesq wave equations where the two dimensions can be characterized as latitude and longitude, with additional techniques available to consider variations in the vertical direction in some applications. Because such equations are computationally much easier to solve than the RANS and LES equations, they are broadly used in large-scale modeling of geophysical flows, e.g. tsunami, storm surge, and flooding. Two-dimensional models are used especially when computational efficiency is a factor. Examples include building an early warning system, which requires tsunami modeling to be done as quickly as possible after an earthquake, versus a probabilistic assessment that often requires thousands of computational simulations.
 
 \section{Input and Output Data}
 \label{sec:tsunami_io}
