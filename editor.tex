@@ -27,6 +27,7 @@
 \usepackage{nameref}
 \usepackage[
 natbib,
+dashed=false,
 defernumbers,
 hyperref=true,
 backend=biber,
@@ -133,42 +134,16 @@ uniquelist=false
 \segimport{CrossCutting/Uncertainty/}{main}
 \segimport{CrossCutting/AI/}{main}
 
-%
 
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{partbacktext}
 \part{Appendix}
-
-% \begin{appendix}
 \appendix
 \include{editor/appendix}
-% \end{appendix}
-
-% \part{References}
-% \include{References/literature}
-% \input{References/digital}
-% \input{references}
-
-%\include{References/main}
-% \import{References/}{literature}
-% \import{References/}{digital}
 \end{partbacktext}
 
-% \part{References}
 \input{references}
-% \include{References/literature.tex}
-% \input{References/digital.tex}
-% \import{References/}{literature}
-% \import{References/}{digital}
-
-% \include{editor/glossary}
-
-
-% \input{references.tex}
-
-% \printbibliography
-% \printbibheading
 
 \printindex
 
