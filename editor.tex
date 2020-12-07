@@ -88,22 +88,20 @@ uniquelist=false
 
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\include{editor/dedication}
-%\include{editor/foreword}
-\include{editor/preface}
-\include{editor/acknowledgement}
+\segimport{editor/}{preface}
+\segimport{editor/}{acknowledgement}
 
 \setcounter{tocdepth}{1}
 \tableofcontents
 
-\include{editor/contriblist}
-\include{editor/acronym}
+\segimport{editor/}{contriblist}
+\segimport{editor/}{acronym}
 
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\include{editor/introduction}
+\segimport{editor/}{introduction}
 
-\include{Hazard/main}
+\segimport{Hazard/}{main}
 \segimport{Hazard/Earthquake_Ground_Shaking/}{main}
 \segimport{Hazard/Earthquake_Surface_Rupture/}{main}
 \segimport{Hazard/Earthquake_Liquefaction/}{main}
@@ -112,25 +110,25 @@ uniquelist=false
 \segimport{Hazard/Storm_Surge/}{main}
 \segimport{Hazard/Tsunami/}{main}
 
-\include{Response/main}
+\segimport{Response/}{main}
 \segimport{Response/Structural/}{main}
 \segimport{Response/Geotechnical/}{main}
 \segimport{Response/CFD_Wind/}{main}
 \segimport{Response/CFD_Water/}{main}
 
-\include{Performance/main}
+\segimport{Performance/}{main}
 \segimport{Performance/Buildings/}{main}
 \segimport{Performance/Transportation/}{main}
 \segimport{Performance/Pipelines/}{main}
 \segimport{Performance/Power/}{main}
 
-\include{Recovery/main}
+\segimport{Recovery/}{main}
 \segimport{Recovery/Communities/}{main}
 \segimport{Recovery/Infrastructure_Systems/}{main}
 \segimport{Recovery/Housing/}{main}
 \segimport{Recovery/Businesses/}{main}
 
-\include{CrossCutting/main}
+\segimport{CrossCutting/}{main}
 \segimport{CrossCutting/Uncertainty/}{main}
 \segimport{CrossCutting/AI/}{main}
 
@@ -140,7 +138,7 @@ uniquelist=false
 \begin{partbacktext}
 \part{Appendix}
 \appendix
-\include{editor/appendix}
+\segimport{editor/}{appendix}
 \end{partbacktext}
 
 \input{references}
