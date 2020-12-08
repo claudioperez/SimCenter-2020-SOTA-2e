@@ -4,7 +4,7 @@
 export TEXINPUTS:=./texmf//:${TEXINPUTS}
 export BSTINPUTS:=./texmf//:${BSTINPUTS}
 
-.PHONY: tex all bib tables
+.PHONY: tex all bib tables images
 
 all:
 	make idx
@@ -42,6 +42,11 @@ idx: # process .bib file to add related reference keys
 	python scripts/index-prgms.py > index.sed
 	sed -i -f index.sed zotero-refs-BLT.bib
 
+images:
+	for i in `echo **/Figures/*.png | sed -r 's/ /\n/g' | sed -r 's/(.*)\.png/\1.pdf/g' | tr '\n' ' '`; do \
+		make $$i; \
+	done
+
 %.pdf: %.png
-	echo '$<' '%@'
-	convert '$<' '%@' -density 300 -units PixelsPerInch
+	echo '$<' '$@'
+	convert '$<' -density 300 -units PixelsPerInch '$@'

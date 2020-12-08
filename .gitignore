@@ -1,6 +1,6 @@
 .vscode/
 texmf/
 build/
-**/*.pdf
+editor*.pdf
 archive/
 index.sed
