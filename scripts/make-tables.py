@@ -48,9 +48,9 @@ for i, lst in enumerate(index):
     for j in lst:
         try: item = [k for k in items if k["citekey"]==j][0]
         except: continue
+        title = item["shortTitle"] if "shortTitle" in item else item["title"]
         lic = [tag["tag"] for tag in item["tags"] if "License" in tag["tag"]]
         lic = lic[0].rsplit("::",1)[-1].replace("License","") if lic else "-"
-        title = item["shortTitle"] if "shortTitle" in item else item["title"]
         OS = [tag["tag"] for tag in item["tags"] if "Operating" in tag["tag"]]
         OS = "/".join(op.rsplit("::",1)[-1] for op in OS) if OS else "-"
         if item["itemType"] == "computerProgram":
