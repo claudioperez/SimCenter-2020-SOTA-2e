@@ -1,4 +1,4 @@
-%Copied from numeric.cbx to imitate numerical citations.
+
 \providebool{bbx:subentry}
 \newbibmacro*{citenum}{%Note: the original macro was called "cite". I did not redefine "cite", but instead defined a new macro "citenum", because the author-year citations use the "cite" macro too. "\renewbibmacro*{cite}" would have caused all the author-year citations to become numeric too.
   \printtext[bibhyperref]{%If you ever want to use hyperref
@@ -7,29 +7,6 @@
     \ifbool{bbx:subentry}
       {\printfield{entrysetcount}}
       {}}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \newbibmacro*{related:default}[1]{%
-%   \entrydata*{#1}{%
-%     \usedriver
-%       {\ifnameundef{savedauthor}
-%          {\ifnameundef{savededitor}
-%             {}
-%             {\ifnamesequal{editor}{savededitor}
-%                {\clearname{editor}}
-%                {}}}
-%          {\ifnamesequal{author}{savedauthor}
-%             {\clearname{author}}
-%             {}}%
-%        \renewbibmacro*{related:init}{}%
-%        \DeclareNameAlias{sortname}{default}%
-%        \ifbibmacroundef{date+extradate}
-%          {}
-%          {\renewbibmacro*{date+extradate}{}%
-%           \renewbibmacro*{bbx:ifmergeddate}{\@secondoftwo}}%
-%        \renewbibmacro*{pageref}{}}
-%       {\thefield{entrytype}}}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newbibmacro*{citetitle}{%
   \iffieldundef{shorthand}
