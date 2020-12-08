@@ -14,12 +14,12 @@ all:
 	make tex
 
 tables:
-	csplit --prefix=build/.refsegs/xx build/editor.aux '/\\newlabel{refsegment\.*/-1' '{*}'
-	echo '' > build/.refsegs/index.yaml
-	for i in build/.refsegs/xx*; do \
-	   printf -- "- \n" >> build/.refsegs/index.yaml; \
-	   sed -n 's/\\abx@aux@cite{\(.*\)}/  - "\1"/p' $$i >> build/.refsegs/index.yaml; \
-	done;
+	# csplit --prefix=build/.refsegs/xx build/editor.aux '/\\newlabel{refsegment\.*/-1' '{*}'
+	# > build/.refsegs/index.yaml
+	# for i in build/.refsegs/xx*; do \
+	#    printf -- "- \n" >> build/.refsegs/index.yaml; \
+	#    sed -n 's/\\abx@aux@cite{\(.*\)}/  - "\1"/p' $$i >> build/.refsegs/index.yaml; \
+	# done;
 	python3 scripts/make-tables.py > editor/tables.tex
 
 fast: # make an incomplete build
