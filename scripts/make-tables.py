@@ -36,12 +36,12 @@ print("""
 
 for i, lst in enumerate(index):
     lst = lst if lst else []
-    body = set()
+    body = set() # use set container to automatically handle duplicates
     head = f"""
 \\subsection{{{i}}}
 \\begin{{table}}[]
-    \\centering
-    \\begin{{tabular}}{{l|cc}}
+  \\centering
+  \\begin{{tabular}}{{l|cc}}
     \\toprule
     Name &  License & Operating system\\\\"""
     for j in lst:
@@ -51,15 +51,16 @@ for i, lst in enumerate(index):
         lic = [tag["tag"] for tag in item["tags"] if "License" in tag["tag"]]
         lic = lic[0].rsplit("::",1)[-1].replace("License","") if lic else "-"
         OS = [tag["tag"] for tag in item["tags"] if "Operating" in tag["tag"]]
-        OS = "/".join(op.rsplit("::",1)[-1] for op in OS) if OS else "-"
+        OS = "/".join(o.rsplit("::",1)[-1] for o in sorted(OS)) if OS else "-"
         if item["itemType"] == "computerProgram":
             name = f"\href{{{item['url']}}}{{{title}}}" \
                    if "url" in item else title
             body = body.union({f"""
-    {name} & {lic} &{OS}\\\\"""})
+    {name} & {lic} & {OS}\\\\"""})
     tail = f"""
     \\bottomrule
-    \\end{{tabular}}
+  \\end{{tabular}}
 \\end{{table}}"""
 
-    if body: print(head,"".join(body),tail)
+    if body: # only print if there are items in the table body
+        print(head,"".join(body),tail)
