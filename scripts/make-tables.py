@@ -47,14 +47,16 @@ for i, lst in enumerate(index):
     for j in lst:
         try: item = [k for k in items if k["citekey"]==j][0]
         except: continue
-        title = item["shortTitle"] if "shortTitle" in item else item["title"]
+        # Title
+        name = item["shortTitle"] if "shortTitle" in item else item["title"]
+        name = f"\href{{{item['url']}}}{{{name}}}" if "url" in item else name
+        # License
         lic = [tag["tag"] for tag in item["tags"] if "License" in tag["tag"]]
         lic = lic[0].rsplit("::",1)[-1].replace("License","") if lic else "-"
+        # Operating System
         OS = [tag["tag"] for tag in item["tags"] if "Operating" in tag["tag"]]
         OS = "/".join(o.rsplit("::",1)[-1] for o in sorted(OS)) if OS else "-"
         if item["itemType"] == "computerProgram":
-            name = f"\href{{{item['url']}}}{{{title}}}" \
-                   if "url" in item else title
             body = body.union({f"""
     {name} & {lic} & {OS}\\\\"""})
     tail = f"""
