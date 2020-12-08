@@ -58,7 +58,7 @@ for i, lst in enumerate(index):
         OS = "/".join(o.rsplit("::",1)[-1] for o in sorted(OS)) if OS else "-"
         # DesignSafe
         DS = [tg["tag"] for tg in item["tags"] if "DesignSafe" in tg["tag"]]
-        DS = DS[0] if DS else "-"
+        DS = DS[0].split("::")[-1] if DS else "-"
         if item["itemType"] == "computerProgram":
             body = body.union({f"""
     {name} & {lic} & {OS} & {DS} \\\\"""})
