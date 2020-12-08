@@ -99,7 +99,7 @@ EDPs are extracted from the structural response simulation. Seismic performance 
 \section{Modeling Approaches}
 \label{sec:perf_bldg_methods}
 
-The main assumption of the widely used stochastic model for building performance assessment is that the uncertainty in the DVs can be estimated through a series of independent calculations. This approach has been developed in the Pacific Earthquake Engineering Research (PEER) Center and it is often referred to as the PEER performance assessment framework or simply the PEER ``triple integral'' (see Figure \ref{fig:intro_PBEF}, \cite{moehle2004framework}, and \cite{porter2001assemblybased}):
+The main assumption of the widely used stochastic model for building performance assessment is that the uncertainty in the DVs can be estimated through a series of independent calculations. This approach has been developed in the Pacific Earthquake Engineering Research (PEER) Center and it is often referred to as the PEER performance assessment framework or simply the PEER ``triple integral'' (see Figure \ref{fig:intro_PBE_framework}, \cite{moehle2004framework}, and \cite{porter2001assemblybased}):
 
 \begin{enumerate}
     \item Describe a set of IM levels (e.g., spectral acceleration intensities) and corresponding likelihoods based on the hazard at the building location over a given time period.
@@ -110,6 +110,8 @@ The main assumption of the widely used stochastic model for building performance
 \end{enumerate}
 
 Depending on which path is taken from Figure \ref{fig:perf_PBEapproaches}, one or more of the steps above can be merged. If calculations are performed independently, the models used for these calculations are decoupled (e.g., the DS for two different IM levels is assumed identical if the IMs generate identical EDPs). These steps are the basis of the widely used HAZUS Models, and they were the foundation of the FEMA P58 method that is currently considered the state-of-the-art for seismic performance assessment of buildings.
+
+Although sophisticated performance assessment methods promise more information about building performance, their veracity demands more detailed input data about the building and its components. Consideration of the uncertainty that stems from the limited amount of building information available is essential for a robust performance evaluation \citep{bradley2013critical}. The methods available for quantification and propagation of such uncertainty are discussed in Chapter \ref{chapter:uq}.
 
 Under non-seismic hazards, there is no equivalent of the FEMA P58 method that would enable high-fidelity building performance assessment. This partly stems from the lack of publicly available high-quality databases--which would drive more sophisticated model development--and from the different nature of the problem. The impact and disruption of earthquakes and hurricanes are very different in both spatial and temporal distribution, with hurricanes having a severe impact on a larger region over a longer time period. Therefore, the focus for hurricane and flood models have always tended to be more regional and capturing the detailed response of individual structures receives less attention. 
 
