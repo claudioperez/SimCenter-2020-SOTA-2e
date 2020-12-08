@@ -36,6 +36,7 @@ print("""
 """)
 
 for i, lst in enumerate(index):
+    lst = lst if lst else []
     body = set()
     head = f"""
 \\subsection{{{i}}}
