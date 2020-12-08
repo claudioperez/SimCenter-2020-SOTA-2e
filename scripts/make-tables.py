@@ -15,7 +15,6 @@ done;
 python3 scripts/make-tables.py > editor/tables.tex
 ```
 """
-
 import yaml
 
 
