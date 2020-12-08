@@ -1,6 +1,9 @@
 # Claudio M. Perez
 # Fall 2020
 
+SHELL = /bin/bash -O globstar
+#.SHELLFLAGS="-O extglob -c"
+
 export TEXINPUTS:=./texmf//:${TEXINPUTS}
 export BSTINPUTS:=./texmf//:${BSTINPUTS}
 
