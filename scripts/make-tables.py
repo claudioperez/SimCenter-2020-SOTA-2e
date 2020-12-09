@@ -40,8 +40,8 @@ for i, lst in enumerate(index):
     head = f"""
 \\subsection{{{i}}}
 \\begin{{table}}[]
-  \\centering
-  \\begin{{tabular}}{{l|ccc}}
+    \\centering
+    \\begin{{tabular}}{{l|ccc}}
     \\toprule
     Name &  License & Operating system & DesignSafe \\\\"""
     for j in lst:
@@ -64,7 +64,7 @@ for i, lst in enumerate(index):
     {name} & {lic} & {OS} & {DS} \\\\"""})
     tail = f"""
     \\bottomrule
-  \\end{{tabular}}
+    \\end{{tabular}}
 \\end{{table}}"""
 
     if body: # only print if there are items in the table body
