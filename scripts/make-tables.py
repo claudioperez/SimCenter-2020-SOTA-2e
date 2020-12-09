@@ -41,7 +41,7 @@ for i, lst in enumerate(index):
 \\subsection{{{i}}}
 \\begin{{table}}[]
   \\centering
-  \\begin{{tabular}}{{l|cc}}
+  \\begin{{tabular}}{{l|ccc}}
     \\toprule
     Name &  License & Operating system & DesignSafe \\\\"""
     for j in lst:
