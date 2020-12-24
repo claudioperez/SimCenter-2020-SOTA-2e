@@ -1,6 +1,5 @@
 # SimCenter 2020 SOTA 2e
 
-
 ## Parsing Citations
 
 1. Run `parse-bib.sh` on text files that include a raw bibliography at the end to create a `.bib` file.
