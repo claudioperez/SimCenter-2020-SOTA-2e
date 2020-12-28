@@ -29,14 +29,15 @@ with open("2020-2e.json") as f:     # This file is exported from Zotero
     items = yaml.load(f,Loader=yaml.Loader)["items"]
 
 print("""
-% This file was generated using the Python script `scripts/make-tables.py`, 
+% This file was generated using the Python script `scripts/make-tables.py`,
 % which can be invoked by running `make tables` at the command line.\n
-% Claudio M. Perez\n
+% Claudio M. Perez
 """)
 
 for i, lst in enumerate(index):
     lst = lst if lst else []
     body = set() # use set container to automatically handle duplicates
+    foot = set()
     head = f"""
 \\subsection{{{i}}}
 \\begin{{table}}[]
@@ -59,6 +60,9 @@ for i, lst in enumerate(index):
         # DesignSafe
         DS = [tg["tag"] for tg in item["tags"] if "DesignSafe" in tg["tag"]]
         DS = DS[0].split("::")[-1].replace("True","Y") if DS else "-"
+        # Comments
+        cm = [tg["tag"] for tg in item["tags"] if "Comment ::" in tg["tag"]]
+        cm = set(c.rsplit("::",1)[-1] for c in sorted(cm))
         if item["itemType"] == "computerProgram":
             body = body.union({f"""
     {name} & {lic} & {OS} & {DS} \\\\"""})
@@ -69,3 +73,4 @@ for i, lst in enumerate(index):
 
     if body: # only print if there are items in the table body
         print(head,"".join(body),tail)
+
