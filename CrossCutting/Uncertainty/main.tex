@@ -112,7 +112,7 @@ The last category of UQ software packages is of greater interest, especially sin
 \begin{itemize}
 
     \item{Probabilistic modeling:}This pertains to standard uncertainty characterization, extending from simple parametric description to stochastic characterization (including dimensionality reduction), and represents the input to the UQ software.
-    
+    \vspace{2mm}
     \item These tasks encompass direct MCS with Latin hypercube sampling, use point estimation methods (FORM/SORM),  variance reduction, and rare event simulation. UQ outputs considered correspond typically to statistical moments, probabilities of exceedance for different limit states or fitted distributions. The numerous software programs adopt different tools for the aforementioned tasks and most lack a complete adaptive implementation; some degree of competency on behalf of the end-user for selecting appropriate algorithms and parameters is assumed. Recently, many types of software have begun to integrate multi-fidelity MCS approaches;
      \vspace{2mm}   
     \item{Surrogate modeling:} Common classes of meta-models used include Gaussian processes, polynomial chaos, support vector machines, and radial basis functions. The developed surrogate models can be then leveraged within the software to accelerate computations for other UQ tasks. Adaptive DoE options are typically available and used frequently; standard DoE approaches are not, however, necessarily tailored to the specific UQ task of interest to the end-user. Most software programs sacrifice robustness (an approach that is reliable and is independent of the end-user competency) for efficiency (the ability to develop high-accuracy meta-models with the least number of simulation experiments);
@@ -140,6 +140,8 @@ The last category of UQ software packages is of greater interest, especially sin
 
 \paragraph{MUQ} 
 \citeprgm{MUQ} is an open source (C++/Python library) collection of tools for UQ analysis, with emphasis on probabilistic modeling, Bayesian inference, and surrogate modeling. Although developments in MUQ have been slightly more accelerated recently, overall it has not kept pace with the other open-source initiatives mentioned above (\url{http://www.cossan.co.uk/software/open-cossan-engine.php}).
-    \vspace{2mm}  
+
+
+\vspace{2mm}  
 Beyond these specific software or open-source tool collections, there is an increasing number of Python-based open-source libraries that are offered by researchers for UQ analysis, including UQ-Pyl (http://www.uq-pyl.com/), FilterPy (https://github.com/rlabbe/filterpy), and Surrogate Modeling Toolbox (https://github.com/SMTorg/SMT). Most of them are focused on specialized UQ tasks (or groups of tasks) and do not intend to establish a generalized UQ analysis workflow. The degree of ongoing improvement and bug fixes also varies substantially between these efforts. 
 
