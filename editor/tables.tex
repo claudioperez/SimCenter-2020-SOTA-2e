@@ -1,354 +1,527 @@
 
-% This file was generated using the Python script `scripts/make-tables.py`, 
+% This file was generated using the Python script `scripts/make-tables.py`,
 % which can be invoked by running `make tables` at the command line.
 
 % Claudio M. Perez
 
 
-
-\subsection{1}
 \begin{table}[]
+    \caption{Introduction}
+    \begin{threeparttable}
     \centering
-    \begin{tabular}{l|ccc}
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
     \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    \href{https://github.com/NHERI-SimCenter/WE-UQ}{WE-UQ} & - &  MacOS/ Windows/ Linux &  Y \\
-    \href{https://simcenter.designsafe-ci.org/research-tools/pbe-application/}{PBE} &  BSD  &  MacOS/ Windows/ Linux & - \\
-    \href{https://openfoam.org.}{OpenFOAM} & - & - & - \\
-    \href{https://github.com/NHERI-SimCenter/EE-UQ}{EE-UQ} & - &  MacOS/ Windows/ Linux &  Y \\
-    \href{https://github.com/NHERI-SimCenter/HydroUQ}{HydroUQ} & - &  MacOS/ Windows/ Linux & - \\
-    \href{https://depts.washington.edu/clawpack/geoclaw/}{GEOCLAW} & - & - & - \\
-    \href{https://github.com/NHERI-SimCenter/quoFEM}{quoFEM} &  BSD  &  MacOS/ Windows/ Linux &  Y \\
-    \href{https://opensees.berkeley.edu/}{OpenSees} &  BSD  &  MacOS/ Windows/ Linux &  Y \\
-    \href{https://nheri-simcenter.github.io/pelicun/}{PELICUN} & - &  MacOS/ Windows/ Linux & - \\
-    \href{https://nheri-simcenter.github.io/BRAILS-Documentation/}{BRAILS} & - &  MacOS/ Windows/ Linux & - \\ 
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    \href{https://github.com/NHERI-SimCenter/WE-UQ}{WE-UQ} & - &  Mac/ Win/ Lin &  Y &  \\
+    \href{https://github.com/NHERI-SimCenter/quoFEM}{quoFEM} &  BSD  &  Mac/ Win/ Lin &  Y &  \\
+    \href{https://github.com/NHERI-SimCenter/HydroUQ}{HydroUQ} & - &  Mac/ Win/ Lin & - &  \\
+    \href{https://depts.washington.edu/clawpack/geoclaw/}{GEOCLAW} & - & - & - &  \\
+    \href{https://nheri-simcenter.github.io/BRAILS-Documentation/}{BRAILS} & - &  Mac/ Win/ Lin & - &  \\
+    \href{https://nheri-simcenter.github.io/pelicun/}{PELICUN} & - &  Mac/ Win/ Lin & - &  \\
+    \href{https://openfoam.org.}{OpenFOAM} & - & - & - &  \\
+    \href{https://github.com/NHERI-SimCenter/EE-UQ}{EE-UQ} & - &  Mac/ Win/ Lin &  Y &  \\
+    \href{https://opensees.berkeley.edu/}{OpenSees} &  BSD  &  Mac/ Win/ Lin &  Y & \tnotex{1},\tnotex{2} \\
+    \href{https://simcenter.designsafe-ci.org/research-tools/pbe-application/}{PBE} &  BSD  &  Mac/ Win/ Lin & - &  \\ 
     \bottomrule
+   %\insertTableNotes
     \end{tabular}
-\end{table}
 
-\subsection{2}
-\begin{table}[]
-    \centering
-    \begin{tabular}{l|ccc}
-    \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    \href{https://github.com/usgs/nshmp-haz/wiki}{NSHMP-Haz} & - & - & - \\
-    \href{https://zenodo.org/record/1063644#.X5PqWe1lBhE}{SW4} & - &  Linux & - \\
-    \href{https://github.com/abrahamson/HAZ}{HAZ} &  GNU General Public  v3 (GPLv3) &  Windows & - \\
-    AWP-ODC & - & - & - \\
-    \href{https://scec.usc.edu/scecpedia/CyberShake}{CyberShake} & - & - & - \\
-    \href{http://www.r-crisis.com/}{R-CRISIS} & - & - & - \\
-    \href{https://strike.scec.org/scecpedia/Broadband_Platform}{The Broadband Platform} &  Apache Software  &  Linux & - \\
-    Hazus 4.2 & - & - & - \\
-    UGMS MCER & - & - & - \\
-    \href{https://www.globalquakemodel.org/openquake}{OpenQuake} & - &  MacOS/ Windows/ Linux & - \\
-    OpenSHA & - & - & - \\ 
-    \bottomrule
-    \end{tabular}
+    \begin{tablenotes}\footnotesize
+      \item[1]{ Comment b}
+\item[2]{ Finite-Element based}
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-0}
 \end{table}
+\newline
+\vspace*{1 cm}
+\newline
 
-\subsection{3}
 \begin{table}[]
+    \caption{Hazards: Earthquake - Ground Shaking}
+    \begin{threeparttable}
     \centering
-    \begin{tabular}{l|ccc}
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
     \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    \href{http://www.lstc.com/}{LS-DYNA} &  Other/Proprietary  &  Windows/ Linux & - \\
-    \href{https://www.itascainternational.com/software/pfc}{PFC} & - & - & - \\
-    \href{https://www.bentley.com/en/products/brands/plaxis}{PLAXIS} &  Other/Proprietary  &  Windows & - \\
-    \href{https://yade-dem.org/doc/}{YADE} & - & - & - \\
-    \href{https://github.com/lammps}{LAMMPS} &  GNU General Public  (GPL) & - & - \\
-    \href{https://www.cfdem.com/}{LIGGGHTS-PUBLIC} &  GNU General Public  v2 or later (GPLv2+) &  Linux & - \\
-    \href{www.simulia.com}{ABAQUS} &  Other/Proprietary  &  Windows/ Linux & - \\
-    \href{http://mimetics-engineering.fr/index.php/en/lmgc90-2/}{LBMC90} & - & - & - \\
-    \href{https://opensees.berkeley.edu/}{OpenSees} &  BSD  &  MacOS/ Windows/ Linux &  Y \\
-    \href{https://www.itascacg.com/software/FLAC}{FLAC} & - &  Windows & - \\ 
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    \href{https://github.com/usgs/nshmp-haz/wiki}{NSHMP-Haz} & - & - & - &  \\
+    Hazus 4.2 & - & - & - & \tnotex{1},\tnotex{2} \\
+    \href{http://www.r-crisis.com/}{R-CRISIS} & - & - & - &  \\
+    \href{https://zenodo.org/record/1063644#.X5PqWe1lBhE}{SW4} & - &  Lin & - & \tnotex{3} \\
+    \href{https://strike.scec.org/scecpedia/Broadband_Platform}{The Broadband Platform} &  Apache Software  &  Lin & - &  \\
+    \href{https://scec.usc.edu/scecpedia/CyberShake}{CyberShake} & - & - & - &  \\
+    UGMS MCER & - & - & - &  \\
+    AWP-ODC & - & - & - &  \\
+    \href{https://github.com/abrahamson/HAZ}{HAZ} & GPLv3 &  Win & - &  \\
+    OpenSHA & - & - & - &  \\
+    \href{https://www.globalquakemodel.org/openquake}{OpenQuake} & - &  Mac/ Win/ Lin & - &  \\ 
     \bottomrule
+   %\insertTableNotes
     \end{tabular}
-\end{table}
 
-\subsection{4}
-\begin{table}[]
-    \centering
-    \begin{tabular}{l|ccc}
-    \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    NovoLIQ &  Other/Proprietary  &  Windows & - \\
-    \href{https://pm4sand.engr.ucdavis.edu/}{PM4Sand} & - & - & - \\
-    Liquefy-Pro & - &  Windows & - \\
-    \href{https://www.bentley.com/en/products/brands/plaxis}{PLAXIS} &  Other/Proprietary  &  Windows & - \\
-    Cliq & - & - & - \\
-    LiqIT &  Other/Proprietary  &  Windows & - \\
-    \href{https://www.itascacg.com/software/FLAC}{FLAC} & - &  Windows & - \\
-    \href{https://pm4silt.engr.ucdavis.edu/}{PM4Silt} & - & - & - \\ 
-    \bottomrule
-    \end{tabular}
+    \begin{tablenotes}\footnotesize
+      \item[1]{ HAZUS MH only}
+\item[2]{ Regional level}
+\item[3]{ Finite-Difference based}
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-1}
 \end{table}
+\newline
+\vspace*{1 cm}
+\newline
 
-\subsection{5}
 \begin{table}[]
+    \caption{Hazards: Earthquake - Surface Fault Rupture}
+    \begin{threeparttable}
     \centering
-    \begin{tabular}{l|ccc}
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
     \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    \href{http://www.lstc.com/}{LS-DYNA} &  Other/Proprietary  &  Windows/ Linux & - \\
-    \href{https://www.bentley.com/en/products/brands/plaxis}{PLAXIS} &  Other/Proprietary  &  Windows & - \\
-    SLAMMER & - &  MacOS/ Windows/ Linux & - \\
-    \href{www.simulia.com}{ABAQUS} &  Other/Proprietary  &  Windows/ Linux & - \\
-    \href{https://opensees.berkeley.edu/}{OpenSees} &  BSD  &  MacOS/ Windows/ Linux &  Y \\
-    \href{https://www.itascacg.com/software/FLAC}{FLAC} & - &  Windows & - \\ 
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    \href{www.simulia.com}{ABAQUS} &  Other/Proprietary  &  Win/ Lin & - &  \\
+    \href{https://yade-dem.org/doc/}{YADE} & - & - & - &  \\
+    \href{https://opensees.berkeley.edu/}{OpenSees} &  BSD  &  Mac/ Win/ Lin &  Y & \tnotex{1},\tnotex{2} \\
+    \href{http://www.lstc.com/}{LS-DYNA} &  Other/Proprietary  &  Win/ Lin & - & \tnotex{1} \\
+    \href{http://mimetics-engineering.fr/index.php/en/lmgc90-2/}{LBMC90} & - & - & - &  \\
+    \href{https://www.cfdem.com/}{LIGGGHTS-PUBLIC} & GPLv2+ &  Lin & - &  \\
+    \href{https://www.itascacg.com/software/FLAC}{FLAC} & - &  Win & - &  \\
+    \href{https://github.com/lammps}{LAMMPS} & GPL & - & - & \tnotex{3} \\
+    \href{https://www.bentley.com/en/products/brands/plaxis}{PLAXIS} &  Other/Proprietary  &  Win & - &  \\
+    \href{https://www.itascainternational.com/software/pfc}{PFC} & - & - & - &  \\ 
     \bottomrule
+   %\insertTableNotes
     \end{tabular}
-\end{table}
 
-\subsection{7}
-\begin{table}[]
-    \centering
-    \begin{tabular}{l|ccc}
-    \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    \href{https://oss.deltares.nl/web/delft3d}{Delft3D} & - & - & - \\
-    SLOSH & - & - & - \\
-    \href{https://depts.washington.edu/clawpack/geoclaw/}{GEOCLAW} & - & - & - \\
-    \href{http://fvcom.smast.umassd.edu/fvcom/}{FVCOM} & - & - & - \\
-    \href{https://www.clawpack.org/}{Clawpack} & - & - & - \\
-    \href{https://adcirc.org/}{ADCIRC} & - & - & - \\ 
-    \bottomrule
-    \end{tabular}
+    \begin{tablenotes}\footnotesize
+      \item[1]{ Comment b}
+\item[2]{ Finite-Element based}
+\item[3]{ Comment a}
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-2}
 \end{table}
+\newline
+\vspace*{1 cm}
+\newline
 
-\subsection{9}
 \begin{table}[]
+    \caption{Hazards: Earthquake - Soil Liquefaction}
+    \begin{threeparttable}
     \centering
-    \begin{tabular}{l|ccc}
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
     \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    \href{http://feap.berkeley.edu/}{FEAP} &  Free For Educational Use & - & - \\
-    \href{https://opensees.berkeley.edu/}{OpenSees} &  BSD  &  MacOS/ Windows/ Linux &  Y \\
-    \href{http://www.lstc.com/}{LS-DYNA} &  Other/Proprietary  &  Windows/ Linux & - \\ 
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    \href{https://www.itascacg.com/software/FLAC}{FLAC} & - &  Win & - &  \\
+    LiqIT &  Other/Proprietary  &  Win & - &  \\
+    Liquefy-Pro & - &  Win & - &  \\
+    \href{https://pm4sand.engr.ucdavis.edu/}{PM4Sand} & - & - & - &  \\
+    Cliq & - & - & - &  \\
+    \href{https://pm4silt.engr.ucdavis.edu/}{PM4Silt} & - & - & - &  \\
+    NovoLIQ &  Other/Proprietary  &  Win & - &  \\
+    \href{https://www.bentley.com/en/products/brands/plaxis}{PLAXIS} &  Other/Proprietary  &  Win & - &  \\ 
     \bottomrule
+   %\insertTableNotes
     \end{tabular}
-\end{table}
 
-\subsection{10}
-\begin{table}[]
-    \centering
-    \begin{tabular}{l|ccc}
-    \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    \href{http://www.mpm-dredge.eu/}{Anura3D} & - & - & - \\
-    \href{http://www.lstc.com/}{LS-DYNA} &  Other/Proprietary  &  Windows/ Linux & - \\
-    \href{http://real-essi.us/}{Real-ESSI} & - & - & - \\
-    \href{https://www.cb-geo.com/research/mpm/}{CB-Geo-MPM} &  MIT  & - & - \\
-    \href{https://github.com/penn-graphics-research/claymore}{Claymore} & - & - & - \\
-    \href{www.simulia.com}{ABAQUS} &  Other/Proprietary  &  Windows/ Linux & - \\
-    \href{https://opensees.berkeley.edu/}{OpenSees} &  BSD  &  MacOS/ Windows/ Linux &  Y \\
-    \href{https://github.com/arkottke/strata}{Strata} & - & - & - \\
-    \href{https://www.itascacg.com/software/FLAC}{FLAC} & - &  Windows & - \\
-    \href{https://pm4silt.engr.ucdavis.edu/}{PM4Silt} & - & - & - \\
-    \href{https://www.bentley.com/en/products/brands/plaxis}{PLAXIS} &  Other/Proprietary  &  Windows & - \\
-    \href{https://www.itascainternational.com/software/pfc}{PFC} & - & - & - \\
-    \href{http://uintah.utah.edu/}{Uintah} &  MIT  & - & - \\
-    \href{http://feap.berkeley.edu/}{FEAP} &  Free For Educational Use & - & - \\
-    \href{https://pm4sand.engr.ucdavis.edu/}{PM4Sand} & - & - & - \\
-    \href{http://www.proshake.com/}{ProShake} & - & - & - \\
-    \href{http://deepsoil.cee.illinois.edu/}{DeepSoil} & - & - & - \\ 
-    \bottomrule
-    \end{tabular}
+    \begin{tablenotes}\footnotesize
+      
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-3}
 \end{table}
+\newline
+\vspace*{1 cm}
+\newline
 
-\subsection{11}
 \begin{table}[]
+    \caption{Hazards: Earthquake - Slope Stability and Landslides}
+    \begin{threeparttable}
     \centering
-    \begin{tabular}{l|ccc}
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
     \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    \href{https://doi.org/10.5281/zenodo.3462804}{Turbulent Inflow Tool} & - & - & - \\ 
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    \href{www.simulia.com}{ABAQUS} &  Other/Proprietary  &  Win/ Lin & - &  \\
+    \href{https://opensees.berkeley.edu/}{OpenSees} &  BSD  &  Mac/ Win/ Lin &  Y & \tnotex{1},\tnotex{2} \\
+    \href{http://www.lstc.com/}{LS-DYNA} &  Other/Proprietary  &  Win/ Lin & - & \tnotex{1} \\
+    SLAMMER & - &  Mac/ Win/ Lin & - &  \\
+    \href{https://www.itascacg.com/software/FLAC}{FLAC} & - &  Win & - &  \\
+    \href{https://www.bentley.com/en/products/brands/plaxis}{PLAXIS} &  Other/Proprietary  &  Win & - &  \\ 
     \bottomrule
+   %\insertTableNotes
     \end{tabular}
-\end{table}
 
-\subsection{12}
-\begin{table}[]
-    \centering
-    \begin{tabular}{l|ccc}
-    \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    \href{https://mdx.plm.automation.siemens.com/star-ccm-plus.}{S.T.A.R.-C.C.M.+} & - & - & - \\
-    \href{https://openfoam.org.}{OpenFOAM} & - & - & - \\
-    \href{https://www.comsol.com.}{COMSOL} & - & - & - \\
-    \href{https://engys.com/.}{H.E.L.Y.X.} & - & - & - \\
-    \href{https://ihfoam.ihcantabria.com/.}{IHFOAM} & - & - & - \\
-    \href{olaflow.github.io}{olaFlow} & - & - & - \\
-    \href{https://su2code.github.io/.}{SU2} &  GNU Lesser General Public  v2 (LGPLv2) &  MacOS/ Windows/ Linux & - \\
-    \href{https://www.ansys.com/products/fluids/ansys-fluent.}{ANSYS Fluent} &  Other/Proprietary  & - & - \\ 
-    \bottomrule
-    \end{tabular}
+    \begin{tablenotes}\footnotesize
+      \item[1]{ Comment b}
+\item[2]{ Finite-Element based}
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-4}
 \end{table}
+\newline
+\vspace*{1 cm}
+\newline
 
-\subsection{13}
 \begin{table}[]
+    \caption{Hazards: Tropical Cyclone - Storm Surge}
+    \begin{threeparttable}
     \centering
-    \begin{tabular}{l|ccc}
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
     \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    \href{https://ecapra.org/}{CAPRA} & - &  Windows & - \\
-    \href{https://femap58.atcouncil.org/pact}{PACT} & - & - & - \\
-    \href{https://simcenter.designsafe-ci.org/research-tools/pbe-application/}{PBE} &  BSD  &  MacOS/ Windows/ Linux & - \\
-    Hazus 4.2 & - & - & - \\
-    \href{https://www.globalquakemodel.org/openquake}{OpenQuake} & - &  MacOS/ Windows/ Linux & - \\
-    \href{http://mae.cee.illinois.edu/software/software_maeviz.html}{MAEViz} & - & - & - \\
-    \href{https://github.com/openslat/SLAT}{OpenSLAT} &  GNU General Public  v3 (GPLv3) & - & - \\
-    \href{https://nheri-simcenter.github.io/pelicun/}{PELICUN} & - &  MacOS/ Windows/ Linux & - \\
-    \href{https://www.hbrisk.com/}{SP3} &  Other/Proprietary  & - & - \\ 
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    SLOSH & - & - & - &  \\
+    \href{https://www.clawpack.org/}{Clawpack} & - & - & - &  \\
+    \href{https://depts.washington.edu/clawpack/geoclaw/}{GEOCLAW} & - & - & - &  \\
+    \href{https://adcirc.org/}{ADCIRC} & - & - & - &  \\
+    \href{https://oss.deltares.nl/web/delft3d}{Delft3D} & - & - & - &  \\
+    \href{http://fvcom.smast.umassd.edu/fvcom/}{FVCOM} & - & - & - &  \\ 
     \bottomrule
+   %\insertTableNotes
     \end{tabular}
-\end{table}
 
-\subsection{14}
-\begin{table}[]
-    \centering
-    \begin{tabular}{l|ccc}
-    \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    Hazus 4.2 & - & - & - \\
-    \href{https://www.globalquakemodel.org/openquake}{OpenQuake} & - &  MacOS/ Windows/ Linux & - \\ 
-    \bottomrule
-    \end{tabular}
+    \begin{tablenotes}\footnotesize
+      
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-6}
 \end{table}
+\newline
+\vspace*{1 cm}
+\newline
 
-\subsection{15}
 \begin{table}[]
+    \caption{Response: Structural Systems}
+    \begin{threeparttable}
     \centering
-    \begin{tabular}{l|ccc}
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
     \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    GIRAFFE & - & - & - \\
-    \href{https://www.epa.gov/water-research/epanet}{EPANET} &  Public Domain & - & - \\
-    WNTR & - & - & - \\ 
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    \href{https://opensees.berkeley.edu/}{OpenSees} &  BSD  &  Mac/ Win/ Lin &  Y & \tnotex{1},\tnotex{2} \\
+    \href{http://www.lstc.com/}{LS-DYNA} &  Other/Proprietary  &  Win/ Lin & - & \tnotex{1} \\
+    \href{http://feap.berkeley.edu/}{FEAP} &  Free For Educational Use & - & - & \tnotex{2} \\ 
     \bottomrule
+   %\insertTableNotes
     \end{tabular}
-\end{table}
 
-\subsection{16}
-\begin{table}[]
-    \centering
-    \begin{tabular}{l|ccc}
-    \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    \href{https://sourceforge.net/p/electricdss/wiki/Home/}{OpenDSS} & - & - & - \\
-    Hazus 4.2 & - & - & - \\
-    \href{https://matpower.org/}{MatPower} &  BSD  & - & - \\ 
-    \bottomrule
-    \end{tabular}
+    \begin{tablenotes}\footnotesize
+      \item[1]{ Comment b}
+\item[2]{ Finite-Element based}
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-8}
 \end{table}
+\newline
+\vspace*{1 cm}
+\newline
 
-\subsection{17}
 \begin{table}[]
+    \caption{Response: Geotechnical Systems}
+    \begin{threeparttable}
     \centering
-    \begin{tabular}{l|ccc}
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
     \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    \href{http://resilience.colostate.edu/in_core.shtml}{IN-CORE} & - & - & - \\
-    DESaster & - & - & - \\ 
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    \href{http://uintah.utah.edu/}{Uintah} &  MIT  & - & - &  \\
+    \href{http://deepsoil.cee.illinois.edu/}{DeepSoil} & - & - & - &  \\
+    \href{https://opensees.berkeley.edu/}{OpenSees} &  BSD  &  Mac/ Win/ Lin &  Y & \tnotex{1},\tnotex{2} \\
+    \href{http://www.lstc.com/}{LS-DYNA} &  Other/Proprietary  &  Win/ Lin & - & \tnotex{1} \\
+    \href{https://github.com/penn-graphics-research/claymore}{Claymore} & - & - & - &  \\
+    \href{http://www.proshake.com/}{ProShake} & - & - & - & \tnotex{3} \\
+    \href{http://www.mpm-dredge.eu/}{Anura3D} & - & - & - &  \\
+    \href{https://www.itascainternational.com/software/pfc}{PFC} & - & - & - &  \\
+    \href{www.simulia.com}{ABAQUS} &  Other/Proprietary  &  Win/ Lin & - &  \\
+    \href{https://pm4sand.engr.ucdavis.edu/}{PM4Sand} & - & - & - &  \\
+    \href{http://real-essi.us/}{Real-ESSI} & - & - & - &  \\
+    \href{https://pm4silt.engr.ucdavis.edu/}{PM4Silt} & - & - & - &  \\
+    \href{https://github.com/arkottke/strata}{Strata} & - & - & - &  \\
+    \href{http://feap.berkeley.edu/}{FEAP} &  Free For Educational Use & - & - & \tnotex{2} \\
+    \href{https://www.cb-geo.com/research/mpm/}{CB-Geo-MPM} &  MIT  & - & - &  \\
+    \href{https://www.itascacg.com/software/FLAC}{FLAC} & - &  Win & - &  \\
+    \href{https://www.bentley.com/en/products/brands/plaxis}{PLAXIS} &  Other/Proprietary  &  Win & - &  \\ 
     \bottomrule
+   %\insertTableNotes
     \end{tabular}
-\end{table}
 
-\subsection{19}
-\begin{table}[]
-    \centering
-    \begin{tabular}{l|ccc}
-    \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    DESaster & - & - & - \\ 
-    \bottomrule
-    \end{tabular}
+    \begin{tablenotes}\footnotesize
+      \item[1]{ Comment b}
+\item[2]{ Finite-Element based}
+\item[3]{ Finite-Difference based}
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-9}
 \end{table}
+\newline
+\vspace*{1 cm}
+\newline
 
-\subsection{21}
 \begin{table}[]
+    \caption{Response: Computational Fluid Dynamics - Wind}
+    \begin{threeparttable}
     \centering
-    \begin{tabular}{l|ccc}
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
     \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    \href{https://www.uqlab.com/}{UQLab} & - & - & - \\
-    \href{http://muq.mit.edu/}{MUQ} & - & - & - \\
-    \href{http://www.cossan.co.uk/software/cossan-x.php}{COSSAN-X} & - & - & - \\
-    \href{https://dakota.sandia.gov/}{Dakota} & - & - &  Y \\
-    \href{http://www.cossan.co.uk/software/open-cossan-engine.php}{OpenCOSSAN} & - & - & - \\ 
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    \href{https://doi.org/10.5281/zenodo.3462804}{Turbulent Inflow Tool} & - & - & - &  \\ 
     \bottomrule
+   %\insertTableNotes
     \end{tabular}
-\end{table}
 
-\subsection{22}
-\begin{table}[]
-    \centering
-    \begin{tabular}{l|ccc}
-    \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    \href{https://www.tensorflow.org/}{TensorFlow} &  Apache Software  & - & - \\
-    \href{https://docs.microsoft.com/en-us/cognitive-toolkit/}{CNTK} &  MIT  & - & - \\
-    \href{https://keras.io/}{Keras} & - &  MacOS/ Windows/ Linux & - \\
-    \href{https://scikit-learn.org}{Scikit-Learn} & - & - & - \\
-    \href{https://pytorch.org/}{PyTorch} & - &  MacOS/ Windows/ Linux & - \\
-    \href{https://caffe.berkeleyvision.org/}{CAFFE} & - & - & - \\
-    \href{http://deeplearning.net/software/theano/}{Theano} & - & - & - \\ 
-    \bottomrule
-    \end{tabular}
+    \begin{tablenotes}\footnotesize
+      
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-10}
 \end{table}
+\newline
+\vspace*{1 cm}
+\newline
 
-\subsection{25}
 \begin{table}[]
+    \caption{Response: Computational Fluid Dynamics - Water}
+    \begin{threeparttable}
     \centering
-    \begin{tabular}{l|ccc}
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
     \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    \href{http://resilience.colostate.edu/in_core.shtml}{IN-CORE} & - & - & - \\
-    DESaster & - & - & - \\ 
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    \href{https://ihfoam.ihcantabria.com/.}{IHFOAM} & - & - & - &  \\
+    \href{https://www.comsol.com.}{COMSOL} & - & - & - &  \\
+    \href{https://engys.com/.}{H.E.L.Y.X.} & - & - & - &  \\
+    \href{https://mdx.plm.automation.siemens.com/star-ccm-plus.}{S.T.A.R.-C.C.M.+} & - & - & - &  \\
+    \href{https://www.ansys.com/products/fluids/ansys-fluent.}{ANSYS Fluent} &  Other/Proprietary  & - & - &  \\
+    \href{olaflow.github.io}{olaFlow} & - & - & - &  \\
+    \href{https://openfoam.org.}{OpenFOAM} & - & - & - &  \\
+    \href{https://su2code.github.io/.}{SU2} & LGPLv2 &  Mac/ Win/ Lin & - &  \\ 
     \bottomrule
+   %\insertTableNotes
     \end{tabular}
-\end{table}
 
-\subsection{27}
-\begin{table}[]
-    \centering
-    \begin{tabular}{l|ccc}
-    \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    DESaster & - & - & - \\ 
-    \bottomrule
-    \end{tabular}
+    \begin{tablenotes}\footnotesize
+      
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-11}
 \end{table}
+\newline
+\vspace*{1 cm}
+\newline
 
-\subsection{30}
 \begin{table}[]
+    \caption{Performance: Buildings}
+    \begin{threeparttable}
     \centering
-    \begin{tabular}{l|ccc}
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
     \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    \href{https://www.uqlab.com/}{UQLab} & - & - & - \\
-    \href{http://muq.mit.edu/}{MUQ} & - & - & - \\
-    \href{http://www.cossan.co.uk/software/cossan-x.php}{COSSAN-X} & - & - & - \\
-    \href{https://dakota.sandia.gov/}{Dakota} & - & - &  Y \\
-    \href{http://www.cossan.co.uk/software/open-cossan-engine.php}{OpenCOSSAN} & - & - & - \\ 
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    \href{http://mae.cee.illinois.edu/software/software_maeviz.html}{MAEViz} & - & - & - &  \\
+    Hazus 4.2 & - & - & - & \tnotex{2},\tnotex{3} \\
+    \href{https://nheri-simcenter.github.io/pelicun/}{PELICUN} & - &  Mac/ Win/ Lin & - &  \\
+    \href{https://www.hbrisk.com/}{SP3} &  Other/Proprietary  & - & - & \tnotex{1} \\
+    \href{https://femap58.atcouncil.org/pact}{PACT} & - & - & - & \tnotex{1} \\
+    \href{https://simcenter.designsafe-ci.org/research-tools/pbe-application/}{PBE} &  BSD  &  Mac/ Win/ Lin & - &  \\
+    \href{https://github.com/openslat/SLAT}{OpenSLAT} & GPLv3 & - & - &  \\
+    \href{https://www.globalquakemodel.org/openquake}{OpenQuake} & - &  Mac/ Win/ Lin & - &  \\
+    \href{https://ecapra.org/}{CAPRA} & - &  Win & - &  \\ 
     \bottomrule
+   %\insertTableNotes
     \end{tabular}
-\end{table}
 
-\subsection{31}
-\begin{table}[]
-    \centering
-    \begin{tabular}{l|ccc}
-    \toprule
-    Name &  License & Operating system & DesignSafe \\ 
-    \href{https://www.tensorflow.org/}{TensorFlow} &  Apache Software  & - & - \\
-    \href{https://docs.microsoft.com/en-us/cognitive-toolkit/}{CNTK} &  MIT  & - & - \\
-    \href{https://keras.io/}{Keras} & - &  MacOS/ Windows/ Linux & - \\
-    \href{https://scikit-learn.org}{Scikit-Learn} & - & - & - \\
-    \href{https://pytorch.org/}{PyTorch} & - &  MacOS/ Windows/ Linux & - \\
-    \href{https://caffe.berkeleyvision.org/}{CAFFE} & - & - & - \\
-    \href{http://deeplearning.net/software/theano/}{Theano} & - & - & - \\ 
-    \bottomrule
-    \end{tabular}
+    \begin{tablenotes}\footnotesize
+      \item[1]{ FEMA P58 only}
+\item[2]{ HAZUS MH only}
+\item[3]{ Regional level}
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-12}
 \end{table}
+\newline
+\vspace*{1 cm}
+\newline
+
+\begin{table}[]
+    \caption{Performance: Transportation Networks}
+    \begin{threeparttable}
+    \centering
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
+    \toprule
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    \href{https://www.globalquakemodel.org/openquake}{OpenQuake} & - &  Mac/ Win/ Lin & - &  \\
+    Hazus 4.2 & - & - & - & \tnotex{1},\tnotex{2} \\ 
+    \bottomrule
+   %\insertTableNotes
+    \end{tabular}
+
+    \begin{tablenotes}\footnotesize
+      \item[1]{ HAZUS MH only}
+\item[2]{ Regional level}
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-13}
+\end{table}
+\newline
+\vspace*{1 cm}
+\newline
+
+\begin{table}[]
+    \caption{Performance: Water, Sewer, and Gas Pipelines}
+    \begin{threeparttable}
+    \centering
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
+    \toprule
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    WNTR & - & - & - &  \\
+    \href{https://www.epa.gov/water-research/epanet}{EPANET} &  Public Domain & - & - &  \\
+    GIRAFFE & - & - & - &  \\ 
+    \bottomrule
+   %\insertTableNotes
+    \end{tabular}
+
+    \begin{tablenotes}\footnotesize
+      
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-14}
+\end{table}
+\newline
+\vspace*{1 cm}
+\newline
+
+\begin{table}[]
+    \caption{Performance: Electrical Transmission Substations and Lines}
+    \begin{threeparttable}
+    \centering
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
+    \toprule
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    \href{https://matpower.org/}{MatPower} &  BSD  & - & - &  \\
+    \href{https://sourceforge.net/p/electricdss/wiki/Home/}{OpenDSS} & - & - & - &  \\
+    Hazus 4.2 & - & - & - & \tnotex{1},\tnotex{2} \\ 
+    \bottomrule
+   %\insertTableNotes
+    \end{tabular}
+
+    \begin{tablenotes}\footnotesize
+      \item[1]{ HAZUS MH only}
+\item[2]{ Regional level}
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-15}
+\end{table}
+\newline
+\vspace*{1 cm}
+\newline
+
+\begin{table}[]
+    \caption{Recovery: Communities}
+    \begin{threeparttable}
+    \centering
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
+    \toprule
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    DESaster & - & - & - &  \\
+    \href{http://resilience.colostate.edu/in_core.shtml}{IN-CORE} & - & - & - &  \\ 
+    \bottomrule
+   %\insertTableNotes
+    \end{tabular}
+
+    \begin{tablenotes}\footnotesize
+      
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-16}
+\end{table}
+\newline
+\vspace*{1 cm}
+\newline
+
+\begin{table}[]
+    \caption{Recovery: Housing}
+    \begin{threeparttable}
+    \centering
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
+    \toprule
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    DESaster & - & - & - &  \\ 
+    \bottomrule
+   %\insertTableNotes
+    \end{tabular}
+
+    \begin{tablenotes}\footnotesize
+      
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-18}
+\end{table}
+\newline
+\vspace*{1 cm}
+\newline
+
+\begin{table}[]
+    \caption{Cross-Cutting: Uncertainty Quantification}
+    \begin{threeparttable}
+    \centering
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
+    \toprule
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    \href{http://www.cossan.co.uk/software/cossan-x.php}{COSSAN-X} & - & - & - &  \\
+    \href{http://muq.mit.edu/}{MUQ} & - & - & - &  \\
+    \href{https://www.uqlab.com/}{UQLab} & - & - & - &  \\
+    \href{http://www.cossan.co.uk/software/open-cossan-engine.php}{OpenCOSSAN} & - & - & - &  \\
+    \href{https://dakota.sandia.gov/}{Dakota} & - & - &  Y &  \\ 
+    \bottomrule
+   %\insertTableNotes
+    \end{tabular}
+
+    \begin{tablenotes}\footnotesize
+      
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-20}
+\end{table}
+\newline
+\vspace*{1 cm}
+\newline
+
+\begin{table}[]
+    \caption{Cross-Cutting: Artificial Intelligence and Machine Learning}
+    \begin{threeparttable}
+    \centering
+    %\begin{tabular}{l|cccc}
+    \begin{tabular}{p{3cm}|cccc}
+    \toprule
+    Name &  License & Operating system & DesignSafe & Notes \\ 
+    \href{https://www.tensorflow.org/}{TensorFlow} &  Apache Software  & - & - &  \\
+    \href{http://deeplearning.net/software/theano/}{Theano} & - & - & - &  \\
+    \href{https://scikit-learn.org}{Scikit-Learn} & - & - & - &  \\
+    \href{https://keras.io/}{Keras} & - &  Mac/ Win/ Lin & - &  \\
+    \href{https://pytorch.org/}{PyTorch} & - &  Mac/ Win/ Lin & - &  \\
+    \href{https://caffe.berkeleyvision.org/}{CAFFE} & - & - & - &  \\
+    \href{https://docs.microsoft.com/en-us/cognitive-toolkit/}{CNTK} &  MIT  & - & - &  \\ 
+    \bottomrule
+   %\insertTableNotes
+    \end{tabular}
+
+    \begin{tablenotes}\footnotesize
+      
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab:app-21}
+\end{table}
+\newline
+\vspace*{1 cm}
+\newline

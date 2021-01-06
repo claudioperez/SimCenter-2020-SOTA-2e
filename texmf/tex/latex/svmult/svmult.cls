@@ -689,10 +689,12 @@ passing it to article class \MessageBreak
                        {12\p@}% \p@lus 4\p@ \@minus 4\p@}%
                        {\normalfont\normalsize\subsubsecstyle
                         \rightskip=\z@ \@plus 8em\pretolerance=10000 }}
-\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
-                       {-18\p@}% \p@lus -4\p@ \@minus -4\p@}%
+\renewcommand\paragraph{\@startsection{paragraph}%
+                       {4}%level
+                       {\z@}%indent
+                       {-18\p@}% \p@lus -4\p@ \@minus -4\p@}%beforeskip
                        {4\p@}% \p@lus 4\p@ \@minus 4\p@}%
-                       {\noindent\bfseries\normalsize
+                       {\raggedright\bfseries\normalsize
                         \rightskip=\z@ \@plus 8em\pretolerance=10000 }}
 \renewcommand\subparagraph{\@startsection{paragraph}{4}{\z@}%
                        {-18\p@}% \p@lus -4\p@ \@minus -4\p@}%

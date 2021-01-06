@@ -7,7 +7,7 @@ SHELL = /bin/bash -O globstar
 export TEXINPUTS:=./texmf//:${TEXINPUTS}
 export BSTINPUTS:=./texmf//:${BSTINPUTS}
 
-.PHONY: tex all bib tables images
+.PHONY: tex all bib tables images idx
 
 all:
 	make idx
