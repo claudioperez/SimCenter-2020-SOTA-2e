@@ -469,7 +469,7 @@ passing it to article class \MessageBreak
 \newif\if@mainmatter \@mainmattertrue
 \newcommand\frontmatter{\startnewpage
             \@mainmatterfalse\pagenumbering{roman}
-            \setcounter{page}{5}}
+            \setcounter{page}{3}}
 %
 \newcommand\mainmatter{\clearemptydoublepage
             \@mainmattertrue
