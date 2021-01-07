@@ -416,7 +416,7 @@ passing it to article class \MessageBreak
     \hyphenpenalty \@M
     \interlinepenalty\@M
     \ifnum \c@secnumdepth >-2\relax
-      \normalfont\partnumsize\partnumstyle %\vrule height 34pt width 0pt depth 0pt%
+      \normalfont\partnumsize\partnumstyle \vrule height 34pt width 0pt depth 0pt%
      \partname\ \thepart %\llap{\smash{\lower 5pt\hbox to\textwidth{\hrulefill}}}
     \par
     \vskip 2\p@ \fi
@@ -438,8 +438,8 @@ passing it to article class \MessageBreak
    \normalfont\partsize\partstyle
    #1\par}\@endpart}
 %
-\newenvironment{partbacktext}{\def\@endpart{\vfil\newpage}}
-{\thispagestyle{empty} \newpage}
+\newenvironment{partbacktext}{\def\@endpart{\vfil}}%\vfil\newpage}}
+{\thispagestyle{empty}\newpage}
 %
 % (re)define sectioning
 \setcounter{secnumdepth}{3}

@@ -53,3 +53,5 @@ images:
 %.pdf: %.png
 	echo '$<' '$@'
 	convert '$<' -density 300 -units PixelsPerInch '$@'
+
+

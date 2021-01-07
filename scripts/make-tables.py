@@ -62,6 +62,8 @@ print("""
 % This file was generated using the Python script `scripts/make-tables.py`,
 % which can be invoked by running `make tables` at the command line.\n
 % Claudio M. Perez
+
+\\begin{center}
 """)
 
 for i, lst in enumerate(index[1:23]):
@@ -95,7 +97,7 @@ for i, lst in enumerate(index[1:23]):
         OS = "/".join(o.rsplit("::",1)[-1][:4] for o in sorted(OS)) if OS else "-"
         # DesignSafe
         DS = [tg["tag"] for tg in item["tags"] if "DesignSafe" in tg["tag"]]
-        DS = DS[0].split("::")[-1].replace("True","Y") if DS else "-"
+        DS = DS[0].split("::")[-1].replace("True","\\checkmark") if DS else "-"
         # Comments
         keys = add_notes(notes, item["tags"])
         NT = ",".join(f"\\tnotex{{{k}}}" for k in keys)
@@ -119,4 +121,6 @@ for i, lst in enumerate(index[1:23]):
 
     if body: # only print if there are items in the table body
         print(head,"".join(body),tail)
+
+print("\\end{center}")
 
