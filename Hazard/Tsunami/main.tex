@@ -26,6 +26,7 @@
 % used in your e-mail or web address
 %
 \maketitle
+\label{chapter:haz_tsunami}
 
 The simulation tools used to model tsunami inundation can generally be categorized as either two-dimensional or three-dimensional models. Three-dimensional models solve Reynolds average Navier-Stokes (RANS) or Large Eddy Simulation (LES) equations numerically using the CFD techniques introduced in Chapter \ref{chapter:res_water}. Two-dimensional models often solve a different category of governing equations derived from the three-dimensional Navier-Stokes (NS) equation by integrating in the vertical dimension, e.g., shallow water equations and Boussinesq wave equations where the two dimensions can be characterized as latitude and longitude, with additional techniques available in some applications to consider variations in the vertical direction. Because such equations are computationally much easier to solve than the RANS and LES equations, they are broadly used in large-scale modeling of geophysical flows, e.g. tsunami, storm surge, and flooding. Two-dimensional models are used in those cases where computational efficiency is a factor. Examples include building an early warning system, which requires tsunami modeling to be done as quickly as possible after an earthquake, versus a probabilistic assessment that often requires thousands of computational simulations.
 
