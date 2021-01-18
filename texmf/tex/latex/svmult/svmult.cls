@@ -1311,7 +1311,10 @@ to\z@{\kern0.55\wd0\vrule\@height0.45\ht0\hss}\box0}}}}
 \def\@listI{\leftmargin\leftmargini
         \parsep=\parskip
         \topsep=\medskipamount
-        \itemsep=\parskip \advance\itemsep by -\parsep}
+        %\itemsep=\parskip 
+        %\advance\itemsep by 2mm}
+        %\advance\itemsep by -\parsep}
+        \itemsep=2mm}
 \let\@listi\@listI
 \@listi
 
@@ -1320,8 +1323,9 @@ to\z@{\kern0.55\wd0\vrule\@height0.45\ht0\hss}\box0}}}}
         \advance\labelwidth by -\labelsep
         \parsep=\parskip
         \topsep=6\p@
-        \itemsep=\parskip
-        \advance\itemsep by -\parsep}
+        \itemsep=2mm}
+        %\itemsep=\parskip
+        %\advance\itemsep by -\parsep}
 
 \def\@listiii{\leftmargin\leftmarginiii
         \labelwidth\leftmarginiii\advance\labelwidth by -\labelsep
