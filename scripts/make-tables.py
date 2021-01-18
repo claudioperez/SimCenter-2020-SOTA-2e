@@ -79,9 +79,9 @@ for i, lst in enumerate(index[1:23]):
     \\begin{{threeparttable}}
     \\centering
     %\\begin{{tabular}}{{l|cccc}}
-    \\begin{{tabular}}{{p{{3cm}}|cccc}}
+    \\begin{{tabular}}{{p{{3cm}}|ccccc}}
     \\toprule
-    Name &  License & Operating system & DesignSafe & Notes \\\\"""
+    Name &  License & Platforms & Prog. Lang & DesignSafe & Notes \\\\"""
     for j in lst:
         try: item = [k for k in items if k["citekey"]==j][0]
         except: continue
@@ -98,12 +98,15 @@ for i, lst in enumerate(index[1:23]):
         # DesignSafe
         DS = [tg["tag"] for tg in item["tags"] if "DesignSafe" in tg["tag"]]
         DS = DS[0].split("::")[-1].replace("True","\\checkmark") if DS else "-"
+        # Prog. Lang
+        PL = [tag["tag"] for tag in item["tags"] if "Programming" in tag["tag"]]
+        PL = "/".join(o.rsplit("::",1)[-1] for o in sorted(PL)) if PL else "-"
         # Comments
         keys = add_notes(notes, item["tags"])
         NT = ",".join(f"\\tnotex{{{k}}}" for k in keys)
         if item["itemType"] == "computerProgram":
             body = body.union({f"""
-    {name} & {lic} & {OS} & {DS} & {NT} \\\\"""})
+    {name} & {lic} & {OS} & {PL} & {DS} & {NT} \\\\"""})
     tail = f"""
     \\bottomrule
    %\\insertTableNotes

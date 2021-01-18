@@ -7,7 +7,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[graybox, envcountchap, tocaftauthskip, 12pt]{svmult}
+\documentclass[
+graybox,
+envcountchap,
+tocaftauthskip,
+12pt
+]{svmult}
+
 % \documentclass{simcenterdocumentation}
 
 \usepackage{microtype}
@@ -70,7 +76,7 @@ uniquelist=false
 \usepackage{threeparttable}
 
 \usepackage{hyperref}
-\hypersetup{colorlinks=true} % use for debugging; helps identify raw citations.
+\hypersetup{colorlinks=false} % use true for debugging; helps identify raw citations.
 
 % see the list of further useful packages in the Reference Guide
 
@@ -86,7 +92,8 @@ uniquelist=false
 \input{editor/prgmstyle.tex}
 
 \usepackage{tikz}
-\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+
 \begin{document}
 
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
