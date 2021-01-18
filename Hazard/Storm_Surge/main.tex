@@ -90,30 +90,31 @@ The most common model used is Simulating WAves Nearshore (SWAN), which solves eq
 Even when coupled with an appropriate nearshore wave model, surge models simulate only the storm-surge elevation and not the additional impact of wave runup, which is particularly important for predicting losses to buildings and infrastructure in a storm event. Supplementary wave runup simulations are required to capture the interaction of the waves with the shoreline and any coastal protective features along coastal transects. Two types of models are common:
 
 \begin{enumerate}
-    \item Wave-Group Envelope models, where the effects of unsteady wave groups on long-wave surge and runup drive time-varying water levels in the nearshore and at the moving shoreline. These models do not model individual wave runup, which can be important in certain instances. By far the most common model of this type is XBeach \citep{roelvink2009modelling}, which is also commonly used to estimate morphological evolution over short time periods. Models of this type require O(10m) resolution to resolve important processes, requiring heavier computational requirements than both spectral wave and surge models for a similar domain. Thus, they are generally limited to km-to-tens of km-scales for simulations.
-    \item Wave-resolving models define individual points on the water surface to model the evolution of the detailed wave shape over arbitrary bathymetry. The most common models of this type use different versions of Boussinesq models (\cite{lynett2002modeling,kennedy2000boussinesq}; and \cite{nwogu2010infragravity}), which are derived from Taylor series expansions about the long wave limit. Wave-resolving models can simulate both wave group runup and runup from individual waves, but may require resolution of O(5m) or finer in the nearshore. Although these models may be used to simulate nearshore behavior of entire storms, they are quite computationally expensive (far more so than wave-group envelope models), and often one-dimensional transects are chosen for representative simulations. Transect locations are generally selected by segmenting the defined coastline in the areas of interest and then selecting the transect density proportional to computational demand. Each transect is then discretized to capture the site-specific bathymetry (offshore) and topography (onshore) along its length. Moreover, transects must accurately capture the current condition of coastal protective features, e.g., dunes, in order to effectively predict the total runup inland. To estimate the wave runup overland, inputs from the surge and spectral wave models are fed into a one-dimensional Boussinesq model executed at the pre-selected transects  \citep{demirbilek2009wave}. 
+    \item Wave-Group Envelope models, where the effects of unsteady wave groups on long-wave surge and runup drive time-varying water levels in the nearshore and at the moving shoreline. These models do not model individual wave runup, which can be important in certain instances. By far the most common model of this type is XBeach \citep{roelvink2009modelling}, which is also commonly used to estimate morphological evolution over short time periods. Models of this type require O(10m) resolution to resolve important processes, requiring more computational resources than both spectral wave and surge models for a similar domain. Thus, they are generally limited to km-to-tens of km-scales for simulations.
+    
+    \item Wave-resolving models define individual points on the water surface to model the evolution of the detailed wave shape over arbitrary bathymetry. The most common models of this type use different versions of Boussinesq models \citep{lynett2002modeling, kennedy2000boussinesq, nwogu2010infragravity}, which are derived from Taylor series expansions about the long wave limit. Wave-resolving models can simulate both wave group runup and runup from individual waves, but may require resolution of O(5m) or finer in the nearshore. Although these models may be used to simulate nearshore behavior of entire storms, they are computationally very expensive (far more so than wave-group envelope models), and often one-dimensional transects are chosen for representative simulations. Transect locations are generally selected by segmenting the defined coastline in the areas of interest and then selecting the transect density proportional to computational demand. Each transect is then discretized to capture the site-specific bathymetry (offshore) and topography (onshore) along its length. Moreover, transects must accurately capture the current condition of coastal protective features, e.g., dunes, in order to effectively predict the total runup inland. To estimate the wave runup overland, inputs from the surge and spectral wave models are fed into a one-dimensional Boussinesq model executed at the pre-selected transects  \citep{demirbilek2009wave}. 
 \end{enumerate}
 
 \subsection{Surrogate Modeling Approach}
 
-Given the high degree of sophistication and computational resources required to execute just one high-fidelity simulation (e.g., an ADCIRC+STWAVE/SWAN run), alternative simulation tools have been developed recently to enable a wider range of users to employ these models for hazard characterization, risk assessment, and design of coastal protective strategies. Most notably, surrogate modeling approaches can efficiently evaluate hurricane wave and surge responses by leveraging databases of existing high-fidelity simulations normally driven by a collection of historical and synthetic hurricane tracks \citep{usace2015north}. This is made possible by formulating a simplified description of a storm scenario by a small number of model parameters corresponding to its characteristics at landfall. The scenarios in the database are then parameterized with respect to this model parameter vector and ultimately provide an input--output dataset. Because the geospatial representation often covers a regional coastline (typically represented by a large number of nodes) and resolves the coastal hazards at different times during the hurricane's history, the dataset is often high dimensional. After correcting for any dry nodes at inland locations, the surrogate model is then built to approximate this input--output relationship. 
+Given the high degree of sophistication and large amount of computational resources required to execute just one high-fidelity simulation (e.g., an ADCIRC+STWAVE/SWAN run), alternative simulation tools have been developed recently to enable a wider range of users to employ these models for hazard characterization, risk assessment, and design of coastal protective strategies. Most notably, surrogate modeling approaches can efficiently evaluate hurricane wave and surge responses by leveraging databases of existing high-fidelity simulations normally driven by a collection of historical and synthetic hurricane tracks \citep{usace2015north}. This is made possible by formulating a simplified description of a storm scenario by a small number of model parameters corresponding to its characteristics at landfall. The scenarios in the database are then parameterized with respect to this model parameter vector and ultimately provide an input--output dataset. Because the geospatial representation often covers a regional coastline (typically represented by a large number of nodes) and resolves the coastal hazards at different times during the hurricane's history, the dataset is often high dimensional. After correcting for any dry nodes at inland locations, the surrogate model is then built to approximate this input--output relationship. 
 
 Although the initial implementations of the surrogate modeling approach relied upon a moving least-squares-response surface methodology, more recent implementations for natural hazard risk assessment now employ a Kriging metamodel for this purpose \citep{jia2013kriging}. To further reduce the computational burden pertaining to both speed of execution---and more importantly memory requirements---this approach is coupled with principal component analysis (PCA) as a dimensional reduction technique. The metamodel is then developed in this low-dimensional latent space (in this case below 100), with the predictions transformed back to the original space for visualization purposes. This PCA implementation results in very large computational savings, which is necessary to enable the evaluation of a large ensemble of scenarios as required for a probabilistic evaluation while circumventing the need for HPC resources \citep{jia2013kriging}. Validation of these surrogate models using leave-one-out cross validation \citep{taflanidis2017advances} suggested high accuracy, with coefficient of determination close to 0.96 and a correlation coefficient close to 98\%. By permitting rapid evaluation of alternate storm scenarios, surrogate models offer an effective way to communicate simulation results to urban planners and emergency managers. One such implementation is a software system developed to assess storm surge risks on the coast of New Jersey \citep{njcoast2018implementation}.
 
 \section{Required Inputs and Resulting Outputs}
 \label{sec:storm_surge_io}
 
-High-fidelity computational simulations of coastal hazards require: (1) storm tracking information, including the relevant description of the hurricane wind and pressure fields to drive the model; (2) the topography and bathymetry along the coastline; and (3) the land use/land cover data for the simulation of wave runup on shore. The simulations are inherently sensitive to assumptions made regarding tides at the time of landfall. The coupling of a storm surge + nearshore wave + wave runup model will yield geospatially distributed, time-dependent responses, i.e., the mean water elevation, maximum water elevation, maximum water depth, and significant wave height (or limit of moderate wave action). Such responses can be generated either by the coupling of the aforementioned high-fidelity models or a surrogate model tuned to a database of results from these models. A brief summary of specific inputs required for storm surge models, the wave runup models, and the related surrogate models are as follows:
+High-fidelity computational simulations of coastal hazards require: (1) storm track information, including the relevant description of the hurricane wind and pressure fields to drive the model; (2) the topography and bathymetry along the coastline; and (3) the land use/land cover data for the simulation of wave runup on shore. The simulations are inherently sensitive to assumptions made regarding tides at the time of landfall. The coupling of a storm surge + nearshore wave + wave runup model will yield geospatially distributed, time-dependent responses, i.e., the mean water elevation, maximum water elevation, maximum water depth, and significant wave height (or limit of moderate wave action). Such responses can be generated either by the coupling of the aforementioned high-fidelity models or a surrogate model tuned to a database of results from these models. A brief summary of specific inputs required for storm surge models, the wave runup models, and the related surrogate models are as follows:
 
 \paragraph{Storm surge models} All storm-surge models require variations of the same inputs, potentially in much different forms. All models require:
 
 \begin{itemize}
     \item Spatial and temporal information about wind fields and pressure. This may be in the form of gridded data or in the form of parameterized wind and pressure fields;
-\vspace{2mm}
+
     \item Bathymetry and topography over the entire domain;
-\vspace{2mm}
+
     \item Frictional information, whether in the form of direct frictional coefficients or roughness, or land use/land cover information that is converted to frictional resistance; and
-\vspace{2mm}
+
     \item Boundary conditions at the domain limits.
 \end{itemize}
 
@@ -122,7 +123,6 @@ Many models will also require:
 
 \begin{itemize}
     \item Information on tidal forcing when real dates are being simulated; and
-        \vspace{2mm}
     \item Computational settings, particularly for parallel systems.
 \end{itemize}
 
@@ -133,13 +133,13 @@ Many models will also require:
 
 \begin{enumerate}
     \item Reference location (latitude, longitude);
-        \vspace{2mm}
+
     \item Track heading (angle);
-        \vspace{2mm}
+
     \item Central pressure (or pressure difference);
-        \vspace{2mm}
+
     \item Forward speed; and
-        \vspace{2mm}
+
     \item Radius of maximum winds.
 \end{enumerate}
 
@@ -161,17 +161,17 @@ The execution environments are briefly summarized below, but only for models inc
 \section{Major Research Gaps}
 \label{sec:storm_surge_gaps}
 
-Although many research topics regarding storm-surge models remain to be solved, the major issue with storm surge models is that the fast models are less accurate, while accurate models require enormous amounts of computation runtime. Thus, it remains impossible to run the most accurate models for the hundreds or thousands of simulations required to obtain surge probabilities prior to a landfalling hurricane or to simulate very long climatological records. Three methodologies hold the potential to improve the accuracy/speed trade-off:
+Although many research topics regarding storm-surge models remain to be solved, the major issue with storm surge models is that the fast models are less accurate, while accurate models require enormous amounts of computation time. Thus, it remains impossible to run the most accurate models for the hundreds or thousands of simulations required to obtain surge probabilities prior to a landfalling hurricane or to simulate very long climatological records. Three methodologies hold the potential to improve the accuracy/speed trade-off:
 
 \begin{itemize}
     \item Surrogate or reduced models that make use of previous high-fidelity model runs to develop simpler and faster models for new cases. This was discussed earlier; AI also falls into this broad category;
-        \vspace{2mm}
+
     \item Improved computational schemes that improve parallel performance for slower models, or improve accuracy for faster models; and
-        \vspace{2mm}
+
     \item Improved theoretical schemes to increase the accuracy on coarse grids. The subgrid model corrections fall into this category and have been shown to increase accuracy greatly \citep{kennedy2019subgrid}.
 \end{itemize}
 
-The next major research gap is difficult to address but extremely important as a future research goal: large-scale surge models that account for morphological evolution during storms. Dune or beach erosion and levee failure are two examples of morphological feedbacks that may have a significant effect on surge inundation; estimates of post-storm erosion are also greatly desired. This has been a long-term goal with little progress.
+The next major research gap is difficult to address but it is extremely important as a future research goal: large-scale surge models that account for morphological evolution during storms. Dune or beach erosion and levee failure are two examples of morphological feedbacks that may have a significant effect on surge inundation; estimates of post-storm erosion are also greatly desired. This has been a long-term goal with little progress.
 
 In conclusion, whether employing these high-fidelity models or a companion surrogate model, the resulting time-evolving water depth and velocity must translate into loads on buildings and infrastructure. In this regard, these models face similar limitations as wind-field models given the complexity of interactions with their surroundings. Accurately capturing the physics of the flow overland and the effect of its interaction with the built environment on the load description remains a challenging problem, even without further accounting for the effects of debris transported in the flow. Identifying means to reasonably determine the impact of these interactions on the load description---without having to support an intensive CFD investigation---will enable a wider range of researchers to evaluate the impacts of coastal hazards. 
 
