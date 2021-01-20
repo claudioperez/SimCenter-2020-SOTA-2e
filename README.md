@@ -2,6 +2,7 @@
 
 ## Parsing Citations
 
+
 1. Run `parse-bib.sh` on text files that include a raw bibliography at the end to create a `.bib` file.
 2. Import generated `.bib` to Zotero and clean;
     - Merge duplicates

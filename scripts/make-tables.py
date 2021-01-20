@@ -119,9 +119,9 @@ for i, lst in enumerate(index[1:23]):
     \\end{{threeparttable}}
     \\label{{tab:app-{i}}}
 \\end{{table}}
-\\newline
+%\\newline
 \\vspace*{{1 cm}}
-\\newline"""
+%\\newline"""
 
     if body: # only print if there are items in the table body
         print(head,"".join(body),tail)
