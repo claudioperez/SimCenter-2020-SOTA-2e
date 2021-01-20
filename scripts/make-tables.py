@@ -82,7 +82,7 @@ for i, lst in enumerate(index[1:23]):
     \\begin{{tabular}}{{p{{3cm}}|ccccc}}
     %\\begin{{tabular}}{{l|ccccc}}
     \\toprule
-    Name &  License & Platforms & Prog. Lang & DesignSafe & Notes \\\\"""
+    Name &  License & Platforms & Prog. Lang. & DesignSafe & Notes \\\\"""
     for j in lst:
         try: item = [k for k in items if k["citekey"]==j][0]
         except: continue
