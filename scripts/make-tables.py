@@ -94,10 +94,10 @@ for i, lst in enumerate(index[1:23]):
     \\begin{{threeparttable}}
     \\centering
     %\\begin{{tabular}}{{l|cccc}}
-    \\begin{{tabular}}{{p{{3cm}}|ccccc}}
+    \\begin{{tabular}}{{p{{4cm}}|cccc}}
     %\\begin{{tabular}}{{l|ccccc}}
     \\toprule
-    Name &  License & Platforms & Prog. Lang. & DesignSafe & Notes \\\\"""
+    Name &  License & Platforms & Prog. Lang. & DesignSafe \\\\"""
     for j in lst:
         try: item = [k for k in items if k["citekey"]==j][0]
         except: continue
@@ -123,7 +123,7 @@ for i, lst in enumerate(index[1:23]):
         NT = r"\textsuperscript{" + ",".join(f"{k}" for k in keys) + "}"
         if item["itemType"] == "computerProgram":
             body = body.union({f"""
-    {name} & {lic} & {OS} & {PL} & {DS} & {NT} \\\\"""})
+    {name} {NT} & {lic} & {OS} & {PL} & {DS}  \\\\"""})
     tail = f"""
     \\bottomrule
    %\\insertTableNotes
