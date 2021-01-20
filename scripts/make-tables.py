@@ -94,7 +94,7 @@ for i, lst in enumerate(index[1:23]):
     \\begin{{threeparttable}}
     \\centering
     %\\begin{{tabular}}{{l|cccc}}
-    \\begin{{tabular}}{{p{{4cm}}|cccc}}
+    \\begin{{tabular}}{{p{{35mm}}|p{{45mm}}ccc}}
     %\\begin{{tabular}}{{l|ccccc}}
     \\toprule
     Name &  License & Platforms & Prog. Lang. & DesignSafe \\\\"""
