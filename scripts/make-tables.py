@@ -104,7 +104,8 @@ for i, lst in enumerate(index[1:23]):
         PL = "/".join(o.rsplit("::",1)[-1] for o in sorted(PL)) if PL else "-"
         # Comments
         keys = add_notes(notes, item["tags"])
-        NT = ",".join(f"\\tnotex{{{k}}}" for k in keys)
+        #NT = ",".join(f"\\tnotex{{{k}}}" for k in keys)
+        NT = r"\textsuperscript{" + ",".join(f"{k}" for k in keys) + "}"
         if item["itemType"] == "computerProgram":
             body = body.union({f"""
     {name} & {lic} & {OS} & {PL} & {DS} & {NT} \\\\"""})
@@ -113,14 +114,15 @@ for i, lst in enumerate(index[1:23]):
    %\\insertTableNotes
     \\end{{tabular}}
 
-    \\begin{{tablenotes}}\\footnotesize
+    \\begin{{tablenotes}}
+      \\footnotesize
       { NL.join(f'{CMD("item")}[{num}]{{{text}}}' for text, num in notes.items())  }
     \\end{{tablenotes}}
     \\end{{threeparttable}}
     \\label{{tab:app-{i}}}
 \\end{{table}}
 %\\newline
-\\vspace*{{1 cm}}
+\\vspace*{{2cm}}
 %\\newline"""
 
     if body: # only print if there are items in the table body
