@@ -79,8 +79,8 @@ for i, lst in enumerate(index[1:23]):
     \\begin{{threeparttable}}
     \\centering
     %\\begin{{tabular}}{{l|cccc}}
-    %\\begin{{tabular}}{{p{{3cm}}|ccccc}}
-    \\begin{{tabular}}{{l|ccccc}}
+    \\begin{{tabular}}{{p{{3cm}}|ccccc}}
+    %\\begin{{tabular}}{{l|ccccc}}
     \\toprule
     Name &  License & Platforms & Prog. Lang & DesignSafe & Notes \\\\"""
     for j in lst:
