@@ -58,6 +58,21 @@ def add_notes(notes, tags)->dict:
             keys.append(notes[text])
     return keys
 
+
+def tablenotes(notes):
+    if lst:
+        return f"""
+    \\begin{{tablenotes}}
+      \\footnotesize
+{ (NL+"      ").join(f'{CMD("item")}[{num}]{{{text}}}' for text, num in notes.items())  }
+    \\end{{tablenotes}}
+"""
+    else:
+        return ""
+
+
+
+
 print("""
 % This file was generated using the Python script `scripts/make-tables.py`,
 % which can be invoked by running `make tables` at the command line.\n
@@ -113,11 +128,7 @@ for i, lst in enumerate(index[1:23]):
     \\bottomrule
    %\\insertTableNotes
     \\end{{tabular}}
-
-    \\begin{{tablenotes}}
-      \\footnotesize
-      { NL.join(f'{CMD("item")}[{num}]{{{text}}}' for text, num in notes.items())  }
-    \\end{{tablenotes}}
+    {tablenotes(notes)}
     \\end{{threeparttable}}
     \\label{{tab:app-{i}}}
 \\end{{table}}
