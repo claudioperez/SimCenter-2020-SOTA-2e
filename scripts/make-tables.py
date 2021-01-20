@@ -18,7 +18,8 @@ python3 scripts/make-tables.py > editor/tables.tex
 import re
 import yaml
 
-
+# These are useful in nested formatted strings where backslashes
+# raise a syntax error
 CMD = lambda cmd: rf"\{cmd}"
 NL = "\n"
 
@@ -95,7 +96,7 @@ for i, lst in enumerate(index[1:23]):
     \\begin{{threeparttable}}
     \\centering
     %\\begin{{tabular}}{{l|cccc}}
-    \\begin{{tabular}}{{p{{35mm}}|p{{45mm}}ccc}}
+    \\begin{{tabular}}{{p{{35mm}}|cccc}}
     %\\begin{{tabular}}{{l|ccccc}}
     \\toprule
     Name &  License & Platforms & Prog. Lang. & DesignSafe \\\\"""
