@@ -60,11 +60,11 @@ def add_notes(notes, tags)->dict:
 
 
 def tablenotes(notes):
-    if lst:
+    if notes:
         return f"""
     \\begin{{tablenotes}}
       \\footnotesize
-{ (NL+"      ").join(f'{CMD("item")}[{num}]{{{text}}}' for text, num in notes.items())  }
+      { (NL+"      ").join(f'{CMD("item")}[{num}]{{{text}}}' for text, num in notes.items())  }
     \\end{{tablenotes}}
 """
     else:
