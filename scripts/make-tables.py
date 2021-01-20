@@ -18,6 +18,7 @@ python3 scripts/make-tables.py > editor/tables.tex
 import re
 import yaml
 
+
 CMD = lambda cmd: rf"\{cmd}"
 NL = "\n"
 
@@ -64,7 +65,7 @@ def tablenotes(notes):
         return f"""
     \\begin{{tablenotes}}
       \\footnotesize
-      { (NL+"      ").join(f'{CMD("item")}[{num}]{{{text}}}' for text, num in notes.items())  }
+      { (NL+"      ").join(f'{CMD("item")}[{num}]{{{text.replace("&",CMD("&"))}}}' for text, num in notes.items())  }
     \\end{{tablenotes}}
 """
     else:
