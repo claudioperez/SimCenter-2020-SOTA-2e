@@ -12,14 +12,12 @@
 % your contribution title if the original one is too long
 \author{
     \textbf{Michael Motley}
-    \and Arindam Chowdhuri
-    \and Catherine Gorlé
-    \and Ajay Harish
-    \and Andrew Kennedy
-    \and Seung Jae Lee
-    \and Patrick J. Lynett}
+    with contributions by Ajay B. Harish and Andrew Winter,
+    \newline
+    along with review comments and suggestions by Arindam Chowdhuri, Catherine Gorlé, Andrew Kennedy, and Seung Jae Lee
+}
 \tocauthor{}
-\authorrunning{Motley et al.}
+\authorrunning{Motley}
 % Use \authorrunning{Short Title} for an abbreviated version of
 % your contribution title if the original one is too long
 %\institute{Name of First Author \at Name, Address of Institute, %\email{name@email.address}
@@ -31,9 +29,9 @@
 %
 \maketitle
 
-Computational Fluid Dynamics (CFD) uses numerical methods to solve governing equations that arise in fluid mechanics. While the previous section focused on gaseous fluids (e.g., air), here we focus on applications of CFD for liquid fluids (e.g., water), although modeling of the water's free surface arises in many situations, especially those around natural hazard modeling as it requires modeling the air, the fluid, and the interface between the two. For water, the standard governing equations are the incompressible Navier--Stokes (NS) equations \citep{Darrigol2005navier}). These equations describe the motion of viscous fluid substances; their solution provides much of the useful information for natural hazards engineering (NHE) problems, e.g., the current speed of the flow and fluid pressures on built infrastructure.
+Computational Fluid Dynamics (CFD) uses numerical methods to solve governing equations that arise in fluid mechanics. While the previous section focused on gaseous fluids (e.g., air), here we focus on applications of CFD for liquid fluids (e.g., water), although modeling of the water's free surface arises in many situations, especially those around natural hazard modeling as it requires modeling the air, the fluid, and the interface between the two. For water, the standard governing equations are the incompressible Navier--Stokes (NS) equations \citep{Darrigol2005navier}. These equations describe the motion of viscous fluid substances; their solution provides much of the useful information for natural hazards engineering (NHE) problems, e.g., the current speed of the flow and fluid pressures on built infrastructure.
 
-Solving NS equations without the use of a turbulence model is often referred to as direct numerical simulation (DNS)   \cite{Orszag1970DNS}), in which the whole range of spatial and temporal scales of the turbulence must be resolved. As a result, the expense of using extremely small grid sizes and time steps is unaffordable in many practical engineering systems, especially when the Reynolds number---which indicates the intensity of turbulence---is high. To accommodate these issues, some variants of NS equations are often used in practice. The two most popular approaches are Reynolds-averaged Navier--Stokes equations referred to as RANS equations  \cite{Reynolds1895RANS, Chou1945RANS}) and large eddy simulation (LES)  \cite{Deardorff1970LES})
+Solving NS equations without the use of a turbulence model is often referred to as direct numerical simulation (DNS,   \cite{Orszag1970DNS}), in which the whole range of spatial and temporal scales of the turbulence must be resolved. As a result, the expense of using extremely small grid sizes and time steps is unaffordable in many practical engineering systems, especially when the Reynolds number---which indicates the intensity of turbulence---is high. To accommodate these issues, some variants of NS equations are often used in practice. The two most popular approaches are Reynolds-averaged Navier--Stokes equations referred to as RANS equations  \citep{Reynolds1895RANS, Chou1945RANS} and large eddy simulation (LES, \cite{Deardorff1970LES})
 
 The two models, while still able to give satisfactory approximations to the turbulence in the fluid, are much cheaper than DNS because they use new model equations to describe turbulent energy dissipation. These equations arise from the addition of new variables into the modified governing equations that result from the averaging and filtering processes to estimate turbulent phenomena. These unknown variables are typically related to known quantities such as the velocity gradient. 
 
