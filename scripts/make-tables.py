@@ -91,13 +91,12 @@ for i, lst in enumerate(index[1:23]):
     notes = {} # text for footnotes
 
     head = f"""
-\\begin{{table}}[]
+\\begin{{table}}
     \\caption{{{section_names[i+1]}}}
     \\begin{{threeparttable}}
     \\centering
     %\\begin{{tabular}}{{l|cccc}}
     \\begin{{tabular}}{{p{{35mm}}|cccc}}
-    %\\begin{{tabular}}{{l|ccccc}}
     \\toprule
     Name &  License & Platforms & Prog. Lang. & DesignSafe \\\\"""
     for j in lst:
@@ -134,7 +133,6 @@ for i, lst in enumerate(index[1:23]):
     \\end{{threeparttable}}
     \\label{{tab:app-{i}}}
 \\end{{table}}
-%\\newline
 \\vspace*{{2cm}}
 %\\newline"""
 

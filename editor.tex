@@ -1,20 +1,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%% editor.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% sample root file for the contributions of a "contributed volume"
+% root file for the contributions of a "contributed volume"
 %
-% Use this file as a template for your own input.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[
 graybox,
 envcountchap,
 tocaftauthskip,
 12pt
 ]{svmult}
-
-% \documentclass{simcenterdocumentation}
 
 \usepackage{microtype}
 
@@ -27,9 +22,6 @@ tocaftauthskip,
 }
 
 %% set the reference style
-% \usepackage{natbib}
-% \bibliographystyle{abbrvnat}
-% \setcitestyle{authoryear,open={(},close={)}}
 \usepackage{nameref}
 \usepackage[
 natbib,
@@ -47,11 +39,12 @@ uniquelist=false
 \defbibheading{subbibliography}{%
     \section*{References for Section \ref{refsegment:\therefsegment}}}
 \setlength\bibitemsep{5pt}
+% Define external bib file
 \addbibresource{zotero-refs-BLT.bib}
 
 
 \usepackage{type1cm}        % activate if the above 3 fonts are 
-                             % not available on your system
+                            % not available on your system
                              
 \usepackage{comment}
 
@@ -65,25 +58,25 @@ uniquelist=false
 \usepackage{newtxmath}       % selects Times Roman as basic font
 
 %\usepackage{mathptmx}       % selects Times Roman as basic font
-\usepackage{helvet}         % selects Helvetica as sans-serif font
+\usepackage{helvet}          % selects Helvetica as sans-serif font
 
 \usepackage{placeins}        % allows the use of floatbarriers
 \usepackage{tabularx}        % creates tables that automatically adjust to contents
 \usepackage{booktabs}        % allows the use of \midrule 
 \usepackage{soul}            % highlighting
-
+\usepackage{pdfpages}        % provide `\includepdf` command for inserting title page
 
 \usepackage{threeparttable}
 
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{
-    colorlinks,
-    linkcolor={red!50!black},
-    citecolor={blue!50!black},
-    urlcolor={blue!80!black}
+colorlinks,
+linkcolor={red!50!black},
+citecolor={blue!50!black},
+urlcolor={blue!80!black}
 }
-%\hypersetup{colorlinks=false} % use true for debugging; helps identify raw citations.
+%\hypersetup{colorlinks=false} % use true for debugging
 
 % see the list of further useful packages in the Reference Guide
 
@@ -94,14 +87,21 @@ uniquelist=false
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{import}
+% Define command `\segimport` to automatically create a 
+% bibliography section for the imported file.
 \newcommand{\seginclude}[1]{\endrefsegment\newrefsegment\include{#1}}
 \newcommand{\segimport}[2]{\begin{refsegment}\import{#1}{#2}\end{refsegment}}
+
+% include file with digital resource cite style
 \input{editor/prgmstyle.tex}
 
+% Define checkmark symbol for appendix tables
 \usepackage{tikz}
 \def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
 
 \begin{document}
+
+\includepdf[pages=-,fitpaper=true]{editor/cover_page.pdf}
 
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

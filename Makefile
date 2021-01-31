@@ -4,8 +4,8 @@
 SHELL = /bin/bash -O globstar
 #.SHELLFLAGS="-O extglob -c"
 
-export TEXINPUTS:=./texmf//:${TEXINPUTS}
-export BSTINPUTS:=./texmf//:${BSTINPUTS}
+export TEXINPUTS:=./style//:${TEXINPUTS}
+#export BSTINPUTS:=./texmf//:${BSTINPUTS}
 
 .PHONY: tex all bib tables images idx
 
@@ -31,8 +31,9 @@ fast: # make an incomplete build
 	make tex
 
 tex:
-	# -  lualatex --output-directory=build --interaction=nonstopmode ./editor.tex
-	-  pdflatex -output-directory=build -interaction=nonstopmode ./editor.tex
+	kpsewhich svmult.cls
+	#- lualatex --output-directory=build --interaction=nonstopmode ./editor.tex
+	- pdflatex -output-directory=build -interaction=nonstopmode ./editor.tex
 
 tex-draft:
 	# -  lualatex --output-directory=build --interaction=nonstopmode ./editor.tex
