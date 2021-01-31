@@ -1388,6 +1388,21 @@
   pages = {121--134}
 }
 
+@article{bouhlel2019python,
+  title = {A {{Python}} Surrogate Modeling Framework with Derivatives},
+  author = {Bouhlel, Mohamed Amine and Hwang, John T. and Bartoli, Nathalie and Lafage, Rémi and Morlier, Joseph and Martins, Joaquim R. R. A.},
+  date = {2019-09-01},
+  journaltitle = {Advances in Engineering Software},
+  shortjournal = {Advances in Engineering Software},
+  volume = {135},
+  pages = {102662},
+  issn = {0965-9978},
+  doi = {10/gghbp7},
+  abstract = {The surrogate modeling toolbox (SMT) is an open-source Python package that contains a collection of surrogate modeling methods, sampling techniques, and benchmarking functions. This package provides a library of surrogate models that is simple to use and facilitates the implementation of additional methods. SMT is different from existing surrogate modeling libraries because of its emphasis on derivatives, including training derivatives used for gradient-enhanced modeling, prediction derivatives, and derivatives with respect to training data. It also includes unique surrogate models: kriging by partial least-squares reduction, which scales well with the number of inputs; and energy-minimizing spline interpolation, which scales well with the number of training points. The efficiency and effectiveness of SMT are demonstrated through a series of examples. SMT is documented using custom tools for embedding automatically tested code and dynamically generated plots to produce high-quality user guides with minimal effort from contributors. SMT is maintained in a public version control repository.11https://github.com/SMTorg/SMT.},
+  langid = {english},
+  related = {SMT}
+}
+
 @report{boulanger2014cpt,
   title = {{{CPT}} and {{SPT}} Based Liquefaction Triggering Procedures},
   author = {Boulanger, RW and Idriss, IM},
@@ -8552,6 +8567,7 @@
 
 @software{olaFlow,
   title = {{{olaFlow}}: {{CFD}} for Waves {{Software}}},
+  shorttitle = {{{olaFlow}}},
   author = {{olaFlow}},
   date = {2018},
   url = {olaflow.github.io},
@@ -8583,7 +8599,8 @@
   journaltitle = {Journal of Computational Science},
   volume = {47},
   pages = {101204},
-  doi = {10/ghg5rh}
+  doi = {10/ghg5rh},
+  related = {UQPy}
 }
 
 @article{Olshansky2006,
@@ -10328,6 +10345,20 @@
 % == BibLateX quality report for smith2018validation:
 % ? Unsure about the formatting of the booktitle
 
+@software{SMT,
+  title = {Surrogate {{Modeling Toolbox}}},
+  shorttitle = {{{SMT}}},
+  date = {2021-01-30T10:41:07Z},
+  origdate = {2016-11-08T23:00:31Z},
+  url = {https://github.com/SMTorg/smt},
+  urldate = {2021-01-31},
+  abstract = {Surrogate Modeling Toolbox. Contribute to SMTorg/smt development by creating an account on GitHub.},
+  organization = {{smt}},
+  related = {bouhlel2019python}
+}
+% == BibLateX quality report for SMT:
+% ? Title looks like it was stored in title-case in Zotero
+
 @report{Smythe2013,
   title = {Assessing the Impacts of Hurricane Sandy on the Port of New York and New Jersey's Maritime Responders and Response Infrastructure},
   author = {Smythe, T. C.},
@@ -11012,6 +11043,17 @@
   title = {{{UQLab}}},
   url = {https://www.uqlab.com/},
   related = {marelli2014uqlab}
+}
+
+@software{UQPy,
+  title = {{{UQpy}}},
+  date = {2021-01-28T20:41:32Z},
+  origdate = {2017-12-01T23:05:13Z},
+  url = {https://github.com/SURGroup/UQpy},
+  urldate = {2021-01-31},
+  abstract = {Contribute to SURGroup/UQpy development by creating an account on GitHub.},
+  organization = {{SURG}},
+  related = {olivier2020uqpy}
 }
 
 @report{usace2015north,

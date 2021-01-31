@@ -95,7 +95,6 @@ for i, lst in enumerate(index[1:23]):
     \\caption{{{section_names[i+1]}}}
     \\begin{{threeparttable}}
     \\centering
-    %\\begin{{tabular}}{{l|cccc}}
     \\begin{{tabular}}{{p{{35mm}}|cccc}}
     \\toprule
     Name &  License & Platforms & Prog. Lang. & DesignSafe \\\\"""
@@ -127,14 +126,13 @@ for i, lst in enumerate(index[1:23]):
     {name} {NT} & {lic} & {OS} & {PL} & {DS}  \\\\"""})
     tail = f"""
     \\bottomrule
-   %\\insertTableNotes
     \\end{{tabular}}
     {tablenotes(notes)}
     \\end{{threeparttable}}
     \\label{{tab:app-{i}}}
 \\end{{table}}
 \\vspace*{{2cm}}
-%\\newline"""
+"""
 
     if body: # only print if there are items in the table body
         print(head,"".join(body),tail)
