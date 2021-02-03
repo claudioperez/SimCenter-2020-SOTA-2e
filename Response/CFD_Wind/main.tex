@@ -132,13 +132,16 @@ Yet, the current state of the art of CFD application in wind effects is defined 
 
 \subsection{Relevant SimCenter Workflows and Tools} 
 
-The SimCenter aims to include CFD-based simulation of wind effects in its regional risk assessment workflow and \citeprgm{R2DTool}, the corresponding desktop application. The regional-scale CFD simulation capabilities need to build on top of a robust implementation of the analyses of individual buildings. Therefore, the SimCenter has been focusing on the analyses of individual buildings first. 
+The SimCenter aims to include CFD-based simulation of wind effects in its regional risk assessment workflow and \emph{R2DTool}, the corresponding desktop application. The regional-scale CFD simulation capabilities need to build on top of a robust implementation of the analyses of individual buildings. Therefore, the SimCenter has been focusing on the analyses of individual buildings first. 
 
 \paragraph{TinF} The \citeprgm{Tinf} helps with the definition and parametrization of various turbulent inflow models and augments existing OpenFOAM model files with the respective parameter definitions. 
 
-\paragraph{WE-UQ} The Wind Engineering with Uncertainty Quantification Tool (\citeprgm{WE-UQ}) is designed to assess the response of buildings subjected to wind loading. Uncertainty Quantification refers to considering the uncertainty in the properties of the building and the wind loads and propagating such uncertainty through the simulations. Besides the advanced features in TinF, it also provides access to other non-CFD-based methods for specifying wind loads, such as online wind engineering databases (e.g., \cite{tpu2020tpu}) and the stochastic wind load generation available in \citeprgm{smelt}. The wind simulations are run using \citeprgm{OpenFOAM} and the calculated loads are applied on finite element models using \citeprgm{OpenSees}. Two-way fully coupled fluid--structure interaction is currently under development.
+\paragraph{smelt}
+The Stochastic, Modular, and Extensible Library for Time histories (\emph{smelt}) is a C++ library for stochastically generating time histories, including velocity time histories for wind loading. 
 
-\paragraph{
+\paragraph{WE-UQ} The Wind Engineering with Uncertainty Quantification Tool (\citeprgm{WE-UQ}) is designed to assess the response of buildings subjected to wind loading. Uncertainty Quantification refers to considering the uncertainty in the properties of the building and the wind loads and propagating such uncertainty through the simulations. Besides the advanced features in TinF, it also provides access to other non-CFD-based methods for specifying wind loads, such as online wind engineering databases (e.g., \cite{tpu2020tpu}) and the stochastic wind load generation available in smelt. The wind simulations are run using \citeprgm{OpenFOAM} and the calculated loads are applied on finite element models using \citeprgm{OpenSees}. Two-way fully coupled fluid--structure interaction is currently under development.
+
+\paragraph{Educational Tools} The \emph{Multiple Degrees of Freedom Application} (MDOF) allows students to explore the effects of different building parameters on the time-varying response of a building under transient loads, including wind effects. The building is represented by a shear column. The \emph{Earthquake versus Wind Application} (EvW) focuses on comparing the response of buildings subjected to earthquake and wind loading, using the same shear model that is applied in MDOF. The wind loads are generated using a stochastic process.
 
 
 \section{Future Directions}
