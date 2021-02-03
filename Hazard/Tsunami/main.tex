@@ -52,7 +52,15 @@ For modeling that focuses on the large-scale phases, two-dimensional models are 
 
 As computational power has grown, three-dimensional models based on RANS and LES equations have been applied for modeling of near-shore waves and floods, and, in particular, for fluid impact on coastal structures like bridges and buildings, which are relatively smaller in scales \citep{biscarini2010computational, choi2007threedimensional, larsen2017tsunamiinduced, mayer2000simulation, montagna20113d, williams2016numerical}. In addition, three-dimensional models output the pressure field directly, which can be integrated to obtain fluid forces on structures. In contrast, two-dimensional models rely on a simplified approach to convert their output to fluid forces on structures \citep{motley2016, qin2016threedimensional, qin2018comparison, sarfaraz2017sph}.
 
-Many of these models are built into mostly open-source software packages that are broadly used by the NHE community and maintained by researchers at research institutes. Examples include GeoClaw \citep{berger2011geoclaw}, MOST \citep{titov1997implementation}, and Tsunami-HySEA \citep{macias2016comparison}.
+Many of these models are built into mostly open-source software packages that are broadly used by the NHE community and maintained by researchers at research institutes. Examples include \citeprgm{GEOCLAW}  \citep{berger2011geoclaw}, \emph{MOST} \citep{titov1997implementation}, and \emph{Tsunami-HySEA}  \citep{macias2016comparison}.
+
+\subsection{Relevant SimCenter Tools}
+
+The SimCenter develops both research and education tools to facilitate the entry for new researchers into the field of tsunami simulation.
+
+\paragraph{Hydro-UQ} The Hydrodynamic loading with Uncertainty Quantification Tool \citeprgm{HydroUQ} manages three-dimensional CFD simulations using \citeprgm{OpenFOAM} and uses a universal interpreter to interface with two-dimensional, far-from-coast simulations performed by shallow water solvers (e.g., \citeprgm{GEOCLAW}, \citeprgm{ADCIRC}). The shallow water simulation results are used as inputs for simulations in OpenFOAM. The bathymetry and topography of the ocean floor, the meshing of the model, and other simulation parameters can be conveniently adjusted through the user interface. Simulations can run remotely on the High-Performance Computing clusters linked to DesignSafe.
+
+\paragraph{Educational Tools} The \emph{CFD Notebooks} (CFDN) prepare students for CFD-based research work by providing a basic working knowledge of \citeprgm{OpenFOAM}, including mesh preparation and the generation of boundary conditions. CFDN is a series of Jupyter notebooks hosted on DesignSafe. It leverages DesignSafe's High-Performance Computing platform to provide an interactive interface for students or instructors that can demonstrate running OpenFOAM simulations without any software installation overhead.
 
 \section{Major Research Gaps and Needs}
 \label{sec:tsunami_gaps}
