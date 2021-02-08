@@ -100,6 +100,10 @@ The dependency between network component repair times is not considered by HAZUS
 
 \paragraph{Gas pipeline simulation software} Compared to water pipeline simulation software, natural gas pipeline modeling and simulation software is mostly commercial and proprietary, e.g., Synergi Gas from DNV-GL conducts hydraulic modeling and analysis and NextGen from Gregg Engineering creates hydraulic simulation models to run simulations and calculate pressures, flow rates, and other operational parameters. Given the emphasis on open-source software in this report, these are not discussed in more detail.
 
+\subsection{Relevant SimCenter Tools}
+
+The SimCenter develops \citeprgm{PELICUN}, a performance assessment tool that integrates multiple conventional damage and loss assessment methods and allows researchers to take advantage of synergies between them when developing new approaches. PELICUN is available as a standalone Python library and it is the performance assessment engine behind the applications developed by the SimCenter. Currently, the databases bundled with PELICUN support the assessment of buildings only; if researchers are interested in the performance of buried pipelines, they need to provide the corresponding parameters of damage models (i.e., fragility functions). Given those parameters, the SimCenter tools described in Chapter \ref{chapter:perf_bldg} can simulate the damage states of the pipes. The commonly used fragility functions for pipelines are planned to be bundled with a future release of PELICUN to support these types of analyses.
+
 \section{Research Gaps and Needs}
 \label{sec:perf_pipeline_gaps}
 

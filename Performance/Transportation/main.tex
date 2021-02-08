@@ -115,6 +115,10 @@ The software that aids in the characterization of the hazard and estimation of n
 
 \paragraph{OpenQuake} The risk assessment framework of the \citeprgm{OpenQuake} tool (introduced in Chapter \ref{chapter:perf_bldg}) is sufficiently flexible to enable the assessment of damage and consequences for transportation network components. Unlike HAZUS, the fragility and consequence information is not provided with the tool. The functions available in the HAZUS Technical Manual \citep{fema2020earthquaketechnical} can be adopted with minor effort.
 
+\subsection{Relevant SimCenter Tools}
+
+The SimCenter develops \citeprgm{PELICUN}, a performance assessment tool that integrates multiple conventional damage and loss assessment methods and allows researchers to take advantage of synergies between them when developing new approaches. PELICUN is available as a standalone Python library and it is the performance assessment engine behind the applications developed by the SimCenter. Currently, the databases bundled with PELICUN support the assessment of buildings only; if researchers are interested in the performance of transportation networks, they need to provide the corresponding parameters of damage models (i.e., fragility functions). Given those parameters, the SimCenter tools described in Chapter \ref{chapter:perf_bldg} can simulate the damage in transportation networks. The commonly used fragility functions for bridges are planned to be bundled with a future release of PELICUN to support these types of analyses.
+
 \section{Research Gaps and Needs}
 \label{sec:perf_transport_gaps}
 
