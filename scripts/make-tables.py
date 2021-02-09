@@ -27,10 +27,6 @@ INDEX = "build/.refsegs/index.yaml" # This file is generated through
                                     # a sed script that is invoked by 
                                     # running `make tables`
 
-ABBREV = {
-    "License :: OSI Approved :: GNU General Public License (GPL)": "GPL",
-    "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)": "GPLv2+"
-}
 
 
 with open(INDEX,"r") as f:
@@ -41,6 +37,10 @@ with open("2020-2e.json") as f:     # This file is exported from Zotero
 
 with open("sections.yaml") as f:
     section_names = yaml.load(f, Loader=yaml.Loader)
+
+
+
+
 
 def proc_lic(text:str)->str:
     if (match:=re.search(r"\((.*)\)$", text)):
@@ -82,7 +82,8 @@ print("""
 
 \\begin{center}
 """)
-
+Licenses = set()
+OpSystems = set()
 for i, lst in enumerate(index[1:23]):
     lst = lst if lst else []
     body = set() # use set container to automatically handle duplicates

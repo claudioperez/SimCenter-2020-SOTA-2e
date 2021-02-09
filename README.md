@@ -1,5 +1,9 @@
 # SimCenter 2020 SOTA 2e
 
+## Citing Software
+
+
+
 ## Parsing Citations
 
 
@@ -23,3 +27,4 @@
 11. Check special cases
 1.  Finalize wrapping citations
 2.  Color citations and proof read
+
