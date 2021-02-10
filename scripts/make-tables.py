@@ -43,6 +43,7 @@ with open("sections.yaml") as f:
 
 
 def proc_lic(text:str)->str:
+    text = text[0].rsplit("::",1)[-1].replace("License","") if text else "-"
     if (match:=re.search(r"\((.*)\)$", text)):
         return match.group(1)
     return text
@@ -107,10 +108,11 @@ for i, lst in enumerate(index[1:23]):
         name = f"\href{{{item['url']}}}{{{name}}}" if "url" in item else name
         # License
         lic = [tag["tag"] for tag in item["tags"] if "License" in tag["tag"]]
-        lic = lic[0].rsplit("::",1)[-1].replace("License","") if lic else "-"
+        Licenses = Licenses.union(lic)
         lic = proc_lic(lic)
         # Operating System
         OS = [tag["tag"] for tag in item["tags"] if "Operating" in tag["tag"]]
+        OpSystems = OpSystems.union(OS)
         OS = "/".join(o.rsplit("::",1)[-1][:4] for o in sorted(OS)) if OS else "-"
         # DesignSafe
         DS = [tg["tag"] for tg in item["tags"] if "DesignSafe" in tg["tag"]]
