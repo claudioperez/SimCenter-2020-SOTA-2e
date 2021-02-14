@@ -1,10 +1,16 @@
 # Future Improvements
 
-- @claudio - document build process
 
-    - pulling from zotero
-    - making tables
-    - converting pngs to pdf
+## Build
+
+- add `make init` target
+
+## Documentation (@claudio)
+
+- pulling from zotero
+- making tables
+- converting pngs to pdf
+
 
 ## Software
 

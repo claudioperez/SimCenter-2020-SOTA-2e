@@ -14,6 +14,7 @@ all:
 	make tex-draft
 	make bib
 	make tex
+	make tables
 	make tex
 
 tables:
