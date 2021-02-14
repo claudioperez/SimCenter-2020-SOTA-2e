@@ -24,7 +24,7 @@ tables:
 	   printf -- "- \n" >> build/.refsegs/index.yaml; \
 	   sed -n 's/\\abx@aux@cite{\(.*\)}/  - "\1"/p' $$i >> build/.refsegs/index.yaml; \
 	done;
-	python3 scripts/make-tables.py > editor/tables.tex
+	python3 scripts/make-tables.py -k 'editor/keys.tex' > editor/tables.tex
 
 fast: # make an incomplete build
 	make idx

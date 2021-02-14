@@ -16,7 +16,10 @@ python3 scripts/make-tables.py > editor/tables.tex
 ```
 """
 import re
+import sys
+
 import yaml
+import pandas as pd
 
 # These are useful in nested formatted strings where backslashes
 # raise a syntax error
@@ -40,11 +43,15 @@ with open("sections.yaml") as f:
 
 
 
-
+def process_opsys(text:str)->str:
+    # print(text,file=sys.stderr)
+    return text.rsplit("::",1)[-1][:4]
 
 def proc_lic(text:str)->str:
+    #print(text,file=sys.stderr)
     text = text[0].rsplit("::",1)[-1].replace("License","") if text else "-"
-    if (match:=re.search(r"\((.*)\)$", text)):
+    match = re.search(r"\((.*)\)$", text)
+    if match:
         return match.group(1)
     return text
 
@@ -66,7 +73,7 @@ def tablenotes(notes):
     if notes:
         return f"""
     \\begin{{tablenotes}}
-      \\footnotesize
+      %\\footnotesize
       { (NL+"      ").join(f'{CMD("item")}[{num}]{{{text.replace("&",CMD("&"))}}}' for text, num in notes.items())  }
     \\end{{tablenotes}}
 """
@@ -81,8 +88,9 @@ print("""
 % which can be invoked by running `make tables` at the command line.\n
 % Claudio M. Perez
 
-\\begin{center}
+%\\begin{center}
 """)
+
 Licenses = set()
 OpSystems = set()
 for i, lst in enumerate(index[1:23]):
@@ -94,9 +102,9 @@ for i, lst in enumerate(index[1:23]):
 
     head = f"""
 \\begin{{table}}
-    \\caption{{{section_names[i+1]}}}
-    \\begin{{threeparttable}}
     \\centering
+    \\begin{{threeparttable}}
+    \\caption{{{section_names[i+1]}}}
     \\begin{{tabular}}{{p{{35mm}}|cccc}}
     \\toprule
     Name &  License & Platforms & Prog. Lang. & DesignSafe \\\\"""
@@ -113,7 +121,7 @@ for i, lst in enumerate(index[1:23]):
         # Operating System
         OS = [tag["tag"] for tag in item["tags"] if "Operating" in tag["tag"]]
         OpSystems = OpSystems.union(OS)
-        OS = "/".join(o.rsplit("::",1)[-1][:4] for o in sorted(OS)) if OS else "-"
+        OS = "/".join(process_opsys(o) for o in sorted(OS)) if OS else "-"
         # DesignSafe
         DS = [tg["tag"] for tg in item["tags"] if "DesignSafe" in tg["tag"]]
         DS = DS[0].split("::")[-1].replace("True","\\checkmark") if DS else "-"
@@ -140,5 +148,33 @@ for i, lst in enumerate(index[1:23]):
     if body: # only print if there are items in the table body
         print(head,"".join(body),tail)
 
-print("\\end{center}")
+#print("\\end{center}")
+
+if __name__ == "__main__":
+    # print(OpSystems,file=sys.stderr)
+    if "-k" in sys.argv:
+        keysfile = sys.argv[sys.argv.index("-k") + 1]
+        license_keys = pd.DataFrame(
+                [license.rsplit("::",1)[-1]  for license in Licenses],
+                index = [proc_lic([license]) for license in Licenses],
+                columns = ["Full license name"],
+        )
+        os_keys = pd.DataFrame(
+                [opsys.rsplit("::",1)[-1] for opsys in OpSystems],
+                index = [process_opsys(opsys) for opsys in OpSystems],
+                columns = ["Operating System"],
+
+        )
+        # print(os_keys,file=sys.stderr)
+        with open(keysfile,"w+") as f:
+            f.write(license_keys.to_latex(
+                caption="Abbreviations of license names used in appendices.",
+                label="tab:keys-licenses"
+            ))
+            f.write("\n")
+            f.write(os_keys.to_latex(
+                caption="Abbreviations of operating system names used in appendices.",
+                label="tab:keys-os"
+            ))
+            f.write("\\pagebreak")
 

@@ -66,7 +66,14 @@ uniquelist=false
 \usepackage{soul}            % highlighting
 \usepackage{pdfpages}        % provide `\includepdf` command for inserting title page
 
-\usepackage{threeparttable}
+\usepackage{threeparttable}  % used for inserting footnotes under tables
+\usepackage{etoolbox}
+\appto\TPTnoteSettings{\footnotesize}
+
+\usepackage{tikz}            % Define checkmark symbol for appendix tables
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+
+\usepackage{float}
 
 \usepackage{hyperref}
 \usepackage{xcolor}
@@ -95,9 +102,6 @@ urlcolor={blue!80!black}
 % include file with digital resource cite style
 \input{editor/prgmstyle.tex}
 
-% Define checkmark symbol for appendix tables
-\usepackage{tikz}
-\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
 
 \begin{document}
 
