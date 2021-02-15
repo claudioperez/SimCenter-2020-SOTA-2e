@@ -94,10 +94,10 @@ print("""
 Licenses = set()
 OpSystems = set()
 for i, lst in enumerate(index[1:23]):
+    #print(table)
     lst = lst if lst else []
     body = set() # use set container to automatically handle duplicates
     foot = set()
-
     notes = {} # text for footnotes
 
     head = f"""
@@ -113,7 +113,7 @@ for i, lst in enumerate(index[1:23]):
         except: continue
         # Title
         name = item["shortTitle"] if "shortTitle" in item else item["title"]
-        name = f"\href{{{item['url']}}}{{{name}}}" if "url" in item else name
+        link = f"\href{{{item['url']}}}{{{name}}}" if "url" in item else name
         # License
         lic = [tag["tag"] for tag in item["tags"] if "License" in tag["tag"]]
         Licenses = Licenses.union(lic)
@@ -128,13 +128,14 @@ for i, lst in enumerate(index[1:23]):
         # Prog. Lang
         PL = [tag["tag"] for tag in item["tags"] if "Programming" in tag["tag"]]
         PL = "/".join(o.rsplit("::",1)[-1] for o in sorted(PL)) if PL else "-"
-        # Comments
+        # Notes/Comments
         keys = add_notes(notes, item["tags"])
-        #NT = ",".join(f"\\tnotex{{{k}}}" for k in keys)
+        # 
         NT = r"\textsuperscript{" + ",".join(f"{k}" for k in keys) + "}"
         if item["itemType"] == "computerProgram":
             body = body.union({f"""
-    {name} {NT} & {lic} & {OS} & {PL} & {DS}  \\\\"""})
+    %{name}
+    {link} {NT} & {lic} & {OS} & {PL} & {DS}  \\\\"""})
     tail = f"""
     \\bottomrule
     \\end{{tabular}}
@@ -143,10 +144,11 @@ for i, lst in enumerate(index[1:23]):
     \\label{{tab:app-{i}}}
 \\end{{table}}
 \\vspace*{{2cm}}
-"""
 
+"""
+    rows = [rw for rw in sorted(body)]
     if body: # only print if there are items in the table body
-        print(head,"".join(body),tail)
+        print(head,"".join(rows),tail)
 
 #print("\\end{center}")
 
