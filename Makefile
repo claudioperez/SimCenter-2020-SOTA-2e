@@ -32,7 +32,6 @@ fast: # make an incomplete build
 	make tex
 
 tex:
-	kpsewhich svmult.cls
 	#- lualatex --output-directory=build --interaction=nonstopmode ./editor.tex
 	- pdflatex -output-directory=build -interaction=nonstopmode ./editor.tex
 
